@@ -1,0 +1,27 @@
+
+boxstage.png
+size: 168,100
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dian
+  rotate: false
+  xy: 101, 36
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+glow_fk
+  rotate: false
+  xy: 101, 3
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+halo
+  rotate: false
+  xy: 0, 0
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1

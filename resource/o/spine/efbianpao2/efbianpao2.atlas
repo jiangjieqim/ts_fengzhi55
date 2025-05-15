@@ -1,0 +1,97 @@
+
+efbianpao2.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bz0001
+  rotate: true
+  xy: 209, 35
+  size: 122, 131
+  orig: 256, 256
+  offset: 61, 51
+  index: -1
+bz0002
+  rotate: false
+  xy: 773, 150
+  size: 236, 230
+  orig: 256, 256
+  offset: 9, 2
+  index: -1
+bz0003
+  rotate: false
+  xy: 2, 368
+  size: 256, 255
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+bz0004
+  rotate: false
+  xy: 260, 377
+  size: 254, 246
+  orig: 256, 256
+  offset: 2, 0
+  index: -1
+bz0005
+  rotate: false
+  xy: 516, 378
+  size: 255, 245
+  orig: 256, 256
+  offset: 1, 0
+  index: -1
+bz0006
+  rotate: false
+  xy: 773, 382
+  size: 246, 241
+  orig: 256, 256
+  offset: 10, 0
+  index: -1
+bz0007
+  rotate: false
+  xy: 516, 150
+  size: 238, 226
+  orig: 256, 256
+  offset: 18, 2
+  index: -1
+bz0008
+  rotate: false
+  xy: 260, 159
+  size: 218, 216
+  orig: 256, 256
+  offset: 25, 16
+  index: -1
+bz0009
+  rotate: true
+  xy: 2, 182
+  size: 184, 213
+  orig: 256, 256
+  offset: 25, 19
+  index: -1
+bz0010
+  rotate: true
+  xy: 2, 2
+  size: 178, 205
+  orig: 256, 256
+  offset: 25, 27
+  index: -1
+flame_1
+  rotate: false
+  xy: 342, 39
+  size: 87, 61
+  orig: 88, 61
+  offset: 1, 0
+  index: -1
+pao1
+  rotate: false
+  xy: 463, 56
+  size: 51, 101
+  orig: 51, 101
+  offset: 0, 0
+  index: -1
+pao2
+  rotate: true
+  xy: 342, 102
+  size: 55, 119
+  orig: 55, 119
+  offset: 0, 0
+  index: -1

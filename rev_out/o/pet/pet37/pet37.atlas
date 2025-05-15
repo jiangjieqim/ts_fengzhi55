@@ -1,0 +1,55 @@
+
+pet37.png
+size: 248,248
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 0, 118
+  size: 151, 130
+  orig: 219, 213
+  offset: 34, 29
+  index: -1
+ef_a1
+  rotate: false
+  xy: 0, 0
+  size: 90, 90
+  orig: 100, 100
+  offset: 4, 2
+  index: -1
+ef_a2
+  rotate: true
+  xy: 152, 150
+  size: 98, 96
+  orig: 100, 100
+  offset: 1, 0
+  index: -1
+ef_a3
+  rotate: true
+  xy: 139, 2
+  size: 88, 89
+  orig: 100, 100
+  offset: 6, 3
+  index: -1
+eye4
+  rotate: true
+  xy: 91, 54
+  size: 63, 47
+  orig: 91, 68
+  offset: 15, 11
+  index: -1
+tail
+  rotate: true
+  xy: 152, 91
+  size: 58, 92
+  orig: 73, 122
+  offset: 13, 15
+  index: -1
+ying
+  rotate: false
+  xy: 0, 92
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

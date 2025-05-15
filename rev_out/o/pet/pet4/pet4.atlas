@@ -1,0 +1,76 @@
+
+pet4.png
+size: 152,112
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 0, 6
+  size: 104, 106
+  orig: 202, 232
+  offset: 40, 56
+  index: -1
+eye
+  rotate: true
+  xy: 105, 3
+  size: 32, 21
+  orig: 78, 46
+  offset: 23, 13
+  index: -1
+eye2
+  rotate: true
+  xy: 131, 38
+  size: 30, 18
+  orig: 78, 46
+  offset: 24, 16
+  index: -1
+eye3
+  rotate: true
+  xy: 127, 3
+  size: 32, 16
+  orig: 78, 46
+  offset: 23, 18
+  index: -1
+eye4
+  rotate: true
+  xy: 131, 69
+  size: 43, 19
+  orig: 78, 46
+  offset: 18, 15
+  index: -1
+handa
+  rotate: false
+  xy: 0, 4
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+handb
+  rotate: false
+  xy: 0, 2
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+winga
+  rotate: false
+  xy: 0, 0
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+wingb
+  rotate: false
+  xy: 2, 4
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+ying
+  rotate: true
+  xy: 105, 36
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

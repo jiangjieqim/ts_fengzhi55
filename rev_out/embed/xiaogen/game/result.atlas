@@ -1,0 +1,42 @@
+{
+    "frames": {
+        "ok.png": {
+            "frame": {
+                "h": 82,
+                "idx": 0,
+                "w": 82,
+                "x": 0,
+                "y": 83
+            },
+            "sourceSize": {
+                "h": 82,
+                "w": 82
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "restart.png": {
+            "frame": {
+                "h": 82,
+                "idx": 0,
+                "w": 161,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 82,
+                "w": 161
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "result.png",
+        "prefix": "game/result/"
+    }
+}

@@ -1,0 +1,34 @@
+
+efbing.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef_1
+  rotate: false
+  xy: 1, 1
+  size: 60, 81
+  orig: 60, 81
+  offset: 0, 0
+  index: -1
+ef_2
+  rotate: false
+  xy: 62, 1
+  size: 60, 81
+  orig: 60, 81
+  offset: 0, 0
+  index: -1
+ef_3
+  rotate: false
+  xy: 123, 1
+  size: 60, 81
+  orig: 60, 81
+  offset: 0, 0
+  index: -1
+ef_4
+  rotate: false
+  xy: 184, 1
+  size: 60, 81
+  orig: 60, 81
+  offset: 0, 0
+  index: -1

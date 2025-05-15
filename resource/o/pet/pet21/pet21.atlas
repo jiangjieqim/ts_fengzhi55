@@ -1,0 +1,62 @@
+
+pet21.png
+size: 180,328
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ahand
+  rotate: false
+  xy: 117, 239
+  size: 57, 87
+  orig: 64, 92
+  offset: 3, 3
+  index: -1
+bhand
+  rotate: false
+  xy: 117, 155
+  size: 54, 83
+  orig: 73, 98
+  offset: 9, 10
+  index: -1
+bodya
+  rotate: true
+  xy: 0, 215
+  size: 111, 116
+  orig: 131, 181
+  offset: 16, 63
+  index: -1
+ef_a1
+  rotate: false
+  xy: 0, 27
+  size: 90, 90
+  orig: 100, 100
+  offset: 4, 2
+  index: -1
+ef_a2
+  rotate: false
+  xy: 0, 118
+  size: 98, 96
+  orig: 100, 100
+  offset: 1, 0
+  index: -1
+ef_a3
+  rotate: true
+  xy: 91, 0
+  size: 88, 89
+  orig: 100, 100
+  offset: 6, 3
+  index: -1
+head
+  rotate: false
+  xy: 99, 89
+  size: 79, 65
+  orig: 103, 95
+  offset: 2, 4
+  index: -1
+ying
+  rotate: false
+  xy: 0, 1
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

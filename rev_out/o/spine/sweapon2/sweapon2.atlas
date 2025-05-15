@@ -1,0 +1,76 @@
+
+sweapon2.png
+size: 328,472
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow03
+  rotate: false
+  xy: 167, 318
+  size: 30, 29
+  orig: 32, 32
+  offset: 1, 1
+  index: -1
+glow_04
+  rotate: false
+  xy: 136, 317
+  size: 30, 30
+  orig: 32, 32
+  offset: 1, 1
+  index: -1
+sb_cz
+  rotate: false
+  xy: 185, 0
+  size: 126, 77
+  orig: 152, 79
+  offset: 25, 1
+  index: -1
+sb_tz
+  rotate: true
+  xy: 77, 15
+  size: 147, 107
+  orig: 162, 107
+  offset: 14, 0
+  index: -1
+tx1
+  rotate: false
+  xy: 185, 78
+  size: 140, 71
+  orig: 375, 667
+  offset: 109, 151
+  index: -1
+tx2
+  rotate: true
+  xy: 0, 0
+  size: 162, 76
+  orig: 375, 667
+  offset: 102, 150
+  index: -1
+tx3
+  rotate: false
+  xy: 136, 348
+  size: 178, 123
+  orig: 375, 667
+  offset: 98, 147
+  index: -1
+tx4
+  rotate: true
+  xy: 0, 282
+  size: 189, 135
+  orig: 375, 667
+  offset: 95, 147
+  index: -1
+tx5
+  rotate: true
+  xy: 201, 150
+  size: 197, 119
+  orig: 375, 667
+  offset: 95, 164
+  index: -1
+tx6
+  rotate: false
+  xy: 0, 163
+  size: 200, 118
+  orig: 375, 667
+  offset: 95, 167
+  index: -1

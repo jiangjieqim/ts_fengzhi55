@@ -1,0 +1,55 @@
+
+boxgulv14big.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow11
+  rotate: false
+  xy: 771, 191
+  size: 62, 62
+  orig: 64, 64
+  offset: 1, 1
+  index: -1
+glow12
+  rotate: true
+  xy: 290, 30
+  size: 223, 222
+  orig: 232, 232
+  offset: 4, 5
+  index: -1
+glow_07
+  rotate: false
+  xy: 642, 125
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+glow_18
+  rotate: true
+  xy: 513, 103
+  size: 150, 128
+  orig: 150, 128
+  offset: 0, 0
+  index: -1
+gu
+  rotate: false
+  xy: 1, 8
+  size: 288, 245
+  orig: 288, 245
+  offset: 0, 0
+  index: -1
+gu_gj
+  rotate: true
+  xy: 513, 1
+  size: 101, 175
+  orig: 102, 176
+  offset: 0, 0
+  index: -1
+ray_10
+  rotate: false
+  xy: 689, 11
+  size: 113, 113
+  orig: 128, 128
+  offset: 8, 7
+  index: -1

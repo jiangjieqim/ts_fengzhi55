@@ -1,0 +1,174 @@
+
+51ndj.png
+size: 628,1040
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 70, 8
+  size: 66, 48
+  orig: 88, 88
+  offset: 10, 17
+  index: -1
+11
+  rotate: true
+  xy: 215, 11
+  size: 44, 68
+  orig: 88, 88
+  offset: 22, 9
+  index: -1
+12
+  rotate: true
+  xy: 137, 6
+  size: 44, 66
+  orig: 88, 88
+  offset: 22, 10
+  index: -1
+19
+  rotate: true
+  xy: 215, 56
+  size: 66, 74
+  orig: 88, 88
+  offset: 12, 6
+  index: -1
+20
+  rotate: true
+  xy: 0, 0
+  size: 46, 69
+  orig: 88, 88
+  offset: 21, 9
+  index: -1
+26
+  rotate: true
+  xy: 550, 310
+  size: 57, 70
+  orig: 88, 88
+  offset: 13, 9
+  index: -1
+3
+  rotate: true
+  xy: 0, 47
+  size: 75, 67
+  orig: 88, 88
+  offset: 7, 8
+  index: -1
+34
+  rotate: true
+  xy: 475, 310
+  size: 57, 74
+  orig: 88, 88
+  offset: 15, 7
+  index: -1
+35
+  rotate: true
+  xy: 290, 14
+  size: 64, 62
+  orig: 88, 88
+  offset: 13, 13
+  index: -1
+60
+  rotate: true
+  xy: 536, 98
+  size: 71, 75
+  orig: 88, 88
+  offset: 7, 5
+  index: -1
+61
+  rotate: true
+  xy: 536, 26
+  size: 71, 75
+  orig: 88, 88
+  offset: 7, 5
+  index: -1
+8
+  rotate: false
+  xy: 68, 57
+  size: 76, 65
+  orig: 88, 88
+  offset: 7, 11
+  index: -1
+9
+  rotate: false
+  xy: 145, 51
+  size: 69, 71
+  orig: 88, 88
+  offset: 5, 8
+  index: -1
+glow11
+  rotate: true
+  xy: 319, 79
+  size: 227, 216
+  orig: 232, 232
+  offset: 5, 6
+  index: -1
+horse1
+  rotate: false
+  xy: 475, 368
+  size: 121, 92
+  orig: 127, 96
+  offset: 2, 2
+  index: -1
+ndj_bg
+  rotate: true
+  xy: 536, 170
+  size: 139, 62
+  orig: 140, 62
+  offset: 0, 0
+  index: -1
+ndj_db2
+  rotate: true
+  xy: 319, 307
+  size: 357, 155
+  orig: 357, 167
+  offset: 0, 3
+  index: -1
+ndj_ndj3
+  rotate: true
+  xy: 597, 433
+  size: 27, 28
+  orig: 27, 28
+  offset: 0, 0
+  index: -1
+ndj_ndj4
+  rotate: false
+  xy: 0, 123
+  size: 318, 541
+  orig: 321, 542
+  offset: 0, 0
+  index: -1
+ndj_ndjd3
+  rotate: true
+  xy: 0, 665
+  size: 375, 480
+  orig: 375, 482
+  offset: 0, 1
+  index: -1
+ndj_ndp
+  rotate: true
+  xy: 481, 896
+  size: 144, 145
+  orig: 145, 162
+  offset: 1, 0
+  index: -1
+ndj_ndr
+  rotate: true
+  xy: 481, 751
+  size: 144, 145
+  orig: 145, 163
+  offset: 1, 0
+  index: -1
+ndj_ndy
+  rotate: false
+  xy: 475, 461
+  size: 144, 144
+  orig: 145, 147
+  offset: 0, 0
+  index: -1
+ndj_ndy3
+  rotate: true
+  xy: 481, 606
+  size: 144, 145
+  orig: 145, 162
+  offset: 1, 6
+  index: -1

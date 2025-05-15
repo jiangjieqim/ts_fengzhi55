@@ -1,0 +1,132 @@
+
+car2.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+baoxing
+  rotate: false
+  xy: 355, 135
+  size: 119, 75
+  orig: 119, 75
+  offset: 0, 0
+  index: -1
+baoxinggu
+  rotate: false
+  xy: 363, 210
+  size: 119, 75
+  orig: 119, 75
+  offset: 0, 0
+  index: -1
+chelun
+  rotate: false
+  xy: 0, 347
+  size: 250, 159
+  orig: 250, 159
+  offset: 0, 0
+  index: -1
+chui
+  rotate: false
+  xy: 128, 97
+  size: 84, 76
+  orig: 84, 76
+  offset: 0, 0
+  index: -1
+dian
+  rotate: false
+  xy: 128, 33
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+glow02
+  rotate: false
+  xy: 428, 0
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+gold
+  rotate: false
+  xy: 192, 6
+  size: 119, 58
+  orig: 119, 58
+  offset: 0, 0
+  index: -1
+huoxiang
+  rotate: false
+  xy: 250, 360
+  size: 168, 146
+  orig: 168, 146
+  offset: 0, 0
+  index: -1
+huoxiangc
+  rotate: false
+  xy: 0, 173
+  size: 212, 174
+  orig: 212, 174
+  offset: 0, 0
+  index: -1
+ma
+  rotate: false
+  xy: 418, 386
+  size: 90, 120
+  orig: 90, 120
+  offset: 0, 0
+  index: -1
+mcfysp
+  rotate: false
+  xy: 212, 213
+  size: 151, 72
+  orig: 151, 72
+  offset: 0, 0
+  index: -1
+mchy
+  rotate: false
+  xy: 344, 64
+  size: 114, 71
+  orig: 114, 71
+  offset: 0, 0
+  index: -1
+mclc
+  rotate: false
+  xy: 212, 137
+  size: 143, 76
+  orig: 143, 76
+  offset: 0, 0
+  index: -1
+mcly
+  rotate: false
+  xy: 250, 285
+  size: 152, 75
+  orig: 152, 75
+  offset: 0, 0
+  index: -1
+mcsjg
+  rotate: false
+  xy: 212, 64
+  size: 132, 73
+  orig: 132, 73
+  offset: 0, 0
+  index: -1
+mcyl
+  rotate: false
+  xy: 311, 2
+  size: 117, 62
+  orig: 117, 62
+  offset: 0, 0
+  index: -1
+smoke_03
+  rotate: false
+  xy: 418, 322
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+smoke_21
+  rotate: false
+  xy: 0, 45
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1

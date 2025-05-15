@@ -1,0 +1,13 @@
+
+uief1.png
+size: 100,100
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef_a1
+  rotate: false
+  xy: 0, 0
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1

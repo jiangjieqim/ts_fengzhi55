@@ -1,0 +1,27 @@
+
+pet15.png
+size: 136,80
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 97, 35
+  size: 39, 44
+  orig: 48, 58
+  offset: 5, 13
+  index: -1
+head
+  rotate: true
+  xy: 0, 0
+  size: 79, 70
+  orig: 100, 100
+  offset: 17, 13
+  index: -1
+ying
+  rotate: true
+  xy: 71, 3
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

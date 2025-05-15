@@ -1,0 +1,90 @@
+
+herotest.png
+size: 464,176
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 398, 24
+  size: 36, 36
+  orig: 36, 36
+  offset: 0, 0
+  index: -1
+daoguang
+  rotate: false
+  xy: 132, 23
+  size: 90, 153
+  orig: 90, 153
+  offset: 0, 0
+  index: -1
+foot
+  rotate: false
+  xy: 398, 6
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 0, 44
+  size: 132, 132
+  orig: 132, 132
+  offset: 0, 0
+  index: -1
+hit1
+  rotate: false
+  xy: 316, 93
+  size: 77, 83
+  orig: 77, 83
+  offset: 0, 0
+  index: -1
+shield
+  rotate: false
+  xy: 222, 0
+  size: 88, 88
+  orig: 88, 88
+  offset: 0, 0
+  index: -1
+tea
+  rotate: false
+  xy: 110, 24
+  size: 22, 20
+  orig: 22, 20
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 310, 0
+  size: 88, 88
+  orig: 88, 88
+  offset: 0, 0
+  index: -1
+wing
+  rotate: false
+  xy: 222, 88
+  size: 94, 88
+  orig: 94, 88
+  offset: 0, 0
+  index: -1
+woodman
+  rotate: false
+  xy: 398, 60
+  size: 63, 116
+  orig: 63, 116
+  offset: 0, 0
+  index: -1
+xinxin
+  rotate: false
+  xy: 78, 12
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+ying
+  rotate: false
+  xy: 0, 15
+  size: 78, 29
+  orig: 78, 29
+  offset: 0, 0
+  index: -1

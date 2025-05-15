@@ -1,0 +1,160 @@
+
+pet51.png
+size: 168,956
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+aarm
+  rotate: false
+  xy: 107, 555
+  size: 57, 55
+  orig: 59, 57
+  offset: 1, 1
+  index: -1
+aarmor1
+  rotate: false
+  xy: 91, 46
+  size: 70, 109
+  orig: 72, 111
+  offset: 1, 1
+  index: -1
+aarmor2
+  rotate: true
+  xy: 115, 611
+  size: 48, 52
+  orig: 51, 54
+  offset: 1, 1
+  index: -1
+ahand
+  rotate: false
+  xy: 101, 357
+  size: 62, 90
+  orig: 64, 92
+  offset: 1, 1
+  index: -1
+back
+  rotate: false
+  xy: 0, 718
+  size: 126, 126
+  orig: 128, 128
+  offset: 1, 1
+  index: -1
+barm
+  rotate: false
+  xy: 81, 657
+  size: 33, 60
+  orig: 35, 62
+  offset: 1, 1
+  index: -1
+barmor1
+  rotate: false
+  xy: 127, 735
+  size: 38, 109
+  orig: 40, 111
+  offset: 1, 1
+  index: -1
+barmor2
+  rotate: true
+  xy: 99, 156
+  size: 30, 37
+  orig: 34, 39
+  offset: 2, 1
+  index: -1
+bhand
+  rotate: false
+  xy: 101, 280
+  size: 62, 76
+  orig: 65, 78
+  offset: 2, 1
+  index: -1
+bodya
+  rotate: true
+  xy: 0, 845
+  size: 111, 149
+  orig: 113, 151
+  offset: 1, 1
+  index: -1
+bodyb
+  rotate: false
+  xy: 101, 448
+  size: 65, 106
+  orig: 67, 108
+  offset: 1, 1
+  index: -1
+ef_a1
+  rotate: false
+  xy: 0, 89
+  size: 90, 90
+  orig: 100, 100
+  offset: 4, 2
+  index: -1
+ef_a2
+  rotate: false
+  xy: 0, 180
+  size: 98, 96
+  orig: 100, 100
+  offset: 1, 0
+  index: -1
+ef_a3
+  rotate: true
+  xy: 0, 0
+  size: 88, 89
+  orig: 100, 100
+  offset: 6, 3
+  index: -1
+ef_b1
+  rotate: false
+  xy: 0, 479
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+ef_b2
+  rotate: false
+  xy: 0, 378
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+ef_b3
+  rotate: false
+  xy: 0, 277
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+ef_c
+  rotate: false
+  xy: 101, 214
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 0, 580
+  size: 80, 137
+  orig: 83, 139
+  offset: 2, 1
+  index: -1
+pena
+  rotate: false
+  xy: 127, 660
+  size: 39, 74
+  orig: 41, 76
+  offset: 1, 1
+  index: -1
+penb
+  rotate: true
+  xy: 99, 187
+  size: 26, 68
+  orig: 28, 70
+  offset: 1, 1
+  index: -1
+ying
+  rotate: true
+  xy: 81, 580
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

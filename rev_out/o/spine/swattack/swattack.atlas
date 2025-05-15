@@ -1,0 +1,34 @@
+
+swattack.png
+size: 212,308
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sw1
+  rotate: false
+  xy: 88, 136
+  size: 114, 115
+  orig: 114, 115
+  offset: 0, 0
+  index: -1
+sw2
+  rotate: false
+  xy: 0, 251
+  size: 212, 54
+  orig: 212, 54
+  offset: 0, 0
+  index: -1
+sw3
+  rotate: false
+  xy: 0, 0
+  size: 209, 136
+  orig: 209, 136
+  offset: 0, 0
+  index: -1
+swicon
+  rotate: false
+  xy: 0, 163
+  size: 88, 88
+  orig: 88, 88
+  offset: 0, 0
+  index: -1

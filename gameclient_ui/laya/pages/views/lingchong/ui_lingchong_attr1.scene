@@ -1,0 +1,54 @@
+{
+    "x":0,
+    "type":"View",
+    "selectedBox":2,
+    "selecteID":4,
+    "searchKey":"View",
+    "props":{"width":238,"sceneColor":"#000000","height":30},
+    "nodeParent":-1,
+    "maxID":5,
+    "label":"View",
+    "isOpen":true,
+    "isDirectory":true,
+    "isAniNode":true,
+    "hasChild":true,
+    "compId":2,
+    "child":[
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label,nameTf",
+            "props":{"width":60,"var":"nameTf","text":"速度","strokeColor":" #A35E1A","stroke":1,"fontSize":26,"font":"BOLD","color":"#F9F0BB","centerY":0,"align":"left"},
+            "nodeParent":2,
+            "label":"nameTf",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":3,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label,valTf",
+            "props":{"width":123,"var":"valTf","text":"速度","strokeColor":" #A35E1A","stroke":1,"right":0,"fontSize":26,"font":"BOLD","color":"#F9F0BB","centerY":0,"align":"right"},
+            "nodeParent":2,
+            "label":"valTf",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":4,
+            "child":[
+                ]
+        }],
+    "animations":[
+        {
+            "nodes":[
+                ],
+            "name":"ani1",
+            "id":1,
+            "frameRate":24,
+            "action":0
+        }]
+}

@@ -1,0 +1,97 @@
+
+box.png
+size: 836,472
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bx_a
+  rotate: false
+  xy: 0, 1
+  size: 338, 217
+  orig: 347, 222
+  offset: 6, 2
+  index: -1
+bx_b
+  rotate: false
+  xy: 0, 219
+  size: 370, 250
+  orig: 376, 254
+  offset: 3, 2
+  index: -1
+bx_c
+  rotate: false
+  xy: 371, 239
+  size: 361, 230
+  orig: 365, 235
+  offset: 2, 3
+  index: -1
+dian
+  rotate: false
+  xy: 771, 280
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+glow01
+  rotate: false
+  xy: 733, 253
+  size: 37, 91
+  orig: 43, 100
+  offset: 4, 5
+  index: -1
+glow03
+  rotate: false
+  xy: 664, 1
+  size: 58, 59
+  orig: 64, 64
+  offset: 3, 2
+  index: -1
+glow11
+  rotate: false
+  xy: 371, 6
+  size: 232, 232
+  orig: 232, 232
+  offset: 0, 0
+  index: -1
+glow_04
+  rotate: false
+  xy: 604, 0
+  size: 59, 60
+  orig: 64, 64
+  offset: 3, 3
+  index: -1
+glow_fk
+  rotate: false
+  xy: 771, 250
+  size: 29, 29
+  orig: 32, 32
+  offset: 2, 2
+  index: -1
+glow_sj
+  rotate: false
+  xy: 801, 251
+  size: 32, 28
+  orig: 32, 32
+  offset: 0, 1
+  index: -1
+guang1
+  rotate: false
+  xy: 604, 61
+  size: 225, 177
+  orig: 232, 195
+  offset: 0, 9
+  index: -1
+guang2
+  rotate: false
+  xy: 733, 345
+  size: 83, 27
+  orig: 89, 33
+  offset: 3, 4
+  index: -1
+halo
+  rotate: false
+  xy: 733, 373
+  size: 96, 96
+  orig: 100, 100
+  offset: 2, 2
+  index: -1

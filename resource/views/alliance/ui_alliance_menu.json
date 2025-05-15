@@ -1,0 +1,1 @@
+{"type":"View","props":{"y":0,"width":170,"height":230,"centerX":0},"compId":2,"child":[{"type":"Image","props":{"y":0,"x":0,"width":170,"var":"paimngBg","skin":"remote/jjc/dfjjc_xs.png","sizeGrid":"17,13,20,16","scaleY":1,"scaleX":1,"height":227,"anchorY":0,"anchorX":0},"compId":15}],"loadList":["remote/jjc/dfjjc_xs.png"],"loadList3D":[]}

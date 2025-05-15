@@ -1,0 +1,27 @@
+
+up.png
+size: 448,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+denjitisheng
+  rotate: false
+  xy: 0, 123
+  size: 337, 133
+  orig: 337, 133
+  offset: 0, 0
+  index: -1
+dian
+  rotate: false
+  xy: 0, 59
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+glow12
+  rotate: false
+  xy: 337, 0
+  size: 109, 256
+  orig: 109, 256
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,41 @@
+
+gym.png
+size: 180,148
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow11
+  rotate: false
+  xy: 0, 0
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+glow12
+  rotate: false
+  xy: 0, 32
+  size: 116, 116
+  orig: 116, 116
+  offset: 0, 0
+  index: -1
+glow_07
+  rotate: false
+  xy: 116, 84
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+ray_10
+  rotate: false
+  xy: 116, 20
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+smoke_01
+  rotate: false
+  xy: 32, 0
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

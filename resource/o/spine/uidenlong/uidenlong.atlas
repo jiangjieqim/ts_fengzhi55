@@ -1,0 +1,20 @@
+
+uidenlong.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+denglong
+  rotate: false
+  xy: 2, 2
+  size: 215, 211
+  orig: 226, 217
+  offset: 6, 6
+  index: -1
+denglong2
+  rotate: false
+  xy: 219, 151
+  size: 23, 62
+  orig: 23, 62
+  offset: 0, 0
+  index: -1

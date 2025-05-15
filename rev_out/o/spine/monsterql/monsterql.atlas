@@ -1,0 +1,244 @@
+
+monsterql.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 535, 113
+  size: 28, 28
+  orig: 36, 36
+  offset: 5, 3
+  index: -1
+ef_d1
+  rotate: true
+  xy: 286, 156
+  size: 98, 85
+  orig: 100, 86
+  offset: 2, 0
+  index: -1
+ef_d2
+  rotate: false
+  xy: 119, 50
+  size: 80, 83
+  orig: 100, 86
+  offset: 20, 0
+  index: -1
+ef_d3
+  rotate: false
+  xy: 373, 175
+  size: 55, 79
+  orig: 100, 86
+  offset: 45, 1
+  index: -1
+ef_d4
+  rotate: false
+  xy: 74, 2
+  size: 35, 45
+  orig: 100, 86
+  offset: 64, 1
+  index: -1
+ef_huo1
+  rotate: false
+  xy: 490, 197
+  size: 38, 57
+  orig: 80, 90
+  offset: 23, 3
+  index: -1
+ef_huo10
+  rotate: true
+  xy: 254, 2
+  size: 47, 64
+  orig: 80, 90
+  offset: 11, 4
+  index: -1
+ef_huo11
+  rotate: true
+  xy: 443, 2
+  size: 52, 64
+  orig: 80, 90
+  offset: 9, 4
+  index: -1
+ef_huo12
+  rotate: false
+  xy: 504, 143
+  size: 38, 52
+  orig: 80, 90
+  offset: 24, 4
+  index: -1
+ef_huo13
+  rotate: true
+  xy: 374, 54
+  size: 40, 56
+  orig: 80, 90
+  offset: 22, 3
+  index: -1
+ef_huo2
+  rotate: true
+  xy: 378, 13
+  size: 39, 63
+  orig: 80, 90
+  offset: 21, 3
+  index: -1
+ef_huo3
+  rotate: true
+  xy: 2, 2
+  size: 42, 70
+  orig: 80, 90
+  offset: 18, 3
+  index: -1
+ef_huo4
+  rotate: true
+  xy: 111, 3
+  size: 44, 76
+  orig: 80, 90
+  offset: 18, 3
+  index: -1
+ef_huo5
+  rotate: false
+  xy: 374, 96
+  size: 41, 77
+  orig: 80, 90
+  offset: 22, 4
+  index: -1
+ef_huo6
+  rotate: false
+  xy: 332, 74
+  size: 40, 80
+  orig: 80, 90
+  offset: 22, 4
+  index: -1
+ef_huo7
+  rotate: true
+  xy: 320, 8
+  size: 42, 56
+  orig: 80, 90
+  offset: 21, 3
+  index: -1
+ef_huo8
+  rotate: true
+  xy: 492, 60
+  size: 38, 60
+  orig: 80, 90
+  offset: 19, 4
+  index: -1
+ef_huo9
+  rotate: true
+  xy: 189, 6
+  size: 42, 63
+  orig: 80, 90
+  offset: 14, 4
+  index: -1
+foot
+  rotate: true
+  xy: 286, 144
+  size: 10, 14
+  orig: 18, 18
+  offset: 4, 2
+  index: -1
+handr
+  rotate: true
+  xy: 444, 99
+  size: 23, 22
+  orig: 36, 36
+  offset: 7, 9
+  index: -1
+hbody
+  rotate: true
+  xy: 272, 52
+  size: 87, 58
+  orig: 114, 91
+  offset: 8, 22
+  index: -1
+hchest
+  rotate: true
+  xy: 444, 124
+  size: 62, 58
+  orig: 79, 84
+  offset: 11, 22
+  index: -1
+head
+  rotate: false
+  xy: 201, 51
+  size: 69, 88
+  orig: 132, 132
+  offset: 33, 23
+  index: -1
+hhead
+  rotate: false
+  xy: 199, 141
+  size: 85, 113
+  orig: 114, 158
+  offset: 26, 38
+  index: -1
+hlarm
+  rotate: true
+  xy: 45, 49
+  size: 48, 72
+  orig: 77, 93
+  offset: 20, 12
+  index: -1
+hlfoot
+  rotate: true
+  xy: 468, 100
+  size: 22, 30
+  orig: 43, 66
+  offset: 10, 18
+  index: -1
+hlhand
+  rotate: true
+  xy: 430, 188
+  size: 66, 58
+  orig: 86, 69
+  offset: 11, 5
+  index: -1
+hlleg
+  rotate: false
+  xy: 509, 2
+  size: 56, 56
+  orig: 81, 89
+  offset: 16, 18
+  index: -1
+hneck
+  rotate: true
+  xy: 432, 56
+  size: 39, 58
+  orig: 59, 70
+  offset: 11, 7
+  index: -1
+horseying
+  rotate: true
+  xy: 109, 135
+  size: 119, 88
+  orig: 120, 88
+  offset: 0, 0
+  index: -1
+htail
+  rotate: true
+  xy: 45, 99
+  size: 155, 62
+  orig: 155, 62
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 2, 46
+  size: 41, 208
+  orig: 57, 222
+  offset: 8, 5
+  index: -1
+xinxin
+  rotate: false
+  xy: 504, 112
+  size: 29, 29
+  orig: 32, 32
+  offset: 1, 2
+  index: -1
+ying
+  rotate: true
+  xy: 417, 97
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

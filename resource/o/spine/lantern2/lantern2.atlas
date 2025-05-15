@@ -1,0 +1,55 @@
+
+lantern2.png
+size: 160,300
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow02
+  rotate: false
+  xy: 0, 10
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+glow14
+  rotate: false
+  xy: 0, 74
+  size: 93, 93
+  orig: 93, 93
+  offset: 0, 0
+  index: -1
+glow_04
+  rotate: false
+  xy: 93, 128
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+smoke_01
+  rotate: false
+  xy: 93, 64
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+smoke_03
+  rotate: false
+  xy: 64, 0
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+td
+  rotate: false
+  xy: 89, 192
+  size: 64, 107
+  orig: 64, 107
+  offset: 0, 0
+  index: -1
+tdwfg
+  rotate: false
+  xy: 0, 167
+  size: 89, 132
+  orig: 89, 132
+  offset: 0, 0
+  index: -1

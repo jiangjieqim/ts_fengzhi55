@@ -1,0 +1,76 @@
+
+cardxiyou6.png
+size: 256,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dian
+  rotate: false
+  xy: 177, 291
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+ef_halo
+  rotate: true
+  xy: 134, 177
+  size: 94, 93
+  orig: 100, 101
+  offset: 3, 4
+  index: -1
+ef_halo2
+  rotate: false
+  xy: 134, 93
+  size: 84, 83
+  orig: 100, 100
+  offset: 8, 8
+  index: -1
+ef_quan1
+  rotate: false
+  xy: 177, 422
+  size: 71, 71
+  orig: 71, 71
+  offset: 0, 0
+  index: -1
+ef_quan2
+  rotate: false
+  xy: 177, 356
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+glow03
+  rotate: false
+  xy: 97, 33
+  size: 58, 59
+  orig: 64, 64
+  offset: 3, 2
+  index: -1
+halo
+  rotate: false
+  xy: 0, 0
+  size: 96, 96
+  orig: 100, 100
+  offset: 2, 2
+  index: -1
+kef
+  rotate: false
+  xy: 0, 272
+  size: 176, 221
+  orig: 212, 253
+  offset: 18, 16
+  index: -1
+kef2
+  rotate: false
+  xy: 97, 6
+  size: 30, 26
+  orig: 30, 30
+  offset: 0, 2
+  index: -1
+ocard05
+  rotate: false
+  xy: 0, 97
+  size: 133, 174
+  orig: 215, 219
+  offset: 48, 21
+  index: -1

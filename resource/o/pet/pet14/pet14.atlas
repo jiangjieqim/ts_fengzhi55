@@ -1,0 +1,62 @@
+
+pet14.png
+size: 220,144
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ahand
+  rotate: false
+  xy: 139, 60
+  size: 70, 83
+  orig: 78, 108
+  offset: 6, 23
+  index: -1
+bhand
+  rotate: true
+  xy: 139, 0
+  size: 59, 79
+  orig: 71, 128
+  offset: 9, 47
+  index: -1
+bodya
+  rotate: false
+  xy: 0, 26
+  size: 138, 117
+  orig: 169, 187
+  offset: 27, 60
+  index: -1
+eye1
+  rotate: true
+  xy: 115, 2
+  size: 23, 11
+  orig: 43, 17
+  offset: 10, 3
+  index: -1
+eye2
+  rotate: true
+  xy: 127, 2
+  size: 23, 8
+  orig: 43, 17
+  offset: 10, 4
+  index: -1
+eye3
+  rotate: false
+  xy: 77, 4
+  size: 23, 5
+  orig: 43, 17
+  offset: 10, 6
+  index: -1
+eye4
+  rotate: false
+  xy: 77, 10
+  size: 37, 15
+  orig: 43, 17
+  offset: 3, 1
+  index: -1
+ying
+  rotate: false
+  xy: 0, 0
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

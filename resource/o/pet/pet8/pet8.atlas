@@ -1,0 +1,62 @@
+
+pet8.png
+size: 120,192
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ahand
+  rotate: true
+  xy: 0, 0
+  size: 59, 70
+  orig: 64, 92
+  offset: 3, 11
+  index: -1
+bhand
+  rotate: false
+  xy: 71, 3
+  size: 48, 56
+  orig: 65, 78
+  offset: 8, 13
+  index: -1
+bodya
+  rotate: false
+  xy: 0, 86
+  size: 107, 104
+  orig: 123, 161
+  offset: 8, 52
+  index: -1
+eye1
+  rotate: true
+  xy: 108, 167
+  size: 23, 11
+  orig: 43, 17
+  offset: 10, 3
+  index: -1
+eye2
+  rotate: true
+  xy: 108, 143
+  size: 23, 8
+  orig: 43, 17
+  offset: 10, 4
+  index: -1
+eye3
+  rotate: true
+  xy: 108, 119
+  size: 23, 5
+  orig: 43, 17
+  offset: 10, 6
+  index: -1
+eye4
+  rotate: false
+  xy: 77, 70
+  size: 37, 15
+  orig: 43, 17
+  offset: 3, 1
+  index: -1
+ying
+  rotate: false
+  xy: 0, 60
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

@@ -1,0 +1,463 @@
+{
+    "protoid": 3067,
+    "fightVo": {
+        "owner": 1,
+        "ownerpos": 6,
+        "itemList": [
+            {
+                "type": 9,
+                "val": 1,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": []
+            },
+            {
+                "type": 8,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 6,
+                        "val": 12
+                    }
+                ]
+            },
+            {
+                "type": 3,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 6,
+                        "val": 0
+                    }
+                ]
+            },
+            {
+                "type": 5,
+                "val": 1,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 12,
+                        "val": 0
+                    }
+                ]
+            },
+            {
+                "type": 6,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 12,
+                        "val": 436018
+                    }
+                ]
+            },
+            {
+                "type": 1,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 12,
+                        "val": 0
+                    }
+                ]
+            },
+            {
+                "type": 12,
+                "val": 2,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 12,
+                        "val": 0
+                    }
+                ]
+            },
+            {
+                "type": 5,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 6,
+                        "val": 0
+                    }
+                ]
+            },
+            {
+                "type": 6,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 6,
+                        "val": 158153
+                    }
+                ]
+            },
+            {
+                "type": 8,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 6,
+                        "val": 6
+                    }
+                ]
+            },
+            {
+                "type": 8,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 12,
+                        "val": 6
+                    }
+                ]
+            },
+            {
+                "type": 1,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 12,
+                        "val": 0
+                    }
+                ]
+            },
+            {
+                "type": 5,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 6,
+                        "val": 0
+                    }
+                ]
+            },
+            {
+                "type": 6,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 6,
+                        "val": 164743
+                    }
+                ]
+            },
+            {
+                "type": 8,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 12,
+                        "val": 12
+                    }
+                ]
+            },
+            {
+                "type": 9,
+                "val": 2,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": []
+            },
+            {
+                "type": 8,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 12,
+                        "val": 6
+                    }
+                ]
+            },
+            {
+                "type": 1,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 12,
+                        "val": 0
+                    }
+                ]
+            },
+            {
+                "type": 5,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 6,
+                        "val": 0
+                    }
+                ]
+            },
+            {
+                "type": 6,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 6,
+                        "val": 169685
+                    }
+                ]
+            },
+            {
+                "type": 8,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 12,
+                        "val": 12
+                    }
+                ]
+            },
+            {
+                "type": 8,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 6,
+                        "val": 12
+                    }
+                ]
+            },
+            {
+                "type": 1,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 6,
+                        "val": 0
+                    }
+                ]
+            },
+            {
+                "type": 5,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 12,
+                        "val": 0
+                    }
+                ]
+            },
+            {
+                "type": 6,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 12,
+                        "val": 197910
+                    }
+                ]
+            },
+            {
+                "type": 20,
+                "val": 860,
+                "skillId": 860,
+                "pos": 12,
+                "targetList": []
+            },
+            {
+                "type": 14,
+                "val": 0,
+                "skillId": 860,
+                "pos": 12,
+                "targetList": [
+                    {
+                        "target": 12,
+                        "val": 57125
+                    }
+                ]
+            },
+            {
+                "type": 8,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 6,
+                        "val": 6
+                    }
+                ]
+            },
+            {
+                "type": 9,
+                "val": 3,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": []
+            },
+            {
+                "type": 8,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 12,
+                        "val": 6
+                    }
+                ]
+            },
+            {
+                "type": 3,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 12,
+                        "val": 0
+                    }
+                ]
+            },
+            {
+                "type": 5,
+                "val": 1,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 6,
+                        "val": 0
+                    }
+                ]
+            },
+            {
+                "type": 6,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 6,
+                        "val": 374771
+                    }
+                ]
+            },
+            {
+                "type": 10,
+                "val": 0,
+                "skillId": 0,
+                "pos": 0,
+                "targetList": [
+                    {
+                        "target": 6,
+                        "val": 0
+                    }
+                ]
+            }
+        ],
+        "logList": [
+            {
+                "skillId": 860,
+                "pos": 12,
+                "round": 2,
+                "type": 1,
+                "attrId": 10028,
+                "oldVal": 0,
+                "newVal": 1000,
+                "addType": 1
+            },
+            {
+                "skillId": 860,
+                "pos": 12,
+                "round": 3,
+                "type": 1,
+                "attrId": 10028,
+                "oldVal": 0,
+                "newVal": 1000,
+                "addType": 1
+            }
+        ],
+        "rewardList": [],
+        "roleList": [
+            {
+                "skin": {
+                    "f_HeadID": 0,
+                    "f_WeaponID": 0,
+                    "f_ShieldID": 0,
+                    "f_WingID": 7,
+                    "f_MountID": 4,
+                    "f_BodyID": 0
+                },
+                "blood": 560046,
+                "plus": 1725755,
+                "pos": 12
+            },
+            {
+                "skin": {
+                    "f_HeadID": 0,
+                    "f_WeaponID": 0,
+                    "f_ShieldID": 0,
+                    "f_WingID": 0,
+                    "f_MountID": 0,
+                    "f_BodyID": 0
+                },
+                "blood": 746855,
+                "plus": 2399519,
+                "pos": 6
+            }
+        ],
+        "petList": []
+    },
+    "enemyInfo": {
+        "id": 0,
+        "headUrl": "",
+        "name": "",
+        "lv": 0,
+        "plus": 0,
+        "rank": 0,
+        "accountId": 0,
+        "titleId": 0
+    },
+    "type": 0,
+    "win": 0,
+    "upval": 0,
+    "downval": 0
+}

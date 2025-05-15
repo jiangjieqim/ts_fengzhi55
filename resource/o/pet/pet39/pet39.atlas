@@ -1,0 +1,83 @@
+
+pet39.png
+size: 308,276
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+aarm
+  rotate: true
+  xy: 123, 9
+  size: 55, 60
+  orig: 63, 67
+  offset: 2, 2
+  index: -1
+ahand
+  rotate: false
+  xy: 237, 176
+  size: 70, 98
+  orig: 80, 114
+  offset: 7, 13
+  index: -1
+barm
+  rotate: false
+  xy: 97, 99
+  size: 30, 60
+  orig: 35, 62
+  offset: 3, 0
+  index: -1
+bhand
+  rotate: true
+  xy: 219, 6
+  size: 59, 86
+  orig: 71, 98
+  offset: 3, 7
+  index: -1
+bodya
+  rotate: true
+  xy: 133, 156
+  size: 118, 103
+  orig: 135, 167
+  offset: 4, 60
+  index: -1
+bodyb
+  rotate: false
+  xy: 0, 0
+  size: 73, 60
+  orig: 85, 108
+  offset: 9, 45
+  index: -1
+ef_a1
+  rotate: false
+  xy: 128, 65
+  size: 90, 90
+  orig: 100, 100
+  offset: 4, 2
+  index: -1
+ef_a2
+  rotate: true
+  xy: 0, 61
+  size: 98, 96
+  orig: 100, 100
+  offset: 1, 0
+  index: -1
+ef_a3
+  rotate: false
+  xy: 219, 66
+  size: 88, 89
+  orig: 100, 100
+  offset: 6, 3
+  index: -1
+head
+  rotate: true
+  xy: 0, 160
+  size: 114, 132
+  orig: 121, 145
+  offset: 5, 9
+  index: -1
+ying
+  rotate: true
+  xy: 97, 22
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

@@ -1,0 +1,48 @@
+
+gxjq.png
+size: 268,180
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef_2
+  rotate: false
+  xy: 0, 60
+  size: 116, 117
+  orig: 120, 118
+  offset: 2, 1
+  index: -1
+glow03
+  rotate: false
+  xy: 0, 0
+  size: 58, 59
+  orig: 64, 64
+  offset: 3, 2
+  index: -1
+z01
+  rotate: false
+  xy: 117, 100
+  size: 75, 77
+  orig: 82, 86
+  offset: 3, 5
+  index: -1
+z02
+  rotate: false
+  xy: 192, 20
+  size: 72, 79
+  orig: 82, 85
+  offset: 5, 3
+  index: -1
+z03
+  rotate: false
+  xy: 117, 21
+  size: 74, 78
+  orig: 81, 86
+  offset: 3, 4
+  index: -1
+z04
+  rotate: false
+  xy: 193, 101
+  size: 72, 76
+  orig: 80, 85
+  offset: 4, 5
+  index: -1

@@ -1,0 +1,97 @@
+
+pet25.png
+size: 584,96
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 0, 4
+  size: 92, 114
+  orig: 138, 158
+  offset: 17, 20
+  index: -1
+ef_a1
+  rotate: false
+  xy: 214, 6
+  size: 90, 90
+  orig: 100, 100
+  offset: 4, 2
+  index: -1
+ef_a2
+  rotate: false
+  xy: 115, 0
+  size: 98, 96
+  orig: 100, 100
+  offset: 1, 0
+  index: -1
+ef_a3
+  rotate: false
+  xy: 305, 7
+  size: 88, 89
+  orig: 100, 100
+  offset: 6, 3
+  index: -1
+eye
+  rotate: true
+  xy: 564, 65
+  size: 31, 19
+  orig: 49, 29
+  offset: 9, 5
+  index: -1
+eye2
+  rotate: true
+  xy: 564, 33
+  size: 31, 17
+  orig: 49, 29
+  offset: 9, 7
+  index: -1
+eye3
+  rotate: false
+  xy: 394, 2
+  size: 32, 7
+  orig: 49, 29
+  offset: 8, 10
+  index: -1
+eye4
+  rotate: false
+  xy: 538, 0
+  size: 42, 19
+  orig: 49, 29
+  offset: 4, 6
+  index: -1
+handa
+  rotate: false
+  xy: 481, 39
+  size: 44, 57
+  orig: 85, 96
+  offset: 14, 21
+  index: -1
+handb
+  rotate: true
+  xy: 481, 1
+  size: 37, 56
+  orig: 77, 97
+  offset: 22, 22
+  index: -1
+winga
+  rotate: false
+  xy: 394, 10
+  size: 53, 86
+  orig: 80, 109
+  offset: 13, 8
+  index: -1
+wingb
+  rotate: false
+  xy: 448, 7
+  size: 32, 89
+  orig: 43, 118
+  offset: 4, 7
+  index: -1
+ying
+  rotate: true
+  xy: 538, 20
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

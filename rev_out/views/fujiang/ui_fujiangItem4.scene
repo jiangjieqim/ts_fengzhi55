@@ -1,0 +1,1 @@
+{"type":"View","props":{"width":162,"height":168},"compId":2,"child":[{"type":"Sprite","props":{"y":0,"x":0,"var":"sp1","texture":"remote/fujiang/fj_vfx.png"},"compId":3},{"type":"Sprite","props":{"y":135,"x":72.5,"var":"sp"},"compId":4}],"loadList":["remote/fujiang/fj_vfx.png"],"loadList3D":[]}

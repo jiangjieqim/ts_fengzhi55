@@ -1,0 +1,1 @@
+{"type":"View","props":{"width":750,"height":880},"compId":2,"child":[{"type":"Sprite","props":{"y":443,"x":800,"width":16,"var":"role1","height":16},"compId":6},{"type":"Sprite","props":{"y":443,"x":150,"var":"role"},"compId":7},{"type":"Sprite","props":{"y":304,"x":86,"var":"pet"},"compId":8}],"loadList":[],"loadList3D":[]}

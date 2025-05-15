@@ -1,0 +1,243 @@
+{
+    "version": "0.2.0",
+    "configurations": [ 
+		{
+			// http://101.132.177.145:8001/Project1/Client/trunk/gameclient/bin/?debug=1&user=96991&skip=1&ver=v10001
+			// "name": "微信正式服",
+			"name": "dev",
+			"type": "chrome",
+			"request": "launch",
+			// &skip=1&sdk_platform=0&
+			"url":"http://127.0.0.1:8001/Project1/Client/ts_fengzhi55/gameclient/bin/index.html?debug=1&user=1&ver=dev",
+            "runtimeExecutable":"${env:userprofile}/AppData/Local/Google/Chrome/Application/chrome.exe",
+            "runtimeArgs": [
+				"--allow-file-access-from-files",
+				"--disable-web-security"
+			],
+			"sourceMaps": true,
+			"webRoot": "d:/",
+			"sourceMapPathOverrides": {
+				"src/*": "${workspaceRoot}/src/*"
+			}		
+		},
+        {
+			"name": "微信DEV服",
+			"type": "chrome",
+			"request": "launch",
+
+			// "url":"http://127.0.0.1:8001/Project1/Client/trunk/gameclient/bin/index.html?sy_url=https://dev-server.game.wanhuir.com/discount/&asset=http://127.0.0.1:8001/Project1/Client/trunk/resource/&user=o5Ota5XHl1Oj5sKVCaLuUdBanIFU&debug=1&sdk_platform=0&clienttype=0&platform=1&ver=v1_0_dicount_20240125&no_ta=1&proto_log=1&war3res=1",
+			"url":"http://127.0.0.1:8001/Project1/Client/trunk/gameclient/bin/index.html?sdk_platform=0&user=a3a878635bc4934a76fee780b710c5ac&ver=v1_0_2024_0306_1010",
+			// appid=tta085d6383fb5c61c02&
+			// http://101.132.177.145:8001/Project1/Client/trunk/gameclient/bin/?debug=1&user=96991&skip=1&ver=v10001
+
+
+            "runtimeExecutable":"${env:userprofile}/AppData/Local/Google/Chrome/Application/chrome.exe",
+            "runtimeArgs": [
+				"--allow-file-access-from-files",
+				"--disable-web-security"
+			],
+			"sourceMaps": true,
+			"webRoot": "d:/",
+			//假如谷歌调试报userDataDir不可用，请把谷歌安装路径取得管理员权限,或者更换${tmpdir}为其他可以读写的文件夹，也可以删除。
+			// "userDataDir": "${workspaceRoot}/.laya/chrome",
+			"sourceMapPathOverrides": {
+				"src/*": "${workspaceRoot}/src/*"
+			}		
+		},
+		{
+			// http://101.132.177.145:8001/Project1/Client/trunk/gameclient/bin/?user=2011102131777131&all_bin=http://101.132.177.145:8001/Project1/Client/ts_fengzhi39_D1/resource/all.bin&clienttype=1&sy_url=https://dev-server.game.wanhuir.com/discount&platform=3&sdk_platform=0&ver=v1_0_dicount_20240125&debug=1
+
+			"name": "0.1折 抖音DEV",
+			"type": "chrome",
+			"request": "launch",
+			// local_asset=1
+			"url":"http://127.0.0.1:8001/Project1/Client/trunk/gameclient/bin/index.html?all_bin=http://101.132.177.145:8001/Project1/Client/ts_fengzhi39_D1/resource/all.bin&sy_url=https://dev-server.game.wanhuir.com/discount&sdk_platform=0&clienttype=1&platform=3&sider=1&skip=1&no_ta=1&ver=v1_0_dicount_20240125&hidelabel=1&user=2011102131777131",
+			"runtimeExecutable":"${env:userprofile}/AppData/Local/Google/Chrome/Application/chrome.exe",
+            "runtimeArgs": [
+				"--allow-file-access-from-files",
+				"--disable-web-security"
+			],
+			"sourceMaps": true,
+			"webRoot": "d:/",
+			"sourceMapPathOverrides": {
+				"src/*": "${workspaceRoot}/src/*"
+			}
+		},
+		{ 
+			"name": "8U 0.1折扣测试服",
+			"type": "chrome",
+			"request": "launch",
+			"url": "http://127.0.0.1:8001/Project1/Client/trunk/gameclient/bin/index.html?all_bin=https://winserver.game.wanhuir.com//Project1/Client/ts_fengzhi39_D1/resource/all.bin&sy_url=https://dev-server.game.wanhuir.com/discount/&asset=http://127.0.0.1:8001/Project1/Client/trunk/resource/&user=1&debug=1&sdk_platform=0&clienttype=1&platform=4&proto_log=1&ver=v1_0_dicount_20240125",
+			"runtimeExecutable": "${env:userprofile}/AppData/Local/Google/Chrome/Application/chrome.exe",
+			"runtimeArgs": [
+				// "--allow-file-access-from-files",
+				// "--disable-web-security"
+			],
+			"sourceMaps": true,
+			"webRoot": "d:/",
+			"sourceMapPathOverrides": {
+				"src/*": "${workspaceRoot}/src/*"
+			}
+		},
+		{
+			"name": "魔兽0.1折",
+			"type": "chrome",
+			"request": "launch",
+			
+
+			//		"url":"http://127.0.0.1:8001/Project1/Client/trunk/gameclient/bin/index.html?all_bin=http://127.0.0.1:8001/Project1/Client/war3/resource/all.bin&sy_url=https://dev-server.game.wanhuir.com/discount/&asset=http://127.0.0.1:8001/Project1/Client/trunk/resource_war/&user=sss&sdk_platform=0&clienttype=1&platform=5&ver=v1_0_dicount_20240125&no_ta=1&maskhide=1=1&debug=1",
+			"url":"http://127.0.0.1:8001/Project1/Client/trunk/gameclient/bin/index.html?all_bin=https://winserver.game.wanhuir.com//Project1/Client/ts_fengzhi39_D1/resource/all.bin&sy_url=https://dev-server.game.wanhuir.com/discount/&asset=http://101.132.177.145:8001/Project1/Client/trunk/resource_war/&user=ss1&debug=1&sdk_platform=0&clienttype=1&platform=5&ver=v1_0_dicount_20240125&no_ta=1",
+
+			// http://101.132.177.145:8001/Project1/Client/trunk/gameclient/bin/index.html?all_bin=https://winserver.game.wanhuir.com//Project1/Client/ts_fengzhi39_D1/resource/all.bin&sy_url=https://dev-server.game.wanhuir.com/discount/&asset=http://101.132.177.145:8001/Project1/Client/trunk/resource_war/&user=ss1&debug=1&sdk_platform=0&clienttype=1&platform=5&ver=v1_0_dicount_20240125&no_ta=1
+
+
+			"runtimeExecutable": "${env:userprofile}/AppData/Local/Google/Chrome/Application/chrome.exe",
+			"runtimeArgs": [
+				"--allow-file-access-from-files",
+				"--disable-web-security"
+			],
+			"sourceMaps": true,
+			"webRoot": "d:/",
+			"sourceMapPathOverrides": {
+				"src/*": "${workspaceRoot}/src/*"
+			}
+		},
+	
+		
+		{ 
+			// dfc3402f9354b365aa6faf73eb480ac7
+			"name": "正式抖音0.1",
+			"type": "chrome",
+			"request": "launch",
+
+			// https://cdnserver.game.wanhuir.com/cbsg/fengzhi_45_douyin/rev_out/
+
+			// http://127.0.0.1:8001/Project1/Client/trunk/resource/
+
+			// https://cdnserver.game.wanhuir.com/cbsg/fengzhi_45_douyin/rev_out/
+
+			// &sider=1&skip=1
+
+			// all_bin=https://winserver.game.wanhuir.com//Project1/Client/ts_fengzhi39_D1/resource/all.bin
+			// https://winserver.game.wanhuir.com/Project1/Client/fengzhi_45_douyin/rev_out/
+			// &all_bin=http://127.0.0.1:8001/Project1/Client/ts_fengzhi39_D1/resource/all.bin
+
+			// https://winserver.game.wanhuir.com/Project1/Client/fengzhi_45_douyin/rev_out/
+
+			// "url":"http://127.0.0.1:8001/Project1/Client/trunk/gameclient/bin/index.html?sy_url=https://server.game.wanhuir.com/discount/&asset=http://127.0.0.1:8001/Project1/Client/trunk/resource/&sdk_platform=0&clienttype=1&platform=3&debug=1&user=632c5809a9d9449faa9b337af13bb1f9&proto_log=1&no_ta=1&appid=tta085d6383fb5c61c02&ver=v1_0_dicount_202401253&onIOS=1&ts=1",
+			"runtimeExecutable": "${env:userprofile}/AppData/Local/Google/Chrome/Application/chrome.exe",
+			
+			"url":"http://127.0.0.1:8001/Project1/Client/trunk/gameclient/bin/index.html?sy_url=https://server.game.wanhuir.com/discount/&asset=http://127.0.0.1:8001/Project1/Client/ts_fengzhi51_douyin/rev_out/&sdk_platform=0&clienttype=1&platform=3&debug=1&user=07ab464b27e1d0c0d40db771c99ebafa&proto_log=1&no_ta=1&appid=tta085d6383fb5c61c02",
+			// v1_0_20240226_13_59_dy
+			// 86e1a6ecbb91fe07003867b8e020bd65
+			
+			"runtimeArgs": [
+
+				"--allow-file-access-from-files",
+				"--disable-web-security"
+			],
+			"sourceMaps": true,
+			"webRoot": "d:/",
+			"sourceMapPathOverrides": {
+				"src/*": "${workspaceRoot}/src/*"
+			}
+		},
+
+		{ 
+
+			"name": "0.1折 盛也",
+			"type": "chrome",
+			"request": "launch",
+			"url":"http://127.0.0.1:8001/Project1/Client/ts_fengzhi55/gameclient/bin/index.html?all_bin=https://winserver.game.wanhuir.com//Project1/Client/ts_fengzhi55/rev_out/all.bin&sy_url=https://dev-server.game.wanhuir.com/discount/&asset=https://h5game.sg-discount.wanhuir.com/cbsg/shengye/rev_out/&sdk_platform=0&clienttype=1&platform=2&skip=1&debug=1&user=1&proto_log=1&no_ta=1&ver=v10001",
+            
+
+			// https://h5game.sg-discount.wanhuir.com/cbsg/shengye/rev_out/
+			// v1_0_dicount_20240125
+			
+			"runtimeExecutable":"${env:userprofile}/AppData/Local/Google/Chrome/Application/chrome.exe",
+            "runtimeArgs": [
+				"--allow-file-access-from-files",
+				"--disable-web-security"
+			],
+			"sourceMaps": true,
+			"webRoot": "d:/",
+			"sourceMapPathOverrides": {
+				"src/*": "${workspaceRoot}/src/*"
+			}		
+		},
+		// http://127.0.0.1:8001/project1/Client/fengzhi_45_douyin/rev_out/binb8/
+		{ 
+			"name": "8U正式服",
+			"type": "chrome",
+			"request": "launch",
+
+			//	appid=8355&openid=11228668&platform=1&ver=v1_0_dy_2024_2_2
+			// "url":"http://127.0.0.1:8001/Project1/Client/trunk/gameclient/bin/index.html?all_bin=https://winserver.game.wanhuir.com//Project1/Client/ts_fengzhi39_D1/resource/all.bin&sy_url=https://dev-server.game.wanhuir.com/discount/&asset=http://127.0.0.1:8001/Project1/Client/trunk/resource/&sdk_platform=0&clienttype=1&platform=2&skip=1&debug=1&user=1&proto_log=1&no_ta=1&ver=v1_0_dicount_20240125",
+            "url":"http://127.0.0.1:8001/project1/Client/fengzhi_45_douyin/rev_out/binb8/index.html?appid=8355&uid=11228668&ver=v1_0_dy_2024_2_2",
+			"runtimeExecutable":"${env:userprofile}/AppData/Local/Google/Chrome/Application/chrome.exe",
+            "runtimeArgs": [
+				"--allow-file-access-from-files",
+				"--disable-web-security"
+			],
+			"sourceMaps": true,
+			"webRoot": "d:/",
+			"sourceMapPathOverrides": {
+				"src/*": "${workspaceRoot}/src/*"
+			}		
+		},
+		{
+			"name": "0.1折美团",
+			"type": "chrome",
+			"request": "launch",		
+			// v1_0_dicount_20240125
+			// "url":"http://127.0.0.1:8001/Project1/Client/trunk/gameclient/bin/index.html?all_bin=https://winserver.game.wanhuir.com/Project1/Client/ts_fengzhi39_D1/resource/all.bin&sy_url=https://server.game.wanhuir.com/discount/&asset=http://127.0.0.1:8001/Project1/Client/trunk/resource/&sdk_platform=0&clienttype=1&platform=6&sider=1&skip=1&proto_log=1&no_ta=1&ver=v1_gray&debug=1&user=698a0d97c8d6414c984430a80110f930&debug=1&f_popType=2",
+			"url":"http://127.0.0.1:8001/Project1/Client/trunk/gameclient/bin/index.html?all_bin=https://winserver.game.wanhuir.com/Project1/Client/ts_fengzhi39_D1/resource/all.bin&sy_url=https://dev-server.game.wanhuir.com/discount/&sdk_platform=0&clienttype=1&platform=3&sider=1&skip=1&proto_log=1&no_ta=1&ver=v1_0_dicount_20240125&debug=1&user=999981&debug=1&f_popType=2",
+			
+			"runtimeExecutable":"${env:userprofile}/AppData/Local/Google/Chrome/Application/chrome.exe",
+            "runtimeArgs": [
+				"--allow-file-access-from-files",
+				"--disable-web-security"
+			],
+			"sourceMaps": true,
+			"webRoot": "d:/",
+			"sourceMapPathOverrides": {
+				"src/*": "${workspaceRoot}/src/*"
+			}	
+		},
+		{
+			"name": "微信0.1折扣服",
+			"type": "chrome",
+			"request": "launch",
+			"url":"http://127.0.0.1:8001/Project1/Client/trunk/gameclient/bin/index.html?user=o5Ota5UmGcJ0qblQEgH6RhLkwYUM&platform=1&sdk_platform=0&debug=1",
+			"runtimeArgs": [
+				"--allow-file-access-from-files",
+				"--disable-web-security"
+			],
+
+			// asset: "http://101.132.177.145:8001/Project1/Client/ts_fengzhi49/rev_out/",
+			// discount_all_bin: "http://101.132.177.145:8001/Project1/Client/ts_fengzhi51_douyin/rev_out/all.bin",
+		
+			// ttappid: "2e6e81d56eb54e15b8d16ea21b12049a",
+			// platform: 1,
+			// sy_url: "https://server.game.wanhuir.com",
+			// loglevel: 3,
+			// channel_key: "戳爆三国",
+			// // ver:"v1_0_main_44_20240201",
+			// //0.1折配置
+			// discount_ttappid: "76251604390e45f0a26ffe3b6a6dbbb9",
+			// discount_sy_url: "https://server.game.wanhuir.com/discount",
+			// discount_channel_key: "戳爆三国_折扣",
+			// ver:"v1_gray",
+
+		},
+		{
+			"name": "0.1折抖音扣服===>",
+			"type": "chrome",
+			"request": "launch",
+			"url":"http://127.0.0.1:8001/Project1/Client/trunk/gameclient/bin/index.html?all_bin=https://winserver.game.wanhuir.com/Project1/Client/ts_fengzhi39_D1/resource/all.bin&sy_url=https://dev-server.game.wanhuir.com/discount/&asset=http://101.132.177.145:8001/Project1/Client/trunk/resource/&clienttype=1&platform=3&sider=1&skip=1&proto_log=1&no_ta=1&ver=v1_0_dicount_20240125&user=wyn12&debug=1&sdk_platform=0",
+			// http://101.132.177.145:8001/Project1/Client/trunk/gameclient/bin/?
+		}
+	]
+
+
+}

@@ -1,0 +1,153 @@
+
+herozh.png
+size: 852,524
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+efa1
+  rotate: false
+  xy: 424, 166
+  size: 88, 76
+  orig: 170, 300
+  offset: 43, 114
+  index: -1
+efa2
+  rotate: false
+  xy: 684, 347
+  size: 168, 174
+  orig: 170, 300
+  offset: 0, 58
+  index: -1
+efa3
+  rotate: false
+  xy: 513, 285
+  size: 170, 236
+  orig: 170, 300
+  offset: 0, 31
+  index: -1
+efa4
+  rotate: false
+  xy: 342, 243
+  size: 170, 278
+  orig: 170, 300
+  offset: 0, 5
+  index: -1
+efa5
+  rotate: false
+  xy: 0, 221
+  size: 170, 300
+  orig: 170, 300
+  offset: 0, 0
+  index: -1
+efa6
+  rotate: false
+  xy: 171, 227
+  size: 170, 294
+  orig: 170, 300
+  offset: 0, 3
+  index: -1
+glow03
+  rotate: false
+  xy: 783, 8
+  size: 58, 59
+  orig: 64, 64
+  offset: 3, 2
+  index: -1
+glow_fk
+  rotate: false
+  xy: 196, 50
+  size: 29, 29
+  orig: 32, 32
+  offset: 2, 2
+  index: -1
+idle1
+  rotate: true
+  xy: 146, 80
+  size: 140, 138
+  orig: 160, 162
+  offset: 7, 13
+  index: -1
+idle2
+  rotate: false
+  xy: 684, 208
+  size: 144, 138
+  orig: 160, 162
+  offset: 6, 10
+  index: -1
+idle3
+  rotate: false
+  xy: 513, 147
+  size: 144, 137
+  orig: 160, 162
+  offset: 6, 12
+  index: -1
+idle4
+  rotate: false
+  xy: 658, 68
+  size: 143, 139
+  orig: 160, 162
+  offset: 6, 10
+  index: -1
+idle5
+  rotate: true
+  xy: 285, 82
+  size: 144, 138
+  orig: 160, 162
+  offset: 6, 11
+  index: -1
+idle6
+  rotate: false
+  xy: 0, 80
+  size: 145, 140
+  orig: 160, 162
+  offset: 6, 11
+  index: -1
+idle7
+  rotate: false
+  xy: 493, 7
+  size: 141, 139
+  orig: 160, 162
+  offset: 6, 13
+  index: -1
+z01
+  rotate: true
+  xy: 635, 0
+  size: 67, 73
+  orig: 82, 77
+  offset: 2, 2
+  index: -1
+z02
+  rotate: false
+  xy: 424, 92
+  size: 68, 73
+  orig: 93, 77
+  offset: 13, 2
+  index: -1
+z03
+  rotate: true
+  xy: 709, 1
+  size: 66, 73
+  orig: 92, 77
+  offset: 13, 2
+  index: -1
+z04
+  rotate: true
+  xy: 339, 11
+  size: 70, 71
+  orig: 82, 77
+  offset: 11, 2
+  index: -1
+zi01
+  rotate: false
+  xy: 0, 44
+  size: 195, 35
+  orig: 195, 35
+  offset: 0, 0
+  index: -1
+zi02
+  rotate: false
+  xy: 0, 11
+  size: 338, 32
+  orig: 338, 32
+  offset: 0, 0
+  index: -1

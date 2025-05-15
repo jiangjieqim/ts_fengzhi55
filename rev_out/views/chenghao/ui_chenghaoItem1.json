@@ -1,0 +1,1 @@
+{"type":"View","props":{"width":260,"height":32},"compId":2,"child":[{"type":"Label","props":{"y":3,"x":35,"var":"lab1","text":"已获得","fontSize":30,"font":"BOLD","color":"#AE6C39"},"compId":3},{"type":"Label","props":{"y":0,"x":142,"width":104,"var":"lab","text":"(4/41)","fontSize":32,"font":"BOLD","color":"#EB5F21","align":"center"},"compId":4}],"loadList":[],"loadList3D":[]}

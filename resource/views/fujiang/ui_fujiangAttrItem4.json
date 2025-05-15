@@ -1,0 +1,1 @@
+{"type":"View","props":{"width":450,"height":24},"compId":2,"child":[{"type":"Label","props":{"y":0,"x":0,"width":405,"var":"lab","text":"对前排敌人头部进行猛击，造成100%","strokeColor":"#7C430C","stroke":1,"fontSize":24,"font":"BOLD","color":"#F9F0BB","align":"left"},"compId":4}],"loadList":[],"loadList3D":[]}

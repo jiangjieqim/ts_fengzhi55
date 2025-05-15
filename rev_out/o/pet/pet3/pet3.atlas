@@ -1,0 +1,55 @@
+
+pet3.png
+size: 120,80
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 0, 5
+  size: 75, 62
+  orig: 89, 85
+  offset: 5, 5
+  index: -1
+eye1
+  rotate: true
+  xy: 101, 14
+  size: 15, 9
+  orig: 31, 15
+  offset: 8, 3
+  index: -1
+eye2
+  rotate: false
+  xy: 0, 0
+  size: 15, 4
+  orig: 31, 15
+  offset: 8, 5
+  index: -1
+eye3
+  rotate: false
+  xy: 101, 4
+  size: 15, 9
+  orig: 31, 15
+  offset: 6, 3
+  index: -1
+eye4
+  rotate: true
+  xy: 89, 1
+  size: 28, 11
+  orig: 31, 15
+  offset: 2, 2
+  index: -1
+tail
+  rotate: false
+  xy: 89, 30
+  size: 29, 50
+  orig: 40, 67
+  offset: 6, 8
+  index: -1
+ying
+  rotate: true
+  xy: 63, 4
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

@@ -1,0 +1,55 @@
+
+pet10.png
+size: 84,124
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 0, 55
+  size: 84, 67
+  orig: 89, 85
+  offset: 1, 5
+  index: -1
+eye1
+  rotate: true
+  xy: 77, 34
+  size: 20, 6
+  orig: 26, 10
+  offset: 3, 2
+  index: -1
+eye2
+  rotate: true
+  xy: 63, 8
+  size: 20, 4
+  orig: 26, 10
+  offset: 3, 3
+  index: -1
+eye3
+  rotate: true
+  xy: 77, 13
+  size: 20, 6
+  orig: 26, 10
+  offset: 3, 2
+  index: -1
+eye4
+  rotate: true
+  xy: 51, 0
+  size: 28, 11
+  orig: 31, 15
+  offset: 2, 2
+  index: -1
+tail
+  rotate: true
+  xy: 0, 2
+  size: 26, 50
+  orig: 40, 67
+  offset: 12, 8
+  index: -1
+ying
+  rotate: false
+  xy: 0, 29
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

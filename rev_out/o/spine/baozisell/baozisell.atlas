@@ -1,0 +1,272 @@
+
+baozisell.png
+size: 416,268
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+blank
+  rotate: false
+  xy: 280, 71
+  size: 22, 31
+  orig: 22, 31
+  offset: 0, 0
+  index: -1
+ef_bg
+  rotate: false
+  xy: 64, 1
+  size: 339, 63
+  orig: 339, 63
+  offset: 0, 0
+  index: -1
+ef_halo2
+  rotate: false
+  xy: 0, 64
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+glow03
+  rotate: false
+  xy: 0, 0
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+h+
+  rotate: false
+  xy: 256, 133
+  size: 24, 31
+  orig: 24, 31
+  offset: 0, 0
+  index: -1
+h0
+  rotate: false
+  xy: 370, 235
+  size: 24, 31
+  orig: 24, 31
+  offset: 0, 0
+  index: -1
+h1
+  rotate: false
+  xy: 381, 176
+  size: 15, 29
+  orig: 15, 29
+  offset: 0, 0
+  index: -1
+h2
+  rotate: false
+  xy: 348, 105
+  size: 22, 30
+  orig: 22, 30
+  offset: 0, 0
+  index: -1
+h3
+  rotate: false
+  xy: 302, 71
+  size: 22, 31
+  orig: 22, 31
+  offset: 0, 0
+  index: -1
+h4
+  rotate: false
+  xy: 348, 135
+  size: 24, 30
+  orig: 24, 30
+  offset: 0, 0
+  index: -1
+h5
+  rotate: false
+  xy: 394, 236
+  size: 21, 30
+  orig: 21, 30
+  offset: 0, 0
+  index: -1
+h6
+  rotate: false
+  xy: 304, 133
+  size: 22, 31
+  orig: 22, 31
+  offset: 0, 0
+  index: -1
+h7
+  rotate: false
+  xy: 370, 106
+  size: 23, 29
+  orig: 23, 29
+  offset: 0, 0
+  index: -1
+h8
+  rotate: false
+  xy: 304, 102
+  size: 22, 31
+  orig: 22, 31
+  offset: 0, 0
+  index: -1
+h9
+  rotate: false
+  xy: 324, 71
+  size: 22, 31
+  orig: 22, 31
+  offset: 0, 0
+  index: -1
+icon1
+  rotate: false
+  xy: 100, 114
+  size: 52, 50
+  orig: 52, 50
+  offset: 0, 0
+  index: -1
+icon2
+  rotate: false
+  xy: 100, 64
+  size: 52, 50
+  orig: 52, 50
+  offset: 0, 0
+  index: -1
+icon3
+  rotate: false
+  xy: 152, 114
+  size: 52, 50
+  orig: 52, 50
+  offset: 0, 0
+  index: -1
+icon4
+  rotate: false
+  xy: 152, 64
+  size: 52, 50
+  orig: 52, 50
+  offset: 0, 0
+  index: -1
+icon_12
+  rotate: false
+  xy: 280, 234
+  size: 90, 32
+  orig: 90, 32
+  offset: 0, 0
+  index: -1
+icon_13
+  rotate: false
+  xy: 242, 196
+  size: 134, 32
+  orig: 134, 32
+  offset: 0, 0
+  index: -1
+icon_3
+  rotate: false
+  xy: 242, 164
+  size: 93, 32
+  orig: 93, 32
+  offset: 0, 0
+  index: -1
+icon_jb
+  rotate: false
+  xy: 204, 114
+  size: 52, 50
+  orig: 52, 50
+  offset: 0, 0
+  index: -1
+icon_jp
+  rotate: false
+  xy: 204, 76
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+icon_jy
+  rotate: false
+  xy: 242, 76
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+icon_sp
+  rotate: false
+  xy: 242, 228
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+j+
+  rotate: false
+  xy: 280, 102
+  size: 24, 31
+  orig: 24, 31
+  offset: 0, 0
+  index: -1
+j0
+  rotate: false
+  xy: 280, 133
+  size: 24, 31
+  orig: 24, 31
+  offset: 0, 0
+  index: -1
+j1
+  rotate: false
+  xy: 389, 77
+  size: 15, 29
+  orig: 15, 29
+  offset: 0, 0
+  index: -1
+j2
+  rotate: false
+  xy: 376, 205
+  size: 22, 30
+  orig: 22, 30
+  offset: 0, 0
+  index: -1
+j3
+  rotate: false
+  xy: 326, 133
+  size: 22, 31
+  orig: 22, 31
+  offset: 0, 0
+  index: -1
+j4
+  rotate: false
+  xy: 357, 166
+  size: 24, 30
+  orig: 24, 30
+  offset: 0, 0
+  index: -1
+j5
+  rotate: false
+  xy: 368, 75
+  size: 21, 30
+  orig: 21, 30
+  offset: 0, 0
+  index: -1
+j6
+  rotate: false
+  xy: 326, 102
+  size: 22, 31
+  orig: 22, 31
+  offset: 0, 0
+  index: -1
+j7
+  rotate: false
+  xy: 372, 137
+  size: 23, 29
+  orig: 23, 29
+  offset: 0, 0
+  index: -1
+j8
+  rotate: false
+  xy: 335, 165
+  size: 22, 31
+  orig: 22, 31
+  offset: 0, 0
+  index: -1
+j9
+  rotate: false
+  xy: 346, 71
+  size: 22, 31
+  orig: 22, 31
+  offset: 0, 0
+  index: -1
+tuxi
+  rotate: false
+  xy: 0, 164
+  size: 242, 102
+  orig: 242, 102
+  offset: 0, 0
+  index: -1

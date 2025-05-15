@@ -1,0 +1,1 @@
+{"type":"View","props":{"width":253,"height":70},"compId":2,"child":[{"type":"ComboBox","props":{"y":1,"x":0,"width":253,"var":"cb1","skin":"comp/combobox.png","labels":"label1,label2","height":69},"compId":3}],"loadList":["comp/combobox.png"],"loadList3D":[]}

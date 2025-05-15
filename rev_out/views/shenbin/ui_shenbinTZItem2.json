@@ -1,0 +1,1 @@
+{"type":"View","props":{"width":300,"height":20},"compId":2,"child":[{"type":"Label","props":{"y":0,"x":0,"width":300,"var":"lab","text":"全部","height":20,"fontSize":20,"font":"BOLD","color":"#8D462D"},"compId":4}],"loadList":[],"loadList3D":[]}

@@ -1,0 +1,110 @@
+{
+    "frames": {
+        "addAttack.png": {
+            "frame": {
+                "h": 49,
+                "idx": 0,
+                "w": 169,
+                "x": 220,
+                "y": 348
+            },
+            "sourceSize": {
+                "h": 49,
+                "w": 169
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "addSpeed.png": {
+            "frame": {
+                "h": 49,
+                "idx": 0,
+                "w": 219,
+                "x": 0,
+                "y": 348
+            },
+            "sourceSize": {
+                "h": 49,
+                "w": 219
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "arrow.png": {
+            "frame": {
+                "h": 65,
+                "idx": 0,
+                "w": 85,
+                "x": 337,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 65,
+                "w": 85
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "delSpeed.png": {
+            "frame": {
+                "h": 49,
+                "idx": 0,
+                "w": 219,
+                "x": 0,
+                "y": 398
+            },
+            "sourceSize": {
+                "h": 49,
+                "w": 219
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "down.png": {
+            "frame": {
+                "h": 173,
+                "idx": 0,
+                "w": 336,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 173,
+                "w": 336
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "up.png": {
+            "frame": {
+                "h": 173,
+                "idx": 0,
+                "w": 336,
+                "x": 0,
+                "y": 174
+            },
+            "sourceSize": {
+                "h": 173,
+                "w": 336
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "set.png",
+        "prefix": "game/set/"
+    }
+}

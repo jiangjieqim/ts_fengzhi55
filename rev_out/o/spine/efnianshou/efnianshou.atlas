@@ -1,0 +1,55 @@
+
+efnianshou.png
+size: 256,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hbody
+  rotate: false
+  xy: 2, 252
+  size: 151, 84
+  orig: 167, 118
+  offset: 3, 8
+  index: -1
+hfoot1
+  rotate: false
+  xy: 155, 157
+  size: 87, 113
+  orig: 94, 137
+  offset: 5, 2
+  index: -1
+hfoot2
+  rotate: false
+  xy: 147, 29
+  size: 107, 126
+  orig: 118, 129
+  offset: 7, 2
+  index: -1
+hhead
+  rotate: false
+  xy: 2, 69
+  size: 143, 181
+  orig: 184, 255
+  offset: 30, 37
+  index: -1
+hneck
+  rotate: false
+  xy: 155, 272
+  size: 88, 64
+  orig: 113, 90
+  offset: 19, 19
+  index: -1
+htail
+  rotate: false
+  xy: 2, 4
+  size: 130, 63
+  orig: 130, 107
+  offset: 0, 25
+  index: -1
+ying
+  rotate: false
+  xy: 134, 2
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

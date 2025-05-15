@@ -1,0 +1,34 @@
+
+cardxiyou1.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef_halo2
+  rotate: true
+  xy: 131, 14
+  size: 84, 83
+  orig: 100, 100
+  offset: 8, 8
+  index: -1
+ef_quan1
+  rotate: false
+  xy: 215, 27
+  size: 71, 71
+  orig: 71, 71
+  offset: 0, 0
+  index: -1
+ef_quan2
+  rotate: false
+  xy: 287, 33
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+ocard01
+  rotate: true
+  xy: 0, 0
+  size: 98, 130
+  orig: 215, 219
+  offset: 62, 45
+  index: -1

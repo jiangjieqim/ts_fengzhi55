@@ -1,0 +1,111 @@
+
+zhanli.png
+size: 776,156
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+zhanli_01
+  rotate: false
+  xy: 0, 52
+  size: 154, 51
+  orig: 154, 51
+  offset: 0, 0
+  index: -1
+zhanli_02
+  rotate: false
+  xy: 155, 104
+  size: 154, 51
+  orig: 154, 51
+  offset: 0, 0
+  index: -1
+zhanli_03
+  rotate: false
+  xy: 0, 0
+  size: 154, 51
+  orig: 154, 51
+  offset: 0, 0
+  index: -1
+zhanli_04
+  rotate: false
+  xy: 0, 104
+  size: 154, 51
+  orig: 154, 51
+  offset: 0, 0
+  index: -1
+zhanli_05
+  rotate: false
+  xy: 155, 52
+  size: 154, 51
+  orig: 154, 51
+  offset: 0, 0
+  index: -1
+zhanli_06
+  rotate: false
+  xy: 310, 104
+  size: 154, 51
+  orig: 154, 51
+  offset: 0, 0
+  index: -1
+zhanli_07
+  rotate: false
+  xy: 155, 0
+  size: 154, 51
+  orig: 154, 51
+  offset: 0, 0
+  index: -1
+zhanli_08
+  rotate: false
+  xy: 310, 52
+  size: 154, 51
+  orig: 154, 51
+  offset: 0, 0
+  index: -1
+zhanli_09
+  rotate: false
+  xy: 465, 104
+  size: 154, 51
+  orig: 154, 51
+  offset: 0, 0
+  index: -1
+zhanli_10
+  rotate: false
+  xy: 310, 0
+  size: 154, 51
+  orig: 154, 51
+  offset: 0, 0
+  index: -1
+zhanli_11
+  rotate: false
+  xy: 465, 52
+  size: 154, 51
+  orig: 154, 51
+  offset: 0, 0
+  index: -1
+zhanli_12
+  rotate: false
+  xy: 620, 104
+  size: 154, 51
+  orig: 154, 51
+  offset: 0, 0
+  index: -1
+zhanli_13
+  rotate: false
+  xy: 465, 0
+  size: 154, 51
+  orig: 154, 51
+  offset: 0, 0
+  index: -1
+zhanli_14
+  rotate: false
+  xy: 620, 52
+  size: 154, 51
+  orig: 154, 51
+  offset: 0, 0
+  index: -1
+zhanli_15
+  rotate: false
+  xy: 620, 0
+  size: 154, 51
+  orig: 154, 51
+  offset: 0, 0
+  index: -1

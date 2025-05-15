@@ -1,0 +1,48 @@
+
+pet23.png
+size: 100,456
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 0, 356
+  size: 73, 98
+  orig: 77, 104
+  offset: 2, 3
+  index: -1
+ef_a1
+  rotate: false
+  xy: 0, 97
+  size: 90, 90
+  orig: 100, 100
+  offset: 4, 2
+  index: -1
+ef_a2
+  rotate: false
+  xy: 0, 0
+  size: 98, 96
+  orig: 100, 100
+  offset: 1, 0
+  index: -1
+ef_a3
+  rotate: true
+  xy: 0, 188
+  size: 88, 89
+  orig: 100, 100
+  offset: 6, 3
+  index: -1
+head
+  rotate: false
+  xy: 0, 277
+  size: 78, 78
+  orig: 112, 98
+  offset: 22, 9
+  index: -1
+ying
+  rotate: false
+  xy: 0, 430
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

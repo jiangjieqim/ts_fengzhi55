@@ -1,0 +1,76 @@
+
+pet2.png
+size: 176,140
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 0, 9
+  size: 104, 131
+  orig: 202, 232
+  offset: 47, 55
+  index: -1
+eye
+  rotate: true
+  xy: 151, 31
+  size: 32, 21
+  orig: 78, 46
+  offset: 23, 12
+  index: -1
+eye2
+  rotate: true
+  xy: 149, 0
+  size: 30, 17
+  orig: 78, 46
+  offset: 24, 16
+  index: -1
+eye3
+  rotate: true
+  xy: 142, 51
+  size: 32, 8
+  orig: 78, 46
+  offset: 23, 18
+  index: -1
+eye4
+  rotate: false
+  xy: 105, 5
+  size: 43, 18
+  orig: 78, 46
+  offset: 18, 15
+  index: -1
+handa
+  rotate: false
+  xy: 105, 84
+  size: 45, 56
+  orig: 85, 96
+  offset: 14, 23
+  index: -1
+handb
+  rotate: false
+  xy: 105, 24
+  size: 36, 59
+  orig: 77, 97
+  offset: 26, 22
+  index: -1
+winga
+  rotate: false
+  xy: 0, 7
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+wingb
+  rotate: false
+  xy: 173, 62
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+ying
+  rotate: true
+  xy: 151, 64
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

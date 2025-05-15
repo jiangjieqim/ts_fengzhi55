@@ -1,0 +1,20 @@
+
+uief2.png
+size: 236,136
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef_a2
+  rotate: false
+  xy: 135, 34
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+ef_a4
+  rotate: false
+  xy: 0, 0
+  size: 134, 134
+  orig: 134, 134
+  offset: 0, 0
+  index: -1

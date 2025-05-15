@@ -1,0 +1,1 @@
+{"type":"View","props":{"width":750,"mouseThrough":false,"mouseEnabled":false,"height":1334},"compId":2,"child":[{"type":"Image","props":{"width":750,"var":"img_mask_right","skin":"remote/common/base/img_mask.png","sizeGrid":"10,10,10,10","height":1334,"centerY":0,"centerX":0,"anchorY":0,"anchorX":0.5},"compId":4}],"loadList":["remote/common/base/img_mask.png"],"loadList3D":[]}

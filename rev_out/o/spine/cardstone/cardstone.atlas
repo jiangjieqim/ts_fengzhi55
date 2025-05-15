@@ -1,0 +1,118 @@
+
+cardstone.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+card2
+  rotate: true
+  xy: 602, 264
+  size: 43, 58
+  orig: 43, 58
+  offset: 0, 0
+  index: -1
+dian
+  rotate: false
+  xy: 701, 339
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+ef_eye
+  rotate: true
+  xy: 661, 252
+  size: 55, 27
+  orig: 55, 28
+  offset: 0, 0
+  index: -1
+ef_halo
+  rotate: false
+  xy: 507, 214
+  size: 94, 93
+  orig: 100, 101
+  offset: 3, 4
+  index: -1
+ef_halo2
+  rotate: false
+  xy: 807, 573
+  size: 84, 83
+  orig: 100, 100
+  offset: 8, 8
+  index: -1
+ef_light
+  rotate: false
+  xy: 0, 193
+  size: 409, 463
+  orig: 420, 472
+  offset: 6, 5
+  index: -1
+ef_quan3
+  rotate: false
+  xy: 807, 507
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+glow03
+  rotate: true
+  xy: 701, 280
+  size: 58, 59
+  orig: 64, 64
+  offset: 3, 2
+  index: -1
+halo
+  rotate: false
+  xy: 410, 211
+  size: 96, 96
+  orig: 100, 100
+  offset: 2, 2
+  index: -1
+head1
+  rotate: false
+  xy: 203, 5
+  size: 340, 187
+  orig: 344, 192
+  offset: 2, 2
+  index: -1
+head2
+  rotate: false
+  xy: 590, 491
+  size: 216, 165
+  orig: 220, 170
+  offset: 2, 3
+  index: -1
+head3
+  rotate: false
+  xy: 544, 13
+  size: 157, 200
+  orig: 161, 204
+  offset: 2, 2
+  index: -1
+head4
+  rotate: false
+  xy: 701, 404
+  size: 115, 86
+  orig: 119, 90
+  offset: 2, 2
+  index: -1
+head5
+  rotate: false
+  xy: 410, 477
+  size: 179, 179
+  orig: 179, 179
+  offset: 0, 0
+  index: -1
+head6
+  rotate: false
+  xy: 410, 308
+  size: 290, 168
+  orig: 294, 172
+  offset: 2, 2
+  index: -1
+head7
+  rotate: false
+  xy: 0, 0
+  size: 202, 192
+  orig: 203, 193
+  offset: 1, 0
+  index: -1

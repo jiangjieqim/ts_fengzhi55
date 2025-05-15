@@ -1,0 +1,132 @@
+
+pet36.png
+size: 676,100
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 0, 0
+  size: 101, 99
+  orig: 192, 199
+  offset: 46, 51
+  index: -1
+ef_a1
+  rotate: false
+  xy: 294, 9
+  size: 90, 90
+  orig: 100, 100
+  offset: 4, 2
+  index: -1
+ef_a2
+  rotate: true
+  xy: 102, 1
+  size: 98, 96
+  orig: 100, 100
+  offset: 1, 0
+  index: -1
+ef_a3
+  rotate: false
+  xy: 385, 10
+  size: 88, 89
+  orig: 100, 100
+  offset: 6, 3
+  index: -1
+eye1
+  rotate: false
+  xy: 542, 0
+  size: 36, 26
+  orig: 79, 57
+  offset: 22, 15
+  index: -1
+eye2
+  rotate: true
+  xy: 619, 27
+  size: 37, 21
+  orig: 79, 57
+  offset: 21, 15
+  index: -1
+eye3
+  rotate: false
+  xy: 635, 81
+  size: 37, 18
+  orig: 79, 57
+  offset: 21, 18
+  index: -1
+eye4
+  rotate: false
+  xy: 579, 0
+  size: 36, 26
+  orig: 79, 57
+  offset: 22, 15
+  index: -1
+eye5
+  rotate: false
+  xy: 616, 0
+  size: 36, 26
+  orig: 79, 57
+  offset: 22, 15
+  index: -1
+eyea1
+  rotate: true
+  xy: 641, 54
+  size: 26, 25
+  orig: 75, 33
+  offset: 15, 2
+  index: -1
+eyea2
+  rotate: true
+  xy: 641, 29
+  size: 24, 20
+  orig: 75, 33
+  offset: 17, 2
+  index: -1
+eyea3
+  rotate: true
+  xy: 588, 53
+  size: 46, 20
+  orig: 75, 33
+  offset: 14, 6
+  index: -1
+eyea4
+  rotate: true
+  xy: 609, 65
+  size: 34, 25
+  orig: 75, 33
+  offset: 13, 3
+  index: -1
+hand
+  rotate: false
+  xy: 653, 7
+  size: 21, 21
+  orig: 56, 54
+  offset: 20, 15
+  index: -1
+head
+  rotate: true
+  xy: 199, 4
+  size: 95, 94
+  orig: 178, 139
+  offset: 40, 35
+  index: -1
+item1
+  rotate: true
+  xy: 474, 9
+  size: 90, 67
+  orig: 145, 97
+  offset: 28, 13
+  index: -1
+tail
+  rotate: true
+  xy: 542, 53
+  size: 46, 45
+  orig: 79, 98
+  offset: 20, 28
+  index: -1
+ying
+  rotate: false
+  xy: 542, 27
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

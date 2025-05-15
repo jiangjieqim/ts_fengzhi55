@@ -1,0 +1,76 @@
+
+pet11.png
+size: 128,260
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 0, 161
+  size: 99, 103
+  orig: 202, 232
+  offset: 44, 56
+  index: -1
+eye
+  rotate: true
+  xy: 104, 229
+  size: 31, 19
+  orig: 78, 46
+  offset: 24, 13
+  index: -1
+eye2
+  rotate: true
+  xy: 104, 154
+  size: 30, 17
+  orig: 78, 46
+  offset: 24, 16
+  index: -1
+eye3
+  rotate: true
+  xy: 90, 128
+  size: 32, 8
+  orig: 78, 46
+  offset: 23, 18
+  index: -1
+eye4
+  rotate: true
+  xy: 104, 185
+  size: 43, 18
+  orig: 78, 46
+  offset: 18, 15
+  index: -1
+handa
+  rotate: false
+  xy: 0, 0
+  size: 63, 59
+  orig: 85, 96
+  offset: 12, 25
+  index: -1
+handb
+  rotate: true
+  xy: 64, 4
+  size: 55, 61
+  orig: 77, 97
+  offset: 11, 21
+  index: -1
+winga
+  rotate: true
+  xy: 0, 60
+  size: 64, 86
+  orig: 118, 160
+  offset: 27, 37
+  index: -1
+wingb
+  rotate: true
+  xy: 0, 125
+  size: 35, 89
+  orig: 61, 167
+  offset: 13, 39
+  index: -1
+ying
+  rotate: true
+  xy: 99, 77
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

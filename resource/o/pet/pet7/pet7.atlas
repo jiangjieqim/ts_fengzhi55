@@ -1,0 +1,27 @@
+
+pet7.png
+size: 88,92
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 61, 32
+  size: 24, 33
+  orig: 33, 41
+  offset: 4, 3
+  index: -1
+head
+  rotate: true
+  xy: 0, 0
+  size: 65, 60
+  orig: 65, 60
+  offset: 0, 0
+  index: -1
+ying
+  rotate: false
+  xy: 0, 66
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

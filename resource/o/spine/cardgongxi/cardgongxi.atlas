@@ -1,0 +1,41 @@
+
+cardgongxi.png
+size: 336,76
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow03
+  rotate: false
+  xy: 275, 14
+  size: 58, 59
+  orig: 64, 64
+  offset: 3, 2
+  index: -1
+z01
+  rotate: false
+  xy: 140, 0
+  size: 67, 73
+  orig: 82, 77
+  offset: 2, 2
+  index: -1
+z02
+  rotate: false
+  xy: 71, 0
+  size: 68, 73
+  orig: 93, 77
+  offset: 13, 2
+  index: -1
+z03
+  rotate: false
+  xy: 208, 0
+  size: 66, 73
+  orig: 92, 77
+  offset: 13, 2
+  index: -1
+z04
+  rotate: false
+  xy: 0, 2
+  size: 70, 71
+  orig: 82, 77
+  offset: 11, 2
+  index: -1

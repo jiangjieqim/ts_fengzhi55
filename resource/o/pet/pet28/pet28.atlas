@@ -1,0 +1,83 @@
+
+pet28.png
+size: 172,532
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+aarm
+  rotate: false
+  xy: 89, 32
+  size: 55, 63
+  orig: 67, 69
+  offset: 5, 3
+  index: -1
+ahand
+  rotate: false
+  xy: 99, 179
+  size: 68, 104
+  orig: 80, 120
+  offset: 9, 16
+  index: -1
+barm
+  rotate: true
+  xy: 89, 0
+  size: 31, 60
+  orig: 35, 62
+  offset: 2, 0
+  index: -1
+bhand
+  rotate: false
+  xy: 108, 291
+  size: 61, 97
+  orig: 73, 114
+  offset: 2, 15
+  index: -1
+bodya
+  rotate: false
+  xy: 0, 284
+  size: 107, 104
+  orig: 125, 187
+  offset: 3, 74
+  index: -1
+bodyb
+  rotate: true
+  xy: 91, 98
+  size: 80, 61
+  orig: 95, 108
+  offset: 12, 44
+  index: -1
+ef_a1
+  rotate: false
+  xy: 0, 96
+  size: 90, 90
+  orig: 100, 100
+  offset: 4, 2
+  index: -1
+ef_a2
+  rotate: false
+  xy: 0, 187
+  size: 98, 96
+  orig: 100, 100
+  offset: 1, 0
+  index: -1
+ef_a3
+  rotate: false
+  xy: 0, 6
+  size: 88, 89
+  orig: 100, 100
+  offset: 6, 3
+  index: -1
+head
+  rotate: false
+  xy: 0, 389
+  size: 143, 143
+  orig: 159, 147
+  offset: 14, 2
+  index: -1
+ying
+  rotate: true
+  xy: 144, 456
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

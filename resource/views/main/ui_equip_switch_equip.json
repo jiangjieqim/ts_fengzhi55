@@ -1,0 +1,1 @@
+{"type":"View","props":{"width":750,"height":1334},"compId":2,"child":[{"type":"Sprite","props":{"y":0,"x":0,"texture":"remote/main/equip/开宝箱页面参考.png"},"compId":3},{"type":"Sprite","props":{"y":177,"x":-79,"texture":"remote/main/equip/texiao.png"},"compId":4}],"loadList":["remote/main/equip/开宝箱页面参考.png","remote/main/equip/texiao.png"],"loadList3D":[]}

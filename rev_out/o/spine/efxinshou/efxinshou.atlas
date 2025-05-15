@@ -1,0 +1,27 @@
+
+efxinshou.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dian
+  rotate: false
+  xy: 214, 48
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+kuang
+  rotate: false
+  xy: 0, 0
+  size: 113, 112
+  orig: 128, 128
+  offset: 9, 7
+  index: -1
+kuang2
+  rotate: false
+  xy: 114, 13
+  size: 99, 99
+  orig: 128, 128
+  offset: 16, 14
+  index: -1

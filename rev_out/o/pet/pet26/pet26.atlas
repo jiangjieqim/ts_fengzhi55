@@ -1,0 +1,55 @@
+
+pet26.png
+size: 480,100
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 0, 7
+  size: 92, 120
+  orig: 147, 143
+  offset: 22, 22
+  index: -1
+ef_a1
+  rotate: false
+  xy: 218, 9
+  size: 90, 90
+  orig: 100, 100
+  offset: 4, 2
+  index: -1
+ef_a2
+  rotate: true
+  xy: 121, 1
+  size: 98, 96
+  orig: 100, 100
+  offset: 1, 0
+  index: -1
+ef_a3
+  rotate: false
+  xy: 309, 10
+  size: 88, 89
+  orig: 100, 100
+  offset: 6, 3
+  index: -1
+eye4
+  rotate: true
+  xy: 398, 26
+  size: 73, 42
+  orig: 73, 42
+  offset: 0, 0
+  index: -1
+tail
+  rotate: false
+  xy: 441, 29
+  size: 36, 70
+  orig: 49, 82
+  offset: 12, 11
+  index: -1
+ying
+  rotate: false
+  xy: 398, 0
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

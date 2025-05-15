@@ -1,0 +1,1 @@
+{"type":"View","props":{"width":400,"height":200},"compId":2,"child":[{"type":"Image","props":{"y":-45,"x":-39,"width":433,"var":"bg1","skin":"remote/main/main/hdbg.png","sizeGrid":"70,47,183,27","height":269},"compId":3},{"type":"Sprite","props":{"var":"con1"},"compId":4}],"loadList":["remote/main/main/hdbg.png"],"loadList3D":[]}

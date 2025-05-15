@@ -1,0 +1,13 @@
+
+horsecard.png
+size: 164,232
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+kabei
+  rotate: false
+  xy: 0, 0
+  size: 164, 230
+  orig: 164, 230
+  offset: 0, 0
+  index: -1

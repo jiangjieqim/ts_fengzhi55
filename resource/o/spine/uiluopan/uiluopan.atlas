@@ -1,0 +1,76 @@
+
+uiluopan.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+f
+  rotate: false
+  xy: 2, 139
+  size: 184, 52
+  orig: 186, 54
+  offset: 1, 1
+  index: -1
+luopan
+  rotate: false
+  xy: 188, 11
+  size: 180, 180
+  orig: 182, 182
+  offset: 1, 1
+  index: -1
+z0
+  rotate: false
+  xy: 2, 43
+  size: 94, 94
+  orig: 96, 96
+  offset: 1, 1
+  index: -1
+z1
+  rotate: true
+  xy: 98, 65
+  size: 34, 38
+  orig: 37, 40
+  offset: 1, 1
+  index: -1
+z2
+  rotate: false
+  xy: 2, 2
+  size: 38, 39
+  orig: 40, 42
+  offset: 1, 1
+  index: -1
+z3
+  rotate: false
+  xy: 42, 4
+  size: 36, 37
+  orig: 38, 39
+  offset: 1, 1
+  index: -1
+z4
+  rotate: false
+  xy: 98, 101
+  size: 35, 36
+  orig: 37, 38
+  offset: 1, 1
+  index: -1
+z5
+  rotate: true
+  xy: 135, 103
+  size: 34, 36
+  orig: 36, 37
+  offset: 1, 1
+  index: -1
+z6
+  rotate: true
+  xy: 80, 4
+  size: 37, 36
+  orig: 39, 38
+  offset: 1, 1
+  index: -1
+z7
+  rotate: false
+  xy: 118, 32
+  size: 29, 31
+  orig: 31, 33
+  offset: 1, 1
+  index: -1

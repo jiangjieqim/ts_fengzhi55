@@ -1,0 +1,83 @@
+
+car.png
+size: 584,308
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+baoxing
+  rotate: false
+  xy: 462, 230
+  size: 119, 75
+  orig: 119, 75
+  offset: 0, 0
+  index: -1
+chelun
+  rotate: false
+  xy: 212, 146
+  size: 250, 159
+  orig: 250, 159
+  offset: 0, 0
+  index: -1
+chui
+  rotate: false
+  xy: 462, 96
+  size: 84, 76
+  orig: 84, 76
+  offset: 0, 0
+  index: -1
+dian
+  rotate: false
+  xy: 386, 82
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+glow02
+  rotate: false
+  xy: 386, 18
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+gold
+  rotate: false
+  xy: 462, 172
+  size: 119, 58
+  orig: 119, 58
+  offset: 0, 0
+  index: -1
+huoxiang
+  rotate: false
+  xy: 218, 0
+  size: 168, 146
+  orig: 168, 146
+  offset: 0, 0
+  index: -1
+huoxiangc
+  rotate: false
+  xy: 0, 131
+  size: 212, 174
+  orig: 212, 174
+  offset: 0, 0
+  index: -1
+ma
+  rotate: false
+  xy: 128, 11
+  size: 90, 120
+  orig: 90, 120
+  offset: 0, 0
+  index: -1
+smoke_03
+  rotate: false
+  xy: 450, 32
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+smoke_21
+  rotate: false
+  xy: 0, 3
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1

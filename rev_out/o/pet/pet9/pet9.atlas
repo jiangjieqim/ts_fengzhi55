@@ -1,0 +1,55 @@
+
+pet9.png
+size: 284,84
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 67, 4
+  size: 79, 86
+  orig: 192, 199
+  offset: 63, 50
+  index: -1
+eye1
+  rotate: false
+  xy: 222, 0
+  size: 40, 33
+  orig: 87, 68
+  offset: 19, 10
+  index: -1
+hand
+  rotate: true
+  xy: 263, 12
+  size: 21, 20
+  orig: 56, 54
+  offset: 20, 16
+  index: -1
+head
+  rotate: true
+  xy: 0, 0
+  size: 83, 66
+  orig: 178, 139
+  offset: 50, 35
+  index: -1
+item1
+  rotate: false
+  xy: 180, 34
+  size: 101, 49
+  orig: 145, 97
+  offset: 22, 22
+  index: -1
+tail
+  rotate: true
+  xy: 180, 0
+  size: 33, 41
+  orig: 79, 98
+  offset: 27, 28
+  index: -1
+ying
+  rotate: true
+  xy: 154, 7
+  size: 76, 25
+  orig: 78, 29
+  offset: 1, 2
+  index: -1

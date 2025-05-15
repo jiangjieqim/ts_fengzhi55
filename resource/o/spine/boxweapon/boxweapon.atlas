@@ -1,0 +1,27 @@
+
+boxweapon.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_1
+  rotate: false
+  xy: 60, 119
+  size: 88, 88
+  orig: 88, 88
+  offset: 0, 0
+  index: -1
+glow03
+  rotate: false
+  xy: 1, 148
+  size: 58, 59
+  orig: 64, 64
+  offset: 3, 2
+  index: -1
+mask_12
+  rotate: false
+  xy: 1, 1
+  size: 119, 117
+  orig: 128, 128
+  offset: 0, 5
+  index: -1

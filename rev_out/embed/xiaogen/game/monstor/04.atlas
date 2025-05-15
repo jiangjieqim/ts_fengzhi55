@@ -1,0 +1,25 @@
+{
+    "frames": {
+        "001.png": {
+            "frame": {
+                "h": 327,
+                "idx": 0,
+                "w": 279,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 327,
+                "w": 279
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "04.png",
+        "prefix": "game/monstor/04/"
+    }
+}

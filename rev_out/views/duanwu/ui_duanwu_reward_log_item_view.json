@@ -1,0 +1,1 @@
+{"type":"View","props":{"width":545,"height":120},"compId":2,"child":[{"type":"Image","props":{"y":0,"x":0,"width":545,"var":"bg1","skin":"remote/common/base/juxing_2.png","sizeGrid":"13,17,14,16","height":120},"compId":4},{"type":"Sprite","props":{"x":31,"var":"txtCon"},"compId":8}],"loadList":["remote/common/base/juxing_2.png"],"loadList3D":[]}

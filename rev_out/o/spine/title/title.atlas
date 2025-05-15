@@ -1,0 +1,13 @@
+
+title.png
+size: 636,260
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+logo
+  rotate: false
+  xy: 0, 0
+  size: 636, 259
+  orig: 636, 259
+  offset: 0, 0
+  index: -1

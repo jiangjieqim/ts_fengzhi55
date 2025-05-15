@@ -1,0 +1,146 @@
+
+eflibao.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow01/G0001
+  rotate: false
+  xy: 340, 129
+  size: 123, 114
+  orig: 140, 140
+  offset: 7, 1
+  index: -1
+glow01/G0001_2
+  rotate: false
+  xy: 458, 249
+  size: 123, 114
+  orig: 140, 140
+  offset: 7, 1
+  index: -1
+glow01/G0001_3
+  rotate: false
+  xy: 576, 369
+  size: 123, 114
+  orig: 140, 140
+  offset: 7, 1
+  index: -1
+glow01/G0002
+  rotate: false
+  xy: 99, 122
+  size: 121, 117
+  orig: 140, 140
+  offset: 10, 0
+  index: -1
+glow01/G0002_2
+  rotate: true
+  xy: 121, 0
+  size: 121, 117
+  orig: 140, 140
+  offset: 10, 0
+  index: -1
+glow01/G0002_3
+  rotate: true
+  xy: 220, 362
+  size: 121, 117
+  orig: 140, 140
+  offset: 10, 0
+  index: -1
+glow01/G0003
+  rotate: true
+  xy: 220, 242
+  size: 119, 118
+  orig: 140, 140
+  offset: 13, 0
+  index: -1
+glow01/G0003_2
+  rotate: true
+  xy: 338, 364
+  size: 119, 118
+  orig: 140, 140
+  offset: 13, 0
+  index: -1
+glow01/G0003_3
+  rotate: true
+  xy: 221, 122
+  size: 119, 118
+  orig: 140, 140
+  offset: 13, 0
+  index: -1
+glow01/G0004
+  rotate: false
+  xy: 358, 9
+  size: 115, 119
+  orig: 140, 140
+  offset: 11, 0
+  index: -1
+glow01/G0004_2
+  rotate: false
+  xy: 464, 129
+  size: 115, 119
+  orig: 140, 140
+  offset: 11, 0
+  index: -1
+glow01/G0004_3
+  rotate: false
+  xy: 474, 9
+  size: 115, 119
+  orig: 140, 140
+  offset: 11, 0
+  index: -1
+glow01/G0005
+  rotate: false
+  xy: 339, 244
+  size: 118, 119
+  orig: 140, 140
+  offset: 10, 1
+  index: -1
+glow01/G0005_2
+  rotate: false
+  xy: 457, 364
+  size: 118, 119
+  orig: 140, 140
+  offset: 10, 1
+  index: -1
+glow01/G0005_3
+  rotate: false
+  xy: 239, 2
+  size: 118, 119
+  orig: 140, 140
+  offset: 10, 1
+  index: -1
+glow01/G0006
+  rotate: false
+  xy: 0, 0
+  size: 120, 121
+  orig: 140, 140
+  offset: 9, 1
+  index: -1
+glow01/G0006_2
+  rotate: false
+  xy: 99, 362
+  size: 120, 121
+  orig: 140, 140
+  offset: 9, 1
+  index: -1
+glow01/G0006_3
+  rotate: false
+  xy: 99, 240
+  size: 120, 121
+  orig: 140, 140
+  offset: 9, 1
+  index: -1
+glow02
+  rotate: false
+  xy: 0, 122
+  size: 98, 180
+  orig: 118, 194
+  offset: 10, 7
+  index: -1
+glow02_2
+  rotate: false
+  xy: 0, 303
+  size: 98, 180
+  orig: 118, 194
+  offset: 10, 7
+  index: -1

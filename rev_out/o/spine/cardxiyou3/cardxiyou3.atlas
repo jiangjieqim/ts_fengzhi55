@@ -1,0 +1,41 @@
+
+cardxiyou3.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dian
+  rotate: false
+  xy: 102, 85
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+ef_halo2
+  rotate: false
+  xy: 0, 0
+  size: 84, 83
+  orig: 100, 100
+  offset: 8, 8
+  index: -1
+ef_quan1
+  rotate: false
+  xy: 85, 12
+  size: 71, 71
+  orig: 71, 71
+  offset: 0, 0
+  index: -1
+ef_quan2
+  rotate: false
+  xy: 102, 150
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+ocard02
+  rotate: false
+  xy: 0, 84
+  size: 101, 131
+  orig: 215, 219
+  offset: 63, 44
+  index: -1

@@ -1,0 +1,1 @@
+{"type":"View","props":{"width":410,"height":42},"compId":2,"child":[{"type":"Label","props":{"y":9,"x":0,"var":"lab","text":"跑商","fontSize":25,"font":"BOLD","color":"#9C5F3A"},"compId":4},{"type":"ui_checkbox_02","props":{"y":0,"x":328,"var":"check","runtime":"ui.views.main.ui_checkbox_02UI"},"compId":5}],"loadList":["views/main/ui_checkbox_02.scene"],"loadList3D":[]}

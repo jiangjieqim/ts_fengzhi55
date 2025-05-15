@@ -1,0 +1,27 @@
+
+cardfly.png
+size: 168,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+card1
+  rotate: false
+  xy: 124, 6
+  size: 43, 58
+  orig: 43, 58
+  offset: 0, 0
+  index: -1
+dian
+  rotate: false
+  xy: 0, 0
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+glow03
+  rotate: false
+  xy: 65, 5
+  size: 58, 59
+  orig: 64, 64
+  offset: 3, 2
+  index: -1

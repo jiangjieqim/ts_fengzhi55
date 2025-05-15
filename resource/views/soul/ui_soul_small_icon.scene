@@ -1,0 +1,1 @@
+{"type":"View","props":{"width":98,"height":98},"compId":1,"child":[{"type":"Image","props":{"y":-14,"x":-6,"width":168,"var":"icon","skin":"o/equip/hero_104.png","scaleY":0.85,"scaleX":0.85,"height":132},"compId":2}],"loadList":["o/equip/hero_104.png"],"loadList3D":[]}

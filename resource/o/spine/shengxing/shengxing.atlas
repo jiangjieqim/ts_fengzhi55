@@ -1,0 +1,41 @@
+
+shengxing.png
+size: 324,72
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef_quan1
+  rotate: false
+  xy: 0, 0
+  size: 71, 71
+  orig: 71, 71
+  offset: 0, 0
+  index: -1
+ef_quan2
+  rotate: false
+  xy: 72, 6
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+glow03
+  rotate: false
+  xy: 264, 12
+  size: 58, 59
+  orig: 64, 64
+  offset: 3, 2
+  index: -1
+xing
+  rotate: true
+  xy: 138, 5
+  size: 66, 62
+  orig: 66, 62
+  offset: 0, 0
+  index: -1
+xing2
+  rotate: true
+  xy: 201, 5
+  size: 66, 62
+  orig: 66, 62
+  offset: 0, 0
+  index: -1

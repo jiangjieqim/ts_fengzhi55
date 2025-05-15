@@ -1,0 +1,118 @@
+
+uitouzi.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sz_1
+  rotate: true
+  xy: 123, 127
+  size: 114, 119
+  orig: 142, 144
+  offset: 14, 15
+  index: -1
+sz_2
+  rotate: true
+  xy: 244, 127
+  size: 114, 119
+  orig: 142, 144
+  offset: 14, 15
+  index: -1
+sz_3
+  rotate: true
+  xy: 365, 127
+  size: 114, 119
+  orig: 142, 144
+  offset: 14, 15
+  index: -1
+sz_4
+  rotate: true
+  xy: 486, 127
+  size: 114, 121
+  orig: 142, 144
+  offset: 14, 15
+  index: -1
+sz_5
+  rotate: true
+  xy: 609, 127
+  size: 114, 119
+  orig: 142, 144
+  offset: 14, 15
+  index: -1
+sz_6
+  rotate: true
+  xy: 730, 126
+  size: 115, 119
+  orig: 142, 144
+  offset: 13, 15
+  index: -1
+sz_a
+  rotate: true
+  xy: 851, 125
+  size: 116, 121
+  orig: 142, 144
+  offset: 12, 14
+  index: -1
+sz_b
+  rotate: true
+  xy: 248, 4
+  size: 121, 124
+  orig: 142, 144
+  offset: 8, 13
+  index: -1
+sz_c
+  rotate: true
+  xy: 2, 130
+  size: 111, 119
+  orig: 142, 144
+  offset: 15, 15
+  index: -1
+sz_d
+  rotate: true
+  xy: 2, 8
+  size: 117, 121
+  orig: 142, 144
+  offset: 12, 14
+  index: -1
+sz_e1
+  rotate: true
+  xy: 374, 4
+  size: 121, 122
+  orig: 142, 144
+  offset: 10, 13
+  index: -1
+sz_e2
+  rotate: true
+  xy: 498, 4
+  size: 121, 122
+  orig: 142, 144
+  offset: 10, 13
+  index: -1
+sz_e3
+  rotate: true
+  xy: 622, 3
+  size: 121, 122
+  orig: 142, 144
+  offset: 10, 13
+  index: -1
+sz_e4
+  rotate: true
+  xy: 746, 2
+  size: 121, 122
+  orig: 142, 144
+  offset: 10, 13
+  index: -1
+sz_e5
+  rotate: true
+  xy: 870, 2
+  size: 121, 122
+  orig: 142, 144
+  offset: 10, 13
+  index: -1
+sz_e6
+  rotate: true
+  xy: 125, 5
+  size: 120, 121
+  orig: 142, 144
+  offset: 11, 14
+  index: -1
