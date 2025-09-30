@@ -46,8 +46,10 @@ window["initConfig"] = initConfig;
 
 var initConfig={
 	// http://127.0.0.1
-	"asset":"/Project1/Client/ts_fengzhi55/rev_out/",
+	//"asset":"/Project1/Client/ts_fengzhi55/rev_out/",
+	asset:"/Project1/Client/ts_fengzhi55/resource/",
 	"platform":0,
-	"sy_url":"https://dev-server-game.wanhuir.com/",
+	//sy_url":"https://dev-server-game.wanhuir.com/",
+	sy_url: "http://127.0.0.1:9502",
 }
 window["initConfig"] = initConfig;

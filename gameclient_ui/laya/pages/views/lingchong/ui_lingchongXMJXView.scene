@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":2,
-    "selecteID":78,
+    "selectedBox":64,
+    "selecteID":59,
     "searchKey":"View",
     "props":{"width":669,"sceneColor":"#000000","height":996},
     "nodeParent":-1,
@@ -101,16 +101,17 @@
             "props":{"y":57,"x":213,"width":233,"skin":"remote/common/base/sxk.png","sizeGrid":"0,25,0,24","height":50},
             "nodeParent":2,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":7,
             "child":[
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
-                    "props":{"y":11,"x":88,"text":"血脉","strokeColor":"#90501f","fontSize":28,"font":"BOLD","color":"#9C5F3A"},
+                    "props":{"y":11,"x":88,"text":"灵脉","strokeColor":"#90501f","fontSize":28,"font":"BOLD","color":"#9C5F3A"},
                     "nodeParent":7,
                     "label":"Label",
                     "isOpen":true,
@@ -158,7 +159,7 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"Label",
             "searchKey":"Label,lab_name",
             "props":{"y":131,"x":299,"var":"lab_name","text":"珊瑚公主","strokeColor":"#7C430C","stroke":3,"fontSize":30,"font":"BOLD","color":"#F9F0BB"},
@@ -174,7 +175,7 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"Label",
             "searchKey":"Label,lab_lv",
             "props":{"y":167,"x":299,"var":"lab_lv","text":"lv.27","strokeColor":"#7C430C","stroke":3,"fontSize":30,"font":"BOLD","color":"#F9F0BB"},
@@ -212,13 +213,14 @@
             "props":{"y":294,"x":512,"var":"btn_tj","skin":"remote/lingchong/wsd_y_1.png"},
             "nodeParent":2,
             "label":"btn_tj",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":14,
             "child":[
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":18,"x":8.75,"texture":"remote/lingchong/tftj.png"},
@@ -233,9 +235,10 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
-                    "props":{"y":77,"x":-9,"text":"血脉图鉴","strokeColor":"#3C1F0C","stroke":2,"fontSize":30,"font":"BOLD","color":"#FFEEC2"},
+                    "props":{"y":77,"x":-9,"text":"灵脉图鉴","strokeColor":"#3C1F0C","stroke":2,"fontSize":30,"font":"BOLD","color":"#FFEEC2"},
                     "nodeParent":14,
                     "label":"Label",
                     "isDirectory":false,
@@ -360,13 +363,14 @@
                     "props":{"x":82},
                     "nodeParent":51,
                     "label":"Sprite",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":27,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"点击","strokeColor":"#90501f","fontSize":24,"font":"BOLD","color":"#9C5F3A"},
@@ -383,9 +387,10 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"x":49,"text":"觉醒血脉","strokeColor":"#90501f","fontSize":24,"font":"BOLD","color":"#F56400"},
+                            "props":{"x":49,"text":"觉醒灵脉","strokeColor":"#90501f","fontSize":24,"font":"BOLD","color":"#F56400"},
                             "nodeParent":27,
                             "label":"Label",
                             "isOpen":true,
@@ -399,9 +404,10 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"x":145,"text":"获得新的血脉天赋","strokeColor":"#90501f","fontSize":24,"font":"BOLD","color":"#9C5F3A"},
+                            "props":{"x":145,"text":"获得新的灵脉天赋","strokeColor":"#90501f","fontSize":24,"font":"BOLD","color":"#9C5F3A"},
                             "nodeParent":27,
                             "label":"Label",
                             "isOpen":true,
@@ -423,13 +429,14 @@
                     "props":{"y":39,"x":22,"var":"sp_lab"},
                     "nodeParent":51,
                     "label":"sp_lab",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":30,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"点击","strokeColor":"#90501f","fontSize":24,"font":"BOLD","color":"#9C5F3A"},
@@ -446,9 +453,10 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"x":48,"text":"血脉提升","strokeColor":"#90501f","fontSize":24,"font":"BOLD","color":"#386FED"},
+                            "props":{"x":48,"text":"灵脉提升","strokeColor":"#90501f","fontSize":24,"font":"BOLD","color":"#386FED"},
                             "nodeParent":30,
                             "label":"Label",
                             "isOpen":true,
@@ -462,9 +470,10 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"x":144,"text":"将随机升级一个当前血脉天赋","strokeColor":"#90501f","fontSize":24,"font":"BOLD","color":"#9C5F3A"},
+                            "props":{"x":144,"text":"将随机升级一个当前灵脉天赋","strokeColor":"#90501f","fontSize":24,"font":"BOLD","color":"#9C5F3A"},
                             "nodeParent":30,
                             "label":"Label",
                             "isOpen":true,
@@ -540,7 +549,7 @@
                                     "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
-                                    "props":{"y":25,"text":"觉醒血脉","fontSize":36,"font":"Bold","color":"#fff1d5","centerX":-3},
+                                    "props":{"y":25,"text":"觉醒灵脉","fontSize":36,"font":"Bold","color":"#fff1d5","centerX":-3},
                                     "nodeParent":49,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -648,7 +657,7 @@
                                     "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
-                                    "props":{"y":25,"text":"血脉提升","fontSize":36,"font":"Bold","color":"#fff1d5","centerX":-3},
+                                    "props":{"y":25,"text":"灵脉提升","fontSize":36,"font":"Bold","color":"#fff1d5","centerX":-3},
                                     "nodeParent":31,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -665,7 +674,7 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Label",
                     "searchKey":"Label,lab_sz",
                     "props":{"y":220.5,"x":342,"wordWrap":false,"var":"lab_sz","text":"已满级","strokeColor":"#7C430C","leading":5,"fontSize":40,"font":"BOLD","color":"#9E734D","align":"left"},
@@ -726,6 +735,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":0,
                     "type":"Label",
                     "searchKey":"Label,lab_attr",
                     "props":{"wordWrap":true,"width":62,"var":"lab_attr","text":"防御防御","strokeColor":"#803907","stroke":2,"fontSize":30,"font":"BOLD","color":"#FFF1C5","centerY":-76,"centerX":-3,"align":"center"},
@@ -741,9 +751,10 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":0,
                     "type":"Label",
                     "searchKey":"Label,lab_thdec",
-                    "props":{"y":154,"x":37,"width":424,"var":"lab_thdec","text":"点击替换会随机替换一条血脉天赋，并继承等级","strokeColor":"#90501f","height":20,"fontSize":20,"font":"BOLD","color":"#9C5F3A","align":"center"},
+                    "props":{"y":154,"x":37,"width":424,"var":"lab_thdec","text":"点击替换会随机替换一条灵脉天赋，并继承等级","strokeColor":"#90501f","height":20,"fontSize":20,"font":"BOLD","color":"#9C5F3A","align":"center"},
                     "nodeParent":64,
                     "label":"lab_thdec",
                     "isOpen":true,
@@ -799,6 +810,7 @@
                     "compId":62,
                     "child":[
                         {
+                            "x":0,
                             "type":"Label",
                             "searchKey":"Label,lab_th",
                             "props":{"y":25,"x":66,"var":"lab_th","text":"替换","fontSize":36,"font":"BOLD","color":"#fff5e3"},

@@ -10,9 +10,9 @@ call loadlib.bat %1
 @REM set old=%cd%
 
 cd %CURPROJECT%
-svn cleanup
+@REM svn cleanup
 
-svn up
+@REM svn up
 
 @REM echo clean END   %time%
 

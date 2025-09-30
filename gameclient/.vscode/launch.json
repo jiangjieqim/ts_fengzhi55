@@ -8,8 +8,9 @@
 			"type": "chrome",
 			"request": "launch",
 			// &skip=1&sdk_platform=0&
-			"url":"http://127.0.0.1:8001/Project1/Client/ts_fengzhi55/gameclient/bin/index.html?debug=1&user=1&ver=dev",
-            "runtimeExecutable":"${env:userprofile}/AppData/Local/Google/Chrome/Application/chrome.exe",
+			//"url":"http://127.0.0.1:8001/Project1/Client/ts_fengzhi55/gameclient/bin/index.html?debug=1&user=1&ver=dev",
+            "url": "http://192.168.0.92:8001/Project1/Client/ts_fengzhi55/gameclient/bin/index.html?user=hxx&ver=dev&debug2=1&tcp=ws://192.168.0.92:8602&proto_log=1",
+			"runtimeExecutable":"${env:userprofile}/AppData/Local/Google/Chrome/Application/chrome.exe",
             "runtimeArgs": [
 				"--allow-file-access-from-files",
 				"--disable-web-security"

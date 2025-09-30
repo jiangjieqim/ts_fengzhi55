@@ -844,6 +844,9 @@ export module ui.views.baoshi {
 		public btn_close:Laya.Image;
 		public bg3:Laya.Image;
 		public title:Laya.Image;
+		public bg:Laya.Image;
+		public gou:Laya.Image;
+		public tips1:Laya.Label;
 		public titletf:Laya.Label;
 		public lb1:Laya.Label;
 		public startBtn:Laya.Image;
@@ -852,9 +855,6 @@ export module ui.views.baoshi {
 		public listarea:Laya.Image;
 		public sanjiao:Laya.Image;
 		public listtf:Laya.Label;
-		public bg:Laya.Image;
-		public gou:Laya.Image;
-		public tips1:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -952,6 +952,7 @@ export module ui.views.baoshi {
     export class ui_baoshiGongMingViewUI extends View {
 		public btn_tip:Laya.Image;
 		public btn_close:Laya.Image;
+		public title_lab:Laya.Label;
 		public sp1:Laya.Sprite;
 		public img_1:Laya.Image;
 		public img_2:Laya.Image;
@@ -1307,6 +1308,9 @@ export module ui.views.chat {
 		public img_title:Laya.Image;
 		public img_bg:Laya.Image;
 		public lab:Laya.Label;
+		public sp:Laya.Sprite;
+		public lab_vip:Laya.Label;
+		public lab_vip1:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -1321,6 +1325,9 @@ export module ui.views.chat {
 		public img_title:Laya.Image;
 		public img_bg:Laya.Image;
 		public lab:Laya.Label;
+		public sp:Laya.Sprite;
+		public lab_vip:Laya.Label;
+		public lab_vip1:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -1752,9 +1759,6 @@ export module ui.views.drawEvent {
     }
     REG("ui.views.drawEvent.ui_DrawEventItem4UI",ui_DrawEventItem4UI);
     export class ui_DrawEventLBItemUI extends View {
-		public btn:Laya.Image;
-		public lab:Laya.Label;
-		public btn1:Laya.Image;
 		public btn2:Laya.Image;
 		public lab2:Laya.Label;
 		public sp:Laya.Sprite;
@@ -1762,6 +1766,9 @@ export module ui.views.drawEvent {
 		public btn3:Laya.Image;
 		public lab3:Laya.Label;
 		public icon:Laya.Image;
+		public rate_btn:ui.views.huodong.ui_01rate_btnUI;
+		public freeBtn:Laya.Image;
+		public tf3:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -2237,11 +2244,10 @@ export module ui.views.fighthard {
 		public tf4:Laya.Label;
 		public list1:Laya.List;
 		public list2:Laya.List;
-        public static  uiView:any ={"type":"View","props":{"width":678,"height":865},"compId":2,"child":[{"type":"Image","props":{"y":25,"width":631,"var":"bg1","skin":"remote/common/base/mb.png","sizeGrid":"18,21,22,19","height":837,"centerX":0},"compId":4},{"type":"Image","props":{"y":0,"x":615,"var":"close1","skin":"remote/common/base/close45.png"},"compId":5},{"type":"Image","props":{"y":49,"width":227,"skin":"remote/common/base/sxk.png","sizeGrid":"0,24,0,24","height":55,"centerX":0},"compId":6},{"type":"Label","props":{"y":59,"var":"tf2","text":"凶兽图鉴","fontSize":35,"font":"BOLD","color":"#BE8757","centerX":0},"compId":7},{"type":"Image","props":{"y":151,"x":92,"var":"bg2","skin":"remote/fighthard/az_bg1.png","centerX":0},"compId":11},{"type":"Image","props":{"y":117,"x":453,"var":"bg7","skin":"remote/zhengzhan/line.png"},"compId":8},{"type":"Image","props":{"y":117,"x":234,"var":"bg8","skin":"remote/zhengzhan/line.png","scaleX":-1},"compId":9},{"type":"Label","props":{"y":107,"var":"nametf","text":"凶兽","strokeColor":"#6B280A","stroke":3,"fontSize":40,"color":"#F83535","centerX":0},"compId":10},{"type":"Sprite","props":{"y":398,"x":331,"var":"avatarCon"},"compId":12},{"type":"Label","props":{"y":415,"width":383,"var":"tf3","text":"高闪避，回复克星","strokeColor":"#7E5236","stroke":3,"height":20,"fontSize":22,"font":"BOLD","color":"#F1E1C2","centerX":0,"align":"center"},"compId":14},{"type":"Image","props":{"y":467,"width":566,"var":"bg3","skin":"remote/common/base/juxing_2.png","sizeGrid":"10,11,13,11","height":200,"centerX":0},"compId":15},{"type":"Label","props":{"y":476,"var":"tf4","text":"凶兽技能","height":20,"fontSize":28,"font":"BOLD","color":"#B2713C","centerX":0,"align":"center"},"compId":16},{"type":"List","props":{"y":702,"width":524,"var":"list1","spaceX":20,"height":125,"hScrollBarSkin":" ","centerX":0},"compId":26,"child":[{"type":"ui_fighthard_avatar","props":{"renderType":"render","runtime":"ui.views.fighthard.ui_fighthard_avatarUI"},"compId":27}]},{"type":"List","props":{"y":535,"x":83,"width":516,"var":"list2","spaceX":38,"height":100,"hScrollBarSkin":" "},"compId":28,"child":[{"type":"ui_fight_hard_cirle","props":{"renderType":"render","runtime":"ui.views.fighthard.ui_fight_hard_cirleUI"},"compId":29}]}],"loadList":["remote/common/base/mb.png","remote/common/base/close45.png","remote/common/base/sxk.png","remote/fighthard/az_bg1.png","remote/zhengzhan/line.png","remote/common/base/juxing_2.png","views/fighthard/ui_fighthard_avatar.scene"],"loadList3D":[]};
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
-            this.createView(ui_fighthardtujianUI.uiView);
+            this.loadScene("views/fighthard/ui_fighthardtujian");
         }
     }
     REG("ui.views.fighthard.ui_fighthardtujianUI",ui_fighthardtujianUI);
@@ -2409,11 +2415,10 @@ export module ui.views.fighthard {
     export class ui_fight_hard_cirleUI extends View {
 		public bg1:Laya.Image;
 		public tf:Laya.Label;
-        public static  uiView:any ={"type":"View","props":{"width":100,"height":100},"compId":2,"child":[{"type":"Image","props":{"var":"bg1","skin":"remote/fighthard/az_anniu.png"},"compId":4},{"type":"Label","props":{"wordWrap":true,"width":58,"var":"tf","text":"爪击好","fontSize":28,"font":"BOLD","color":"#9E734D","centerY":0,"centerX":0,"align":"center"},"compId":5}],"loadList":["remote/fighthard/az_anniu.png"],"loadList3D":[]};
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
-            this.createView(ui_fight_hard_cirleUI.uiView);
+            this.loadScene("views/fighthard/ui_fight_hard_cirle");
         }
     }
     REG("ui.views.fighthard.ui_fight_hard_cirleUI",ui_fight_hard_cirleUI);
@@ -4177,6 +4182,95 @@ export module ui.views.gemfeast {
     }
     REG("ui.views.gemfeast.ui_gemfeast_main2UI",ui_gemfeast_main2UI);
 }
+export module ui.views.gexuqipao {
+    export class ui_gexuqipaoLBItemUI extends View {
+		public lab:Laya.Label;
+		public countTf:Laya.Label;
+		public rate_btn:ui.views.huodong.ui_01rate_btnUI;
+		public freeBtn:Laya.Image;
+		public tf3:Laya.Label;
+		public rewardCon:Laya.Sprite;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/gexuqipao/ui_gexuqipaoLBItem");
+        }
+    }
+    REG("ui.views.gexuqipao.ui_gexuqipaoLBItemUI",ui_gexuqipaoLBItemUI);
+    export class ui_gexuqipaoShopItemUI extends View {
+		public lab_num:Laya.Label;
+		public icon:Laya.Image;
+		public lab:Laya.Label;
+		public lab_name:Laya.Label;
+		public item:ui.views.main.ui_slot_itemUI;
+		public lab_xg:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/gexuqipao/ui_gexuqipaoShopItem");
+        }
+    }
+    REG("ui.views.gexuqipao.ui_gexuqipaoShopItemUI",ui_gexuqipaoShopItemUI);
+    export class ui_gexuqipaoTaskItemUI extends View {
+		public lab:Laya.Label;
+		public btn1:Laya.Image;
+		public lab2:Laya.Label;
+		public btn:Laya.Image;
+		public rewardCon:Laya.Sprite;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/gexuqipao/ui_gexuqipaoTaskItem");
+        }
+    }
+    REG("ui.views.gexuqipao.ui_gexuqipaoTaskItemUI",ui_gexuqipaoTaskItemUI);
+    export class ui_gexuqipaoViewUI extends View {
+		public close1:Laya.Image;
+		public btn_help:Laya.Image;
+		public sp1:Laya.Sprite;
+		public sp_role:Laya.Sprite;
+		public img1:Laya.Image;
+		public lab:Laya.Label;
+		public sp_jian:Laya.Sprite;
+		public sp_item:Laya.Sprite;
+		public btn_zj:Laya.Image;
+		public ckbg:Laya.Image;
+		public gou:Laya.Image;
+		public img:Laya.Image;
+		public lab1:Laya.Label;
+		public sp2:Laya.Sprite;
+		public list_task:Laya.List;
+		public sp3:Laya.Sprite;
+		public list_lb:Laya.List;
+		public sp4:Laya.Sprite;
+		public list_shop:Laya.List;
+		public lab2:Laya.Label;
+		public img2:Laya.Image;
+		public tab1:ui.views.gexuqipao.ui_tabUI;
+		public tab2:ui.views.gexuqipao.ui_tabUI;
+		public tab3:ui.views.gexuqipao.ui_tabUI;
+		public tab4:ui.views.gexuqipao.ui_tabUI;
+		public time1:Laya.Label;
+		public tf1:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/gexuqipao/ui_gexuqipaoView");
+        }
+    }
+    REG("ui.views.gexuqipao.ui_gexuqipaoViewUI",ui_gexuqipaoViewUI);
+    export class ui_tabUI extends View {
+		public img:Laya.Image;
+		public img1:Laya.Image;
+		public lab:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/gexuqipao/ui_tab");
+        }
+    }
+    REG("ui.views.gexuqipao.ui_tabUI",ui_tabUI);
+}
 export module ui.views.guaji {
     export class ui_guajiUI extends View {
 		public close1:Laya.Image;
@@ -4722,13 +4816,14 @@ export module ui.views.hero_house {
 		public ywtBtn:Laya.Image;
 		public tf12:Laya.Label;
 		public fastCon:Laya.Sprite;
-		public lab_time:Laya.Label;
 		public fastBtn:Laya.Image;
 		public tf23:Laya.Label;
+		public timeTf:Laya.Label;
+		public subtimeCon:Laya.Sprite;
+		public lab_time:Laya.Label;
 		public subBtn:Laya.Image;
 		public tf22:Laya.Label;
 		public bg5:Laya.Image;
-		public timeTf:Laya.Label;
 		public lab_d:Laya.Label;
         constructor(){ super()}
         createChildren():void {
@@ -5589,7 +5684,6 @@ export module ui.views.huodong {
     export class ui_meirilibao_itemUI extends View {
 		public bg1:Laya.Image;
 		public bg3:Laya.Image;
-		public bg2:Laya.Image;
 		public freeBtn:Laya.Image;
 		public tf3:Laya.Label;
 		public redImg:Laya.Image;
@@ -5606,20 +5700,32 @@ export module ui.views.huodong {
     REG("ui.views.huodong.ui_meirilibao_itemUI",ui_meirilibao_itemUI);
     export class ui_meirilibao_viewUI extends View {
 		public bg1:Laya.Image;
-		public bg2:Laya.Image;
-		public close1:Laya.Image;
-		public bg3:Laya.Image;
-		public tf2:Laya.Label;
-		public sp_mr:Laya.Sprite;
-		public bg4:Laya.Image;
-		public list1:Laya.List;
+		public sp_1:Laya.Sprite;
 		public timeTf:Laya.Label;
+		public list1:Laya.List;
 		public disbtn:ui.views.huodong.ui_01rate_btnUI;
-		public sp_zk:Laya.Sprite;
+		public tab1:ui.views.huodong.ui_meiriTabUI;
+		public tab2:ui.views.huodong.ui_meiriTabUI;
+		public tab3:ui.views.huodong.ui_meiriTabUI;
+		public sp_2:Laya.Sprite;
 		public timeTf1:Laya.Label;
 		public panel:Laya.Panel;
-		public tab_zk:ui.views.huodong.ui_tabUI;
-		public tab_mr:ui.views.huodong.ui_tabUI;
+		public sp_3:Laya.Sprite;
+		public list_vip:Laya.List;
+		public lab_vip:Laya.Label;
+		public lab_vip1:Laya.Label;
+		public lab_vip2:Laya.Label;
+		public pro_vip:Laya.Image;
+		public lab_vip3:Laya.Label;
+		public sp:Laya.Sprite;
+		public btn_vip1:Laya.Image;
+		public lab_vip4:Laya.Label;
+		public btn_vip2:Laya.Image;
+		public sp_4:Laya.Sprite;
+		public item:ui.views.huodong.ui_zhongshenka_viewUI;
+		public item1:ui.views.huodong.ui_yueka_viewUI;
+		public close1:Laya.Image;
+		public list_tab:Laya.List;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -5627,6 +5733,39 @@ export module ui.views.huodong {
         }
     }
     REG("ui.views.huodong.ui_meirilibao_viewUI",ui_meirilibao_viewUI);
+    export class ui_meiriTabUI extends View {
+		public img:Laya.Image;
+		public sel:Laya.Sprite;
+		public timeTf:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/huodong/ui_meiriTab");
+        }
+    }
+    REG("ui.views.huodong.ui_meiriTabUI",ui_meiriTabUI);
+    export class ui_meiriTab1UI extends View {
+		public img:Laya.Image;
+		public img1:Laya.Image;
+		public txt:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/huodong/ui_meiriTab1");
+        }
+    }
+    REG("ui.views.huodong.ui_meiriTab1UI",ui_meiriTab1UI);
+    export class ui_meiriTab2UI extends View {
+		public img:Laya.Image;
+		public sp:Laya.Sprite;
+		public txt:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/huodong/ui_meiriTab2");
+        }
+    }
+    REG("ui.views.huodong.ui_meiriTab2UI",ui_meiriTab2UI);
     export class ui_mount_chengzhangUI extends View {
 		public bg0:Laya.Image;
 		public bg1:Laya.Image;
@@ -5721,11 +5860,10 @@ export module ui.views.huodong {
 		public numCon:Laya.Sprite;
 		public redImg:Laya.Image;
 		public timeTF:Laya.Label;
-        public static  uiView:any ={"type":"View","props":{"width":603,"height":205},"compId":2,"child":[{"type":"Image","props":{"y":0,"x":0,"var":"bg1","skin":"remote/newplayerfeast/a1.png"},"compId":3,"child":[{"type":"Sprite","props":{"y":63,"x":101,"var":"numCon"},"compId":7}]},{"type":"Image","props":{"y":0,"x":573,"var":"redImg","skin":"remote/main/main/reddot.png"},"compId":4},{"type":"Label","props":{"y":48,"x":124,"width":464,"var":"timeTF","text":"1小时50分后结束","strokeColor":"#5E3021","stroke":2,"height":24,"fontSize":21,"font":"BOLD","color":"#FFEFCD","align":"right"},"compId":5}],"loadList":["remote/newplayerfeast/a1.png","remote/main/main/reddot.png"],"loadList3D":[]};
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
-            this.createView(ui_newplayer_feast_itemUI.uiView);
+            this.loadScene("views/huodong/ui_newplayer_feast_item");
         }
     }
     REG("ui.views.huodong.ui_newplayer_feast_itemUI",ui_newplayer_feast_itemUI);
@@ -6046,6 +6184,25 @@ export module ui.views.huodong {
         }
     }
     REG("ui.views.huodong.ui_xingrenlibao_viewUI",ui_xingrenlibao_viewUI);
+    export class ui_xingrenlibao_view_oldUI extends View {
+		public bg1:Laya.Image;
+		public rewardCon:Laya.Sprite;
+		public close1:Laya.Image;
+		public list1:Laya.List;
+		public btn1:Laya.Image;
+		public tf1:Laya.Label;
+		public img:Laya.Image;
+		public btnhot:ui.views.huodong.ui_01rate_btnUI;
+		public old_money_con:Laya.Sprite;
+		public oldMoney:Laya.Label;
+		public lab_money:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/huodong/ui_xingrenlibao_view_old");
+        }
+    }
+    REG("ui.views.huodong.ui_xingrenlibao_view_oldUI",ui_xingrenlibao_view_oldUI);
     export class ui_yueka_viewUI extends View {
 		public bg1:Laya.Image;
 		public weichongzhi:Laya.Sprite;
@@ -7009,11 +7166,10 @@ export module ui.views.jjzml {
 		public item6:ui.views.jjzml.ui_jjzml_itemUI;
 		public titleimg:Laya.Image;
 		public tf2:Laya.Label;
-        public static  uiView:any ={"type":"View","props":{"width":705,"height":682},"compId":2,"child":[{"type":"Image","props":{"y":-301,"x":-18,"var":"bg1","skin":"remote/jjzml/jjzml.png"},"compId":4},{"type":"Image","props":{"y":-60,"x":637,"var":"close1","skin":"remote/jjzml/x.png"},"compId":5},{"type":"Image","props":{"y":536,"x":256,"var":"btn1","skin":"remote/jjzml/qiandao.png"},"compId":6},{"type":"Sprite","props":{"y":129,"x":41,"var":"rewardCon"},"compId":17,"child":[{"type":"ui_jjzml_item","props":{"var":"item0","runtime":"ui.views.jjzml.ui_jjzml_itemUI"},"compId":7},{"type":"ui_jjzml_item","props":{"x":159,"var":"item1","runtime":"ui.views.jjzml.ui_jjzml_itemUI"},"compId":8},{"type":"ui_jjzml_item","props":{"x":323,"var":"item2","runtime":"ui.views.jjzml.ui_jjzml_itemUI"},"compId":11},{"type":"ui_jjzml_item","props":{"x":484,"var":"item3","runtime":"ui.views.jjzml.ui_jjzml_itemUI"},"compId":12},{"type":"ui_jjzml_item","props":{"y":196,"x":69,"var":"item4","runtime":"ui.views.jjzml.ui_jjzml_itemUI"},"compId":13},{"type":"ui_jjzml_item","props":{"y":196,"x":241,"var":"item5","runtime":"ui.views.jjzml.ui_jjzml_itemUI"},"compId":14},{"type":"ui_jjzml_item","props":{"y":196,"x":407,"var":"item6","runtime":"ui.views.jjzml.ui_jjzml_itemUI"},"compId":15}]},{"type":"Image","props":{"y":-15,"x":61,"var":"titleimg","skin":"remote/jjzml/t0.png"},"compId":18},{"type":"Label","props":{"y":557,"width":285,"var":"tf2","text":"今日已签到","strokeColor":"#904C23","stroke":2,"height":22,"fontSize":28,"font":"BOLD","color":"#FCEEC7","centerX":0,"align":"center"},"compId":20}],"loadList":["remote/jjzml/jjzml.png","remote/jjzml/x.png","remote/jjzml/qiandao.png","views/jjzml/ui_jjzml_item.scene","remote/jjzml/t0.png"],"loadList3D":[]};
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
-            this.createView(ui_jjzml_mainUI.uiView);
+            this.loadScene("views/jjzml/ui_jjzml_main");
         }
     }
     REG("ui.views.jjzml.ui_jjzml_mainUI",ui_jjzml_mainUI);
@@ -7211,6 +7367,99 @@ export module ui.views.kaifuchongbang {
         }
     }
     REG("ui.views.kaifuchongbang.ui_tabUI",ui_tabUI);
+}
+export module ui.views.kangjixiongshou {
+    export class ui_kangjixiongshouItemUI extends View {
+		public slot:ui.views.main.ui_slot_itemUI;
+		public bg9:Laya.Image;
+		public lab1:Laya.Label;
+		public lab2:Laya.Label;
+		public lab3:Laya.Label;
+		public lab4:Laya.Label;
+		public lab5:Laya.Label;
+		public lab6:Laya.Label;
+		public lab7:Laya.Label;
+		public lab8:Laya.Label;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/kangjixiongshou/ui_kangjixiongshouItem");
+        }
+    }
+    REG("ui.views.kangjixiongshou.ui_kangjixiongshouItemUI",ui_kangjixiongshouItemUI);
+    export class ui_kangjixiongshouViewUI extends View {
+		public bg1:Laya.Image;
+		public bg2:Laya.Image;
+		public bg4:Laya.Image;
+		public bg3:Laya.Image;
+		public title1:Laya.Label;
+		public close1:Laya.Image;
+		public help1:Laya.Image;
+		public bg7:Laya.Image;
+		public bg8:Laya.Image;
+		public nametf:Laya.Label;
+		public timeTf:Laya.Label;
+		public tf1:Laya.Label;
+		public tujianBtn:Laya.Image;
+		public tf4:Laya.Label;
+		public avatarCon:Laya.Sprite;
+		public bg9:Laya.Image;
+		public tf8:Laya.Label;
+		public freeCon:Laya.Sprite;
+		public freeBtn:Laya.Image;
+		public freeTf:Laya.Label;
+		public freeCountTf:Laya.Label;
+		public tiaozhanCon:Laya.Sprite;
+		public fightBtn:Laya.Image;
+		public tf6:Laya.Label;
+		public tf7:Laya.Label;
+		public goldImg:Laya.Image;
+		public goldTf:Laya.Label;
+		public btn:Laya.Image;
+		public slot:ui.views.main.ui_slot_itemUI;
+		public slot1:ui.views.main.ui_slot_itemUI;
+		public slot2:ui.views.main.ui_slot_itemUI;
+		public slot3:ui.views.main.ui_slot_itemUI;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/kangjixiongshou/ui_kangjixiongshouView");
+        }
+    }
+    REG("ui.views.kangjixiongshou.ui_kangjixiongshouViewUI",ui_kangjixiongshouViewUI);
+    export class ui_kangjixiongshouView1UI extends View {
+		public bg1:Laya.Image;
+		public close1:Laya.Image;
+		public tf2:Laya.Label;
+		public bg2:Laya.Image;
+		public bg7:Laya.Image;
+		public bg8:Laya.Image;
+		public nametf:Laya.Label;
+		public avatarCon:Laya.Sprite;
+		public tf3:Laya.Label;
+		public bg3:Laya.Image;
+		public tf4:Laya.Label;
+		public list1:Laya.List;
+		public list2:Laya.List;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/kangjixiongshou/ui_kangjixiongshouView1");
+        }
+    }
+    REG("ui.views.kangjixiongshou.ui_kangjixiongshouView1UI",ui_kangjixiongshouView1UI);
+    export class ui_kangjixiongshouView2UI extends View {
+		public bg1:Laya.Image;
+		public close1:Laya.Image;
+		public tf2:Laya.Label;
+		public list:Laya.List;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/kangjixiongshou/ui_kangjixiongshouView2");
+        }
+    }
+    REG("ui.views.kangjixiongshou.ui_kangjixiongshouView2UI",ui_kangjixiongshouView2UI);
 }
 export module ui.views.laborday {
     export class ui_children_markerUI extends View {
@@ -7441,6 +7690,7 @@ export module ui.views.laborday {
 		public moneyTf:Laya.Label;
 		public dotimg:Laya.Image;
 		public xiangoutf:Laya.Label;
+		public dicbtn:ui.views.huodong.ui_01rate_btnUI;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -7972,6 +8222,8 @@ export module ui.views.libao {
     }
     REG("ui.views.libao.ui_skinSlotItemUI",ui_skinSlotItemUI);
     export class ui_skinViewUI extends View {
+		public bg1:Laya.Image;
+		public descImg:Laya.Image;
 		public btn_lf:Laya.Image;
 		public btn_rt:Laya.Image;
 		public btn_close:Laya.Image;
@@ -7984,6 +8236,7 @@ export module ui.views.libao {
 		public dot1:Laya.Image;
 		public dot2:Laya.Image;
 		public dot3:Laya.Image;
+		public disbtn:ui.views.huodong.ui_01rate_btnUI;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -8024,6 +8277,9 @@ export module ui.views.lingchong {
 		public lb1:Laya.Label;
 		public startBtn:Laya.Image;
 		public startTf:Laya.Label;
+		public bg4:Laya.Image;
+		public gou:Laya.Image;
+		public tips1:Laya.Label;
 		public listcontainer:Laya.Image;
 		public listarea:Laya.Image;
 		public sanjiao:Laya.Image;
@@ -8161,9 +8417,9 @@ export module ui.views.lingchong {
 		public spbg:Laya.Sprite;
 		public star:ui.views.fujiang.ui_starUI;
 		public lab_lv:Laya.Label;
-		public tab:ui.views.lingchong.ui_tab1UI;
 		public img_xz:Laya.Image;
 		public sp:Laya.Sprite;
+		public tab:ui.views.lingchong.ui_tab1UI;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -8787,8 +9043,8 @@ export module ui.views.login {
 		public img_t:Laya.Image;
 		public lab_id:Laya.Label;
 		public lab_sel:Laya.Label;
-		public bg2:Laya.Image;
 		public bg3:Laya.Image;
+		public lab_notice:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -8878,6 +9134,17 @@ export module ui.views.mail {
     REG("ui.views.mail.mallitemUI",mallitemUI);
 }
 export module ui.views.main.maincell {
+    export class ui_fight_num_playUI extends View {
+		public bg:Laya.Image;
+		public plusCon:Laya.Sprite;
+		public upimg:Laya.Image;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/main/maincell/ui_fight_num_play");
+        }
+    }
+    REG("ui.views.main.maincell.ui_fight_num_playUI",ui_fight_num_playUI);
     export class ui_item_not_enough_cellUI extends View {
 		public nametf:Laya.Label;
 		public btn1:Laya.Image;
@@ -9120,11 +9387,10 @@ export module ui.views.main {
 		public bg:Laya.Image;
 		public tf:Laya.Label;
 		public juhua:Laya.Image;
-        public static  uiView:any ={"type":"View","props":{"width":750,"height":1334},"compId":2,"child":[{"type":"Image","props":{"width":750,"var":"bg","height":1630,"centerY":0,"centerX":0},"compId":4,"child":[{"type":"Label","props":{"y":651,"x":314,"var":"tf","text":"请稍等...","fontSize":32,"color":"#ffffff","centerY":0,"centerX":0},"compId":3}]},{"type":"Image","props":{"y":667,"x":375,"var":"juhua","skin":"static/jh.png","rotation":0,"centerY":0,"centerX":0,"anchorY":0.5,"anchorX":0.5},"compId":11}],"loadList":["static/jh.png"],"loadList3D":[]};
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
-            this.createView(ui_game_maskUI.uiView);
+            this.loadScene("views/main/ui_game_mask");
         }
     }
     REG("ui.views.main.ui_game_maskUI",ui_game_maskUI);
@@ -9246,6 +9512,10 @@ export module ui.views.main {
 		public plus1:Laya.Image;
 		public yuanbaoTf:Laya.Label;
 		public nameTF:Laya.Label;
+		public sp:Laya.Sprite;
+		public img_vip:Laya.Image;
+		public lab_vip:Laya.Label;
+		public lab_vip1:Laya.Label;
 		public titleImg:Laya.Image;
 		public lbLayer1:Laya.Sprite;
 		public paoma:Laya.Sprite;
@@ -9737,16 +10007,26 @@ export module ui.views.main {
 		public title1:Laya.Image;
 		public closeBtn1:Laya.Image;
 		public bg4:Laya.Image;
-		public zhuanbeitf1:Laya.Label;
-		public descTf:Laya.Label;
 		public nameTF:Laya.Label;
 		public item:ui.views.main.ui_slot_itemUI;
-		public moneyTf:Laya.Label;
-		public goldIcon:Laya.Image;
 		public okBtn:Laya.Image;
 		public tf1:Laya.Label;
 		public cancelBtn:Laya.Image;
 		public tf2:Laya.Label;
+		public oldStyles:Laya.Sprite;
+		public zhuanbeitf1:Laya.Label;
+		public descTf:Laya.Label;
+		public goldIcon:Laya.Image;
+		public moneyTf:Laya.Label;
+		public newStyles:Laya.Sprite;
+		public btn_add1:Laya.Image;
+		public btn_sub1:Laya.Image;
+		public btn_sub:Laya.Image;
+		public btn_add:Laya.Image;
+		public lab_num:Laya.Label;
+		public lab_m:Laya.Label;
+		public lab_d:Laya.Label;
+		public icon:Laya.Image;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -9891,7 +10171,6 @@ export module ui.views.main {
 export module ui.views.mall {
     export class ui_mallUI extends View {
 		public bg:Laya.Image;
-		public bg1:Laya.Image;
 		public close1:Laya.Image;
 		public title:Laya.Image;
 		public tf1:Laya.Label;
@@ -10194,6 +10473,7 @@ export module ui.views.maoxian2 {
 		public tf1:Laya.Label;
 		public tf2:Laya.Label;
 		public tf3:Laya.Label;
+		public tf33:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -10537,10 +10817,10 @@ export module ui.views.monopoly {
 		public sp:Laya.Sprite;
 		public lab1:Laya.Label;
 		public lab2:Laya.Label;
-		public btn:Laya.Image;
-		public lab:Laya.Label;
-		public btn1:Laya.Image;
 		public btn2:Laya.Image;
+		public rate_btn:ui.views.huodong.ui_01rate_btnUI;
+		public freeBtn:Laya.Image;
+		public tf3:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -10769,6 +11049,7 @@ export module ui.views.paoshang {
     export class ui_paoshangUI extends View {
 		public bg:Laya.Image;
 		public txt2:Laya.Label;
+		public shuoming_btn:Laya.Image;
 		public box_my:Laya.Box;
 		public btn_rz:Laya.Image;
 		public btn_wp:Laya.Image;
@@ -11661,6 +11942,7 @@ export module ui.views.shenbin {
 		public txt_money2:Laya.Label;
 		public img_money2:Laya.Image;
 		public btn_tz:Laya.Sprite;
+		public lab_3:Laya.Label;
 		public ckbg3:Laya.Image;
 		public gou3:Laya.Image;
 		public icon1:Laya.Image;
@@ -11895,6 +12177,8 @@ export module ui.views.shezhi {
 		public btn_ys:Laya.Image;
 		public btn_qw:Laya.Image;
 		public qw_red:Laya.Image;
+		public btn_nc:Laya.Image;
+		public xxtx:Laya.Image;
 		public check:ui.views.main.ui_checkbox_02UI;
 		public auth_btn:Laya.Image;
 		public appimg:Laya.Image;
@@ -11917,6 +12201,26 @@ export module ui.views.shezhi {
         }
     }
     REG("ui.views.shezhi.ui_tabUI",ui_tabUI);
+    export class ui_xiugaincViewUI extends View {
+		public bg1:Laya.Image;
+		public close1:Laya.Image;
+		public bg2:Laya.Image;
+		public tf2:Laya.Label;
+		public bg3:Laya.Image;
+		public tf5:Laya.Label;
+		public btn1:Laya.Image;
+		public tf3:Laya.Label;
+		public input1:Laya.TextInput;
+		public sp:Laya.Sprite;
+		public lab_m:Laya.Label;
+		public icon:Laya.Image;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/shezhi/ui_xiugaincView");
+        }
+    }
+    REG("ui.views.shezhi.ui_xiugaincViewUI",ui_xiugaincViewUI);
     export class ui_yingsiUI extends View {
 		public close1:Laya.Image;
 		public tab1:ui.views.shezhi.ui_tabUI;
@@ -13879,6 +14183,70 @@ export module ui.views.zhengtu {
         }
     }
     REG("ui.views.zhengtu.ui_zhengtu_viewUI",ui_zhengtu_viewUI);
+}
+export module ui.views.zixuanlibao {
+    export class ui_zixuanlibaoItemUI extends View {
+		public lab:Laya.Label;
+		public countTf:Laya.Label;
+		public rate_btn:ui.views.huodong.ui_01rate_btnUI;
+		public freeBtn:Laya.Image;
+		public tf3:Laya.Label;
+		public rewardCon:Laya.Sprite;
+		public item1:ui.views.zixuanlibao.ui_zixuanlibaoItem1UI;
+		public item:ui.views.main.ui_slot_itemUI;
+		public item2:ui.views.zixuanlibao.ui_zixuanlibaoItem1UI;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/zixuanlibao/ui_zixuanlibaoItem");
+        }
+    }
+    REG("ui.views.zixuanlibao.ui_zixuanlibaoItemUI",ui_zixuanlibaoItemUI);
+    export class ui_zixuanlibaoItem1UI extends View {
+		public item:ui.views.main.ui_slot_itemUI;
+		public quality:Laya.Image;
+		public btn:Laya.Image;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/zixuanlibao/ui_zixuanlibaoItem1");
+        }
+    }
+    REG("ui.views.zixuanlibao.ui_zixuanlibaoItem1UI",ui_zixuanlibaoItem1UI);
+    export class ui_zixuanlibaoViewUI extends View {
+		public btn_close:Laya.Image;
+		public lab:Laya.Label;
+		public lab_time:Laya.Label;
+		public list:Laya.List;
+		public disbtn:ui.views.huodong.ui_01rate_btnUI;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/zixuanlibao/ui_zixuanlibaoView");
+        }
+    }
+    REG("ui.views.zixuanlibao.ui_zixuanlibaoViewUI",ui_zixuanlibaoViewUI);
+    export class ui_zixuanlibaoView1UI extends View {
+		public btn_close:Laya.Image;
+		public sp1:Laya.Sprite;
+		public item1:ui.views.zixuanlibao.ui_zixuanlibaoItem1UI;
+		public img1:Laya.Image;
+		public sp_1:Laya.Sprite;
+		public sp2:Laya.Sprite;
+		public item2:ui.views.zixuanlibao.ui_zixuanlibaoItem1UI;
+		public img2:Laya.Image;
+		public sp_2:Laya.Sprite;
+		public list:Laya.List;
+		public btn_qr:Laya.Image;
+		public labFree:Laya.Label;
+		public btn_qx:Laya.Image;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/zixuanlibao/ui_zixuanlibaoView1");
+        }
+    }
+    REG("ui.views.zixuanlibao.ui_zixuanlibaoView1UI",ui_zixuanlibaoView1UI);
 }
 export module ui.views.zuoqi {
     export class ui_zuoqiGMViewUI extends View {

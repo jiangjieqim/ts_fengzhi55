@@ -441,9 +441,9 @@ export class E {
     static all_bin:string;
     private static get discount_all_bin(){
         if(Laya.Utils.getQueryString("asset")){
-            return `${Laya.Utils.getQueryString("asset")}all2.bin`;
+            return `${Laya.Utils.getQueryString("asset")}all.bin`;
         }
-        return `${initConfig.asset}all2.bin`;
+        return `${initConfig.asset}all.bin`;
     }
     private static f_get_new(){
         // if(!initConfig.sy_url){

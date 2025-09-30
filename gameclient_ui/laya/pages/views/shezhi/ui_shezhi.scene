@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":41,
-    "selecteID":69,
+    "selectedBox":2,
+    "selecteID":54,
     "searchKey":"View",
     "props":{"width":659,"sceneColor":"#000000","height":1126},
     "nodeParent":-1,
@@ -452,7 +452,7 @@
                     "compId":47,
                     "child":[
                         ],
-                    "$HIDDEN":false
+                    "$HIDDEN":true
                 },
                 {
                     "x":30,
@@ -482,7 +482,7 @@
                     "compId":49,
                     "child":[
                         ],
-                    "$HIDDEN":false
+                    "$HIDDEN":true
                 },
                 {
                     "x":30,
@@ -503,7 +503,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,btn_ys",
-                    "props":{"y":200,"x":229,"var":"btn_ys","skin":"remote/shezhi/ysxy.png"},
+                    "props":{"y":40.5,"x":238,"var":"btn_ys","skin":"remote/shezhi/ysxy.png"},
                     "nodeParent":41,
                     "label":"btn_ys",
                     "isDirectory":false,
@@ -541,7 +541,7 @@
                             "child":[
                                 ]
                         }],
-                    "$HIDDEN":false
+                    "$HIDDEN":true
                 },
                 {
                     "x":30,
@@ -557,7 +557,7 @@
                     "compId":69,
                     "child":[
                         ],
-                    "$HIDDEN":false
+                    "$HIDDEN":true
                 }],
             "$LOCKED":false,
             "$HIDDEN":false
@@ -565,51 +565,50 @@
         {
             "x":15,
             "type":"Image",
-            "searchKey":"Image",
-            "props":{"y":960,"x":37,"width":568,"skin":"remote/common/base/shuxingkuang1.png","sizeGrid":"12,12,12,12","height":116},
+            "searchKey":"Image,xxtx",
+            "props":{"y":960,"x":37,"width":568,"var":"xxtx","skin":"remote/common/base/shuxingkuang1.png","sizeGrid":"12,12,12,12","height":116},
             "nodeParent":2,
-            "label":"Image",
+            "label":"xxtx",
             "isOpen":true,
-            "isDirectory":false,
+            "isDirectory":true,
             "isAniNode":true,
-            "hasChild":false,
+            "hasChild":true,
             "compId":54,
             "child":[
-                ],
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"y":45,"x":68,"width":209,"text":"接收游戏更新提醒","height":26,"fontSize":26,"font":"BOLD","color":"#9C5F3A"},
+                    "nodeParent":54,
+                    "label":"Label",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":55,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"UIView",
+                    "source":"views/main/ui_checkbox_02.scene",
+                    "searchKey":"UIView,check",
+                    "props":{"y":36,"x":452,"var":"check"},
+                    "nodeParent":54,
+                    "label":"check",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":64,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                }],
             "$LOCKED":false,
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Label",
-            "searchKey":"Label",
-            "props":{"y":1005,"x":105,"width":209,"text":"接收游戏更新提醒","height":26,"fontSize":26,"font":"BOLD","color":"#9C5F3A"},
-            "nodeParent":2,
-            "label":"Label",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":55,
-            "child":[
-                ],
-            "$LOCKED":false,
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"UIView",
-            "source":"views/main/ui_checkbox_02.scene",
-            "searchKey":"UIView,check",
-            "props":{"y":995.5,"x":489,"var":"check"},
-            "nodeParent":2,
-            "label":"check",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":64,
-            "child":[
-                ],
             "$HIDDEN":false
         },
         {

@@ -763,7 +763,7 @@
             "type": "shell",
             "command":"echo off & cd ../../../../ & cd Project1/cmd & call commit_rev_out ${workspaceFolder}",
             "problemMatcher": [],
-        }
+        },
         {
             "label": "open ../workspaceFolder",
             "type": "shell",

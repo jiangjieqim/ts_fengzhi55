@@ -29688,7 +29688,7 @@
             }
             else {
                 this.con1.visible = true;
-                this.nameTf.text = `Lv.${vo.level} ${vo.name}`;
+                this.nameTf.text = `${vo.level}级${vo.name}`;
                 this.starCtl.setStar(vo.star);
                 this.starCtl.centerX();
             }
@@ -30115,7 +30115,12 @@
                 slotName == ESpineSlotId.WING1 ||
                 slotName == ESpineSlotId.WING2) {
                 let tex = Laya.loader.getRes(url);
-                _uv = SpineUtil.createSize(tex.width, tex.height);
+                if (tex) {
+                    _uv = SpineUtil.createSize(tex.width, tex.height);
+                }
+                else {
+                    console.log(`drawSkel ${url} not find!!`);
+                }
             }
             let str = getAtlasNameBySlot(slotName);
             if (!_uv) {
@@ -31108,13 +31113,13 @@
         }
         getFuncList(taskId) {
             const taskIdList = TaskProxy.Ins.getTaskIdList();
-            const funcInfos = this.List;
+            const funcInfos = this.List.filter(o => o.f_close == 0);
             const playerTaskIndex = taskIdList.findIndex(id => id === taskId);
             const funcTaskIndexs = funcInfos.map(o => {
                 if (o.f_task != 0) {
                     const index = taskIdList.findIndex(tid => tid === o.f_task);
                     if (index === -1) {
-                        throw new Error(`Func表配置错误，缺少功能#${o.funcId}对应的taskId#${o.taskId}`);
+                        throw new Error(`Func表配置错误，缺少功能#${o.f_FunctionID}对应的taskId#${o.taskId}`);
                     }
                     return index;
                 }
@@ -33960,7 +33965,7 @@
             this.curLv = t_Spirit_ExpUpgrade.Ins.getLvByExp(_vo.qualityId, _vo.exp);
             if (this.newLv > this.curLv) {
                 this._ui.bg11.visible = true;
-                this._ui.addTf.text = "Lv." + this.newLv;
+                this._ui.addTf.text = this.newLv + "级";
                 this._ui.img5.visible = true;
                 this._ui.img4.visible = true;
             }
@@ -33975,7 +33980,7 @@
             let maxVal = t_Spirit_ExpUpgrade.Ins.getMaxByQua(_vo.qualityId);
             this.maxVal = maxVal;
             this.iconCtl.updateCell(_vo);
-            this._ui.lvtf.text = "Lv." + this.curLv;
+            this._ui.lvtf.text = this.curLv + "级";
             let cfg = (t_Spirit_Attribute_Fixed.Ins.getCfgBySpiritID(_vo.spiritId));
             this._ui.namftf.text = cfg.f_SpiritName;
             if (_nowExp >= maxVal) {
@@ -36119,6 +36124,7 @@
             this.tf1.text = this.vo.clearanceDesc;
             this.tf2.text = this.vo.heroName;
             this.tf3.text = E.getLang("maoxian2_text2");
+            this.tf33.text = E.getLang("maoxian2_text3");
             ItemViewFactory.LayoutLabels(this.desctf);
             ItemViewFactory.renderItemSlots(this.rewardCon, this.vo.cfg.f_LevelReward1, 10, 1, "left", SoltItemView, "SoltItemView");
             let _imgcfg = Enemy_ImageProxy.Ins.getCfg(this.vo.cfg.f_EnamyImage);
@@ -40250,7 +40256,6 @@
                 _pop = true;
             }
             if (_pop) {
-                E.ViewMgr.Open(EViewType.NewPlayPackage);
             }
         }
         get isNotBuyAll() {
@@ -40520,7 +40525,6 @@
                     console.log(JSON.stringify(item) + "- nextOpenTime:" + TimeUtil.timestamtoTime(item.time * 1000));
                 });
             }
-            this.event(ActivityEvent.PopWinUpdate);
         }
         get isPopIconShow() {
             if (initConfig.clienttype == EClientType.Discount) {
@@ -46144,6 +46148,7 @@
             this.model.once(JjcEvent.UpdatePlayerList, this, this.onRefreshList);
             this.model.reqJjcList();
             this.onScoreHandle();
+            this._ui.fightbtn.visible = false;
         }
         onScoreHandle() {
             if (this.model.hasScore) {
@@ -49168,7 +49173,7 @@
             return "";
         }
         static str2Lv(lv) {
-            return "Lv." + lv;
+            return lv + "级";
         }
     }
     IconUtils.Empty = "empty";
@@ -49781,7 +49786,7 @@
                 case EActionSkill.NormalAttack:
                     return "普攻";
                 case EActionSkill.SuckBlood:
-                    return "吸血";
+                    return "汲取";
                 case EActionSkill.CriticalStrike:
                     return "暴击";
                 case EActionSkill.PassiveDodge:
@@ -50158,7 +50163,7 @@
                 case EServerSkillType.PassiveHurtBlood:
                     return "受击减血 -" + val;
                 case EServerSkillType.SuckBlood:
-                    return "吸血 +" + val;
+                    return "汲取 +" + val;
                 case EServerSkillType.Move:
                     let a = "";
                     switch (val) {
@@ -50794,7 +50799,7 @@
                 if (vo) {
                     MainModel.Ins.setTTHead(this._ui["icon" + i], MainModel.Ins.convertHead(vo.portrait));
                     this._ui["img_t_" + i].skin = ChengHaoModel.Ins.getTitleImg(vo.titleId);
-                    this._ui["Lvtf" + i].text = "lv" + vo.level;
+                    this._ui["Lvtf" + i].text = vo.level + "级";
                     this._ui["name" + i].text = vo.name;
                     this._ui["box_" + i].visible = true;
                     this["_ctl" + i].setValue(this._ui["num" + i], vo.streakTimes.toString(), "middle");
@@ -58205,7 +58210,7 @@
             headSkin.sel.visible = false;
             f_setStar(headSkin, this._data.star);
             headSkin.typename.text = "";
-            headSkin.tf1.text = "Lv." + this._data.lv;
+            headSkin.tf1.text = this._data.lv + "级";
             headSkin.icon.skin = IconUtils.getHorseIcon(this._data.mountid);
             headSkin.qua.skin = IconUtils.getQuaIcon(this._data.qua);
         }
@@ -59408,7 +59413,7 @@
                 let s = "";
                 let sign = "";
                 if (this.cfg.f_p1 != 0) {
-                    s = `Lv.${this.cfg.f_p1}`;
+                    s = `${this.cfg.f_p1}级`;
                     sign = "+";
                 }
                 if (this.cfg.f_UnlockType == EBoxAutoType.Month) {
@@ -62202,7 +62207,7 @@
             this.avatarCon.addChild(this.avatar);
             this.starCtl.setStar(cfg.f_EnemyStar);
             this.starCtl.centerX();
-            this.nameTf.text = "Lv." + cfg.f_EnemyLv + " " + cfg.f_Stations;
+            this.nameTf.text = cfg.f_EnemyLv + "级" + cfg.f_Stations;
             this.nameTf.color = "#" + EquipmentQualityProxy.Ins.getByQua(cfg.f_EnemyImage).f_Color;
             if (this.avatar.bHorseSkel) {
                 this.con1.y = -AvatarConfig.hasHorseHeight;
@@ -63116,7 +63121,6 @@
         }
         checkAndOpenNewPlayer() {
             if (ActivityModel.Ins.compackPop.isNotBuyAll) {
-                E.ViewMgr.Open(EViewType.NewPlayPackage);
                 return true;
             }
         }
@@ -63147,7 +63151,6 @@
                         break;
                 }
                 if (_need && MainModel.Ins.newPay.isOpen) {
-                    E.ViewMgr.Open(EViewType.NewPlayPackage);
                 }
                 else {
                     this.goPopOther();
@@ -65110,7 +65113,6 @@
                                 isMax = true;
                             }
                             else {
-                                E.ViewMgr.Open(EViewType.NewPlayPackage);
                             }
                         }
                     }
@@ -65446,14 +65448,9 @@
             this.funcSetRed(EFuncDef.KaiFuKuangHuang, ActivityModel.Ins.checkOpenBoxRed());
         }
         gm(str) {
-            if (debug) {
-                let gm = new Gm_req();
-                gm.datas = str;
-                SocketMgr.Ins.SendMessageBin(gm);
-            }
-            else {
-                E.ViewMgr.ShowMsgBox(EMsgBoxType.OnlyOk, `please set URL debug=1`);
-            }
+            let gm = new Gm_req();
+            gm.datas = str;
+            SocketMgr.Ins.SendMessageBin(gm);
         }
         onWatchPlayerInfoRevc(revc) {
             E.ViewMgr.Open(EViewType.ShowPlayer, null, revc);
@@ -66138,7 +66135,6 @@
                 newplayer = false;
             }
             if (newplayer) {
-                E.ViewMgr.Open(EViewType.NewPlayPackage);
                 this.savePop();
             }
             else {
@@ -73906,7 +73902,7 @@
             this._isTip = isTip;
             let cfg = BaoShiCfgProxy.Ins.getCfgById(vo.id);
             this.skin.icon.skin = BaoShiCfgProxy.Ins.getBaoShiIcon(cfg.f_gemicon);
-            this.skin.tf1.text = "lv" + vo.level;
+            this.skin.tf1.text = vo.level + "级";
             this.skin.lab_name.text = cfg.f_GemAttr;
             this.skin.img.visible = imgBo;
             this.skin.img2.visible = !imgBo;
@@ -73931,7 +73927,7 @@
                 let cfg = BaoShiCfgProxy.Ins.getCfgById(this._vo.id);
                 let lCfg = BaoShiLvProxy.Ins.getCfgByIdAndLv(this._vo.id, this._vo.level);
                 let arr = lCfg.f_GemAttr.split("-");
-                let dec = cfg.f_GemAttr + "    " + attrConvert(arr[0], arr[1]);
+                let dec = cfg.f_GemAttr + "：" + attrConvert(arr[0], arr[1]);
                 MainModel.Ins.showSmallTips(cfg.f_gemname, dec, this.skin.icon);
             }
         }
@@ -74281,9 +74277,10 @@
             this._ui.sp1.visible = this._ui.sp2.visible = false;
             this._ui["sp" + (v + 1)].visible = true;
             this["updataView" + (v + 1)]();
+            this._ui.title_lab.text = E.getLang("BaoShiGMTitle" + this.tabsCtl.selectIndex);
         }
         onBtnTipClick() {
-            E.ViewMgr.openHelpView("BaoShiGMTitle", "BaoShiGMDec");
+            E.ViewMgr.openHelpView("BaoShiGMTitle" + this.tabsCtl.selectIndex, "BaoShiGMDec" + this.tabsCtl.selectIndex);
         }
         onBtnClick1() {
             let req = new GemLifeBlood_req;
@@ -74345,7 +74342,7 @@
                 this._ui.lab4.visible = true;
             }
             let lv = BaoShiModel.Ins.getGMLv();
-            this._ui.lab.text = "Lv." + lv;
+            this._ui.lab.text = lv + "级";
             let array = BaoShiResonanceProxy.Ins.List;
             this._index = 0;
             for (let i = 0; i < array.length; i++) {
@@ -74383,7 +74380,7 @@
         showLab() {
             let array = BaoShiResonanceProxy.Ins.List;
             let cfg = array[this._index];
-            this._ui.lab1.text = "lv." + cfg.f_gemlevelmin;
+            this._ui.lab1.text = cfg.f_gemlevelmin + "级";
             let lv = BaoShiModel.Ins.getGMLv();
             if (lv > parseInt(cfg.f_gemlevelmin)) {
                 this._ui.lab5.text = "";
@@ -75031,9 +75028,9 @@
             let arr = item.dataSource.split(":");
             let id = parseInt(arr[0]);
             let val = attrConvert(id, parseInt(arr[1]));
-            item.txt.text = MainModel.Ins.getAttrNameIdByID(id) + ":" + val;
+            item.txt.text = MainModel.Ins.getAttrNameIdByID(id) + "：" + val;
             if (arr[2]) {
-                item.txt1.text = " (+" + attrConvert(id, parseInt(arr[2])) + ")";
+                item.txt1.text = " +" + attrConvert(id, parseInt(arr[2])) + "";
                 item.txt1.x = item.txt.x + item.txt.textField.width;
             }
             else {
@@ -81316,7 +81313,7 @@
                 this.model = ZuoQiModel.Ins;
                 this.UI = this._ui = new ui.views.zuoqi.ui_zuoqi_mainUI();
                 this.zuoSkinCtl = new ZuoqiMainCtl(this._ui);
-                this.btnList.push(ButtonCtl.Create(this._ui.close1, new Laya.Handler(this, this.Close)), ButtonCtl.Create(this._ui.switchBtn, new Laya.Handler(this, this.onSwitchHandler)), ButtonCtl.Create(this._ui.shengxingBtn, new Laya.Handler(this, this.onQuaUp)), ButtonCtl.Create(this._ui.zuoqicankuBtn, new Laya.Handler(this, this.storgeHandler)), ButtonCtl.Create(this._ui.btn_xslb, new Laya.Handler(this, this.onBtnXslbClick)));
+                this.btnList.push(ButtonCtl.Create(this._ui.close1, new Laya.Handler(this, this.Close)), ButtonCtl.Create(this._ui.switchBtn, new Laya.Handler(this, this.onSwitchHandler)), ButtonCtl.Create(this._ui.shengxingBtn, new Laya.Handler(this, this.onQuaUp)), ButtonCtl.Create(this._ui.zuoqicankuBtn, new Laya.Handler(this, this.storgeHandler)));
                 this.yunshubtnCtl = ButtonCtl.Create(this._ui.yunshubtn, new Laya.Handler(this, this.onTransportHandler));
                 this.zuoqichouBtnCtl = ButtonCtl.Create(this._ui.zuoqichouBtn, new Laya.Handler(this, this.onChouka));
                 this._attrZuoqi = new ZuoQiAttrCtl(this._ui.listleft, this._ui.listright, this._ui.list2, null, this._ui.nameTf, this._ui.quaTf, this._ui.plusCon);
@@ -81382,8 +81379,7 @@
             this.model.on(ZuoQiEvent.UpdateInfoEvt, this, this.onValChangeEvt);
             this.model.on(ZuoQiEvent.RedUpdate, this, this.onRedUpdate);
             MainModel.Ins.on(MainEvent.ValChange, this, this.onValChangeEvt);
-            ActivityModel.Ins.on(ActivityEvent.PopWinUpdate, this, ActivityModel.Ins.onPop, [this.packUid, this._ui.btn_xslb]);
-            ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
+            this._ui.btn_xslb.visible = false;
             this.onValChangeEvt();
             this.onRedUpdate();
         }
@@ -81441,7 +81437,7 @@
             this.zuoqiData = _zqVo;
             let _quaConfig = MountConfigProxy.Ins.getByQualityID(_zqVo.quality);
             this._ui.isLvFullTf.visible = false;
-            this._ui.tf1.text = "Lv." + _zqVo.lv;
+            this._ui.tf1.text = _zqVo.lv + "级";
             if (result.isMax) {
                 this._ui.lvupg.visible = false;
             }
@@ -81737,6 +81733,7 @@
             return false;
         }
         isDotEquip(index, cheifId = 0) {
+            return false;
             let soltNum = HuYouSlotProxy.Ins.getSlotNum();
             if (soltNum >= index) {
                 let array = this.getBagList(HuYouModel.BagEnmu.noSort_FY, cheifId);
@@ -82153,7 +82150,7 @@
                 ValCtl.Create(this._ui.txt_money3, this._ui.img_money3, ECellType.QiYun);
                 ValCtl.Create(this._ui.txt_money2, this._ui.img_money2, ECellType.DaoQi);
                 ValCtl.Create(this._ui.txt_money1, this._ui.img_money1, ECellType.GouYu);
-                this.btnList.push(ButtonCtl.Create(this._ui.btn_l, new Laya.Handler(this, this.onBtnLClick)), ButtonCtl.Create(this._ui.btn_r, new Laya.Handler(this, this.onBtnRClick)), ButtonCtl.Create(this._ui.levelUpBtn, new Laya.Handler(this, this.onBtnlevelUpClick)), ButtonCtl.Create(this._ui.tujianbtn, new Laya.Handler(this, this.onBtntujianbtnClick)), ButtonCtl.Create(this._ui.btn_shezhi, new Laya.Handler(this, this.onBtnSheZhiClick)), ButtonCtl.Create(this._ui.btn_attr, new Laya.Handler(this, this.onBtnAttrClick)), ButtonCtl.Create(this._ui.btn_xslb, new Laya.Handler(this, this.onBtnXslbClick)));
+                this.btnList.push(ButtonCtl.Create(this._ui.btn_l, new Laya.Handler(this, this.onBtnLClick)), ButtonCtl.Create(this._ui.btn_r, new Laya.Handler(this, this.onBtnRClick)), ButtonCtl.Create(this._ui.levelUpBtn, new Laya.Handler(this, this.onBtnlevelUpClick)), ButtonCtl.Create(this._ui.tujianbtn, new Laya.Handler(this, this.onBtntujianbtnClick)), ButtonCtl.Create(this._ui.btn_shezhi, new Laya.Handler(this, this.onBtnSheZhiClick)), ButtonCtl.Create(this._ui.btn_attr, new Laya.Handler(this, this.onBtnAttrClick)));
                 this._checkBoxCtl = new CheckBoxCtl({ bg: this._ui.ckbg, gou: this._ui.gou });
                 this._checkBoxCtl.selectHander = new Laya.Handler(this, this.updataMoneyRes);
                 this._ui.list.itemRender = GridItemView;
@@ -82182,6 +82179,7 @@
                 _animCtl.load(`o/spine/sell2/sell2.skel`);
                 _animCtl.once(Laya.Event.COMPLETE, this, this.onAnimCompleteHandler);
                 this._animCtl = _animCtl;
+                this._ui.btn_xslb.visible = false;
             }
         }
         onAnimCompleteHandler() {
@@ -82254,7 +82252,6 @@
                     this._ui.gold1.visible = this._ui.gold2.visible = this._ui.gold3.visible = this._ui.gold4.visible = true;
                     this._ui.gold1.x = 0;
                     this._ui.gold2.x = 158;
-                    ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
                     break;
                 case 1:
                     this._ui.qifu.visible = false;
@@ -82263,7 +82260,6 @@
                     this._ui.gold2.visible = true;
                     this._ui.gold2.x = 483;
                     this._ui.gold1.visible = this._ui.gold3.visible = this._ui.gold4.visible = false;
-                    ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
                     break;
                 case 2:
                     this._ui.qifu.visible = false;
@@ -82320,7 +82316,6 @@
             this._ui.heroContainer.addChild(_avatar);
         }
         onPop() {
-            ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
         }
         onExit() {
             Laya.stage.off(Laya.Event.MOUSE_UP, this, this.onStageUp);
@@ -82796,7 +82791,7 @@
                 }
                 else {
                     this._ui["suo" + i].visible = true;
-                    this._ui["txt_suo" + i].text = "Lv." + HuYouSlotProxy.Ins.getCfgByCount(i).f_PlayerLevel + "解锁";
+                    this._ui["txt_suo" + i].text = HuYouSlotProxy.Ins.getCfgByCount(i).f_PlayerLevel + "级解锁";
                 }
                 if (equipList) {
                     let vo = equipList.find(item => item.pos == i);
@@ -85461,7 +85456,7 @@
         onUpdataView() {
             this.setSend();
             this.updataFree();
-            this._ui.lab_lv.text = "LV." + GuaJiModel.Ins.mianData.level;
+            this._ui.lab_lv.text = GuaJiModel.Ins.mianData.level + '级别';
             this._cfg = GuaJiRewardsProxy.Ins.getCfgByLv(GuaJiModel.Ins.mianData.level);
             let arrTime = this._cfg.f_AFKReward.split("|");
             for (let i = 0; i < 2; i++) {
@@ -85873,7 +85868,7 @@
             let cfg = HuYouQualityProxy.Ins.getCfgByQua(this.Data.itemCfg.f_qua);
             this._ui.txt_name.text = this.Data.getName() + ` (${cfg.f_SoulQualityName})`;
             this._ui.txt_name.color = this.Data.getQua();
-            this._ui.txt_level.text = "Lv." + this.Data.stItem.level;
+            this._ui.txt_level.text = this.Data.stItem.level + "级";
             let attr = HuYouModel.Ins.getAttr(this.Data.uid);
             this._ui.txt1.text = MainModel.Ins.getAttrNameIdByID(attr.id) + ":";
             this._ui.txt2.text = attrConvert(attr.id, attr.value) + "";
@@ -87748,8 +87743,8 @@
                 let val = parseInt(data.f_attr.split(":")[1]) * value.data.talentLevel;
                 this.quality.skin = IconUtils.getQuaIcon(data.f_quality);
                 this.lab.text = MainModel.Ins.getAttrNameIdByID(id);
-                this.lab_lv.text = "Lv." + value.data.talentLevel;
-                this._dec = MainModel.Ins.getAttrNameIdByID(id) + ":" + attrConvert(id, val);
+                this.lab_lv.text = value.data.talentLevel + "级";
+                this._dec = MainModel.Ins.getAttrNameIdByID(id) + "：" + attrConvert(id, val);
                 this.wh.visible = false;
             }
             else {
@@ -87867,7 +87862,7 @@
             let cfg = PetListProxy.Ins.getCfgById(value.petId);
             this._ui.item.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
             this._ui.item.icon.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-            this._ui.item.lab_lv.text = "Lv." + value.petLevel;
+            this._ui.item.lab_lv.text = value.petLevel + "级";
             this._ui.item.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
             this._ui.item.tab.img2.visible = false;
             if (value.petStar) {
@@ -88229,7 +88224,7 @@
             let cfg = PetListProxy.Ins.getCfgById(this._data.id);
             this._ui.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
             this._ui.icon1.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-            this._ui.lab_lv.text = "Lv." + this._data.level;
+            this._ui.lab_lv.text = this._data.level + "级";
             this._starCtl.setStar(this._data.star);
             this._ui.lab_name.text = cfg.f_petname;
             this._ui.lab_name.color = QualityUtils.getQuaColor(cfg.f_petquality);
@@ -88921,7 +88916,7 @@
             let arr = data.split(":");
             let id = parseInt(arr[0]);
             let val = parseInt(arr[1]);
-            item.nameTf.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.nameTf.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
         }
         disposeAvatar() {
@@ -88951,7 +88946,7 @@
                 let sCfg = PetSkillClientProxy.Ins.getCfgById(cfg.f_petskillid);
                 this._ui.skillTf.text = sCfg.f_skillname;
                 let skillLv = LingChongModel.Ins.getSkillLv(this._vo.petStar);
-                this._ui.lvTf.text = "Lv." + skillLv;
+                this._ui.lvTf.text = skillLv + "级";
                 this._ui.nametf.text = cfg.f_petname;
                 this._ui.nametf.color = "#" + EquipmentQualityProxy.Ins.getByQua(cfg.f_petquality).f_Color;
                 this._ui.desctf.text = LingChongModel.Ins.getSkillDec(cfg.f_petskillid, skillLv);
@@ -89047,7 +89042,7 @@
                 this.skin.icon.skin = PetListProxy.Ins.getPetIconById(vo.petId);
                 this.skin.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
                 this.skin.lab_lv.visible = true;
-                this.skin.lab_lv.text = `Lv.${vo.petLevel}`;
+                this.skin.lab_lv.text = `${vo.petLevel}级`;
                 if (this.skinType == ELingChongSkin.Normal) {
                     if (this.model.isSelect(this.vo.petSerialNum)) {
                         this.skin.mask1.visible = true;
@@ -89583,7 +89578,7 @@
             let cfg = PetListProxy.Ins.getCfgById(value.petId);
             this.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
             this.icon.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-            this.lab_lv.text = "Lv." + value.petLevel;
+            this.lab_lv.text = value.petLevel + "级";
             if (value.petStar) {
                 this.sp.visible = true;
                 this.star.visible = true;
@@ -89743,7 +89738,7 @@
                 let cfg = PetListProxy.Ins.getCfgById(this._selectData.petId);
                 this._ui.item.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
                 this._ui.item.icon.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-                this._ui.item.lab_lv.text = "Lv." + this._selectData.petLevel;
+                this._ui.item.lab_lv.text = this._selectData.petLevel + "级";
                 if (this._selectData.petStar) {
                     this._ui.item.sp.visible = true;
                     this._ui.item.star.visible = true;
@@ -90205,7 +90200,7 @@
         onRenderHandller1(item) {
             let id = parseInt(item.dataSource.split(":")[0]);
             let val = parseInt(item.dataSource.split(":")[1]);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
         }
         onBtnLVClick() {
@@ -90244,9 +90239,9 @@
             let cfg = PetListProxy.Ins.getCfgById(this._data.petId);
             let qCfg = PetQualityProxy.Ins.getCfgById(cfg.f_petquality);
             this._ui.lab_name.text = cfg.f_petname;
-            this._ui.lab_lv.text = "Lv." + this._data.petLevel;
+            this._ui.lab_lv.text = this._data.petLevel + "级";
             this._starCtl.setStar(this._data.petStar);
-            this._ui.lab_maxLv.text = "Lv." + qCfg.f_maxlevel;
+            this._ui.lab_maxLv.text = qCfg.f_maxlevel + "级";
             this._ui.list_attr.array = LingChongModel.Ins.getAttrArr(this._data.petId, this._data.petLevel, this._data.petStar);
             this._ui.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
             this._ui.tab.img2.visible = false;
@@ -90333,7 +90328,7 @@
                 }
                 this.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
                 this.icon.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-                this.lab_lv.text = "Lv." + data.petLevel;
+                this.lab_lv.text = data.petLevel + "级";
                 if (data.petStar) {
                     this.spbg.visible = true;
                     this.star.visible = true;
@@ -90407,7 +90402,7 @@
         onRenderHandller1(item) {
             let id = parseInt(item.dataSource.split(":")[0]);
             let val = parseInt(item.dataSource.split(":")[1]);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
         }
         onBtnCZClick() {
@@ -90522,7 +90517,7 @@
             let cfg = PetListProxy.Ins.getCfgById(this._data.petId);
             this._ui.lab_name.text = cfg.f_petname;
             this._ui.lab_name.color = "#" + EquipmentQualityProxy.Ins.getByQua(cfg.f_petquality).f_Color;
-            this._ui.lab_lv.text = "Lv." + this._data.petLevel;
+            this._ui.lab_lv.text = this._data.petLevel + "级";
             this._starCtl.setStar(this._data.petStar);
             this._ui.list_attr.array = LingChongModel.Ins.getAttrArr(cfg.f_petid, this._data.petLevel, this._data.petStar);
             this._ui.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
@@ -90538,7 +90533,7 @@
             let sCfg = PetSkillClientProxy.Ins.getCfgById(cfg.f_petskillid);
             this._ui.jnItem.lab.text = sCfg.f_skillname;
             let lv = LingChongModel.Ins.getSkillLv(this._data.petStar);
-            this._ui.jnItem.lab_lv.text = "Lv." + lv;
+            this._ui.jnItem.lab_lv.text = lv + "级";
             this._ui.lab_jn.text = LingChongModel.Ins.getSkillDec(cfg.f_petskillid, lv);
             let array = [];
             for (let i = 0; i < this._data.petTalents.length; i++) {
@@ -90858,7 +90853,7 @@
             let cfg = PetListProxy.Ins.getCfgById(value.petId);
             this.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
             this.icon.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-            this.lab_lv.text = "Lv." + value.petLevel;
+            this.lab_lv.text = value.petLevel + "级";
             this.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
             this.tab.img2.visible = false;
             if (value.petStar) {
@@ -90941,7 +90936,7 @@
         onRenderHandller1(item) {
             let id = parseInt(item.dataSource.split(":")[0]);
             let val = parseInt(item.dataSource.split(":")[1]);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
             if (this._selectStarNum) {
                 if (this._qCfg) {
@@ -91068,7 +91063,7 @@
             let cfg = PetListProxy.Ins.getCfgById(this._data.petId);
             this._qCfg = PetQualityProxy.Ins.getCfgById(cfg.f_petquality);
             this._ui.lab_name.text = cfg.f_petname;
-            this._ui.lab_lv.text = "Lv." + this._data.petLevel;
+            this._ui.lab_lv.text = this._data.petLevel + "级";
             this._starCtl.setStar(this._data.petStar);
             this._ui.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
             this._ui.tab.img2.visible = false;
@@ -91189,7 +91184,7 @@
             let sCfg = PetSkillClientProxy.Ins.getCfgById(cfg.f_petskillid);
             this._ui.item_jn.lab.text = sCfg.f_skillname;
             let lv = LingChongModel.Ins.getSkillLv(addStar);
-            this._ui.item_jn.lab_lv.text = "Lv." + lv;
+            this._ui.item_jn.lab_lv.text = lv + "级";
             this._ui.lab_jn.text = LingChongModel.Ins.getSkillDec(cfg.f_petskillid, lv);
         }
         creatAvatar() {
@@ -91308,7 +91303,7 @@
         onRenderHandller1(item) {
             let id = parseInt(item.dataSource.split(":")[0]);
             let val = parseInt(item.dataSource.split(":")[1]);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
         }
         onInit() {
@@ -91328,7 +91323,7 @@
             let qCfg = PetQualityProxy.Ins.getCfgById(cfg.f_petquality);
             this._ui.lab_name.text = cfg.f_petname;
             this._ui.lab_name.color = "#" + EquipmentQualityProxy.Ins.getByQua(cfg.f_petquality).f_Color;
-            this._ui.lab_lv.text = "Lv." + qCfg.f_maxlevel;
+            this._ui.lab_lv.text = qCfg.f_maxlevel + "级";
             this._starCtl.setStar(qCfg.f_maxstar);
             this._ui.valTf1.text = `血脉天赋数量上限${cfg.f_talentslot}个`;
             this._ui.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
@@ -91336,7 +91331,7 @@
             let sCfg = PetSkillClientProxy.Ins.getCfgById(cfg.f_petskillid);
             this._ui.item_jn.lab.text = sCfg.f_skillname;
             let lv = LingChongModel.Ins.getSkillLv(qCfg.f_maxstar);
-            this._ui.item_jn.lab_lv.text = "Lv." + lv;
+            this._ui.item_jn.lab_lv.text = lv + "级";
             this._ui.lab_jn.text = LingChongModel.Ins.getSkillDec(cfg.f_petskillid, lv);
             this._ui.list_attr.array = LingChongModel.Ins.getAttrArr(cfg.f_petid, qCfg.f_maxlevel, qCfg.f_maxstar);
         }
@@ -91374,8 +91369,8 @@
             let val = parseInt(value.f_attr.split(":")[1]) * value.f_maxlevel;
             this.quality.skin = IconUtils.getQuaIcon(value.f_quality);
             this.lab.text = MainModel.Ins.getAttrNameIdByID(id);
-            this.lab_lv.text = "Lv." + value.f_maxlevel;
-            this._dec = MainModel.Ins.getAttrNameIdByID(id) + ":" + attrConvert(id, val);
+            this.lab_lv.text = value.f_maxlevel + "级";
+            this._dec = MainModel.Ins.getAttrNameIdByID(id) + "：" + attrConvert(id, val);
         }
     }
 
@@ -91499,8 +91494,8 @@
                 let val = parseInt(data.f_attr.split(":")[1]) * value.data.talentLevel;
                 this.quality.skin = IconUtils.getQuaIcon(data.f_quality);
                 this.lab.text = MainModel.Ins.getAttrNameIdByID(id);
-                this.lab_lv.text = "Lv." + value.data.talentLevel;
-                this._dec = MainModel.Ins.getAttrNameIdByID(id) + ":" + attrConvert(id, val);
+                this.lab_lv.text = value.data.talentLevel + "级";
+                this._dec = MainModel.Ins.getAttrNameIdByID(id) + "：" + attrConvert(id, val);
                 this.wh.visible = false;
                 let cfg = PetListProxy.Ins.getCfgById(this._data.petId);
                 if (this._data.petTalents.length >= cfg.f_talentslot) {
@@ -91663,7 +91658,7 @@
             this._ui.tImg.visible = false;
             let cfg = PetListProxy.Ins.getCfgById(this._data.petId);
             this._ui.lab_name.text = cfg.f_petname;
-            this._ui.lab_lv.text = "Lv." + this._data.petLevel;
+            this._ui.lab_lv.text = this._data.petLevel + "级";
             this._starCtl.setStar(this._data.petStar);
             this._ui.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
             this._ui.tab.img2.visible = false;
@@ -91693,7 +91688,7 @@
                 let tval = parseInt(tCfg.f_attr.split(":")[1]) * 1;
                 this._ui.quality.skin = IconUtils.getQuaIcon(tCfg.f_quality);
                 this._ui.lab_attr.text = MainModel.Ins.getAttrNameIdByID(tid);
-                this._dec = MainModel.Ins.getAttrNameIdByID(tid) + ":" + attrConvert(tid, tval);
+                this._dec = MainModel.Ins.getAttrNameIdByID(tid) + "：" + attrConvert(tid, tval);
                 this._ui.tImg.x = 280;
                 this._ui.tImg.y = 656;
                 this._ui.tImg.scaleX = this._ui.tImg.scaleY = 1;
@@ -94242,7 +94237,7 @@
         }
         isDotMain() {
             if (TaskModel.Ins.isFuncOpen(EFuncDef.PaoShang)) {
-                if (this.isDotTXZ() || this.isDotOk() || this.isDotLD()) {
+                if (this.isDotTXZ() || this.isDotOk()) {
                     return true;
                 }
             }
@@ -95187,7 +95182,7 @@
                     this.txt1.text = "";
                     this.txt2.text = "";
                     this.txt3.text = "";
-                    this.txt.text = "LV." + value.count + "解锁";
+                    this.txt.text = value.count + "级解锁";
                     this.img_bgm.y = 204 + this._offY;
                     this.txt.y = 218 + this._offY;
                     break;
@@ -95421,14 +95416,19 @@
                 ButtonCtl.Create(this._ui.btn_ss, new Laya.Handler(this, this.onBtnSSClick));
                 ButtonCtl.Create(this._ui.btn_bj, new Laya.Handler(this, this.onBtnBJClick));
                 ButtonCtl.Create(this._ui.btn_ybj, new Laya.Handler(this, this.onBtnYBJClick));
-                ButtonCtl.Create(this._ui.btn_xslb, new Laya.Handler(this, this.onBtnXslbClick));
+                ButtonCtl.Create(this._ui.shuoming_btn, new Laya.Handler(this, this.onBtnShuoMingClick));
                 this._ui.list.array = this._ui.list1.array = [];
                 this._ui.list.itemRender = PaoShangItem;
                 this._ui.list.renderHandler = new Laya.Handler(this, this.itemRender);
                 this._ui.list1.itemRender = PaoShangItem1;
                 this._ui.list1.renderHandler = new Laya.Handler(this, this.itemRender1);
                 this._ui.img_money3.skin = IconUtils.getIconByCfgId(56);
+                this._ui.btn_ss.visible = false;
+                this._ui.btn_rz.visible = false;
             }
+        }
+        onBtnShuoMingClick() {
+            E.ViewMgr.openHelpView("paoshangTitle", "paoshangNotice");
         }
         onBtnXslbClick() {
             ActivityModel.Ins.diamondEject(this.packUid);
@@ -95445,8 +95445,7 @@
             PaoShangModel.Ins.on(PaoShangModel.UPDATA_TXZ, this, this.onUpdateMoneyAll);
             PaoShangModel.Ins.on(PaoShangModel.UPDATA_RES, this, this.setDot);
             MainModel.Ins.on(MainEvent.ValChange, this, this.onUpdateMoney);
-            ActivityModel.Ins.on(ActivityEvent.PopWinUpdate, this, ActivityModel.Ins.onPop, [this.packUid, this._ui.btn_xslb]);
-            ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
+            this._ui.btn_xslb.visible = false;
             this.sendInit();
         }
         onExit() {
@@ -95567,7 +95566,7 @@
                     arr.push(data);
                 }
             }
-            this._ui.list.array = PaoShangModel.Ins.stItemStationList.concat(arr);
+            this._ui.list.array = PaoShangModel.Ins.stItemStationList.filter(o => o.state != 5).concat(arr);
             this._ui.list1.array = [];
             this.setDot();
         }
@@ -96620,10 +96619,10 @@
             let val = attrConvert(id, parseInt(arr[1]));
             let st = MainModel.Ins.getAttrNameIdByID(id) + "+" + val;
             if (index == 0) {
-                item.lab.text = "全部激活  " + st;
+                item.lab.text = "全部激活：" + st;
             }
             else {
-                item.lab.text = `激活达到${lv}级  ` + st;
+                item.lab.text = `激活达到${lv}级：` + st;
             }
             if (this._data.currentLevel > lv) {
                 item.lab.color = "#92918D";
@@ -96645,7 +96644,7 @@
             let cfg = ShenBinComboProxy.Ins.GetDataById(value.fid);
             this.lab_name.text = cfg.f_ComboName + `(${ShenBinModel.Ins.getTZSt(cfg.f_Artifactid)})`;
             this.list.array = cfg.f_Artifactid.split("|");
-            this.lab_lv.text = "Lv." + ShenBinModel.Ins.getTZLv(cfg.f_Artifactid);
+            this.lab_lv.text = ShenBinModel.Ins.getTZLv(cfg.f_Artifactid) + "级";
             let attArr = ArtifactComboAttributeProxy.Ins.getCfgById(value.fid);
             this.list1.array = attArr;
             DotManager.removeDot(this.btn);
@@ -97711,6 +97710,9 @@
                         break;
                 }
                 this._ui.auth_btn.visible = false;
+                this._ui.btn_dh.visible = false;
+                this._ui.btn_xx.visible = false;
+                this._ui.xxtx.visible = false;
             }
         }
         initConfig() {
@@ -97871,7 +97873,7 @@
         }
         updataView() {
             MainModel.Ins.setTTHead(this._ui.icon, MainModel.Ins.mRoleData.headUrl);
-            this._ui.Lvtf.text = "Lv." + MainModel.Ins.mRoleData.lv;
+            this._ui.Lvtf.text = MainModel.Ins.mRoleData.lv + "级";
             this._ui.lab_name.text = MainModel.Ins.mRoleData.getName();
             this._ui.lab_id.text = MainModel.Ins.mRoleData.AccountId + "";
             this._ui.lab_sid.text = MainModel.Ins.mRoleData.serverName;
@@ -106904,7 +106906,7 @@
         onInit() {
             let cfg = t_Purchase_PriceProxy.Ins.GetDataById(this.Data);
             this.cfg = cfg;
-            this._ui.tf1.text = "fid = " + cfg.f_id + "\n" + "充值:" + this.moneyCNY + "元";
+            this._ui.tf1.text = "是否花费" + this.moneyCNY + "元购买？";
         }
         get moneyCNY() {
             let cfg = t_Purchase_PriceProxy.Ins.GetDataById(this.Data);
@@ -110401,7 +110403,7 @@
         onAttrHandler(item) {
             let id = parseInt(item.dataSource);
             let val = PlayerVoFactory.getEquipVal(this._list, id);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
             let val1 = PlayerVoFactory.getEquipVal(this._list1, id);
             if (val > val1) {
@@ -110417,7 +110419,7 @@
         onAttrHandler1(item) {
             let id = parseInt(item.dataSource);
             let val = PlayerVoFactory.getEquipVal(this._list1, id);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
             item.upimg.visible = false;
         }
@@ -110448,11 +110450,11 @@
             this.skin.list1.renderHandler = new Laya.Handler(this, this.onAttrHandler);
         }
         onAttrHandler(item) {
-            item.txt_level.text = "lv." + item.dataSource.lv;
+            item.txt_level.text = item.dataSource.lv + '级';
             let iCfg = ItemProxy.Ins.getCfg(item.dataSource.id);
             let hcfg = HuYouIconProxy.Ins.getCfgByIdAndAttr(item.dataSource.id, item.dataSource.attr.id);
             let val = attrConvert(item.dataSource.attr.id, item.dataSource.attr.value);
-            item.txt_name.text = hcfg.f_SoulName + ` (${val})`;
+            item.txt_name.text = hcfg.f_SoulName + ` ${val}`;
             item.txt_name.color = QualityUtils.getQuaColor(iCfg.f_qua);
         }
         setData(value) {
@@ -110514,16 +110516,16 @@
         onAttrHandler(item) {
             let arr = item.dataSource.split(":");
             let id = parseInt(arr[0]);
-            let val = attrConvert(id, parseInt(arr[1]));
-            item.txt.text = MainModel.Ins.getAttrNameIdByID(id) + ":" + val;
+            let val = attrConvert(id, parseInt(arr[1])).replace('.00%', '%');
+            item.txt.text = MainModel.Ins.getAttrNameIdByID(id) + "：" + val;
             if (arr[3]) {
-                item.txt1.text = " (+" + attrConvert(id, parseInt(arr[3])) + ")";
-                item.txt1.x = item.txt.x + item.txt.textField.width;
+                item.txt1.text = " +" + attrConvert(id, parseInt(arr[3]));
+                item.txt1.x = item.txt.x + item.txt.textField.width + 5;
             }
             else {
                 item.txt1.text = "";
             }
-            item.lab_lv.text = "lv." + arr[2];
+            item.lab_lv.text = arr[2] + '级';
         }
         setData(value) {
             if (BaoShiModel.Ins.mationId) {
@@ -110622,7 +110624,7 @@
         refreshAttr(item) {
             let id = parseInt(item.dataSource.id);
             let val = parseInt(item.dataSource.value);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
             let val1 = PlayerVoFactory.getEquipVal(this._list, id);
             if (val > val1) {
@@ -110642,7 +110644,7 @@
         onAttrItemHandler1(item) {
             let id = parseInt(item.dataSource.id);
             let val = parseInt(item.dataSource.value);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
             item.upimg.visible = false;
         }
@@ -110650,7 +110652,7 @@
             let attrVo = item.dataSource;
             let id = attrVo.id;
             let val = attrVo.value;
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
             item.upimg.visible = false;
             item.tf1.color = item.valTf.color = ZuoQiAttrCtl.getColor(attrVo.f_UnlockVal);
@@ -110748,7 +110750,7 @@
         onAttrItemHandler(item) {
             let id = parseInt(item.dataSource.id);
             let val = parseInt(item.dataSource.value);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
             let val1 = PlayerVoFactory.getEquipVal(this._list, id);
             if (val > val1) {
@@ -110764,7 +110766,7 @@
         onAttrItemHandler1(item) {
             let id = parseInt(item.dataSource.id);
             let val = parseInt(item.dataSource.value);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
             item.upimg.visible = false;
         }
@@ -110820,7 +110822,7 @@
         onAttrItemHandler(item) {
             let id = parseInt(item.dataSource.id);
             let val = parseInt(item.dataSource.value);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
             let val1 = PlayerVoFactory.getEquipVal(this._list, id);
             if (val > val1) {
@@ -110836,7 +110838,7 @@
         onAttrItemHandler1(item) {
             let id = parseInt(item.dataSource.id);
             let val = parseInt(item.dataSource.value);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
             item.upimg.visible = false;
         }
@@ -110918,7 +110920,7 @@
         onRenderHandller1(item) {
             let id = parseInt(item.dataSource.split(":")[0]);
             let val = parseInt(item.dataSource.split(":")[1]);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
             let val1 = PlayerVoFactory.getEquipVal(this._list, id);
             if (val > val1) {
@@ -110934,7 +110936,7 @@
         onRenderHandller2(item) {
             let id = parseInt(item.dataSource.id);
             let val = parseInt(item.dataSource.value);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
             item.upimg.visible = false;
         }
@@ -110971,7 +110973,7 @@
             let cfg = PetListProxy.Ins.getCfgById(value.petId);
             this.skin.item.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
             this.skin.item.icon.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-            this.skin.item.lab_lv.text = "Lv." + value.petLevel;
+            this.skin.item.lab_lv.text = value.petLevel + "级";
             this.skin.item.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
             this.skin.item.tab.img2.visible = false;
             if (value.petStar) {
@@ -110993,7 +110995,7 @@
             let sCfg = PetSkillClientProxy.Ins.getCfgById(cfg.f_petskillid);
             this.skin.item_jn.lab.text = sCfg.f_skillname;
             let lv = LingChongModel.Ins.getSkillLv(value.petStar);
-            this.skin.item_jn.lab_lv.text = "Lv." + lv;
+            this.skin.item_jn.lab_lv.text = lv + "级";
             this.skin.lab_jn.text = LingChongModel.Ins.getSkillDec(cfg.f_petskillid, lv);
         }
         setOtherData(value) {
@@ -111004,7 +111006,7 @@
             let cfg = PetListProxy.Ins.getCfgById(value.petId);
             this.skin.item1.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
             this.skin.item1.icon.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-            this.skin.item1.lab_lv.text = "Lv." + value.petLevel;
+            this.skin.item1.lab_lv.text = value.petLevel + "级";
             this.skin.item1.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
             this.skin.item1.tab.img2.visible = false;
             if (value.petStar) {
@@ -111034,7 +111036,7 @@
             let sCfg = PetSkillClientProxy.Ins.getCfgById(cfg.f_petskillid);
             this.skin.item_jn1.lab.text = sCfg.f_skillname;
             let lv = LingChongModel.Ins.getSkillLv(value.petStar);
-            this.skin.item_jn1.lab_lv.text = "Lv." + lv;
+            this.skin.item_jn1.lab_lv.text = lv + "级";
             this.skin.lab_jn1.text = LingChongModel.Ins.getSkillDec(cfg.f_petskillid, lv);
         }
     }
@@ -111272,11 +111274,11 @@
             if (this.model.getType() == EJjcType.JJC) {
                 const count = MainModel.Ins.mRoleData.getVal(ECellType.JjcTicket);
                 const conf = BoxExtraItemProxy.Ins.getConfByFid(1);
-                this._ui.tf2.text = E.LangMgr.getLang("FightSubCnt2") + ":" + count + "/" + conf.f_Maxhold;
+                this._ui.tf2.text = E.LangMgr.getLang("FightSubCnt2") + "：" + count + "/" + conf.f_Maxhold;
                 this.buyCtl.visible = true;
             }
             else {
-                this._ui.tf2.text = E.LangMgr.getLang("FightSubCnt") + ":" + this.model.fightTotalCnt + "/" + this.model.refreshTotalCnt;
+                this._ui.tf2.text = E.LangMgr.getLang("FightSubCnt") + "：" + this.model.fightTotalCnt + "/" + this.model.refreshTotalCnt;
                 if (this.model.fightTotalCnt >= this.model.refreshTotalCnt) {
                     this.buyCtl.visible = false;
                 }
@@ -111306,6 +111308,7 @@
                 this.timeCtl.stop();
                 this.setTimeTf();
             }
+            this._ui.fightbtn.visible = false;
             this.model.reqRefreshList();
             this.updateView();
         }
@@ -111384,7 +111387,7 @@
         onRenderHandller1(item) {
             let id = parseInt(item.dataSource.split(":")[0]);
             let val = parseInt(item.dataSource.split(":")[1]);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
         }
         onRenderHandler(item, index) {
@@ -111406,14 +111409,14 @@
             let cfg = PetListProxy.Ins.getCfgById(this._data.petId);
             this._ui.lab_name.text = cfg.f_petname;
             this._ui.lab_name.color = "#" + EquipmentQualityProxy.Ins.getByQua(cfg.f_petquality).f_Color;
-            this._ui.lab_lv.text = "Lv." + this._data.petLevel;
+            this._ui.lab_lv.text = this._data.petLevel + "级";
             this._starCtl.setStar(this._data.petStar);
             this._ui.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
             this._ui.tab.img2.visible = false;
             let sCfg = PetSkillClientProxy.Ins.getCfgById(cfg.f_petskillid);
             this._ui.item_jn.lab.text = sCfg.f_skillname;
             let lv = LingChongModel.Ins.getSkillLv(this._data.petStar);
-            this._ui.item_jn.lab_lv.text = "Lv." + lv;
+            this._ui.item_jn.lab_lv.text = lv + "级";
             this._ui.lab_jn.text = LingChongModel.Ins.getSkillDec(cfg.f_petskillid, lv);
             this._ui.list_attr.array = LingChongModel.Ins.getAttrArr(cfg.f_petid, this._data.petLevel, this._data.petStar);
             let array = [];
@@ -111705,7 +111708,7 @@
             this._ui.lab_name.text = cfg.f_ArtifactName;
             this._ui.icon.skin = IconUtils.getIconByCfgId(icfg.f_itemid);
             this._ui.quality.skin = IconUtils.getQuaIcon(icfg.f_qua);
-            this._ui.lab_l.text = "lv." + data.level;
+            this._ui.lab_l.text = data.level + '级';
             if (MainModel.Ins.serverVer == EServerVersion.Version_1) {
                 this._ui.lab_dec.text = StringUtil.format(cfg.f_Comment_v1, this.getAttr(data.level, data.artifactId));
             }
@@ -112057,7 +112060,7 @@
             this.clear();
             if (wingData.wingId) {
                 this.skin.typename.text = "";
-                this.skin.tf1.text = "Lv." + wingData.level;
+                this.skin.tf1.text = wingData.level + "级";
                 const wingId = wingData.wingId;
                 if (!wingData.wingName) {
                     wingData.wingName = WingIdProxy.Ins.getWingName(wingId);
@@ -112250,7 +112253,7 @@
                 let isbcfg = ItemProxy.Ins.getCfg(sbcfg.f_itemId);
                 this._ui.item_sb.quality.skin = IconUtils.getQuaIcon(isbcfg.f_qua);
                 this._ui.item_sb.icon.skin = IconUtils.getIconByCfgId(isbcfg.f_itemid);
-                this._ui.item_sb.tf1.text = "lv." + this.playerData.Artifact[0].level;
+                this._ui.item_sb.tf1.text = this.playerData.Artifact[0].level + '级';
             }
             else {
                 this._ui.item_sb.visible = false;
@@ -112263,7 +112266,7 @@
                 let cfg = PetListProxy.Ins.getCfgById(this.playerData.petInfo[0].petId);
                 this._ui.item_lq.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
                 this._ui.item_lq.icon.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-                this._ui.item_lq.lab_lv.text = "Lv." + this.playerData.petInfo[0].petLevel;
+                this._ui.item_lq.lab_lv.text = this.playerData.petInfo[0].petLevel + "级";
                 this._ui.item_lq.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
                 this._ui.item_lq.tab.img2.visible = false;
                 if (this.playerData.petInfo[0].petStar) {
@@ -112598,12 +112601,7 @@
         }
         upDataView() {
             let arr = [];
-            arr.push({ name: "推荐", isSelect: false, id: 10000 });
             arr.push({ name: "我的角色", isSelect: false, id: 20000 });
-            for (let i = MainModel.Ins.serverZu; i > 0; i--) {
-                let st = (i * 20 - 20 + 1) + "-" + i * 20 + "服";
-                arr.push({ name: st, isSelect: false, id: i });
-            }
             this._ui.list.array = arr;
             this._ui.list.selectedIndex = 0;
         }
@@ -112644,9 +112642,6 @@
                 this._ui.versionTf.color = ver == "v1_0_15" ? "#ff0000" : "#00ff00";
                 this._ui.versionTf.strokeColor = "#000000";
                 this._ui.versionTf.stroke = 2;
-                if (!Laya.Browser.onPC && initConfig.asset.indexOf("https://") == -1) {
-                    E.ViewMgr.ShowMsgBox(EMsgBoxType.OnlyOk, "请使用CDN资源");
-                }
                 this.btnList.push(ButtonCtl.CreateBtn(this._ui.shilinbtn, this, this.onAgeHandler));
                 this._ui.lab_sel.on(Laya.Event.CLICK, this, this.onLabSelClick);
                 this.initUi();
@@ -113184,7 +113179,7 @@
                 let val = v / cfg.f_ExpValue;
                 if (val > 1)
                     val = 1;
-                this.Lvtf.text = "Lv. " + MainModel.Ins.lv;
+                this.Lvtf.text = MainModel.Ins.lv + "级";
                 this.tf.text = v + "/" + cfg.f_ExpValue;
                 this.SetProgress(val);
             }
@@ -114531,7 +114526,7 @@
             else {
                 fid = EFuncDef.SwitchStyle;
             }
-            this.botListIcon.push(this.model.createFuncIcon('btn1', EFuncDef.Jjc, botStyle), this.model.createFuncIcon('btn4', EFuncDef.Alliance, botStyle), this.model.createFuncIcon('btn2', fid, botStyle), this.model.createFuncIcon('mainBtn', EFuncDef.Adventure, botStyle));
+            this.botListIcon.push(this.model.createFuncIcon('btn1', EFuncDef.Jjc, botStyle), this.model.createFuncIcon('btn4', fid, botStyle), this.model.createFuncIcon('btn2', EFuncDef.YeWaiBoss, botStyle), this.model.createFuncIcon('mainBtn', EFuncDef.Adventure, botStyle));
             this.funcIcons = this.funcIcons.concat(this.botListIcon);
             let _maxPos = 0;
             let l = MainIconProxy.Ins.List;
@@ -114599,7 +114594,7 @@
                     console.log("onClickEvtNOSP>>>>>>>>>>>>>>>>", taskArr, taskArr[E.yinDaoMgr.index]);
                     return;
                 }
-                if (skin == sp) {
+                if ((skin == sp) || (skin.name && (skin.name === skin.name))) {
                     E.yinDaoMgr.index++;
                     E.yinDaoMgr.removeYD();
                     let gCfg = taskArr[E.yinDaoMgr.index];
@@ -114620,6 +114615,7 @@
             if (!this.UI) {
                 this.model = MainModel.Ins;
                 this.UI = this._ui = new ui.views.main.ui_mainUI();
+                this._ui.chatbg.visible = false;
                 this._mainViewAdaptation.skin = this._ui;
                 this._mainViewAdaptation.init();
                 DebugUtil$1.draw(this._ui.titleImg);
@@ -114734,8 +114730,6 @@
                 MainModel.Ins.event(MainEvent.MainViewInit);
                 this.onShareReward();
                 this._ui.ts_img.visible = false;
-                this._ui.chatbg.on(Laya.Event.CLICK, this, this.onShowChat);
-                DebugUtil$1.draw(this._ui.chatbg);
             }
         }
         onStartFight() {
@@ -115012,7 +115006,7 @@
             this._ui.boxFc.text = this.mRoleData.getVal(ECellType.BOX).toString();
         }
         UpdateBoxLv() {
-            this._ui.xianziLvTf.text = `Lv${this.model.mRoleData.getChestData().boxlv}`;
+            this._ui.xianziLvTf.text = `${this.model.mRoleData.getChestData().boxlv}级`;
         }
         UpdateBattle() {
             let n = this.mRoleData.getBattleValue();
@@ -115254,7 +115248,6 @@
             this._topbtns.refresh();
             this._midbtns.refresh();
             this.redUpdate();
-            this._ui.chatbg.visible = true;
         }
         updateLayarPos(start, end, ox) {
             let maxCount = 3;
@@ -115505,14 +115498,14 @@
             let _mRed = MainModel.Ins.mChestMoneyLevelRed();
             let cfg = this.model.getChestLvCfg(this.chestData.boxlv);
             this.curList = cfg.curInfo.f_Quality_Client.split("|");
-            this._ui.curTf.text = E.LangMgr.getLang("CurLv") + ":" + this.chestData.boxlv;
+            this._ui.curTf.text = E.LangMgr.getLang("CurLv") + "：" + this.chestData.boxlv;
             if (this.oldLv != this.chestData.boxlv) {
                 this.playEffect();
                 this.oldLv = this.chestData.boxlv;
             }
             if (cfg.nextInfo) {
                 this.nextList = cfg.curInfo.f_Quality_Client_next.split("|");
-                this._ui.nextTf.text = E.LangMgr.getLang("NextLv") + ":" + cfg.nextInfo.f_BoxLevel;
+                this._ui.nextTf.text = E.LangMgr.getLang("NextLv") + "：" + cfg.nextInfo.f_BoxLevel;
                 this._ui.arrow.visible = true;
             }
             else {
@@ -116052,7 +116045,8 @@
             tempCell.clsKey = clsKey;
             tempCell.fontSize = 28;
             tempCell.font = E.sdk.convertFont(ZipJson.BOLD);
-            tempCell.width = 450;
+            tempCell.width = 500;
+            tempCell.x = 20;
             tempCell.color = "#9f540c";
             tempCell.align = "left";
             tempCell.wordWrap = true;
@@ -116675,7 +116669,6 @@
                 ButtonCtl.Create(this._ui.upgradeBtn, new Laya.Handler(this, this.onUpgradeBtnHandler));
                 ButtonCtl.Create(this._ui.exchangeBtn, new Laya.Handler(this, this.onExchangeBtnHandler));
                 ButtonCtl.Create(this._ui.treasureBtn, new Laya.Handler(this, this.onTreasureBtnHandler));
-                ButtonCtl.Create(this._ui.btn_xslb, new Laya.Handler(this, this.onBtnXslbClick));
                 this._ui.attrList.itemRender = ui.views.wing.ui_wing_update_attrUI;
                 this._ui.attrList.renderHandler = new Laya.Handler(this, this.onAttrItemHandler);
                 this._ui.addAttrList.itemRender = ui.views.wing.ui_wing_update_attrUI;
@@ -116828,8 +116821,7 @@
         onInit() {
             WingModel.Ins.on(WingModel.EventRedRefresh, this, this.onRedUpdate);
             MainModel.Ins.on(MainEvent.ValChange, this, this.refreshResources);
-            ActivityModel.Ins.on(ActivityEvent.PopWinUpdate, this, ActivityModel.Ins.onPop, [this.packUid, this._ui.btn_xslb]);
-            ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
+            this._ui.btn_xslb.visible = false;
             this.refresh();
             this.refreshResources();
         }
@@ -117072,7 +117064,7 @@
                 const value = parseFloat(attrConvert(o.id, o.value));
                 element.element.skin = `remote/main/wing/wing_treasure_${o.id}.png`;
                 element.titleLabel.text = `${attrName}${value}%`;
-                element.levelLabel.text = `lv.${o.level}`;
+                element.levelLabel.text = `${o.level}级`;
                 if (i === arrowIndex) {
                     element.arrowIcon.visible = true;
                 }
@@ -119815,9 +119807,9 @@
         }
         static get discount_all_bin() {
             if (Laya.Utils.getQueryString("asset")) {
-                return `${Laya.Utils.getQueryString("asset")}all2.bin`;
+                return `${Laya.Utils.getQueryString("asset")}all.bin`;
             }
-            return `${initConfig.asset}all2.bin`;
+            return `${initConfig.asset}all.bin`;
         }
         static f_get_new() {
             if (Laya.Utils.getQueryString("sy_url")) {

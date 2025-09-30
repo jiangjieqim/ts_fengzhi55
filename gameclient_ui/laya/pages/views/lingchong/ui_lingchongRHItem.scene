@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
-    "selecteID":12,
+    "selecteID":6,
     "searchKey":"View",
     "props":{"width":100,"sceneColor":"#ffffff","height":100},
     "nodeParent":-1,
@@ -49,7 +49,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,starBg",
-            "props":{"var":"starBg","skin":"remote/lingchong/shadow.png"},
+            "props":{"y":0,"x":0,"width":98,"var":"starBg","skin":"remote/lingchong/shadow.png","height":17},
             "nodeParent":2,
             "label":"starBg",
             "isDirectory":false,
@@ -65,7 +65,7 @@
             "type":"UIView",
             "source":"views/lingchong/ui_tab1.scene",
             "searchKey":"UIView,tab",
-            "props":{"y":57,"x":5,"var":"tab","scaleY":0.7,"scaleX":0.7},
+            "props":{"y":75,"x":5,"var":"tab","scaleY":0.4,"scaleX":0.4},
             "nodeParent":2,
             "label":"tab",
             "isDirectory":false,
@@ -80,7 +80,7 @@
             "type":"UIView",
             "source":"views/fujiang/ui_star.scene",
             "searchKey":"UIView,star",
-            "props":{"y":5.5,"x":6,"var":"star","scaleY":0.5,"scaleX":0.5},
+            "props":{"y":3.5,"x":18,"var":"star","scaleY":0.35,"scaleX":0.35},
             "nodeParent":2,
             "label":"star",
             "isDirectory":false,
@@ -95,7 +95,7 @@
             "x":15,
             "type":"Label",
             "searchKey":"Label,lab_lv",
-            "props":{"y":75,"x":22,"width":70,"var":"lab_lv","text":"Lv.27","strokeColor":"#7C430C","stroke":2,"fontSize":18,"font":"BOLD","color":"#FFEBD2","align":"right"},
+            "props":{"y":79,"x":22,"width":70,"var":"lab_lv","text":"Lv.27","strokeColor":"#7C430C","stroke":2,"fontSize":16,"font":"BOLD","color":"#FFEBD2","align":"right"},
             "nodeParent":2,
             "label":"lab_lv",
             "isDirectory":false,
@@ -136,7 +136,7 @@
             "child":[
                 ],
             "$LOCKED":true,
-            "$HIDDEN":true
+            "$HIDDEN":false
         },
         {
             "x":15,
