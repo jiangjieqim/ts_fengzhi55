@@ -39,7 +39,7 @@ export class JjcAttrViewCtl8{
     private onRenderHandller1(item:ui.views.jjcAttr.ui_jjc_attrItem1UI){
         let id = parseInt(item.dataSource.split(":")[0]);
         let val = parseInt(item.dataSource.split(":")[1]);
-        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
         item.valTf.text = attrConvert(id,val);
 
         let val1 = PlayerVoFactory.getEquipVal(this._list,id);
@@ -55,7 +55,7 @@ export class JjcAttrViewCtl8{
     private onRenderHandller2(item:ui.views.jjcAttr.ui_jjc_attrItem1UI){
         let id = parseInt(item.dataSource.id);
         let val = parseInt(item.dataSource.value);
-        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
         item.valTf.text = attrConvert(id,val);
         item.upimg.visible = false;
     }
@@ -93,7 +93,7 @@ export class JjcAttrViewCtl8{
         let cfg: Configs.t_Pet_List_dat = PetListProxy.Ins.getCfgById(value.petId);
         this.skin.item.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
         this.skin.item.icon.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-        this.skin.item.lab_lv.text = "Lv." + value.petLevel;
+        this.skin.item.lab_lv.text = value.petLevel + "级";
         this.skin.item.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
         this.skin.item.tab.img2.visible = false;
         if (value.petStar) {
@@ -116,7 +116,7 @@ export class JjcAttrViewCtl8{
         let sCfg = PetSkillClientProxy.Ins.getCfgById(cfg.f_petskillid);
         this.skin.item_jn.lab.text = sCfg.f_skillname;
         let lv = LingChongModel.Ins.getSkillLv(value.petStar);
-        this.skin.item_jn.lab_lv.text = "Lv." + lv;
+        this.skin.item_jn.lab_lv.text = lv + "级";
         this.skin.lab_jn.text = LingChongModel.Ins.getSkillDec(cfg.f_petskillid,lv);
     }
 
@@ -129,7 +129,7 @@ export class JjcAttrViewCtl8{
         let cfg: Configs.t_Pet_List_dat = PetListProxy.Ins.getCfgById(value.petId);
         this.skin.item1.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
         this.skin.item1.icon.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-        this.skin.item1.lab_lv.text = "Lv." + value.petLevel;
+        this.skin.item1.lab_lv.text = value.petLevel + "级";
         this.skin.item1.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
         this.skin.item1.tab.img2.visible = false;
         if (value.petStar) {
@@ -160,7 +160,7 @@ export class JjcAttrViewCtl8{
         let sCfg = PetSkillClientProxy.Ins.getCfgById(cfg.f_petskillid);
         this.skin.item_jn1.lab.text = sCfg.f_skillname;
         let lv = LingChongModel.Ins.getSkillLv(value.petStar);
-        this.skin.item_jn1.lab_lv.text = "Lv." + lv;
+        this.skin.item_jn1.lab_lv.text = lv + "级";
         this.skin.lab_jn1.text = LingChongModel.Ins.getSkillDec(cfg.f_petskillid,lv);
     }
 }

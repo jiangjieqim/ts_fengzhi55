@@ -165,7 +165,7 @@ export class LingChongCQView extends ViewBase{
             let cfg: Configs.t_Pet_List_dat = PetListProxy.Ins.getCfgById(this._selectData.petId);
             this._ui.item.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
             this._ui.item.icon.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-            this._ui.item.lab_lv.text = "Lv." + this._selectData.petLevel;
+            this._ui.item.lab_lv.text = this._selectData.petLevel + "级";
             if (this._selectData.petStar) {
                 this._ui.item.sp.visible = true;
                 this._ui.item.star.visible = true;

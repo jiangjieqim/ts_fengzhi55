@@ -21,7 +21,7 @@ export class ZhengZhanAvatarItem extends ui.views.zhangzhan.ui_zhengzhan_avatarU
         this.avatarCon.addChild(this.avatar);
         this.starCtl.setStar(cfg.f_EnemyStar);
         this.starCtl.centerX();
-        this.nameTf.text = "Lv."+cfg.f_EnemyLv + " " + cfg.f_Stations;
+        this.nameTf.text = cfg.f_EnemyLv + "级" + cfg.f_Stations;
         this.nameTf.color = "#"+EquipmentQualityProxy.Ins.getByQua(cfg.f_EnemyImage).f_Color;
     
         if(this.avatar.bHorseSkel){

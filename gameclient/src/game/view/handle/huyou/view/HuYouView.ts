@@ -108,7 +108,7 @@ export class HuYouView extends ViewBase{
                 ButtonCtl.Create(this._ui.tujianbtn,new Laya.Handler(this,this.onBtntujianbtnClick)),
                 ButtonCtl.Create(this._ui.btn_shezhi,new Laya.Handler(this,this.onBtnSheZhiClick)),
                 ButtonCtl.Create(this._ui.btn_attr,new Laya.Handler(this,this.onBtnAttrClick)),
-                ButtonCtl.Create(this._ui.btn_xslb,new Laya.Handler(this,this.onBtnXslbClick))
+                //ButtonCtl.Create(this._ui.btn_xslb,new Laya.Handler(this,this.onBtnXslbClick))
             )
             this._checkBoxCtl = new CheckBoxCtl({bg:this._ui.ckbg,gou:this._ui.gou} as ICheckBoxSkin);
             this._checkBoxCtl.selectHander = new Laya.Handler(this,this.updataMoneyRes);
@@ -150,6 +150,7 @@ export class HuYouView extends ViewBase{
             _animCtl.load(`o/spine/sell2/sell2.skel`);
             _animCtl.once(Laya.Event.COMPLETE,this,this.onAnimCompleteHandler);
             this._animCtl = _animCtl;
+            this._ui.btn_xslb.visible = false;
         }
     }
 
@@ -232,7 +233,7 @@ export class HuYouView extends ViewBase{
                 this._ui.gold1.visible = this._ui.gold2.visible = this._ui.gold3.visible = this._ui.gold4.visible = true;
                 this._ui.gold1.x = 0;
                 this._ui.gold2.x = 158;
-                ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
+                //ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
                 break;
             case 1:
                 this._ui.qifu.visible = false;
@@ -241,7 +242,7 @@ export class HuYouView extends ViewBase{
                 this._ui.gold2.visible = true;
                 this._ui.gold2.x = 483;
                 this._ui.gold1.visible = this._ui.gold3.visible = this._ui.gold4.visible = false;
-                ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
+                //ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
                 break;
             case 2:
                 this._ui.qifu.visible = false;
@@ -312,7 +313,7 @@ export class HuYouView extends ViewBase{
     }
 
     private onPop() {
-        ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
+        //ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
     }
 
     protected onExit() {
@@ -832,7 +833,7 @@ export class HuYouView extends ViewBase{
                 this._ui["suo" + i].visible = false;
             }else{
                 this._ui["suo" + i].visible = true;
-                this._ui["txt_suo" + i].text = "Lv." +  HuYouSlotProxy.Ins.getCfgByCount(i).f_PlayerLevel + "解锁";
+                this._ui["txt_suo" + i].text = HuYouSlotProxy.Ins.getCfgByCount(i).f_PlayerLevel + "级解锁";
             }
             if(equipList){
                 let vo = equipList.find(item => (item as stItem).pos == i);

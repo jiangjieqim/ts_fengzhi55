@@ -83,7 +83,7 @@ export class CountAutoCfg implements IListData {
             let s = "";
             let sign = "";
             if (this.cfg.f_p1 != 0) {
-                s = `Lv.${this.cfg.f_p1}`
+                s = `${this.cfg.f_p1}级`
                 sign = "+";
             }
             if(this.cfg.f_UnlockType == EBoxAutoType.Month){

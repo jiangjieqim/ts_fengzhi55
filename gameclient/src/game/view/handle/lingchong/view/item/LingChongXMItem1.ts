@@ -92,8 +92,8 @@ export class LingChongXMItem1 extends ui.views.lingchong.ui_lingchongXMItem1UI{
             let val = parseInt(data.f_attr.split(":")[1]) * value.data.talentLevel;
             this.quality.skin = IconUtils.getQuaIcon(data.f_quality);
             this.lab.text = MainModel.Ins.getAttrNameIdByID(id);
-            this.lab_lv.text = "Lv." + value.data.talentLevel;
-            this._dec = MainModel.Ins.getAttrNameIdByID(id) + ":" + attrConvert(id,val);
+            this.lab_lv.text = value.data.talentLevel + "级";
+            this._dec = MainModel.Ins.getAttrNameIdByID(id) + "：" + attrConvert(id,val);
             this.wh.visible = false;
 
             let cfg:Configs.t_Pet_List_dat = PetListProxy.Ins.getCfgById(this._data.petId);

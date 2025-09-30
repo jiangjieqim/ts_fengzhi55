@@ -39,7 +39,7 @@ export class WingLevelView extends ViewBase{
             ButtonCtl.Create(this._ui.upgradeBtn,new Laya.Handler(this,this.onUpgradeBtnHandler));
             ButtonCtl.Create(this._ui.exchangeBtn, new Laya.Handler(this,this.onExchangeBtnHandler));
             ButtonCtl.Create(this._ui.treasureBtn,new Laya.Handler(this,this.onTreasureBtnHandler));
-            ButtonCtl.Create(this._ui.btn_xslb,new Laya.Handler(this,this.onBtnXslbClick));
+            //ButtonCtl.Create(this._ui.btn_xslb,new Laya.Handler(this,this.onBtnXslbClick));
             this._ui.attrList.itemRender = ui.views.wing.ui_wing_update_attrUI;
             this._ui.attrList.renderHandler = new Laya.Handler(this,this.onAttrItemHandler);
             this._ui.addAttrList.itemRender = ui.views.wing.ui_wing_update_attrUI;
@@ -214,8 +214,9 @@ export class WingLevelView extends ViewBase{
         WingModel.Ins.on(WingModel.EventRedRefresh,this,this.onRedUpdate);
         MainModel.Ins.on(MainEvent.ValChange, this, this.refreshResources);
         // 限时礼包按钮是否显示
-        ActivityModel.Ins.on(ActivityEvent.PopWinUpdate,this,ActivityModel.Ins.onPop, [this.packUid, this._ui.btn_xslb]);
-        ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
+        // ActivityModel.Ins.on(ActivityEvent.PopWinUpdate,this,ActivityModel.Ins.onPop, [this.packUid, this._ui.btn_xslb]);
+        // ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
+        this._ui.btn_xslb.visible = false;
         this.refresh();
         this.refreshResources();
     }

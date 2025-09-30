@@ -123,6 +123,8 @@ export class JjcMainView extends ViewBase {
         this.model.once(JjcEvent.UpdatePlayerList,this,this.onRefreshList);
         this.model.reqJjcList();
         this.onScoreHandle();
+
+        this._ui.fightbtn.visible = false;
     }
 
     private onScoreHandle(){

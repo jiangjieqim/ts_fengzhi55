@@ -247,7 +247,7 @@ export class DiscountPackagePop {
     /**有就打开新人礼包 */
     checkAndOpenNewPlayer() {
         if (ActivityModel.Ins.compackPop.isNotBuyAll) {
-            E.ViewMgr.Open(EViewType.NewPlayPackage)
+            //E.ViewMgr.Open(EViewType.NewPlayPackage)
             return true;
         }
     }
@@ -282,7 +282,7 @@ export class DiscountPackagePop {
                     break;
             }
             if (_need && MainModel.Ins.newPay.isOpen) {
-                E.ViewMgr.Open(EViewType.NewPlayPackage);
+                //E.ViewMgr.Open(EViewType.NewPlayPackage);
             }else{
                 this.goPopOther();
             }

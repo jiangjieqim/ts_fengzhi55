@@ -123,7 +123,7 @@ export class DaLuanDouView extends ViewBase{
                 MainModel.Ins.setTTHead(this._ui["icon" + i], MainModel.Ins.convertHead(vo.portrait));
 
                 this._ui["img_t_" + i].skin = ChengHaoModel.Ins.getTitleImg(vo.titleId);
-                this._ui["Lvtf" + i].text = "lv" + vo.level;
+                this._ui["Lvtf" + i].text = vo.level + "级";
                 this._ui["name" + i].text = vo.name;
                 this._ui["box_" + i].visible = true;
                 this["_ctl" + i].setValue(this._ui["num" + i],vo.streakTimes.toString(),"middle");

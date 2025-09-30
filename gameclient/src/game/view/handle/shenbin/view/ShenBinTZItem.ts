@@ -60,9 +60,9 @@ export class ShenBinTZItem extends ui.views.shenbin.ui_shenbinTZItemUI{
         let val = attrConvert(id,parseInt(arr[1]));
         let st = MainModel.Ins.getAttrNameIdByID(id) + "+" + val;
         if(index == 0){
-            item.lab.text = "全部激活  " + st;
+            item.lab.text = "全部激活：" + st;
         }else{
-            item.lab.text = `激活达到${lv}级  ` + st;
+            item.lab.text = `激活达到${lv}级：` + st;
         }
         if(this._data.currentLevel > lv){
             item.lab.color = "#92918D";
@@ -83,7 +83,7 @@ export class ShenBinTZItem extends ui.views.shenbin.ui_shenbinTZItemUI{
         let cfg:Configs.t_Artifact_Combo_dat = ShenBinComboProxy.Ins.GetDataById(value.fid);
         this.lab_name.text = cfg.f_ComboName + `(${ShenBinModel.Ins.getTZSt(cfg.f_Artifactid)})`;
         this.list.array = cfg.f_Artifactid.split("|");
-        this.lab_lv.text = "Lv." + ShenBinModel.Ins.getTZLv(cfg.f_Artifactid);
+        this.lab_lv.text = ShenBinModel.Ins.getTZLv(cfg.f_Artifactid) + "级";
 
         let attArr = ArtifactComboAttributeProxy.Ins.getCfgById(value.fid);
         this.list1.array = attArr;

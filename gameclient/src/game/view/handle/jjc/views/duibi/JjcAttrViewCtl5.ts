@@ -60,7 +60,7 @@ export class JjcAttrViewCtl5{
     private refreshAttr(item:ui.views.jjcAttr.ui_jjc_attrItem1UI){
         let id = parseInt(item.dataSource.id);
         let val = parseInt(item.dataSource.value);
-        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
         item.valTf.text = attrConvert(id,val);
 
         let val1 = PlayerVoFactory.getEquipVal(this._list,id);
@@ -81,7 +81,7 @@ export class JjcAttrViewCtl5{
     private onAttrItemHandler1(item:ui.views.jjcAttr.ui_jjc_attrItem1UI){
         let id = parseInt(item.dataSource.id);
         let val = parseInt(item.dataSource.value);
-        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
         item.valTf.text = attrConvert(id,val);
         item.upimg.visible = false;
     }
@@ -91,7 +91,7 @@ export class JjcAttrViewCtl5{
 
         let id = attrVo.id;
         let val = attrVo.value;
-        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
         item.valTf.text = attrConvert(id,val);
         item.upimg.visible = false;
 

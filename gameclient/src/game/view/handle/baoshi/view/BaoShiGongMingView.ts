@@ -88,10 +88,12 @@ export class BaoShiGongMingView extends ViewBase{
         this._ui.sp1.visible = this._ui.sp2.visible = false;
         this._ui["sp"+(v+1)].visible = true;
         this["updataView"+(v+1)]();
+        this._ui.title_lab.text = E.getLang("BaoShiGMTitle" + this.tabsCtl.selectIndex);
     }
 
     private onBtnTipClick(){
-        E.ViewMgr.openHelpView("BaoShiGMTitle","BaoShiGMDec");
+        // E.ViewMgr.openHelpView("BaoShiGMTitle","BaoShiGMDec");
+        E.ViewMgr.openHelpView("BaoShiGMTitle" + this.tabsCtl.selectIndex,"BaoShiGMDec" + this.tabsCtl.selectIndex);
     }
 
     private onBtnClick1(){
@@ -160,7 +162,7 @@ export class BaoShiGongMingView extends ViewBase{
         }
 
         let lv = BaoShiModel.Ins.getGMLv();
-        this._ui.lab.text = "Lv." + lv;
+        this._ui.lab.text = lv + "级";
         let array = BaoShiResonanceProxy.Ins.List;
         this._index = 0;
         for(let i:number=0;i<array.length;i++){
@@ -201,7 +203,7 @@ export class BaoShiGongMingView extends ViewBase{
     private showLab(){
         let array = BaoShiResonanceProxy.Ins.List;
         let cfg = array[this._index];
-        this._ui.lab1.text = "lv." + cfg.f_gemlevelmin;
+        this._ui.lab1.text = cfg.f_gemlevelmin + "级";
         let lv = BaoShiModel.Ins.getGMLv();
         if(lv > parseInt(cfg.f_gemlevelmin)){
             this._ui.lab5.text = "";

@@ -30,7 +30,7 @@ export class CompackPop{
             _pop = true;
         }
         if(_pop){
-            E.ViewMgr.Open(EViewType.NewPlayPackage);
+            //E.ViewMgr.Open(EViewType.NewPlayPackage);
         }
     }
 

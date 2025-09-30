@@ -33,7 +33,8 @@ export class HelpPanelView extends HelpView{
         tempCell.clsKey = clsKey;
         tempCell.fontSize = 28;
         tempCell.font = E.sdk.convertFont(ZipJson.BOLD);
-        tempCell.width = 450;
+        tempCell.width = 500;
+        tempCell.x = 20;
         tempCell.color = "#9f540c";
         tempCell.align = "left";
         tempCell.wordWrap = true;

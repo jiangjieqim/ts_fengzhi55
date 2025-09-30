@@ -31,7 +31,7 @@ export class JjcSBTip extends ViewBase{
         this._ui.lab_name.text = cfg.f_ArtifactName;
         this._ui.icon.skin = IconUtils.getIconByCfgId(icfg.f_itemid);
         this._ui.quality.skin = IconUtils.getQuaIcon(icfg.f_qua);
-        this._ui.lab_l.text = "lv." + data.level;
+        this._ui.lab_l.text = data.level + '级';
         if(MainModel.Ins.serverVer == EServerVersion.Version_1){
             this._ui.lab_dec.text = StringUtil.format(cfg.f_Comment_v1,this.getAttr(data.level,data.artifactId));
         }else{

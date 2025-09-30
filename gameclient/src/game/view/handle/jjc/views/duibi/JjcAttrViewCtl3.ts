@@ -19,12 +19,12 @@ export class JjcAttrViewCtl3{
     }
 
     private onAttrHandler(item:ui.views.jjcAttr.ui_jjc_attrItem3UI){
-        item.txt_level.text = "lv." + item.dataSource.lv;
+        item.txt_level.text = item.dataSource.lv + '级';
         let iCfg = ItemProxy.Ins.getCfg(item.dataSource.id);
         // let cfg = HuYouQualityProxy.Ins.getCfgByQua(iCfg.f_qua);
         let hcfg = HuYouIconProxy.Ins.getCfgByIdAndAttr(item.dataSource.id,item.dataSource.attr.id);
         let val = attrConvert(item.dataSource.attr.id,item.dataSource.attr.value);
-        item.txt_name.text = hcfg.f_SoulName + ` (${val})`;
+        item.txt_name.text = hcfg.f_SoulName + ` ${val}`;
         item.txt_name.color = QualityUtils.getQuaColor(iCfg.f_qua);
     }
 

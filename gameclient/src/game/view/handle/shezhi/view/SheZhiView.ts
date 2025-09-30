@@ -128,6 +128,9 @@ export class SheZhiView extends ViewBase{
                     break;
             }
             this._ui.auth_btn.visible = false;
+            this._ui.btn_dh.visible = false;
+            this._ui.btn_xx.visible = false;
+            this._ui.xxtx.visible = false;
         }
     }
 
@@ -329,7 +332,7 @@ export class SheZhiView extends ViewBase{
     private updataView(){
         // this._ui.icon.skin = MainModel.Ins.mRoleData.headUrl;
         MainModel.Ins.setTTHead(this._ui.icon,MainModel.Ins.mRoleData.headUrl);
-        this._ui.Lvtf.text = "Lv." + MainModel.Ins.mRoleData.lv;
+        this._ui.Lvtf.text = MainModel.Ins.mRoleData.lv + "级";
         this._ui.lab_name.text = MainModel.Ins.mRoleData.getName();
         this._ui.lab_id.text = MainModel.Ins.mRoleData.AccountId + "";
         this._ui.lab_sid.text = MainModel.Ins.mRoleData.serverName;

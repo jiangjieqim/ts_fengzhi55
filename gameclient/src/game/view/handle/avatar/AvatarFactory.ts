@@ -489,7 +489,7 @@ export class AvatarFactory{
                 // o.push(new FightActionVo(owner),)
                 return "受击减血 -" + val;
             case  EServerSkillType.SuckBlood:
-                return "吸血 +" + val;
+                return "汲取 +" + val;
             case EServerSkillType.Move:
                 // 0回到自己的位置 1冲向对方阵地
                 let a = "";

@@ -22,8 +22,8 @@ export class LingChongXMTJItem extends ui.views.lingchong.ui_lingchongXMItemUI{
         let val = parseInt(value.f_attr.split(":")[1]) * value.f_maxlevel;
         this.quality.skin = IconUtils.getQuaIcon(value.f_quality);
         this.lab.text = MainModel.Ins.getAttrNameIdByID(id);
-        this.lab_lv.text = "Lv." + value.f_maxlevel;
+        this.lab_lv.text = value.f_maxlevel + "级";
 
-        this._dec = MainModel.Ins.getAttrNameIdByID(id) + ":" + attrConvert(id,val);
+        this._dec = MainModel.Ins.getAttrNameIdByID(id) + "：" + attrConvert(id,val);
     }
 }

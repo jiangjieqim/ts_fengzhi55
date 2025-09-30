@@ -952,6 +952,7 @@ export module ui.views.baoshi {
     export class ui_baoshiGongMingViewUI extends View {
 		public btn_tip:Laya.Image;
 		public btn_close:Laya.Image;
+		public title_lab:Laya.Label;
 		public sp1:Laya.Sprite;
 		public img_1:Laya.Image;
 		public img_2:Laya.Image;
@@ -8416,9 +8417,9 @@ export module ui.views.lingchong {
 		public spbg:Laya.Sprite;
 		public star:ui.views.fujiang.ui_starUI;
 		public lab_lv:Laya.Label;
-		public tab:ui.views.lingchong.ui_tab1UI;
 		public img_xz:Laya.Image;
 		public sp:Laya.Sprite;
+		public tab:ui.views.lingchong.ui_tab1UI;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -9042,8 +9043,8 @@ export module ui.views.login {
 		public img_t:Laya.Image;
 		public lab_id:Laya.Label;
 		public lab_sel:Laya.Label;
-		public bg2:Laya.Image;
 		public bg3:Laya.Image;
+		public lab_notice:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -10472,6 +10473,7 @@ export module ui.views.maoxian2 {
 		public tf1:Laya.Label;
 		public tf2:Laya.Label;
 		public tf3:Laya.Label;
+		public tf33:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -11047,6 +11049,7 @@ export module ui.views.paoshang {
     export class ui_paoshangUI extends View {
 		public bg:Laya.Image;
 		public txt2:Laya.Label;
+		public shuoming_btn:Laya.Image;
 		public box_my:Laya.Box;
 		public btn_rz:Laya.Image;
 		public btn_wp:Laya.Image;
@@ -12175,6 +12178,7 @@ export module ui.views.shezhi {
 		public btn_qw:Laya.Image;
 		public qw_red:Laya.Image;
 		public btn_nc:Laya.Image;
+		public xxtx:Laya.Image;
 		public check:ui.views.main.ui_checkbox_02UI;
 		public auth_btn:Laya.Image;
 		public appimg:Laya.Image;

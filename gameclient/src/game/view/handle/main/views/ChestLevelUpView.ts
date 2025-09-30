@@ -230,7 +230,7 @@ export class ChestLevelUpView extends ViewBase{
         let cfg:IChestLv =  this.model.getChestLvCfg(this.chestData.boxlv);
         
         this.curList = cfg.curInfo.f_Quality_Client.split("|");
-        this._ui.curTf.text = E.LangMgr.getLang("CurLv") + ":" + this.chestData.boxlv;
+        this._ui.curTf.text = E.LangMgr.getLang("CurLv") + "：" + this.chestData.boxlv;
 
         if(this.oldLv!=this.chestData.boxlv){
             this.playEffect();
@@ -240,7 +240,7 @@ export class ChestLevelUpView extends ViewBase{
 
         if(cfg.nextInfo){
             this.nextList = cfg.curInfo.f_Quality_Client_next.split("|");
-            this._ui.nextTf.text = E.LangMgr.getLang("NextLv") + ":" + cfg.nextInfo.f_BoxLevel;
+            this._ui.nextTf.text = E.LangMgr.getLang("NextLv") + "：" + cfg.nextInfo.f_BoxLevel;
             this._ui.arrow.visible = true;
         }else{
             this.nextList = null;

@@ -21,16 +21,16 @@ export class JjcAttrViewCtl4{
     private onAttrHandler(item:ui.views.jjcAttr.ui_jjc_attrItem4UI){
         let arr = (item.dataSource as string).split(":");
         let id = parseInt(arr[0]);
-        let val = attrConvert(id,parseInt(arr[1]));
-        item.txt.text = MainModel.Ins.getAttrNameIdByID(id) + ":" + val;
+        let val = attrConvert(id,parseInt(arr[1])).replace('.00%', '%');
+        item.txt.text = MainModel.Ins.getAttrNameIdByID(id) + "：" + val;
         if(arr[3]){
-            item.txt1.text = " (+" + attrConvert(id,parseInt(arr[3])) + ")"
-            item.txt1.x = item.txt.x + item.txt.textField.width;
+            item.txt1.text = " +" + attrConvert(id,parseInt(arr[3]));
+            item.txt1.x = item.txt.x + item.txt.textField.width + 5;
         }else{
             item.txt1.text = "";
         }
 
-        item.lab_lv.text = "lv." + arr[2];
+        item.lab_lv.text = arr[2] + '级';
     }
 
     public setData(value:WatchPlayerInfo_revc){

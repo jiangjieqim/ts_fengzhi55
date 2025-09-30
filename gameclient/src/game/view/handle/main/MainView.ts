@@ -463,10 +463,14 @@ export class MainView extends ViewBase implements IMainUpdate ,IMainView{
         this.botListIcon.push(
         
             this.model.createFuncIcon('btn1',EFuncDef.Jjc,botStyle),//竞技场
-            this.model.createFuncIcon('btn4',EFuncDef.Alliance,botStyle),//同盟
-            
-            this.model.createFuncIcon('btn2',fid,botStyle),//家园
+            //this.model.createFuncIcon('btn4',EFuncDef.Alliance,botStyle),//同盟
+            // this.model.createFuncIcon('btn2',fid,botStyle),//家园
+            // this.model.createFuncIcon('mainBtn',EFuncDef.Adventure,botStyle),//冒险
+
+            this.model.createFuncIcon('btn4',fid,botStyle),//家园
+            this.model.createFuncIcon('btn2',EFuncDef.YeWaiBoss,botStyle),//副本
             this.model.createFuncIcon('mainBtn',EFuncDef.Adventure,botStyle),//冒险
+
             /**
              * 
              * 竞技场: 巅峰 竞技场 星星 大乱斗
@@ -606,7 +610,7 @@ export class MainView extends ViewBase implements IMainUpdate ,IMainView{
                 console.log("onClickEvtNOSP>>>>>>>>>>>>>>>>",taskArr,taskArr[E.yinDaoMgr.index]);
                 return;
             }
-            if(skin == sp){
+            if((skin == sp) || (skin.name && (skin.name === skin.name))){
                 E.yinDaoMgr.index ++ ;
                 E.yinDaoMgr.removeYD();
                 let gCfg = taskArr[E.yinDaoMgr.index];
@@ -660,6 +664,8 @@ export class MainView extends ViewBase implements IMainUpdate ,IMainView{
             this.model = MainModel.Ins;
 
             this.UI = this._ui = new ui.views.main.ui_mainUI();
+            // 隐藏聊天按钮
+            this._ui.chatbg.visible = false;
             this._mainViewAdaptation.skin = this._ui;
             this._mainViewAdaptation.init();
 
@@ -909,8 +915,8 @@ export class MainView extends ViewBase implements IMainUpdate ,IMainView{
             MainModel.Ins.event(MainEvent.MainViewInit);
             this.onShareReward();
             this._ui.ts_img.visible = false;
-            this._ui.chatbg.on(Laya.Event.CLICK,this,this.onShowChat);
-            DebugUtil.draw(this._ui.chatbg);
+            // this._ui.chatbg.on(Laya.Event.CLICK,this,this.onShowChat);
+            // DebugUtil.draw(this._ui.chatbg);
 
             /*
             //挂机
@@ -1571,7 +1577,7 @@ export class MainView extends ViewBase implements IMainUpdate ,IMainView{
      * 更新宝箱的等级
      */
     public UpdateBoxLv(){
-        this._ui.xianziLvTf.text = `Lv${this.model.mRoleData.getChestData().boxlv}`;
+        this._ui.xianziLvTf.text = `${this.model.mRoleData.getChestData().boxlv}级`;
     }
     /**
      * 战斗力
@@ -1928,7 +1934,7 @@ export class MainView extends ViewBase implements IMainUpdate ,IMainView{
         this.redUpdate();
 
         // if(this.model.isOpenAllByFuncid(EFuncDef.Chat+"")){
-        this._ui.chatbg.visible = true;
+        //this._ui.chatbg.visible = true;
         // }else{
             // this._ui.chatbg.visible = false;
         // }

@@ -36,7 +36,7 @@ export class WingItemView{
         this.clear();
         if(wingData.wingId){
             this.skin.typename.text = "";
-            this.skin.tf1.text = "Lv." + wingData.level;
+            this.skin.tf1.text = wingData.level + "级";
             const wingId = wingData.wingId;
             if (!wingData.wingName) {
                 wingData.wingName = WingIdProxy.Ins.getWingName(wingId);

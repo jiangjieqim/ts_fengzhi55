@@ -26,7 +26,7 @@ export class LingChongItem extends ui.views.lingchong.ui_lingchongItemUI{
             }
             this.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
             this.icon.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-            this.lab_lv.text = "Lv." + data.petLevel;
+            this.lab_lv.text = data.petLevel + "级";
             if(data.petStar){
                 this.spbg.visible = true;
                 this.star.visible = true;

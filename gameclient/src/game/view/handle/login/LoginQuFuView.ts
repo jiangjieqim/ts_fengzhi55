@@ -147,12 +147,12 @@ export class LoginQuFuView extends ViewBase{
 
     private upDataView(){
         let arr = [];
-        arr.push({name:"推荐",isSelect:false,id:10000});
+        //arr.push({name:"推荐",isSelect:false,id:10000});
         arr.push({name:"我的角色",isSelect:false,id:20000});
-        for(let i:number = MainModel.Ins.serverZu;i > 0;i--){
-            let st = (i*20-20+1) + "-" + i*20 + "服";
-            arr.push({name:st,isSelect:false,id:i});
-        }
+        // for(let i:number = MainModel.Ins.serverZu;i > 0;i--){
+        //     let st = (i*20-20+1) + "-" + i*20 + "服";
+        //     arr.push({name:st,isSelect:false,id:i});
+        // }
         this._ui.list.array = arr;
         this._ui.list.selectedIndex = 0;
     }

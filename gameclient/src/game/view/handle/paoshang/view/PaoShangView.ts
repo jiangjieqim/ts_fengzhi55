@@ -54,7 +54,8 @@ export class PaoShangView extends ViewBase{
             ButtonCtl.Create(this._ui.btn_ss,new Laya.Handler(this,this.onBtnSSClick));
             ButtonCtl.Create(this._ui.btn_bj,new Laya.Handler(this,this.onBtnBJClick));
             ButtonCtl.Create(this._ui.btn_ybj,new Laya.Handler(this,this.onBtnYBJClick));
-            ButtonCtl.Create(this._ui.btn_xslb,new Laya.Handler(this,this.onBtnXslbClick));
+            ButtonCtl.Create(this._ui.shuoming_btn,new Laya.Handler(this,this.onBtnShuoMingClick));
+            //ButtonCtl.Create(this._ui.btn_xslb,new Laya.Handler(this,this.onBtnXslbClick));
 
             this._ui.list.array = this._ui.list1.array = [];
 
@@ -65,7 +66,16 @@ export class PaoShangView extends ViewBase{
             this._ui.list1.renderHandler = new Laya.Handler(this,this.itemRender1);
 
             this._ui.img_money3.skin = IconUtils.getIconByCfgId(56);
+
+            // 隐藏掠夺和日志
+            this._ui.btn_ss.visible = false;
+            this._ui.btn_rz.visible = false;
+            
         }
+    }
+
+    private onBtnShuoMingClick() {
+        E.ViewMgr.openHelpView("paoshangTitle","paoshangNotice");
     }
 
     private onBtnXslbClick(){
@@ -86,8 +96,9 @@ export class PaoShangView extends ViewBase{
         PaoShangModel.Ins.on(PaoShangModel.UPDATA_RES,this,this.setDot);
         MainModel.Ins.on(MainEvent.ValChange,this,this.onUpdateMoney);
         // 限时礼包按钮是否显示
-        ActivityModel.Ins.on(ActivityEvent.PopWinUpdate,this,ActivityModel.Ins.onPop, [this.packUid, this._ui.btn_xslb]);
-        ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
+        // ActivityModel.Ins.on(ActivityEvent.PopWinUpdate,this,ActivityModel.Ins.onPop, [this.packUid, this._ui.btn_xslb]);
+        // ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
+        this._ui.btn_xslb.visible = false;
         this.sendInit();
     }
 
@@ -227,7 +238,7 @@ export class PaoShangView extends ViewBase{
                 arr.push(data);
             }
         }
-        this._ui.list.array = PaoShangModel.Ins.stItemStationList.concat(arr);
+        this._ui.list.array = PaoShangModel.Ins.stItemStationList.filter(o => o.state != 5).concat(arr);
         this._ui.list1.array = [];
         this.setDot();
     }

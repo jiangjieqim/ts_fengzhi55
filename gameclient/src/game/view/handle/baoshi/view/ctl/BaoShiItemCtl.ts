@@ -75,7 +75,7 @@ export class BaoShiItemCtl{
         this._isTip = isTip;
         let cfg = BaoShiCfgProxy.Ins.getCfgById(vo.id);
         this.skin.icon.skin = BaoShiCfgProxy.Ins.getBaoShiIcon(cfg.f_gemicon);
-        this.skin.tf1.text = "lv" + vo.level;
+        this.skin.tf1.text = vo.level + "级";
         this.skin.lab_name.text = cfg.f_GemAttr;
         this.skin.img.visible = imgBo;
         this.skin.img2.visible = !imgBo;
@@ -99,7 +99,7 @@ export class BaoShiItemCtl{
             let cfg = BaoShiCfgProxy.Ins.getCfgById(this._vo.id);
             let lCfg = BaoShiLvProxy.Ins.getCfgByIdAndLv(this._vo.id,this._vo.level);
             let arr = lCfg.f_GemAttr.split("-");
-            let dec = cfg.f_GemAttr + "    " + attrConvert(arr[0],arr[1]);
+            let dec = cfg.f_GemAttr + "：" + attrConvert(arr[0],arr[1]);
             MainModel.Ins.showSmallTips(cfg.f_gemname,dec,this.skin.icon);
         }
     }

@@ -271,7 +271,7 @@ export class ShowPlayerView extends ViewBase {
             let isbcfg = ItemProxy.Ins.getCfg(sbcfg.f_itemId);
             this._ui.item_sb.quality.skin = IconUtils.getQuaIcon(isbcfg.f_qua);
             this._ui.item_sb.icon.skin = IconUtils.getIconByCfgId(isbcfg.f_itemid);
-            this._ui.item_sb.tf1.text = "lv." + this.playerData.Artifact[0].level;
+            this._ui.item_sb.tf1.text = this.playerData.Artifact[0].level + '级';
         }else{
             this._ui.item_sb.visible = false;
             this._ui.img_sb1.visible = true;
@@ -285,7 +285,7 @@ export class ShowPlayerView extends ViewBase {
             let cfg: Configs.t_Pet_List_dat = PetListProxy.Ins.getCfgById(this.playerData.petInfo[0].petId);
             this._ui.item_lq.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
             this._ui.item_lq.icon.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-            this._ui.item_lq.lab_lv.text = "Lv." + this.playerData.petInfo[0].petLevel;
+            this._ui.item_lq.lab_lv.text = this.playerData.petInfo[0].petLevel + "级";
             this._ui.item_lq.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
             this._ui.item_lq.tab.img2.visible = false;
             if (this.playerData.petInfo[0].petStar) {

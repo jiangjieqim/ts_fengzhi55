@@ -95,7 +95,7 @@ export class WingTreasureView extends ViewBase{
             const value = parseFloat(attrConvert(o.id, o.value));
             element.element.skin = `remote/main/wing/wing_treasure_${o.id}.png`;
             element.titleLabel.text = `${attrName}${value}%`;
-            element.levelLabel.text = `lv.${o.level}`;
+            element.levelLabel.text = `${o.level}级`;
             if (i === arrowIndex) {
                 element.arrowIcon.visible = true;
             } else {

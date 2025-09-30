@@ -110,7 +110,8 @@ export class ActivityModel extends BaseModel{
                 // console.log(item.uid,item.id,item.iconHideTime)
             });
         }
-        this.event(ActivityEvent.PopWinUpdate);
+        // 去掉限时礼包
+        //this.event(ActivityEvent.PopWinUpdate);
     }
 
     /**是否有一个弹出礼包的图标显示着 */

@@ -197,7 +197,7 @@ export class PaoShangItem extends ui.views.paoshang.ui_paoshangItemUI{
                 this.txt1.text = "";
                 this.txt2.text = "";
                 this.txt3.text = "";
-                this.txt.text = "LV." + value.count + "解锁";
+                this.txt.text = value.count + "级解锁";
                 this.img_bgm.y = 204 + this._offY;
                 this.txt.y = 218 + this._offY;
                 break;

@@ -40,7 +40,7 @@ export class MainExpControl {
             // let _start = cfg.minExp;
             let val = v / cfg.f_ExpValue;
             if(val > 1) val = 1;
-            this.Lvtf.text = "Lv. " + MainModel.Ins.lv;  //+cfg.lv.toString();
+            this.Lvtf.text = MainModel.Ins.lv + "级";  //+cfg.lv.toString();
             this.tf.text =  v + "/" + cfg.f_ExpValue;
             this.SetProgress(val);
         }

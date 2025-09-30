@@ -35,9 +35,9 @@ export class BaoShiAttrCtl{
         let arr = (item.dataSource as string).split(":");
         let id = parseInt(arr[0]);
         let val = attrConvert(id,parseInt(arr[1]));
-        item.txt.text = MainModel.Ins.getAttrNameIdByID(id) + ":" + val;
+        item.txt.text = MainModel.Ins.getAttrNameIdByID(id) + "：" + val;
         if(arr[2]){
-            item.txt1.text = " (+" + attrConvert(id,parseInt(arr[2])) + ")"
+            item.txt1.text = " +" + attrConvert(id,parseInt(arr[2])) + ""
             item.txt1.x = item.txt.x + item.txt.textField.width;
         }else{
             item.txt1.text = "";

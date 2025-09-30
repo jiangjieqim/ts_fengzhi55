@@ -90,7 +90,9 @@ export class PaoShangModel extends Laya.EventDispatcher{
 
     public isDotMain(){
         if(TaskModel.Ins.isFuncOpen(EFuncDef.PaoShang)){
-            if(this.isDotTXZ() || this.isDotOk() || this.isDotLD()){
+            // if(this.isDotTXZ() || this.isDotOk() || this.isDotLD()){
+            // 忽略掠夺的红点
+            if(this.isDotTXZ() || this.isDotOk()){
                 return true;
             }
         }

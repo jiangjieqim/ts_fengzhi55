@@ -17,7 +17,7 @@ export class LingChongItem2 extends ui.views.lingchong.ui_lingchongItem2UI{
         let cfg:Configs.t_Pet_List_dat = PetListProxy.Ins.getCfgById(value.petId);
         this.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
         this.icon.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-        this.lab_lv.text = "Lv." + value.petLevel;
+        this.lab_lv.text = value.petLevel + "级";
         if(value.petStar){
             this.sp.visible = true;
             this.star.visible = true;

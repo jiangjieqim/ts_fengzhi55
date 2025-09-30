@@ -1200,7 +1200,7 @@ export class MainModel extends BaseModel implements IMainModel{
                             isMax = true;
                         }
                         else {
-                            E.ViewMgr.Open(EViewType.NewPlayPackage);
+                            //E.ViewMgr.Open(EViewType.NewPlayPackage);
                         }
                     }
                 }
@@ -1666,13 +1666,13 @@ export class MainModel extends BaseModel implements IMainModel{
     }
 
     public gm(str:string){
-        if(debug){
+        //if(debug){
             let gm = new Gm_req();
             gm.datas = str;
             SocketMgr.Ins.SendMessageBin(gm);
-        }else{
-            E.ViewMgr.ShowMsgBox(EMsgBoxType.OnlyOk,`please set URL debug=1`);
-        }
+        // }else{
+        //     E.ViewMgr.ShowMsgBox(EMsgBoxType.OnlyOk,`please set URL debug=1`);
+        // }
     }
     
     private onWatchPlayerInfoRevc(revc:WatchPlayerInfo_revc){
@@ -2601,7 +2601,7 @@ export class MainModel extends BaseModel implements IMainModel{
         }
 
         if(newplayer){
-            E.ViewMgr.Open(EViewType.NewPlayPackage);
+            //E.ViewMgr.Open(EViewType.NewPlayPackage);
             this.savePop();
         }else{
             let day = TimeUtil.getDay();

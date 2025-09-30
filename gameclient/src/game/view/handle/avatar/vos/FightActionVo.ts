@@ -303,7 +303,7 @@ export class FightActionVo{
             case EActionSkill.NormalAttack:
                 return "普攻";
             case EActionSkill.SuckBlood:
-                return "吸血";
+                return "汲取";
             case EActionSkill.CriticalStrike:
                 return "暴击";
             case EActionSkill.PassiveDodge:

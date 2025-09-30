@@ -151,11 +151,11 @@ export class JjcFightView extends ViewBase {
             const count = MainModel.Ins.mRoleData.getVal(ECellType.JjcTicket);
             // 挑战券最大拥有上限
             const conf = BoxExtraItemProxy.Ins.getConfByFid(1);
-            this._ui.tf2.text = E.LangMgr.getLang("FightSubCnt2") + ":" + count + "/" + conf.f_Maxhold;
+            this._ui.tf2.text = E.LangMgr.getLang("FightSubCnt2") + "：" + count + "/" + conf.f_Maxhold;
             this.buyCtl.visible = true;
         } else {
             // 巅峰竞技场
-            this._ui.tf2.text = E.LangMgr.getLang("FightSubCnt") + ":" + this.model.fightTotalCnt + "/" + this.model.refreshTotalCnt;
+            this._ui.tf2.text = E.LangMgr.getLang("FightSubCnt") + "：" + this.model.fightTotalCnt + "/" + this.model.refreshTotalCnt;
 
             if(this.model.fightTotalCnt >= this.model.refreshTotalCnt){
                 this.buyCtl.visible = false;
@@ -189,7 +189,7 @@ export class JjcFightView extends ViewBase {
             this.timeCtl.stop();
             this.setTimeTf();
         }
-
+        this._ui.fightbtn.visible = false;
         // let req:JjcRefreshList_req = new JjcRefreshList_req();
         // SocketMgr.Ins.SendMessageBin(req);
         this.model.reqRefreshList();

@@ -51,13 +51,13 @@ export class FuncProxy extends BaseCfg {
      */
     public getFuncList(taskId: number): number[] {
         const taskIdList = TaskProxy.Ins.getTaskIdList();
-        const funcInfos = this.List;
+        const funcInfos = this.List.filter(o => o.f_close == 0);
         const playerTaskIndex = taskIdList.findIndex(id => id === taskId);
         const funcTaskIndexs = funcInfos.map(o => {
             if (o.f_task != 0) {
                 const index = taskIdList.findIndex(tid => tid === o.f_task);
                 if (index === -1) {
-                    throw new Error(`Func表配置错误，缺少功能#${o.funcId}对应的taskId#${o.taskId}`);
+                    throw new Error(`Func表配置错误，缺少功能#${o.f_FunctionID}对应的taskId#${o.taskId}`);
                 }
                 return index;
             }

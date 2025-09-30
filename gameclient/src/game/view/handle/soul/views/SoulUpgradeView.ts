@@ -325,7 +325,7 @@ export class SoulUpgradeView extends ViewBase {
 
         if(this.newLv > this.curLv){
             this._ui.bg11.visible = true;
-            this._ui.addTf.text = "Lv."+this.newLv;
+            this._ui.addTf.text = this.newLv + "级";
             this._ui.img5.visible = true;
             this._ui.img4.visible = true;
         }else{
@@ -342,7 +342,7 @@ export class SoulUpgradeView extends ViewBase {
         this.maxVal = maxVal;
         this.iconCtl.updateCell(_vo);
         
-        this._ui.lvtf.text = "Lv." + this.curLv;
+        this._ui.lvtf.text = this.curLv + "级";
 
         let cfg:Configs.t_Spirit_Attribute_Fixed_dat = (t_Spirit_Attribute_Fixed.Ins.getCfgBySpiritID(_vo.spiritId));
         this._ui.namftf.text = cfg.f_SpiritName;

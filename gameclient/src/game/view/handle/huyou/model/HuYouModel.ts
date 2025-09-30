@@ -187,6 +187,8 @@ export class HuYouModel extends Laya.EventDispatcher{
     }
 
     public isDotEquip(index:number,cheifId:number = 0){
+        return false;
+        
         let soltNum = HuYouSlotProxy.Ins.getSlotNum();
         if(soltNum >= index){
             let array:stItem[] = this.getBagList(HuYouModel.BagEnmu.noSort_FY,cheifId);//背包数据

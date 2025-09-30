@@ -275,7 +275,7 @@ class LingChongSucceed extends ViewBase {
         let arr = data.split(":");
         let id = parseInt(arr[0]);
         let val = parseInt(arr[1]);
-        item.nameTf.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+        item.nameTf.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
         item.valTf.text = attrConvert(id,val);
     }
     private disposeAvatar(){
@@ -316,7 +316,7 @@ class LingChongSucceed extends ViewBase {
             this._ui.skillTf.text = sCfg.f_skillname;
             // let lv = //LingChongModel.Ins.getSkillLv(qCfg.f_maxstar);
             let skillLv:number = LingChongModel.Ins.getSkillLv(this._vo.petStar)
-            this._ui.lvTf.text = "Lv." + skillLv;// this._vo.petLevel;
+            this._ui.lvTf.text = skillLv + "级";// this._vo.petLevel;
             this._ui.nametf.text = cfg.f_petname;
             this._ui.nametf.color = "#"+EquipmentQualityProxy.Ins.getByQua(cfg.f_petquality).f_Color;
             // let arr = sCfg.f_initvalue.split("|");
@@ -436,7 +436,7 @@ class LingChongItemCtl {
             this.skin.icon.skin = PetListProxy.Ins.getPetIconById(vo.petId);
             this.skin.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
             this.skin.lab_lv.visible = true;
-            this.skin.lab_lv.text = `Lv.${vo.petLevel}`;
+            this.skin.lab_lv.text = `${vo.petLevel}级`;
             if (this.skinType == ELingChongSkin.Normal) {
                 if (this.model.isSelect(this.vo.petSerialNum)) {
                     this.skin.mask1.visible = true;

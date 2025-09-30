@@ -103,9 +103,9 @@ export class LoginViewNew extends ViewBase {
             this._ui.versionTf.stroke = 2;
             
 
-            if(!Laya.Browser.onPC && initConfig.asset.indexOf("https://")==-1){
-                E.ViewMgr.ShowMsgBox(EMsgBoxType.OnlyOk,"请使用CDN资源");
-            }
+            // if(!Laya.Browser.onPC && initConfig.asset.indexOf("https://")==-1){
+            //     E.ViewMgr.ShowMsgBox(EMsgBoxType.OnlyOk,"请使用CDN资源");
+            // }
             this.btnList.push(
                 ButtonCtl.CreateBtn(this._ui.shilinbtn,this,this.onAgeHandler)
             );

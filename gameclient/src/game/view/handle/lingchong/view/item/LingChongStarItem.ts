@@ -19,7 +19,7 @@ export class LingChongStarItem extends ui.views.lingchong.ui_lingchongItem1UI{
         let cfg:Configs.t_Pet_List_dat = PetListProxy.Ins.getCfgById(value.petId);
         this.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
         this.icon.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-        this.lab_lv.text = "Lv." + value.petLevel;
+        this.lab_lv.text = value.petLevel + "级";
         this.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
         this.tab.img2.visible = false;
         if(value.petStar){

@@ -74,6 +74,6 @@ export class IconUtils{
         return "";
     }
     public static str2Lv(lv:number){
-        return "Lv." + lv;
+        return lv + "级";
     }
 }

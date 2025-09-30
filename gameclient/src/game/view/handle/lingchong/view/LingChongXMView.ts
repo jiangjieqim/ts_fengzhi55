@@ -173,7 +173,7 @@ export class LingChongXMView extends ViewBase{
         this._ui.tImg.visible = false;
         let cfg:Configs.t_Pet_List_dat = PetListProxy.Ins.getCfgById(this._data.petId);
         this._ui.lab_name.text = cfg.f_petname;
-        this._ui.lab_lv.text = "Lv." + this._data.petLevel;
+        this._ui.lab_lv.text = this._data.petLevel + "级";
         this._starCtl.setStar(this._data.petStar);
         this._ui.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
         this._ui.tab.img2.visible = false;
@@ -205,7 +205,7 @@ export class LingChongXMView extends ViewBase{
             let tval = parseInt(tCfg.f_attr.split(":")[1]) * 1;
             this._ui.quality.skin = IconUtils.getQuaIcon(tCfg.f_quality);
             this._ui.lab_attr.text = MainModel.Ins.getAttrNameIdByID(tid);
-            this._dec = MainModel.Ins.getAttrNameIdByID(tid) + ":" + attrConvert(tid,tval);
+            this._dec = MainModel.Ins.getAttrNameIdByID(tid) + "：" + attrConvert(tid,tval);
 
             this._ui.tImg.x = 280;
             this._ui.tImg.y = 656;

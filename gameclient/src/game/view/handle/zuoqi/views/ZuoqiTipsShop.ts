@@ -108,7 +108,7 @@ export class ZuoqiTipsShop extends ViewBase {
         headSkin.sel.visible = false;
         f_setStar(headSkin, this._data.star);
         headSkin.typename.text = "";
-        headSkin.tf1.text = "Lv." + this._data.lv;
+        headSkin.tf1.text = this._data.lv + "级";
         headSkin.icon.skin = IconUtils.getHorseIcon(this._data.mountid);
         headSkin.qua.skin = IconUtils.getQuaIcon(this._data.qua);
     }

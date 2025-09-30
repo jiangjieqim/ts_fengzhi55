@@ -50,7 +50,7 @@ export class LingChongLVView extends ViewBase{
     private onRenderHandller1(item:ui.views.lingchong.ui_lingchongAttrItemUI){
         let id = parseInt(item.dataSource.split(":")[0]);
         let val = parseInt(item.dataSource.split(":")[1]);
-        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
         item.valTf.text = attrConvert(id,val);
     }
 
@@ -94,9 +94,9 @@ export class LingChongLVView extends ViewBase{
         let cfg:Configs.t_Pet_List_dat = PetListProxy.Ins.getCfgById(this._data.petId);
         let qCfg = PetQualityProxy.Ins.getCfgById(cfg.f_petquality);
         this._ui.lab_name.text = cfg.f_petname;
-        this._ui.lab_lv.text = "Lv." + this._data.petLevel;
+        this._ui.lab_lv.text = this._data.petLevel + "级";
         this._starCtl.setStar(this._data.petStar);
-        this._ui.lab_maxLv.text = "Lv." + qCfg.f_maxlevel;
+        this._ui.lab_maxLv.text = qCfg.f_maxlevel + "级";
         this._ui.list_attr.array = LingChongModel.Ins.getAttrArr(this._data.petId,this._data.petLevel,this._data.petStar);
         this._ui.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
         this._ui.tab.img2.visible = false;

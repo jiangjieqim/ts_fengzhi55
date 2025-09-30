@@ -82,7 +82,7 @@ export class ZuoQiMainView extends ViewBase{
                 ButtonCtl.Create(this._ui.switchBtn,new Laya.Handler(this,this.onSwitchHandler)),
                 ButtonCtl.Create(this._ui.shengxingBtn,new Laya.Handler(this,this.onQuaUp)),
                 ButtonCtl.Create(this._ui.zuoqicankuBtn,new Laya.Handler(this,this.storgeHandler)),
-                ButtonCtl.Create(this._ui.btn_xslb,new Laya.Handler(this,this.onBtnXslbClick))
+                //ButtonCtl.Create(this._ui.btn_xslb,new Laya.Handler(this,this.onBtnXslbClick))
             );
             this.yunshubtnCtl = ButtonCtl.Create(this._ui.yunshubtn,new Laya.Handler(this,this.onTransportHandler));
             this.zuoqichouBtnCtl = ButtonCtl.Create(this._ui.zuoqichouBtn,new Laya.Handler(this,this.onChouka));
@@ -160,8 +160,9 @@ export class ZuoQiMainView extends ViewBase{
         this.model.on(ZuoQiEvent.RedUpdate, this, this.onRedUpdate);
         MainModel.Ins.on(MainEvent.ValChange, this, this.onValChangeEvt);
         // 限时礼包按钮是否显示
-        ActivityModel.Ins.on(ActivityEvent.PopWinUpdate,this,ActivityModel.Ins.onPop, [this.packUid, this._ui.btn_xslb]);
-        ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
+        // ActivityModel.Ins.on(ActivityEvent.PopWinUpdate,this,ActivityModel.Ins.onPop, [this.packUid, this._ui.btn_xslb]);
+        // ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
+        this._ui.btn_xslb.visible = false;
         this.onValChangeEvt();
         this.onRedUpdate();
     }
@@ -264,7 +265,7 @@ export class ZuoqiMainCtl{
         this._ui.isLvFullTf.visible = false;
  
         // this.slotView.setData(_zqVo);
-        this._ui.tf1.text = "Lv."+_zqVo.lv;
+        this._ui.tf1.text = _zqVo.lv + "级";
         //等级
         if(result.isMax){
             this._ui.lvupg.visible = false;

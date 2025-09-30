@@ -34,7 +34,8 @@ export class ChongZhiView extends ViewBase {
     protected onInit(): void {
         let cfg: Configs.t_Purchase_Price_dat = t_Purchase_PriceProxy.Ins.GetDataById(this.Data);
         this.cfg = cfg;
-        this._ui.tf1.text = "fid = " + cfg.f_id/*JSON.stringify(cfg) */ + "\n" + "充值:" + this.moneyCNY + "元";
+        // this._ui.tf1.text = "fid = " + cfg.f_id/*JSON.stringify(cfg) */ + "\n" + "充值:" + this.moneyCNY + "元";
+        this._ui.tf1.text = "是否花费" + this.moneyCNY + "元购买？";
         // this.event(ActivityEvent.RechargeBillUpdate,revc.val);      
     }
 

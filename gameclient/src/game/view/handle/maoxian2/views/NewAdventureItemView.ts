@@ -263,6 +263,7 @@ class CurNewAdventureItemViewSkin extends ui.views.maoxian2.ui_maoxian2_item1UI{
         this.tf1.text = this.vo.clearanceDesc;
         this.tf2.text = this.vo.heroName;
         this.tf3.text = E.getLang("maoxian2_text2");
+        this.tf33.text = E.getLang("maoxian2_text3");
         ItemViewFactory.LayoutLabels(this.desctf);
 
         // let sign:string = "SoltItemView2";

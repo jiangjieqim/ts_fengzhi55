@@ -60,7 +60,7 @@ export class LCRankCtl1{
         let cfg = PetListProxy.Ins.getCfgById(this._data.id);
         this._ui.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
         this._ui.icon1.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-        this._ui.lab_lv.text = "Lv." + this._data.level;
+        this._ui.lab_lv.text = this._data.level + "级";
         this._starCtl.setStar(this._data.star);
         this._ui.lab_name.text = cfg.f_petname;
         this._ui.lab_name.color = QualityUtils.getQuaColor(cfg.f_petquality);

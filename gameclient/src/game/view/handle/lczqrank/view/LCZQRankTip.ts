@@ -137,7 +137,7 @@ export class LCZQRankTip extends ViewBase{
         let cfg: Configs.t_Pet_List_dat = PetListProxy.Ins.getCfgById(value.petId);
         this._ui.item.quality.skin = IconUtils.getQuaIcon(cfg.f_petquality);
         this._ui.item.icon.skin = PetListProxy.Ins.getPetIconById(cfg.f_petid);
-        this._ui.item.lab_lv.text = "Lv." + value.petLevel;
+        this._ui.item.lab_lv.text = value.petLevel + "级";
         this._ui.item.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
         this._ui.item.tab.img2.visible = false;
         if (value.petStar) {

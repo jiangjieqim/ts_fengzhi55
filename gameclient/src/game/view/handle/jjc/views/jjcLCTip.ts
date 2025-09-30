@@ -43,7 +43,7 @@ export class jjcLCTip extends ViewBase{
     private onRenderHandller1(item:ui.views.lingchong.ui_lingchongAttrItemUI){
         let id = parseInt(item.dataSource.split(":")[0]);
         let val = parseInt(item.dataSource.split(":")[1]);
-        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
         item.valTf.text = attrConvert(id,val);
     }
 
@@ -69,7 +69,7 @@ export class jjcLCTip extends ViewBase{
         let cfg:Configs.t_Pet_List_dat = PetListProxy.Ins.getCfgById(this._data.petId);
         this._ui.lab_name.text = cfg.f_petname;
         this._ui.lab_name.color = "#" + EquipmentQualityProxy.Ins.getByQua(cfg.f_petquality).f_Color;
-        this._ui.lab_lv.text = "Lv." + this._data.petLevel;
+        this._ui.lab_lv.text = this._data.petLevel + "级";
         this._starCtl.setStar(this._data.petStar);
         this._ui.tab.img.skin = `remote/lingchong/tj${cfg.f_pettype}.png`;
         this._ui.tab.img2.visible = false;
@@ -77,7 +77,7 @@ export class jjcLCTip extends ViewBase{
         let sCfg = PetSkillClientProxy.Ins.getCfgById(cfg.f_petskillid);
         this._ui.item_jn.lab.text = sCfg.f_skillname;
         let lv = LingChongModel.Ins.getSkillLv(this._data.petStar);
-        this._ui.item_jn.lab_lv.text = "Lv." + lv;
+        this._ui.item_jn.lab_lv.text = lv + "级";
         this._ui.lab_jn.text = LingChongModel.Ins.getSkillDec(cfg.f_petskillid,lv);
 
         this._ui.list_attr.array = LingChongModel.Ins.getAttrArr(cfg.f_petid,this._data.petLevel,this._data.petStar);

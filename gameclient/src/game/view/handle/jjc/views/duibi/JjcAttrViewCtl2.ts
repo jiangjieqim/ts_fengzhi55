@@ -22,7 +22,7 @@ export class JjcAttrViewCtl2{
     private onAttrHandler(item:ui.views.jjcAttr.ui_jjc_attrItem1UI){
         let id = parseInt(item.dataSource);
         let val = PlayerVoFactory.getEquipVal(this._list,id);
-        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
         item.valTf.text = attrConvert(id,val);
 
         let val1 = PlayerVoFactory.getEquipVal(this._list1,id);
@@ -38,7 +38,7 @@ export class JjcAttrViewCtl2{
     private onAttrHandler1(item:ui.views.jjcAttr.ui_jjc_attrItem1UI){
         let id = parseInt(item.dataSource);
         let val = PlayerVoFactory.getEquipVal(this._list1,id);
-        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
         item.valTf.text = attrConvert(id,val);
         item.upimg.visible = false;
     }

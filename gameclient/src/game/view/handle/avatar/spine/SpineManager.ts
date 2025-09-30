@@ -328,7 +328,12 @@ export class SpineUtil{
             slotName == ESpineSlotId.WING2)
         {
             let tex:Laya.Texture = Laya.loader.getRes(url);
-            _uv = SpineUtil.createSize(tex.width,tex.height);//创建一个定义的纹理宽高
+            if (tex) {
+                _uv = SpineUtil.createSize(tex.width,tex.height);//创建一个定义的纹理宽高
+            } else {
+                console.log(`drawSkel ${url} not find!!`);
+            }
+            
             // }else if(){
             // let tex:Laya.Texture = Laya.loader.getRes(url);
             // _uv = SpineUtil.createSize(tex.width,tex.height);

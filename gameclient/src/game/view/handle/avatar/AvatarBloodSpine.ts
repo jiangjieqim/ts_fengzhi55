@@ -102,7 +102,7 @@ export class AvatarBloodSpine extends ui.views.maoxian.ui_blood_viewUI{
             this.con1.visible = false;
         }else{
             this.con1.visible = true;
-            this.nameTf.text = `Lv.${vo.level} ${vo.name}`;
+            this.nameTf.text = `${vo.level}级${vo.name}`;
             this.starCtl.setStar(vo.star);
             this.starCtl.centerX();
         }
