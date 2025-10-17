@@ -82,7 +82,7 @@ export class ZuoQiTJView extends ViewBase{
 
     protected onInit(): void {
         ZuoQiModel.Ins.on(ZuoQiEvent.TJSELECT,this,this.onSelect);
-        ZuoQiModel.Ins.tjSelectId = 27;
+        ZuoQiModel.Ins.tjSelectId = Math.max(...Mount_ListProxy.Ins.GetAllFids());
         this.updataView();
         this.refreshPanel();
     }
@@ -141,7 +141,7 @@ export class ZuoQiTJView extends ViewBase{
             }
             let obj:any = {};
             let starweight = data.f_starweight / 10000;
-            obj.name = MainModel.Ins.getAttrNameIdByID(data.f_attr_id) + ":";
+            obj.name = MainModel.Ins.getAttrNameIdByID(data.f_attr_id) + "：";
             let value = (qcfg.f_MaxLevel*data.f_levelweight + this._cfg.f_Quality*data.f_quaweight)*(4*(1+((qcfg.f_MaxStar-1)*starweight)));
             value = value + qcfg.f_MaxLevel * this._cfg.f_Quality * data.f_adjustweight;
             value = Math.ceil(value);
@@ -161,31 +161,31 @@ export class ZuoQiTJView extends ViewBase{
         let arr = [];
         if(this._cfg.f_Skill1){
             let obj:any = {};
-            obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill1) + ":";
+            obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill1) + "：";
             obj.value = attrConvert(this._cfg.f_Skill1,this._cfg.f_Skill1Value) + "";
             arr.push(obj);
         }
         if(this._cfg.f_Skill2){
             let obj:any = {};
-            obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill2) + ":";
+            obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill2) + "：";
             obj.value = attrConvert(this._cfg.f_Skill2,this._cfg.f_Skill2Value) + "";
             arr.push(obj);
         }
         if(this._cfg.f_Skill3){
             let obj:any = {};
-            obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill3) + ":";
+            obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill3) + "：";
             obj.value = attrConvert(this._cfg.f_Skill3,this._cfg.f_Skill3Value) + "";
             arr.push(obj);
         }
         if(this._cfg.f_Skill4){
             let obj:any = {};
-            obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill4) + ":";
+            obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill4) + "：";
             obj.value = attrConvert(this._cfg.f_Skill4,this._cfg.f_Skill4Value) + "";
             arr.push(obj);
         }
         if(this._cfg.f_Skill5){
             let obj:any = {};
-            obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill5) + ":";
+            obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill5) + "：";
             obj.value = attrConvert(this._cfg.f_Skill5,this._cfg.f_Skill5Value) + "";
             arr.push(obj);
         }

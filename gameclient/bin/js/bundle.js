@@ -2362,6 +2362,7 @@
         EViewType[EViewType["ZiXuanLiBaoView"] = 650] = "ZiXuanLiBaoView";
         EViewType[EViewType["ZiXuanLiBaoView1"] = 651] = "ZiXuanLiBaoView1";
         EViewType[EViewType["GeXuQiPaoView"] = 660] = "GeXuQiPaoView";
+        EViewType[EViewType["ShiLingTiShiView"] = 661] = "ShiLingTiShiView";
     })(EViewType || (EViewType = {}));
     var EPageType;
     (function (EPageType) {
@@ -4354,6 +4355,8 @@
         MSGID[MSGID["GeXuQiPaoPack"] = 3765] = "GeXuQiPaoPack";
         MSGID[MSGID["GeXuQiPaoShop"] = 3767] = "GeXuQiPaoShop";
         MSGID[MSGID["GeXuQiPaoZhuiJi"] = 3770] = "GeXuQiPaoZhuiJi";
+        MSGID[MSGID["CommonLotteryNumInit"] = 3771] = "CommonLotteryNumInit";
+        MSGID[MSGID["CommonLotteryNumUpdate"] = 3772] = "CommonLotteryNumUpdate";
     })(MSGID || (MSGID = {}));
 
     let TWO_PWR_16_DBL = 1 << 16;
@@ -4900,6 +4903,7 @@
     }
     class stServerConfig {
         constructor() {
+            this.protoid = undefined;
             this.ServerTime = new uint64();
             this.openTime = new uint64();
         }
@@ -4917,7 +4921,9 @@
         }
     }
     class stPlayerData {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUTFString(this.Account || "");
@@ -4940,7 +4946,9 @@
         }
     }
     class stPlayerBaseInfo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             this.moneyInfo = this.moneyInfo || [];
@@ -4979,7 +4987,9 @@
         }
     }
     class stPropItem {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.id);
@@ -4992,7 +5002,9 @@
         }
     }
     class stCellValue {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.id);
@@ -5005,7 +5017,9 @@
         }
     }
     class stEquipAttr {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.id);
@@ -5019,6 +5033,7 @@
     }
     class stEquipItem {
         constructor() {
+            this.protoid = undefined;
             this.uid = new uint64();
         }
         write(b) {
@@ -5082,7 +5097,9 @@
         }
     }
     class stWingUpgradeInfo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.id);
@@ -5098,6 +5115,7 @@
     }
     class stWingItem {
         constructor() {
+            this.protoid = undefined;
             this.wingInfoData = new stWingInfo();
         }
         write(b) {
@@ -5140,7 +5158,9 @@
         }
     }
     class stWingInfo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.wingLevel);
@@ -5255,7 +5275,9 @@
         }
     }
     class stFightActionLog {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.skillId);
@@ -5280,7 +5302,9 @@
         }
     }
     class stFightPet {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.pos);
@@ -5293,7 +5317,9 @@
         }
     }
     class stFightData {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.target);
@@ -5306,7 +5332,9 @@
         }
     }
     class stFightAction {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.type);
@@ -5334,7 +5362,9 @@
         }
     }
     class stSkin {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.f_HeadID);
@@ -5358,6 +5388,7 @@
     }
     class stFightRole {
         constructor() {
+            this.protoid = undefined;
             this.skin = new stSkin();
         }
         write(b) {
@@ -5384,7 +5415,9 @@
         }
     }
     class stFightVo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.owner);
@@ -5591,7 +5624,9 @@
         }
     }
     class stSkinStyle {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.qua);
@@ -5674,7 +5709,9 @@
         }
     }
     class stRewardRideVo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.type);
@@ -5691,7 +5728,9 @@
         }
     }
     class stRideVo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.id);
@@ -5707,6 +5746,7 @@
     }
     class stMountRelation {
         constructor() {
+            this.protoid = undefined;
             this.equipItem = new stEquipItem();
         }
         write(b) {
@@ -5808,7 +5848,9 @@
         }
     }
     class stRideMissionVo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.id);
@@ -5823,7 +5865,9 @@
         }
     }
     class stRideReq {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.rideId);
@@ -6050,7 +6094,9 @@
         }
     }
     class stJjcPlayer {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.id);
@@ -6157,7 +6203,9 @@
         }
     }
     class stJjcLog {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.time);
@@ -6215,6 +6263,7 @@
     }
     class stRideInfo {
         constructor() {
+            this.protoid = undefined;
             this.baseInfo = new stRideVo();
         }
         write(b) {
@@ -6240,7 +6289,9 @@
         }
     }
     class stWing {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.wingId);
@@ -6259,7 +6310,9 @@
         }
     }
     class stGemArena {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.formationId);
@@ -6283,7 +6336,9 @@
         }
     }
     class stSpiritInfo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.spiritId);
@@ -6298,7 +6353,9 @@
         }
     }
     class stSpiritArena {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             this.spiritInfo = this.spiritInfo || [];
@@ -6333,7 +6390,9 @@
         }
     }
     class stGymArena {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             this.gymAttrList = this.gymAttrList || [];
@@ -6368,7 +6427,9 @@
         }
     }
     class stBlessingArena {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             this.attrList = this.attrList || [];
@@ -6543,7 +6604,9 @@
         }
     }
     class stTipsVo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.type);
@@ -6581,7 +6644,9 @@
         }
     }
     class stShopItem {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.fid);
@@ -6615,7 +6680,9 @@
         }
     }
     class stActivityStatus {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.uid);
@@ -6628,7 +6695,9 @@
         }
     }
     class stActivityCell {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.id);
@@ -6641,7 +6710,9 @@
         }
     }
     class stActivity {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.uid);
@@ -6726,7 +6797,9 @@
         }
     }
     class stActivityRed {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.uid);
@@ -6817,7 +6890,9 @@
         }
     }
     class stReloadEquip {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.type);
@@ -6885,7 +6960,9 @@
         }
     }
     class stPopWin {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.uid);
@@ -6917,7 +6994,9 @@
         }
     }
     class stStyle {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -7050,6 +7129,7 @@
     }
     class stGymInvite {
         constructor() {
+            this.protoid = undefined;
             this.endtime = new uint64();
             this.item = new stGymEquip();
         }
@@ -7073,7 +7153,9 @@
         }
     }
     class stGymEquip {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.heroType);
@@ -7231,7 +7313,9 @@
         }
     }
     class stGymUpgradeInfo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -7316,7 +7400,9 @@
         }
     }
     class stGymFacilityRefinementInfo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.wearable);
@@ -7340,7 +7426,9 @@
         }
     }
     class stGymFacilityRefinement {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -7405,7 +7493,9 @@
         }
     }
     class stGymMission {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -7495,6 +7585,7 @@
     }
     class stItem {
         constructor() {
+            this.protoid = undefined;
             this.uid = new uint64();
         }
         write(b) {
@@ -7522,6 +7613,7 @@
     }
     class stItemEquipAttr {
         constructor() {
+            this.protoid = undefined;
             this.uid = new uint64();
         }
         write(b) {
@@ -7548,6 +7640,7 @@
     }
     class stItemRem {
         constructor() {
+            this.protoid = undefined;
             this.uid = new uint64();
         }
         write(b) {
@@ -7727,7 +7820,9 @@
         }
     }
     class stGymNpc {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.id);
@@ -7843,7 +7938,9 @@
         }
     }
     class stGymMapTasks {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.taskTypeId);
@@ -7872,6 +7969,7 @@
     }
     class stAfk {
         constructor() {
+            this.protoid = undefined;
             this.startUnix = new uint64();
             this.endUnix = new uint64();
         }
@@ -7902,7 +8000,9 @@
         }
     }
     class stAfkFast {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.fastAfkVideoNum);
@@ -7915,7 +8015,9 @@
         }
     }
     class stAfkInvitee {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUTFString(this.portrait || "");
@@ -8054,7 +8156,9 @@
         }
     }
     class stItemStation {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.pos);
@@ -8161,6 +8265,7 @@
     }
     class stMission {
         constructor() {
+            this.protoid = undefined;
             this.uid = new uint64();
         }
         write(b) {
@@ -8211,7 +8316,9 @@
         }
     }
     class stNewAdventure {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.adventureId);
@@ -8325,7 +8432,9 @@
         }
     }
     class stStationNearBy {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.playerId);
@@ -8465,7 +8574,9 @@
         }
     }
     class stStationHandleLog {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.logId);
@@ -8521,7 +8632,9 @@
         }
     }
     class stSpirit {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.uid);
@@ -8706,7 +8819,9 @@
         }
     }
     class stSmashFightLang {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.type);
@@ -8719,7 +8834,9 @@
         }
     }
     class stSmashFight {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.type);
@@ -8743,7 +8860,9 @@
         }
     }
     class stSmashTopWinner {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.position);
@@ -8764,7 +8883,9 @@
         }
     }
     class stSmashFightResult {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.streakTimes);
@@ -8895,7 +9016,9 @@
         }
     }
     class stServerItem {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUTFString(this.serverName || "");
@@ -9045,7 +9168,9 @@
         }
     }
     class stDingYue {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -9155,7 +9280,9 @@
         }
     }
     class stMail {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.uid);
@@ -9245,7 +9372,9 @@
         }
     }
     class stRedDot {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.type);
@@ -9310,7 +9439,9 @@
         }
     }
     class stAdCd {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.pos);
@@ -9427,6 +9558,7 @@
     }
     class stGem {
         constructor() {
+            this.protoid = undefined;
             this.uid = new uint64();
         }
         write(b) {
@@ -9447,7 +9579,9 @@
         }
     }
     class stGemLifeBlood {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.id);
@@ -9509,7 +9643,9 @@
         }
     }
     class stGemItem {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.itemId);
@@ -9626,7 +9762,9 @@
         }
     }
     class stNotice {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.uid);
@@ -9686,7 +9824,9 @@
         }
     }
     class stArtifact {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.artifactId);
@@ -9767,6 +9907,7 @@
     }
     class stArtifactLog {
         constructor() {
+            this.protoid = undefined;
             this.item = new stCellValue();
         }
         write(b) {
@@ -9852,7 +9993,9 @@
         }
     }
     class stLabourShop {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -9865,7 +10008,9 @@
         }
     }
     class stLabourItemRed {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -9926,7 +10071,9 @@
         }
     }
     class stArtifactPack {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -9978,7 +10125,9 @@
         }
     }
     class stLabourCapsuleToys {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.type);
@@ -10374,7 +10523,9 @@
         }
     }
     class stTitleInfo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.titleId);
@@ -10531,6 +10682,7 @@
     }
     class stPeakJjcAvatar {
         constructor() {
+            this.protoid = undefined;
             this.enemySkin = new stSkin();
         }
         write(b) {
@@ -10607,7 +10759,9 @@
         }
     }
     class stMountRefinement {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.id);
@@ -10709,7 +10863,9 @@
         }
     }
     class stChief {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.cheifId);
@@ -10786,7 +10942,9 @@
         }
     }
     class stChiefEquip {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.partId);
@@ -10801,7 +10959,9 @@
         }
     }
     class stChiefSkill {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.skillId);
@@ -10862,7 +11022,9 @@
         }
     }
     class stRecruitChief {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.type);
@@ -11012,7 +11174,9 @@
         }
     }
     class stInvitationTopPlayer {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.level);
@@ -11027,7 +11191,9 @@
         }
     }
     class stInvitationInfo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.fid);
@@ -11040,7 +11206,9 @@
         }
     }
     class stActivationInfo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.fid);
@@ -11183,7 +11351,9 @@
         }
     }
     class stFundReward {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.state);
@@ -11196,7 +11366,9 @@
         }
     }
     class stFund {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -11302,7 +11474,9 @@
         }
     }
     class stMountRecord {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.playerId);
@@ -11321,7 +11495,9 @@
         }
     }
     class stMountNum {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.playerId);
@@ -11498,7 +11674,9 @@
         }
     }
     class stSilkBag {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -11511,7 +11689,9 @@
         }
     }
     class stStarBattleEnemy {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.accountId);
@@ -11720,7 +11900,9 @@
         }
     }
     class stStarBattleLog {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.accountId);
@@ -11770,7 +11952,9 @@
         }
     }
     class stStarRank {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.accountId);
@@ -11863,7 +12047,9 @@
         }
     }
     class stStarGoods {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.goodsId);
@@ -11902,7 +12088,9 @@
         }
     }
     class stActivityRecord {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.playerId);
@@ -11923,7 +12111,9 @@
         }
     }
     class stActivityNum {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.playerId);
@@ -12107,6 +12297,7 @@
     }
     class stTeamFightPlayer {
         constructor() {
+            this.protoid = undefined;
             this.accHarm = new uint64();
         }
         write(b) {
@@ -12253,7 +12444,9 @@
         }
     }
     class stPalaceEnemy {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.enemyId);
@@ -12326,7 +12519,9 @@
         }
     }
     class stPalaceBuff {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.buffId);
@@ -12428,7 +12623,9 @@
         }
     }
     class stPalacePlayer {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUTFString(this.severName || "");
@@ -12525,7 +12722,9 @@
         }
     }
     class stPalaceShopItem {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.fid);
@@ -12684,7 +12883,9 @@
         }
     }
     class stCommonRank {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.accountId);
@@ -12778,7 +12979,9 @@
         }
     }
     class stNewPlayerAttr {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -12808,7 +13011,9 @@
         }
     }
     class stTrammelsChief {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -12866,7 +13071,9 @@
         }
     }
     class stPet {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.petSerialNum);
@@ -12902,7 +13109,9 @@
         }
     }
     class stPetSkill {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.skillId);
@@ -12915,7 +13124,9 @@
         }
     }
     class stPetTalent {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.talentId);
@@ -13209,7 +13420,9 @@
         }
     }
     class stNewFeast {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -13276,7 +13489,9 @@
         }
     }
     class stPetFusionBaoDi {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.quality);
@@ -13322,7 +13537,9 @@
         }
     }
     class stFuncGuide {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -13388,7 +13605,9 @@
         }
     }
     class stSevenTask {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -13461,7 +13680,9 @@
         }
     }
     class stShareReward {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.funcId);
@@ -13489,7 +13710,9 @@
         }
     }
     class stBoxExtraItem {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -13542,7 +13765,9 @@
         }
     }
     class stClubReward {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -13582,7 +13807,9 @@
         }
     }
     class stDailyShopWeekCard {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -13610,7 +13837,9 @@
         }
     }
     class stNewPlayerTask {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -13675,7 +13904,9 @@
         }
     }
     class stChatPlayer {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.uid);
@@ -13745,7 +13976,9 @@
         }
     }
     class stAlliance {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.uid);
@@ -13770,7 +14003,9 @@
         }
     }
     class stAlliancePlayer {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.uid);
@@ -14005,7 +14240,9 @@
         }
     }
     class stCheifStarUp {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.cheifId);
@@ -14047,6 +14284,7 @@
     }
     class stAllianceInnerRankPlayer {
         constructor() {
+            this.protoid = undefined;
             this.accHarm = new uint64();
         }
         write(b) {
@@ -14078,6 +14316,7 @@
     }
     class stAllianceBossRank {
         constructor() {
+            this.protoid = undefined;
             this.accHarm = new uint64();
         }
         write(b) {
@@ -14190,7 +14429,9 @@
         }
     }
     class stSkyRank {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.accountId);
@@ -14361,7 +14602,9 @@
         }
     }
     class stPromotion {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.taskId);
@@ -14440,7 +14683,9 @@
         }
     }
     class stAllianceShop {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.fid);
@@ -14532,7 +14777,9 @@
         }
     }
     class stAllianceWarTime {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.type);
@@ -14617,7 +14864,9 @@
         }
     }
     class stAllianceWarLife {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.id);
@@ -14690,7 +14939,9 @@
         }
     }
     class stAllianceWarCityPreview {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.cityType);
@@ -14713,6 +14964,7 @@
     }
     class stAllianceWarCityContent {
         constructor() {
+            this.protoid = undefined;
             this.enemySkin = new stSkin();
         }
         write(b) {
@@ -14773,7 +15025,9 @@
         }
     }
     class stAllianceWarCityTakeOver {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.cityType);
@@ -14849,7 +15103,9 @@
         }
     }
     class stBossDamage {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.rank);
@@ -14897,7 +15153,9 @@
         }
     }
     class stAllianceWarCityLog {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.playerId);
@@ -14943,7 +15201,9 @@
         }
     }
     class stAllianceWarAllianceRank {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.uid);
@@ -14987,7 +15247,9 @@
         }
     }
     class stAllianceWarInnerRank {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.rank);
@@ -15037,7 +15299,9 @@
         }
     }
     class stAllianceWarRewardRank {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.rank);
@@ -15116,7 +15380,9 @@
         }
     }
     class stBattlePassCard {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -15174,7 +15440,9 @@
         }
     }
     class stBattlePassTask {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -15215,7 +15483,9 @@
         }
     }
     class stBattlePassPack {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -15349,7 +15619,9 @@
         }
     }
     class stDailyEventTask {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -15414,7 +15686,9 @@
         }
     }
     class stDailyEvent {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.type);
@@ -15454,7 +15728,9 @@
         }
     }
     class stMonopolyMapInfo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -15471,7 +15747,9 @@
         }
     }
     class stMonopolyTask {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -15486,7 +15764,9 @@
         }
     }
     class stMonopolyPack {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -15607,7 +15887,9 @@
         }
     }
     class stDrawEventRewardInfo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -15620,7 +15902,9 @@
         }
     }
     class stDrawEventCumulateRewardInfo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -15633,7 +15917,9 @@
         }
     }
     class stDrawEventTask {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -15648,7 +15934,9 @@
         }
     }
     class stDrawEventPack {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -15829,7 +16117,9 @@
         }
     }
     class stArtifactSuit {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -15976,7 +16266,9 @@
         }
     }
     class stNamingReward {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -16081,7 +16373,9 @@
         }
     }
     class stNamingRank {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.ranking);
@@ -16172,7 +16466,9 @@
         }
     }
     class stSpringFestivalRewardInfo {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -16185,7 +16481,9 @@
         }
     }
     class stSpringFestivalTask {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -16200,7 +16498,9 @@
         }
     }
     class stSpringFestivalPack {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -16213,7 +16513,9 @@
         }
     }
     class stSpringFestivalShop {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -16226,7 +16528,9 @@
         }
     }
     class stSpringFestivalAllianceRank {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.uid);
@@ -16499,7 +16803,9 @@
         }
     }
     class stWarcraftSkin {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.type);
@@ -16523,7 +16829,9 @@
         }
     }
     class stWarcraftAttr {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -16616,7 +16924,9 @@
         }
     }
     class stMountShop {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -16686,7 +16996,9 @@
         }
     }
     class stPopWinDiscount {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.uid);
@@ -16722,7 +17034,9 @@
         }
     }
     class stSkillTreeLattice {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.latticeId);
@@ -16735,7 +17049,9 @@
         }
     }
     class stSkillTreeGraph {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.uid);
@@ -16761,7 +17077,9 @@
         }
     }
     class stSkillTreeSpell {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.spellId);
@@ -16870,7 +17188,9 @@
         }
     }
     class stTimeCommon {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.flag);
@@ -16909,7 +17229,9 @@
         }
     }
     class stVipPrivilege {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint16(this.fid);
@@ -16992,7 +17314,9 @@
         }
     }
     class stEasyPay {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -17063,7 +17387,9 @@
         }
     }
     class stOptionalGift {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.id);
@@ -17087,7 +17413,9 @@
         }
     }
     class stOptionalItem {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint8(this.itemIdx);
@@ -17130,7 +17458,9 @@
         }
     }
     class stGeXuQiPaoTask {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -17145,7 +17475,9 @@
         }
     }
     class stGeXuQiPaoPack {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -17158,7 +17490,9 @@
         }
     }
     class stGeXuQiPaoShop {
-        constructor() { }
+        constructor() {
+            this.protoid = undefined;
+        }
         write(b) {
             let len;
             b.writeUint32(this.fid);
@@ -17297,6 +17631,51 @@
             len = b.readInt32();
             for (let i = 0; i < len; i++) {
                 this.datalist.push(b.readUint32());
+            }
+        }
+    }
+    class stCommonLottery {
+        constructor() {
+            this.protoid = undefined;
+        }
+        write(b) {
+            let len;
+            b.writeUint8(this.type);
+            b.writeUint8(this.num);
+        }
+        read(b) {
+            let len;
+            this.type = b.readUint8();
+            this.num = b.readUint8();
+        }
+    }
+    class CommonLotteryNumInit_revc {
+        constructor() {
+            this.protoid = 3771;
+        }
+        read(b) {
+            let len;
+            this.datalist = this.datalist || [];
+            len = b.readInt32();
+            for (let i = 0; i < len; i++) {
+                let item = new stCommonLottery();
+                item.read(b);
+                this.datalist.push(item);
+            }
+        }
+    }
+    class CommonLotteryNumUpdate_revc {
+        constructor() {
+            this.protoid = 3772;
+        }
+        read(b) {
+            let len;
+            this.datalist = this.datalist || [];
+            len = b.readInt32();
+            for (let i = 0; i < len; i++) {
+                let item = new stCommonLottery();
+                item.read(b);
+                this.datalist.push(item);
             }
         }
     }
@@ -18515,6 +18894,7 @@
     RedEnum.SHEN_BIN_SHILIAN = 1015;
     RedEnum.ZUOQI_SHILIAN = 1013;
     RedEnum.LINGCHONG_SHILIAN = 1014;
+    RedEnum.TASK_GUIDE = 1015;
 
     class CheckBox2Ctl {
         constructor(skin, label = "") {
@@ -19212,6 +19592,7 @@
     MainEvent.ShareSuccess = 'ShareSuccess';
     MainEvent.OneClickPurchase = "OneClickPurchase";
     MainEvent.UpdateListView = "UpdateListView";
+    MainEvent.CommonLotteryUpdate = "CommonLotteryUpdate";
 
     class ButtonCtl {
         constructor(skin, onClick = null, scaleAnim = true) {
@@ -24609,6 +24990,15 @@
                 }
                 login.ui_login_newUI = ui_login_newUI;
                 REG("ui.views.login.ui_login_newUI", ui_login_newUI);
+                class ui_shilingtishiViewUI extends View {
+                    constructor() { super(); }
+                    createChildren() {
+                        super.createChildren();
+                        this.loadScene("views/login/ui_shilingtishiView");
+                    }
+                }
+                login.ui_shilingtishiViewUI = ui_shilingtishiViewUI;
+                REG("ui.views.login.ui_shilingtishiViewUI", ui_shilingtishiViewUI);
             })(login = views.login || (views.login = {}));
         })(views = ui.views || (ui.views = {}));
     })(ui || (ui = {}));
@@ -34012,6 +34402,12 @@
             newList = newList.concat(_vo.attrList);
             newList = newList.concat(textList);
             this.rightCtl.attr = newList;
+            if (newList.length) {
+                this._ui.tf4.visible = true;
+            }
+            else {
+                this._ui.tf4.visible = false;
+            }
             this.leftCtl.attr = attrList;
             let plusVal = t_Power_level.Ins.calculatePlus(attrList);
             this._plusCtl.setValue(this._ui.plusCon1, StringUtil.val2Atlas(plusVal));
@@ -34044,6 +34440,12 @@
             }
             this.dataList = result;
             this._ui.list2.array = result;
+            if (result.length) {
+                this._ui.empty_lab.visible = false;
+            }
+            else {
+                this._ui.empty_lab.visible = true;
+            }
             this._ui.list2.scrollTo(0);
             this.updateViewList();
         }
@@ -35057,6 +35459,12 @@
             this._ui.list1.array = SoulModel.Ins.getAllBaseAttr();
             let randomList = SoulModel.Ins.getAllRandomAttr();
             this._ui.list2.array = randomList;
+            if (randomList.length) {
+                this._ui.bg6.visible = true;
+            }
+            else {
+                this._ui.bg6.visible = false;
+            }
             this._ui.list2.scrollTo(0);
             this.rightCtl.onChangeEvt();
             let dataList = SoulModel.Ins.getWeardIds();
@@ -36639,7 +37047,7 @@
         }
         onInit() {
             ZuoQiModel.Ins.on(ZuoQiEvent.TJSELECT, this, this.onSelect);
-            ZuoQiModel.Ins.tjSelectId = 27;
+            ZuoQiModel.Ins.tjSelectId = Math.max(...Mount_ListProxy.Ins.GetAllFids());
             this.updataView();
             this.refreshPanel();
         }
@@ -36693,7 +37101,7 @@
                 }
                 let obj = {};
                 let starweight = data.f_starweight / 10000;
-                obj.name = MainModel.Ins.getAttrNameIdByID(data.f_attr_id) + ":";
+                obj.name = MainModel.Ins.getAttrNameIdByID(data.f_attr_id) + "：";
                 let value = (qcfg.f_MaxLevel * data.f_levelweight + this._cfg.f_Quality * data.f_quaweight) * (4 * (1 + ((qcfg.f_MaxStar - 1) * starweight)));
                 value = value + qcfg.f_MaxLevel * this._cfg.f_Quality * data.f_adjustweight;
                 value = Math.ceil(value);
@@ -36714,31 +37122,31 @@
             let arr = [];
             if (this._cfg.f_Skill1) {
                 let obj = {};
-                obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill1) + ":";
+                obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill1) + "：";
                 obj.value = attrConvert(this._cfg.f_Skill1, this._cfg.f_Skill1Value) + "";
                 arr.push(obj);
             }
             if (this._cfg.f_Skill2) {
                 let obj = {};
-                obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill2) + ":";
+                obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill2) + "：";
                 obj.value = attrConvert(this._cfg.f_Skill2, this._cfg.f_Skill2Value) + "";
                 arr.push(obj);
             }
             if (this._cfg.f_Skill3) {
                 let obj = {};
-                obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill3) + ":";
+                obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill3) + "：";
                 obj.value = attrConvert(this._cfg.f_Skill3, this._cfg.f_Skill3Value) + "";
                 arr.push(obj);
             }
             if (this._cfg.f_Skill4) {
                 let obj = {};
-                obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill4) + ":";
+                obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill4) + "：";
                 obj.value = attrConvert(this._cfg.f_Skill4, this._cfg.f_Skill4Value) + "";
                 arr.push(obj);
             }
             if (this._cfg.f_Skill5) {
                 let obj = {};
-                obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill5) + ":";
+                obj.name = MainModel.Ins.getAttrNameIdByID(this._cfg.f_Skill5) + "：";
                 obj.value = attrConvert(this._cfg.f_Skill5, this._cfg.f_Skill5Value) + "";
                 arr.push(obj);
             }
@@ -39638,7 +40046,6 @@
                 E.ViewMgr.ShowMidOk('领取成功');
             }
             else {
-                E.ViewMgr.ShowMidOk('购买成功');
             }
         }
         showShopView() {
@@ -40503,6 +40910,7 @@
             return this._dataList;
         }
         onPopWinRevc(revc) {
+            return;
             let l = revc.datalist;
             for (let i = 0; i < l.length; i++) {
                 let cell = l[i];
@@ -47224,6 +47632,7 @@
         EQuickMsg[EQuickMsg["ShenHun3"] = 13] = "ShenHun3";
         EQuickMsg[EQuickMsg["ShenHun4"] = 14] = "ShenHun4";
         EQuickMsg[EQuickMsg["ShenHun5"] = 15] = "ShenHun5";
+        EQuickMsg[EQuickMsg["BaoShiFZ"] = 16] = "BaoShiFZ";
     })(EQuickMsg || (EQuickMsg = {}));
     class QuickMsgVo {
     }
@@ -48631,7 +49040,7 @@
             let res = [];
             res.push(vo);
             res = res.concat(rl);
-            return res;
+            return rl;
         }
         getFirstEquipStyle(type) {
             let o = this.dataList.find(cell => cell.type == type);
@@ -58978,6 +59387,7 @@
             return btn;
         }
         onClickHandler() {
+            return;
             if (this.func) {
                 this.func.call(this.that);
             }
@@ -62552,7 +62962,7 @@
                 }
             }
         }
-        isStopNow(l, id) {
+        isStopNow(list, id) {
             let arr1 = [RedEnum.BOX_ATTR_0, RedEnum.BOX_ATTR_1, RedEnum.BOX_ATTR_2, RedEnum.BOX_ATTR_3];
             let index = arr1.indexOf(id);
             let group = t_Box_filter.Ins.List;
@@ -62573,7 +62983,7 @@
             if (val == 0) {
                 for (let i = 0; i < arr.length; i++) {
                     let id = parseInt(arr[i]);
-                    if (this.hasAttr(l, id)) {
+                    if (this.hasAttr(list, id)) {
                         return EAutoErrCode.Stop;
                     }
                 }
@@ -62582,7 +62992,7 @@
                 return EAutoErrCode.None;
             }
             else {
-                if (this.hasAttr(l, val)) {
+                if (this.hasAttr(list, val)) {
                     return EAutoErrCode.Stop;
                 }
             }
@@ -62706,6 +63116,7 @@
         ErrorCode[ErrorCode["HeroYanWuFail"] = 133] = "HeroYanWuFail";
         ErrorCode[ErrorCode["HeroForgetFail"] = 138] = "HeroForgetFail";
         ErrorCode[ErrorCode["HeroMoveFail"] = 139] = "HeroMoveFail";
+        ErrorCode[ErrorCode["EjectPackCDNotEnough"] = 192] = "EjectPackCDNotEnough";
         ErrorCode[ErrorCode["DisableUser"] = 448] = "DisableUser";
     })(ErrorCode || (ErrorCode = {}));
 
@@ -64486,6 +64897,7 @@
             this.easyPayList = [];
             this.bServerEasyPay = true;
             this.plusplay = new FightNumModel();
+            this.commonLotteryDatas = [];
             this._drawList = [];
             this.taLBId = [3, 4, 13, 11, 12];
             this.mSellStatus = ESellStatus.End;
@@ -64905,6 +65317,8 @@
             E.MsgMgr.AddMsg(MSGID.EquipChangeRevc, this.onEquipChangeRevc, this);
             E.MsgMgr.AddMsg(MSGID.ValChanelRevc, this.onValChanelRevc, this);
             E.MsgMgr.AddMsg(MSGID.InitRevc, this.onInitRevc, this);
+            E.MsgMgr.AddMsg(MSGID.CommonLotteryNumInit, this.onCommonLotteryInitRevc, this);
+            E.MsgMgr.AddMsg(MSGID.CommonLotteryNumUpdate, this.onCommonLotteryUpdateRevc, this);
             E.MsgMgr.AddMsg(MSGID.ChestInfoUpdateRevc, this.onChestInfoUpdate, this);
             E.MsgMgr.AddMsg(MSGID.ChestUpLevelRevc, this.onChestUpLevelRevc, this);
             E.MsgMgr.AddMsg(MSGID.ItemDelRevc, this.onItemDelRevc, this);
@@ -65355,6 +65769,13 @@
         }
         onRedDotUpdateOtpRevc(revc) {
             RedUpdateModel.Ins.redList = revc.datalist;
+            const yinDaoRed = RedUpdateModel.Ins.getByID(RedEnum.TASK_GUIDE);
+            if (yinDaoRed) {
+                E.yinDaoMgr.index = yinDaoRed.type + 1;
+            }
+            else {
+                E.yinDaoMgr.index = 0;
+            }
             this.boxAutoVo.initData();
             if (E.Debug) {
                 let str = "";
@@ -65481,6 +65902,7 @@
             switch (data.reason) {
                 case ErrorCode.EquipUid:
                 case ErrorCode.Sell:
+                case ErrorCode.EjectPackCDNotEnough:
                     return;
                 case ErrorCode.Selled:
                     return;
@@ -65668,6 +66090,7 @@
             E.ViewMgr.ShowMidOk(_content);
         }
         mChestMoneyLevelRed() {
+            return false;
             this.hasLvUpBtnRed = false;
             let isFullMax = false;
             let chestData = this.mRoleData.getChestData();
@@ -66005,6 +66428,16 @@
             console.log("cbsgTunnelOpenType:", SySdk.Ins.cbsgTunnelOpenType, "gameStyle_server", this.gameStyle_server);
             SocketMgr.Ins.SendMessageBin(skinReq);
             this.checkDisCount();
+        }
+        onCommonLotteryInitRevc(data) {
+            this.commonLotteryDatas = data.datalist;
+        }
+        onCommonLotteryUpdateRevc(data) {
+            for (const d of data.datalist) {
+                const item = this.commonLotteryDatas.find(o => o.type === d.type);
+                item.num = d.num;
+            }
+            this.event(MainEvent.CommonLotteryUpdate);
         }
         checkDisCount() {
             if (!this.isOpenAllByFuncid(EFuncDef.DiscountWin + "")) {
@@ -68135,9 +68568,431 @@
             case 3768: return new GeXuQiPaoZhuiJi_req();
             case 3769: return new GetRewardFromCache_req();
             case 3770: return new GeXuQiPaoZhuiJi_revc();
+            case 3771: return new CommonLotteryNumInit_revc();
+            case 3772: return new CommonLotteryNumUpdate_revc();
             default: return null;
         }
     }
+    var SERVER_MSGID;
+    (function (SERVER_MSGID) {
+        SERVER_MSGID[SERVER_MSGID["Heartbeat"] = 1002] = "Heartbeat";
+        SERVER_MSGID[SERVER_MSGID["Kick"] = 1003] = "Kick";
+        SERVER_MSGID[SERVER_MSGID["Err"] = 1004] = "Err";
+        SERVER_MSGID[SERVER_MSGID["PlayerLevel"] = 1005] = "PlayerLevel";
+        SERVER_MSGID[SERVER_MSGID["PlayerCurExp"] = 1006] = "PlayerCurExp";
+        SERVER_MSGID[SERVER_MSGID["WebClientRegist"] = 3002] = "WebClientRegist";
+        SERVER_MSGID[SERVER_MSGID["WebClientLogin"] = 3004] = "WebClientLogin";
+        SERVER_MSGID[SERVER_MSGID["ExchangeEquip"] = 3006] = "ExchangeEquip";
+        SERVER_MSGID[SERVER_MSGID["EquipChange"] = 3007] = "EquipChange";
+        SERVER_MSGID[SERVER_MSGID["ValChanel"] = 3009] = "ValChanel";
+        SERVER_MSGID[SERVER_MSGID["Init"] = 3010] = "Init";
+        SERVER_MSGID[SERVER_MSGID["ChestInfoUpdate"] = 3012] = "ChestInfoUpdate";
+        SERVER_MSGID[SERVER_MSGID["ChestUpLevel"] = 3013] = "ChestUpLevel";
+        SERVER_MSGID[SERVER_MSGID["FightResult"] = 3014] = "FightResult";
+        SERVER_MSGID[SERVER_MSGID["ItemDel"] = 3016] = "ItemDel";
+        SERVER_MSGID[SERVER_MSGID["Sell"] = 3017] = "Sell";
+        SERVER_MSGID[SERVER_MSGID["Task"] = 3019] = "Task";
+        SERVER_MSGID[SERVER_MSGID["Adventure"] = 3020] = "Adventure";
+        SERVER_MSGID[SERVER_MSGID["DebugFightVal"] = 3023] = "DebugFightVal";
+        SERVER_MSGID[SERVER_MSGID["Reward"] = 3025] = "Reward";
+        SERVER_MSGID[SERVER_MSGID["Adventure_Boss"] = 3028] = "Adventure_Boss";
+        SERVER_MSGID[SERVER_MSGID["GetRide"] = 3030] = "GetRide";
+        SERVER_MSGID[SERVER_MSGID["RideInfo"] = 3031] = "RideInfo";
+        SERVER_MSGID[SERVER_MSGID["RideLv"] = 3033] = "RideLv";
+        SERVER_MSGID[SERVER_MSGID["RideQua"] = 3035] = "RideQua";
+        SERVER_MSGID[SERVER_MSGID["RideMission"] = 3037] = "RideMission";
+        SERVER_MSGID[SERVER_MSGID["RideStorgeUp"] = 3040] = "RideStorgeUp";
+        SERVER_MSGID[SERVER_MSGID["WingList"] = 3041] = "WingList";
+        SERVER_MSGID[SERVER_MSGID["RideOwnerInfo"] = 3042] = "RideOwnerInfo";
+        SERVER_MSGID[SERVER_MSGID["RideOwnerCnt"] = 3043] = "RideOwnerCnt";
+        SERVER_MSGID[SERVER_MSGID["RideMissionList"] = 3046] = "RideMissionList";
+        SERVER_MSGID[SERVER_MSGID["RideMissionData"] = 3050] = "RideMissionData";
+        SERVER_MSGID[SERVER_MSGID["WearedWingData"] = 3052] = "WearedWingData";
+        SERVER_MSGID[SERVER_MSGID["WingInfo"] = 3054] = "WingInfo";
+        SERVER_MSGID[SERVER_MSGID["wingTreasureStage"] = 3058] = "wingTreasureStage";
+        SERVER_MSGID[SERVER_MSGID["JjcList"] = 3060] = "JjcList";
+        SERVER_MSGID[SERVER_MSGID["JjcRefreshList"] = 3062] = "JjcRefreshList";
+        SERVER_MSGID[SERVER_MSGID["JjcInfo"] = 3065] = "JjcInfo";
+        SERVER_MSGID[SERVER_MSGID["JjcFight"] = 3067] = "JjcFight";
+        SERVER_MSGID[SERVER_MSGID["JjcFightLog"] = 3069] = "JjcFightLog";
+        SERVER_MSGID[SERVER_MSGID["WatchPlayerInfo"] = 3071] = "WatchPlayerInfo";
+        SERVER_MSGID[SERVER_MSGID["JjcRewardGain"] = 3073] = "JjcRewardGain";
+        SERVER_MSGID[SERVER_MSGID["JjcListChange"] = 3074] = "JjcListChange";
+        SERVER_MSGID[SERVER_MSGID["JjcBuyFightCnt"] = 3076] = "JjcBuyFightCnt";
+        SERVER_MSGID[SERVER_MSGID["JjcMoneyUpdate"] = 3077] = "JjcMoneyUpdate";
+        SERVER_MSGID[SERVER_MSGID["JjcOpen"] = 3078] = "JjcOpen";
+        SERVER_MSGID[SERVER_MSGID["JjcRankChange"] = 3079] = "JjcRankChange";
+        SERVER_MSGID[SERVER_MSGID["TipsVoList"] = 3080] = "TipsVoList";
+        SERVER_MSGID[SERVER_MSGID["BuyItemResult"] = 3083] = "BuyItemResult";
+        SERVER_MSGID[SERVER_MSGID["ActivityList"] = 3084] = "ActivityList";
+        SERVER_MSGID[SERVER_MSGID["ActivityChange"] = 3085] = "ActivityChange";
+        SERVER_MSGID[SERVER_MSGID["ActivityStatus"] = 3086] = "ActivityStatus";
+        SERVER_MSGID[SERVER_MSGID["ActivityRedListChange"] = 3089] = "ActivityRedListChange";
+        SERVER_MSGID[SERVER_MSGID["RechargeBill"] = 3095] = "RechargeBill";
+        SERVER_MSGID[SERVER_MSGID["reloadEquip"] = 3097] = "reloadEquip";
+        SERVER_MSGID[SERVER_MSGID["suitEquipList"] = 3098] = "suitEquipList";
+        SERVER_MSGID[SERVER_MSGID["popWin"] = 3102] = "popWin";
+        SERVER_MSGID[SERVER_MSGID["StyleUpdate"] = 3103] = "StyleUpdate";
+        SERVER_MSGID[SERVER_MSGID["ShopBoughtItems"] = 3105] = "ShopBoughtItems";
+        SERVER_MSGID[SERVER_MSGID["ItemNotEnoughCode"] = 3107] = "ItemNotEnoughCode";
+        SERVER_MSGID[SERVER_MSGID["BoxUsedCount"] = 3108] = "BoxUsedCount";
+        SERVER_MSGID[SERVER_MSGID["GymInfo"] = 3109] = "GymInfo";
+        SERVER_MSGID[SERVER_MSGID["GymInvite"] = 3113] = "GymInvite";
+        SERVER_MSGID[SERVER_MSGID["GymEquipInit"] = 3116] = "GymEquipInit";
+        SERVER_MSGID[SERVER_MSGID["GymEquipChange"] = 3117] = "GymEquipChange";
+        SERVER_MSGID[SERVER_MSGID["JjcSucceedReward"] = 3118] = "JjcSucceedReward";
+        SERVER_MSGID[SERVER_MSGID["JjcSurplusRefreshCount"] = 3119] = "JjcSurplusRefreshCount";
+        SERVER_MSGID[SERVER_MSGID["JjcWeekInfo"] = 3122] = "JjcWeekInfo";
+        SERVER_MSGID[SERVER_MSGID["GymFacilityList"] = 3123] = "GymFacilityList";
+        SERVER_MSGID[SERVER_MSGID["GymUpgrade"] = 3125] = "GymUpgrade";
+        SERVER_MSGID[SERVER_MSGID["GymForgetEquip"] = 3126] = "GymForgetEquip";
+        SERVER_MSGID[SERVER_MSGID["GymRoomLevel"] = 3130] = "GymRoomLevel";
+        SERVER_MSGID[SERVER_MSGID["GymFacilityRefinementList"] = 3131] = "GymFacilityRefinementList";
+        SERVER_MSGID[SERVER_MSGID["GymFacilityRefinement"] = 3133] = "GymFacilityRefinement";
+        SERVER_MSGID[SERVER_MSGID["GymMissionList"] = 3134] = "GymMissionList";
+        SERVER_MSGID[SERVER_MSGID["GymMissionUpdate"] = 3135] = "GymMissionUpdate";
+        SERVER_MSGID[SERVER_MSGID["BlessingMaxLevelRewards"] = 3154] = "BlessingMaxLevelRewards";
+        SERVER_MSGID[SERVER_MSGID["BlessingInit"] = 3158] = "BlessingInit";
+        SERVER_MSGID[SERVER_MSGID["BlessingChange"] = 3159] = "BlessingChange";
+        SERVER_MSGID[SERVER_MSGID["BlessingRes"] = 3161] = "BlessingRes";
+        SERVER_MSGID[SERVER_MSGID["BlessingItemRemove"] = 3164] = "BlessingItemRemove";
+        SERVER_MSGID[SERVER_MSGID["BlessingSlotStatus"] = 3165] = "BlessingSlotStatus";
+        SERVER_MSGID[SERVER_MSGID["GymBondListInit"] = 3170] = "GymBondListInit";
+        SERVER_MSGID[SERVER_MSGID["GymBondChange"] = 3172] = "GymBondChange";
+        SERVER_MSGID[SERVER_MSGID["GymBondNpcChange"] = 3173] = "GymBondNpcChange";
+        SERVER_MSGID[SERVER_MSGID["GymInvitation"] = 3176] = "GymInvitation";
+        SERVER_MSGID[SERVER_MSGID["GymFacilitySummary"] = 3178] = "GymFacilitySummary";
+        SERVER_MSGID[SERVER_MSGID["GymRoomSummary"] = 3179] = "GymRoomSummary";
+        SERVER_MSGID[SERVER_MSGID["GymMapTasks"] = 3180] = "GymMapTasks";
+        SERVER_MSGID[SERVER_MSGID["AfkInit"] = 3181] = "AfkInit";
+        SERVER_MSGID[SERVER_MSGID["AfkUpdate"] = 3182] = "AfkUpdate";
+        SERVER_MSGID[SERVER_MSGID["AfkFastUpdate"] = 3183] = "AfkFastUpdate";
+        SERVER_MSGID[SERVER_MSGID["AfkInviteeUpdate"] = 3184] = "AfkInviteeUpdate";
+        SERVER_MSGID[SERVER_MSGID["AfkPackUpdate"] = 3190] = "AfkPackUpdate";
+        SERVER_MSGID[SERVER_MSGID["StationInit"] = 3193] = "StationInit";
+        SERVER_MSGID[SERVER_MSGID["StationMainChange"] = 3194] = "StationMainChange";
+        SERVER_MSGID[SERVER_MSGID["UpgradePassportSlot"] = 3197] = "UpgradePassportSlot";
+        SERVER_MSGID[SERVER_MSGID["MissionList"] = 3201] = "MissionList";
+        SERVER_MSGID[SERVER_MSGID["NewAdventureInit"] = 3203] = "NewAdventureInit";
+        SERVER_MSGID[SERVER_MSGID["NewAdventureUpdate"] = 3205] = "NewAdventureUpdate";
+        SERVER_MSGID[SERVER_MSGID["NewAdventureCtnUpdate"] = 3206] = "NewAdventureCtnUpdate";
+        SERVER_MSGID[SERVER_MSGID["OpenStationNearBy"] = 3210] = "OpenStationNearBy";
+        SERVER_MSGID[SERVER_MSGID["StationOtherChange"] = 3213] = "StationOtherChange";
+        SERVER_MSGID[SERVER_MSGID["RemarkStationList"] = 3217] = "RemarkStationList";
+        SERVER_MSGID[SERVER_MSGID["HandleStationLogs"] = 3220] = "HandleStationLogs";
+        SERVER_MSGID[SERVER_MSGID["SpiritList"] = 3223] = "SpiritList";
+        SERVER_MSGID[SERVER_MSGID["SpiritListUpdate"] = 3225] = "SpiritListUpdate";
+        SERVER_MSGID[SERVER_MSGID["SpiritListDel"] = 3226] = "SpiritListDel";
+        SERVER_MSGID[SERVER_MSGID["NewAdventureRewardUpdate"] = 3230] = "NewAdventureRewardUpdate";
+        SERVER_MSGID[SERVER_MSGID["StationDaliyInfo"] = 3231] = "StationDaliyInfo";
+        SERVER_MSGID[SERVER_MSGID["StationBuy"] = 3233] = "StationBuy";
+        SERVER_MSGID[SERVER_MSGID["PurchasePriceSucceed"] = 3235] = "PurchasePriceSucceed";
+        SERVER_MSGID[SERVER_MSGID["SmashInit"] = 3236] = "SmashInit";
+        SERVER_MSGID[SERVER_MSGID["SmashEnroll"] = 3238] = "SmashEnroll";
+        SERVER_MSGID[SERVER_MSGID["SmashUpdate"] = 3241] = "SmashUpdate";
+        SERVER_MSGID[SERVER_MSGID["ServerNumRevc"] = 3243] = "ServerNumRevc";
+        SERVER_MSGID[SERVER_MSGID["ServerListRevc"] = 3245] = "ServerListRevc";
+        SERVER_MSGID[SERVER_MSGID["SelectServerIDRevc"] = 3247] = "SelectServerIDRevc";
+        SERVER_MSGID[SERVER_MSGID["SmashStateUpdate"] = 3248] = "SmashStateUpdate";
+        SERVER_MSGID[SERVER_MSGID["SmashFight"] = 3249] = "SmashFight";
+        SERVER_MSGID[SERVER_MSGID["Success"] = 3250] = "Success";
+        SERVER_MSGID[SERVER_MSGID["BlessingAutoZH_revc"] = 3251] = "BlessingAutoZH_revc";
+        SERVER_MSGID[SERVER_MSGID["DingYueRevc"] = 3255] = "DingYueRevc";
+        SERVER_MSGID[SERVER_MSGID["DingYueSelectRevc"] = 3257] = "DingYueSelectRevc";
+        SERVER_MSGID[SERVER_MSGID["ConfigHash"] = 3258] = "ConfigHash";
+        SERVER_MSGID[SERVER_MSGID["GymPack"] = 3259] = "GymPack";
+        SERVER_MSGID[SERVER_MSGID["reloadEquipUpdate"] = 3260] = "reloadEquipUpdate";
+        SERVER_MSGID[SERVER_MSGID["weeklyReward"] = 3261] = "weeklyReward";
+        SERVER_MSGID[SERVER_MSGID["ServerVersion"] = 3262] = "ServerVersion";
+        SERVER_MSGID[SERVER_MSGID["MailRed"] = 3263] = "MailRed";
+        SERVER_MSGID[SERVER_MSGID["MailList"] = 3265] = "MailList";
+        SERVER_MSGID[SERVER_MSGID["GymMissionRefreshUpdate"] = 3266] = "GymMissionRefreshUpdate";
+        SERVER_MSGID[SERVER_MSGID["RedDotUpdate"] = 3267] = "RedDotUpdate";
+        SERVER_MSGID[SERVER_MSGID["GmResult"] = 3270] = "GmResult";
+        SERVER_MSGID[SERVER_MSGID["AdCdInit"] = 3271] = "AdCdInit";
+        SERVER_MSGID[SERVER_MSGID["AdCdChange"] = 3272] = "AdCdChange";
+        SERVER_MSGID[SERVER_MSGID["JjcRankDrop"] = 3274] = "JjcRankDrop";
+        SERVER_MSGID[SERVER_MSGID["SignStatus"] = 3275] = "SignStatus";
+        SERVER_MSGID[SERVER_MSGID["MonthCard"] = 3277] = "MonthCard";
+        SERVER_MSGID[SERVER_MSGID["AllLifeCard"] = 3279] = "AllLifeCard";
+        SERVER_MSGID[SERVER_MSGID["GemInit"] = 3281] = "GemInit";
+        SERVER_MSGID[SERVER_MSGID["GemBuy"] = 3283] = "GemBuy";
+        SERVER_MSGID[SERVER_MSGID["GemChange"] = 3285] = "GemChange";
+        SERVER_MSGID[SERVER_MSGID["GemRemove"] = 3286] = "GemRemove";
+        SERVER_MSGID[SERVER_MSGID["GemFormationBuy"] = 3289] = "GemFormationBuy";
+        SERVER_MSGID[SERVER_MSGID["GemFormationChange"] = 3291] = "GemFormationChange";
+        SERVER_MSGID[SERVER_MSGID["NoticeList"] = 3292] = "NoticeList";
+        SERVER_MSGID[SERVER_MSGID["GemHandler"] = 3293] = "GemHandler";
+        SERVER_MSGID[SERVER_MSGID["ArtifactList"] = 3294] = "ArtifactList";
+        SERVER_MSGID[SERVER_MSGID["OpenArtifactBox"] = 3296] = "OpenArtifactBox";
+        SERVER_MSGID[SERVER_MSGID["ArtifactUpdate"] = 3298] = "ArtifactUpdate";
+        SERVER_MSGID[SERVER_MSGID["ArtifactLogList"] = 3300] = "ArtifactLogList";
+        SERVER_MSGID[SERVER_MSGID["LabourShopInit"] = 3306] = "LabourShopInit";
+        SERVER_MSGID[SERVER_MSGID["LabourShopChange"] = 3307] = "LabourShopChange";
+        SERVER_MSGID[SERVER_MSGID["ArtifactPackList"] = 3308] = "ArtifactPackList";
+        SERVER_MSGID[SERVER_MSGID["ArtifactPackUpdate"] = 3309] = "ArtifactPackUpdate";
+        SERVER_MSGID[SERVER_MSGID["LabourCapsuleToys"] = 3311] = "LabourCapsuleToys";
+        SERVER_MSGID[SERVER_MSGID["LabourTicket"] = 3312] = "LabourTicket";
+        SERVER_MSGID[SERVER_MSGID["LabourItemRedChange"] = 3313] = "LabourItemRedChange";
+        SERVER_MSGID[SERVER_MSGID["LabourBaodiLeft"] = 3314] = "LabourBaodiLeft";
+        SERVER_MSGID[SERVER_MSGID["dailyReward"] = 3316] = "dailyReward";
+        SERVER_MSGID[SERVER_MSGID["BoxAuto"] = 3318] = "BoxAuto";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcList"] = 3320] = "PeakJjcList";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcRefreshList"] = 3322] = "PeakJjcRefreshList";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcInfo"] = 3323] = "PeakJjcInfo";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcFightLog"] = 3327] = "PeakJjcFightLog";
+        SERVER_MSGID[SERVER_MSGID["PeakWatchPlayerInfo"] = 3329] = "PeakWatchPlayerInfo";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcRewardGain"] = 3331] = "PeakJjcRewardGain";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcListChange"] = 3332] = "PeakJjcListChange";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcBuyFightCnt"] = 3334] = "PeakJjcBuyFightCnt";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcOpen"] = 3335] = "PeakJjcOpen";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcRankChange"] = 3336] = "PeakJjcRankChange";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcWeeklyRewardUnix"] = 3337] = "PeakJjcWeeklyRewardUnix";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcDailyRewardUnix"] = 3338] = "PeakJjcDailyRewardUnix";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcSucceedReward"] = 3339] = "PeakJjcSucceedReward";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcSurplusRefreshCount"] = 3340] = "PeakJjcSurplusRefreshCount";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcWeekInfo"] = 3343] = "PeakJjcWeekInfo";
+        SERVER_MSGID[SERVER_MSGID["TitleInfo"] = 3344] = "TitleInfo";
+        SERVER_MSGID[SERVER_MSGID["TitleUpdate"] = 3345] = "TitleUpdate";
+        SERVER_MSGID[SERVER_MSGID["TitleReward"] = 3347] = "TitleReward";
+        SERVER_MSGID[SERVER_MSGID["TitleChange"] = 3349] = "TitleChange";
+        SERVER_MSGID[SERVER_MSGID["TitleExpire"] = 3351] = "TitleExpire";
+        SERVER_MSGID[SERVER_MSGID["TitleStateUpdate"] = 3352] = "TitleStateUpdate";
+        SERVER_MSGID[SERVER_MSGID["TitleRefresh"] = 3353] = "TitleRefresh";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcMoneyUpdate"] = 3355] = "PeakJjcMoneyUpdate";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcAvatar"] = 3357] = "PeakJjcAvatar";
+        SERVER_MSGID[SERVER_MSGID["MountReturnPreView"] = 3360] = "MountReturnPreView";
+        SERVER_MSGID[SERVER_MSGID["MountRefinement"] = 3362] = "MountRefinement";
+        SERVER_MSGID[SERVER_MSGID["MountRefinementLock"] = 3364] = "MountRefinementLock";
+        SERVER_MSGID[SERVER_MSGID["MountReturn"] = 3365] = "MountReturn";
+        SERVER_MSGID[SERVER_MSGID["PeakJjcOpenUnix"] = 3366] = "PeakJjcOpenUnix";
+        SERVER_MSGID[SERVER_MSGID["JjcRewardPreview"] = 3367] = "JjcRewardPreview";
+        SERVER_MSGID[SERVER_MSGID["ChiefInit"] = 3368] = "ChiefInit";
+        SERVER_MSGID[SERVER_MSGID["ChiefMainChange"] = 3369] = "ChiefMainChange";
+        SERVER_MSGID[SERVER_MSGID["RecruitChief"] = 3371] = "RecruitChief";
+        SERVER_MSGID[SERVER_MSGID["BuyMilitaryPledge"] = 3374] = "BuyMilitaryPledge";
+        SERVER_MSGID[SERVER_MSGID["CheifFightChange"] = 3375] = "CheifFightChange";
+        SERVER_MSGID[SERVER_MSGID["CheifMoraleReward"] = 3382] = "CheifMoraleReward";
+        SERVER_MSGID[SERVER_MSGID["InvitationRed"] = 3383] = "InvitationRed";
+        SERVER_MSGID[SERVER_MSGID["Invitation"] = 3385] = "Invitation";
+        SERVER_MSGID[SERVER_MSGID["InvitationUpdate"] = 3388] = "InvitationUpdate";
+        SERVER_MSGID[SERVER_MSGID["InvitationActivationUpdate"] = 3389] = "InvitationActivationUpdate";
+        SERVER_MSGID[SERVER_MSGID["CheifStarUp"] = 3390] = "CheifStarUp";
+        SERVER_MSGID[SERVER_MSGID["MountChief"] = 3391] = "MountChief";
+        SERVER_MSGID[SERVER_MSGID["FundInit"] = 3393] = "FundInit";
+        SERVER_MSGID[SERVER_MSGID["FundReward"] = 3396] = "FundReward";
+        SERVER_MSGID[SERVER_MSGID["ChiefLosslessReplacement"] = 3399] = "ChiefLosslessReplacement";
+        SERVER_MSGID[SERVER_MSGID["GetServerTimeMS"] = 3401] = "GetServerTimeMS";
+        SERVER_MSGID[SERVER_MSGID["MountFeastInit"] = 3402] = "MountFeastInit";
+        SERVER_MSGID[SERVER_MSGID["MountFeastRecords"] = 3404] = "MountFeastRecords";
+        SERVER_MSGID[SERVER_MSGID["MountFeastSelfRecords"] = 3405] = "MountFeastSelfRecords";
+        SERVER_MSGID[SERVER_MSGID["MountFeastNums"] = 3407] = "MountFeastNums";
+        SERVER_MSGID[SERVER_MSGID["MountFeastTotalCntReward"] = 3409] = "MountFeastTotalCntReward";
+        SERVER_MSGID[SERVER_MSGID["MountFeastTotalCnt"] = 3410] = "MountFeastTotalCnt";
+        SERVER_MSGID[SERVER_MSGID["Conquest"] = 3411] = "Conquest";
+        SERVER_MSGID[SERVER_MSGID["StarBattleInit"] = 3414] = "StarBattleInit";
+        SERVER_MSGID[SERVER_MSGID["StarBattleKeyRecovery"] = 3416] = "StarBattleKeyRecovery";
+        SERVER_MSGID[SERVER_MSGID["StarBattleReward"] = 3418] = "StarBattleReward";
+        SERVER_MSGID[SERVER_MSGID["TurnWheel"] = 3420] = "TurnWheel";
+        SERVER_MSGID[SERVER_MSGID["StarBattleEnemys"] = 3422] = "StarBattleEnemys";
+        SERVER_MSGID[SERVER_MSGID["StarBattleFight"] = 3424] = "StarBattleFight";
+        SERVER_MSGID[SERVER_MSGID["StarNumChange"] = 3425] = "StarNumChange";
+        SERVER_MSGID[SERVER_MSGID["SilkBagHandler"] = 3427] = "SilkBagHandler";
+        SERVER_MSGID[SERVER_MSGID["StarBattleLog"] = 3429] = "StarBattleLog";
+        SERVER_MSGID[SERVER_MSGID["StarBattleRank"] = 3431] = "StarBattleRank";
+        SERVER_MSGID[SERVER_MSGID["StarBattleRankReward"] = 3433] = "StarBattleRankReward";
+        SERVER_MSGID[SERVER_MSGID["StarShopBuy"] = 3436] = "StarShopBuy";
+        SERVER_MSGID[SERVER_MSGID["ActivityInit"] = 3437] = "ActivityInit";
+        SERVER_MSGID[SERVER_MSGID["ActivityRecords"] = 3439] = "ActivityRecords";
+        SERVER_MSGID[SERVER_MSGID["ActivitySelfRecords"] = 3440] = "ActivitySelfRecords";
+        SERVER_MSGID[SERVER_MSGID["ActivityNums"] = 3442] = "ActivityNums";
+        SERVER_MSGID[SERVER_MSGID["ActivityTotalCntReward"] = 3444] = "ActivityTotalCntReward";
+        SERVER_MSGID[SERVER_MSGID["ActivityTotalCnt"] = 3445] = "ActivityTotalCnt";
+        SERVER_MSGID[SERVER_MSGID["TeamFightInit"] = 3446] = "TeamFightInit";
+        SERVER_MSGID[SERVER_MSGID["TeamFightRankList"] = 3447] = "TeamFightRankList";
+        SERVER_MSGID[SERVER_MSGID["TeamFightHarmReward"] = 3449] = "TeamFightHarmReward";
+        SERVER_MSGID[SERVER_MSGID["TeamFightRankReward"] = 3451] = "TeamFightRankReward";
+        SERVER_MSGID[SERVER_MSGID["TeamFight"] = 3453] = "TeamFight";
+        SERVER_MSGID[SERVER_MSGID["TeamFightNum"] = 3455] = "TeamFightNum";
+        SERVER_MSGID[SERVER_MSGID["PalaceInit"] = 3459] = "PalaceInit";
+        SERVER_MSGID[SERVER_MSGID["PalaceChooseBuff"] = 3462] = "PalaceChooseBuff";
+        SERVER_MSGID[SERVER_MSGID["PalaceBuffList"] = 3464] = "PalaceBuffList";
+        SERVER_MSGID[SERVER_MSGID["PalaceChooseCoreBuff"] = 3466] = "PalaceChooseCoreBuff";
+        SERVER_MSGID[SERVER_MSGID["PalaceCoreBuffList"] = 3468] = "PalaceCoreBuffList";
+        SERVER_MSGID[SERVER_MSGID["PalaceRankList"] = 3470] = "PalaceRankList";
+        SERVER_MSGID[SERVER_MSGID["PalaceReward"] = 3472] = "PalaceReward";
+        SERVER_MSGID[SERVER_MSGID["PalaceUpdateRanking"] = 3473] = "PalaceUpdateRanking";
+        SERVER_MSGID[SERVER_MSGID["PalaceShop"] = 3474] = "PalaceShop";
+        SERVER_MSGID[SERVER_MSGID["PalaceShopUpdate"] = 3475] = "PalaceShopUpdate";
+        SERVER_MSGID[SERVER_MSGID["PalaceRefresh"] = 3479] = "PalaceRefresh";
+        SERVER_MSGID[SERVER_MSGID["GrowPackUnlock"] = 3481] = "GrowPackUnlock";
+        SERVER_MSGID[SERVER_MSGID["DailyWheelBigPrize"] = 3484] = "DailyWheelBigPrize";
+        SERVER_MSGID[SERVER_MSGID["DailyWheelTurn"] = 3486] = "DailyWheelTurn";
+        SERVER_MSGID[SERVER_MSGID["AdFreeCard"] = 3487] = "AdFreeCard";
+        SERVER_MSGID[SERVER_MSGID["OpenServerAdventureRank"] = 3490] = "OpenServerAdventureRank";
+        SERVER_MSGID[SERVER_MSGID["OpenServerAccPaid"] = 3492] = "OpenServerAccPaid";
+        SERVER_MSGID[SERVER_MSGID["NewPlayerAttr"] = 3494] = "NewPlayerAttr";
+        SERVER_MSGID[SERVER_MSGID["TrammelsChiefInit"] = 3495] = "TrammelsChiefInit";
+        SERVER_MSGID[SERVER_MSGID["TrammelsChief"] = 3497] = "TrammelsChief";
+        SERVER_MSGID[SERVER_MSGID["PetInit"] = 3499] = "PetInit";
+        SERVER_MSGID[SERVER_MSGID["PetBuyFlute"] = 3501] = "PetBuyFlute";
+        SERVER_MSGID[SERVER_MSGID["PetChange"] = 3503] = "PetChange";
+        SERVER_MSGID[SERVER_MSGID["PetFreeChange"] = 3504] = "PetFreeChange";
+        SERVER_MSGID[SERVER_MSGID["PetBaoDiChange"] = 3505] = "PetBaoDiChange";
+        SERVER_MSGID[SERVER_MSGID["PetRemove"] = 3510] = "PetRemove";
+        SERVER_MSGID[SERVER_MSGID["PetHandleNewTalent"] = 3513] = "PetHandleNewTalent";
+        SERVER_MSGID[SERVER_MSGID["PetExtractSuccess"] = 3515] = "PetExtractSuccess";
+        SERVER_MSGID[SERVER_MSGID["PetFusion"] = 3516] = "PetFusion";
+        SERVER_MSGID[SERVER_MSGID["PetUpgradeTalent"] = 3518] = "PetUpgradeTalent";
+        SERVER_MSGID[SERVER_MSGID["PetNewTalent"] = 3519] = "PetNewTalent";
+        SERVER_MSGID[SERVER_MSGID["NewPlayerFeast"] = 3520] = "NewPlayerFeast";
+        SERVER_MSGID[SERVER_MSGID["NewPlayerFeastSelfRecords"] = 3521] = "NewPlayerFeastSelfRecords";
+        SERVER_MSGID[SERVER_MSGID["NewPlayerFeastRewards"] = 3522] = "NewPlayerFeastRewards";
+        SERVER_MSGID[SERVER_MSGID["NewPlayerFeastScore"] = 3523] = "NewPlayerFeastScore";
+        SERVER_MSGID[SERVER_MSGID["NewServer"] = 3525] = "NewServer";
+        SERVER_MSGID[SERVER_MSGID["JjcScoreUpdate"] = 3526] = "JjcScoreUpdate";
+        SERVER_MSGID[SERVER_MSGID["PetFusionBaoDi"] = 3527] = "PetFusionBaoDi";
+        SERVER_MSGID[SERVER_MSGID["StationPillagesNew"] = 3529] = "StationPillagesNew";
+        SERVER_MSGID[SERVER_MSGID["GetFuncGuide"] = 3531] = "GetFuncGuide";
+        SERVER_MSGID[SERVER_MSGID["BoxCommitState"] = 3532] = "BoxCommitState";
+        SERVER_MSGID[SERVER_MSGID["PlayerTotalCnt"] = 3534] = "PlayerTotalCnt";
+        SERVER_MSGID[SERVER_MSGID["SevenTask"] = 3535] = "SevenTask";
+        SERVER_MSGID[SERVER_MSGID["SevenScore"] = 3536] = "SevenScore";
+        SERVER_MSGID[SERVER_MSGID["SellEquipFinish"] = 3538] = "SellEquipFinish";
+        SERVER_MSGID[SERVER_MSGID["ShareReward"] = 3540] = "ShareReward";
+        SERVER_MSGID[SERVER_MSGID["BoxExtraItemInit"] = 3541] = "BoxExtraItemInit";
+        SERVER_MSGID[SERVER_MSGID["BoxExtraItemChange"] = 3542] = "BoxExtraItemChange";
+        SERVER_MSGID[SERVER_MSGID["ClubReward"] = 3544] = "ClubReward";
+        SERVER_MSGID[SERVER_MSGID["GemFreeChange"] = 3545] = "GemFreeChange";
+        SERVER_MSGID[SERVER_MSGID["DailyShopWeekCard"] = 3546] = "DailyShopWeekCard";
+        SERVER_MSGID[SERVER_MSGID["NewPlayerFeastTask"] = 3547] = "NewPlayerFeastTask";
+        SERVER_MSGID[SERVER_MSGID["LabourShopFreeChange"] = 3549] = "LabourShopFreeChange";
+        SERVER_MSGID[SERVER_MSGID["WorldChatList"] = 3551] = "WorldChatList";
+        SERVER_MSGID[SERVER_MSGID["WorldChatListChange"] = 3552] = "WorldChatListChange";
+        SERVER_MSGID[SERVER_MSGID["AllianceList"] = 3555] = "AllianceList";
+        SERVER_MSGID[SERVER_MSGID["AllianceInfo"] = 3556] = "AllianceInfo";
+        SERVER_MSGID[SERVER_MSGID["AlliancePlayerList"] = 3557] = "AlliancePlayerList";
+        SERVER_MSGID[SERVER_MSGID["AllianceApplyList"] = 3562] = "AllianceApplyList";
+        SERVER_MSGID[SERVER_MSGID["ChiefBuyFlag"] = 3566] = "ChiefBuyFlag";
+        SERVER_MSGID[SERVER_MSGID["ChiefChangeFlag"] = 3568] = "ChiefChangeFlag";
+        SERVER_MSGID[SERVER_MSGID["ChiefUpgradeFlag"] = 3570] = "ChiefUpgradeFlag";
+        SERVER_MSGID[SERVER_MSGID["AllianceSearch"] = 3572] = "AllianceSearch";
+        SERVER_MSGID[SERVER_MSGID["AllianceBossInit"] = 3575] = "AllianceBossInit";
+        SERVER_MSGID[SERVER_MSGID["AllianceBossRankList"] = 3577] = "AllianceBossRankList";
+        SERVER_MSGID[SERVER_MSGID["AllianceInnerRankList"] = 3579] = "AllianceInnerRankList";
+        SERVER_MSGID[SERVER_MSGID["AllianceRankReward"] = 3581] = "AllianceRankReward";
+        SERVER_MSGID[SERVER_MSGID["AllianceBossFight"] = 3583] = "AllianceBossFight";
+        SERVER_MSGID[SERVER_MSGID["CheifStarUpMulti"] = 3584] = "CheifStarUpMulti";
+        SERVER_MSGID[SERVER_MSGID["SkyRank"] = 3586] = "SkyRank";
+        SERVER_MSGID[SERVER_MSGID["WatchSkyRank"] = 3588] = "WatchSkyRank";
+        SERVER_MSGID[SERVER_MSGID["DrawLevelChange"] = 3589] = "DrawLevelChange";
+        SERVER_MSGID[SERVER_MSGID["TotalCntInit"] = 3590] = "TotalCntInit";
+        SERVER_MSGID[SERVER_MSGID["TotalCntReward"] = 3592] = "TotalCntReward";
+        SERVER_MSGID[SERVER_MSGID["TotalCntChange"] = 3593] = "TotalCntChange";
+        SERVER_MSGID[SERVER_MSGID["PromotionInit"] = 3595] = "PromotionInit";
+        SERVER_MSGID[SERVER_MSGID["PromotionUgraded"] = 3596] = "PromotionUgraded";
+        SERVER_MSGID[SERVER_MSGID["PromotionDataChange"] = 3597] = "PromotionDataChange";
+        SERVER_MSGID[SERVER_MSGID["AllianceShop"] = 3601] = "AllianceShop";
+        SERVER_MSGID[SERVER_MSGID["AllianceShopInit"] = 3602] = "AllianceShopInit";
+        SERVER_MSGID[SERVER_MSGID["WxAuthInfo"] = 3603] = "WxAuthInfo";
+        SERVER_MSGID[SERVER_MSGID["AllianceJoinWait"] = 3607] = "AllianceJoinWait";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarInit"] = 3608] = "AllianceWarInit";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarTimeChange"] = 3609] = "AllianceWarTimeChange";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarSignUp"] = 3611] = "AllianceWarSignUp";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarPsChange"] = 3612] = "AllianceWarPsChange";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarEnemyLife"] = 3616] = "AllianceWarEnemyLife";
+        SERVER_MSGID[SERVER_MSGID["GetChestQua"] = 3619] = "GetChestQua";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarCityPreview"] = 3620] = "AllianceWarCityPreview";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarCityDetail"] = 3622] = "AllianceWarCityDetail";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarBossDamage"] = 3627] = "AllianceWarBossDamage";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarCityLog"] = 3629] = "AllianceWarCityLog";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarAllianceRank"] = 3631] = "AllianceWarAllianceRank";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarInnerRank"] = 3633] = "AllianceWarInnerRank";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarRewardRank"] = 3635] = "AllianceWarRewardRank";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarGetRankReward"] = 3637] = "AllianceWarGetRankReward";
+        SERVER_MSGID[SERVER_MSGID["BattlePass"] = 3638] = "BattlePass";
+        SERVER_MSGID[SERVER_MSGID["BattlePassMonth"] = 3639] = "BattlePassMonth";
+        SERVER_MSGID[SERVER_MSGID["BattlePassWeek"] = 3640] = "BattlePassWeek";
+        SERVER_MSGID[SERVER_MSGID["BattlePassTask"] = 3642] = "BattlePassTask";
+        SERVER_MSGID[SERVER_MSGID["BattlePassTaskUpdate"] = 3643] = "BattlePassTaskUpdate";
+        SERVER_MSGID[SERVER_MSGID["BattlePassPack"] = 3644] = "BattlePassPack";
+        SERVER_MSGID[SERVER_MSGID["BattlePassMonthUpdate"] = 3645] = "BattlePassMonthUpdate";
+        SERVER_MSGID[SERVER_MSGID["BattlePassWeekUpdate"] = 3646] = "BattlePassWeekUpdate";
+        SERVER_MSGID[SERVER_MSGID["BattlePassPackFree"] = 3649] = "BattlePassPackFree";
+        SERVER_MSGID[SERVER_MSGID["BattlePassPackAccTimes"] = 3651] = "BattlePassPackAccTimes";
+        SERVER_MSGID[SERVER_MSGID["BattlePassPackUpdate"] = 3652] = "BattlePassPackUpdate";
+        SERVER_MSGID[SERVER_MSGID["GameStyle"] = 3653] = "GameStyle";
+        SERVER_MSGID[SERVER_MSGID["NewCrossGroup"] = 3654] = "NewCrossGroup";
+        SERVER_MSGID[SERVER_MSGID["DailyEventInit"] = 3655] = "DailyEventInit";
+        SERVER_MSGID[SERVER_MSGID["DailyEventTaskUpdate"] = 3656] = "DailyEventTaskUpdate";
+        SERVER_MSGID[SERVER_MSGID["DailyEventSearch"] = 3659] = "DailyEventSearch";
+        SERVER_MSGID[SERVER_MSGID["MonopolyInit"] = 3660] = "MonopolyInit";
+        SERVER_MSGID[SERVER_MSGID["MonopolyMapUpdate"] = 3662] = "MonopolyMapUpdate";
+        SERVER_MSGID[SERVER_MSGID["MonopolyTaskUpdate"] = 3663] = "MonopolyTaskUpdate";
+        SERVER_MSGID[SERVER_MSGID["MonopolyPackUpdate"] = 3666] = "MonopolyPackUpdate";
+        SERVER_MSGID[SERVER_MSGID["DrawEventInit"] = 3668] = "DrawEventInit";
+        SERVER_MSGID[SERVER_MSGID["DrawEventChoose"] = 3670] = "DrawEventChoose";
+        SERVER_MSGID[SERVER_MSGID["DrawEventRewardUpdate"] = 3672] = "DrawEventRewardUpdate";
+        SERVER_MSGID[SERVER_MSGID["DrawEventTaskUpdate"] = 3673] = "DrawEventTaskUpdate";
+        SERVER_MSGID[SERVER_MSGID["DrawEventPack"] = 3676] = "DrawEventPack";
+        SERVER_MSGID[SERVER_MSGID["DrawEventCumulateReward"] = 3678] = "DrawEventCumulateReward";
+        SERVER_MSGID[SERVER_MSGID["ArtifactSuitInit"] = 3680] = "ArtifactSuitInit";
+        SERVER_MSGID[SERVER_MSGID["ArtifactSuitUpdate"] = 3682] = "ArtifactSuitUpdate";
+        SERVER_MSGID[SERVER_MSGID["GemLifeBlood"] = 3685] = "GemLifeBlood";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarCan"] = 3686] = "AllianceWarCan";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarPlayerDamage"] = 3687] = "AllianceWarPlayerDamage";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarSkins"] = 3688] = "AllianceWarSkins";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarRank"] = 3690] = "AllianceWarRank";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarBounsEnd"] = 3691] = "AllianceWarBounsEnd";
+        SERVER_MSGID[SERVER_MSGID["NamingInit"] = 3692] = "NamingInit";
+        SERVER_MSGID[SERVER_MSGID["FirstDayCharge"] = 3693] = "FirstDayCharge";
+        SERVER_MSGID[SERVER_MSGID["NamingReward"] = 3694] = "NamingReward";
+        SERVER_MSGID[SERVER_MSGID["NameingChange"] = 3695] = "NameingChange";
+        SERVER_MSGID[SERVER_MSGID["NameingServer"] = 3698] = "NameingServer";
+        SERVER_MSGID[SERVER_MSGID["NamingChargeRankFirstDay"] = 3700] = "NamingChargeRankFirstDay";
+        SERVER_MSGID[SERVER_MSGID["NamingChargeRank"] = 3701] = "NamingChargeRank";
+        SERVER_MSGID[SERVER_MSGID["AllianceWarBounsCan"] = 3703] = "AllianceWarBounsCan";
+        SERVER_MSGID[SERVER_MSGID["SpringFestivalInit"] = 3705] = "SpringFestivalInit";
+        SERVER_MSGID[SERVER_MSGID["SpringFestivalCanJoin"] = 3707] = "SpringFestivalCanJoin";
+        SERVER_MSGID[SERVER_MSGID["SpringFestivalEnroll"] = 3709] = "SpringFestivalEnroll";
+        SERVER_MSGID[SERVER_MSGID["SpringFestivalTaskUpdate"] = 3711] = "SpringFestivalTaskUpdate";
+        SERVER_MSGID[SERVER_MSGID["SpringFestivalPack"] = 3714] = "SpringFestivalPack";
+        SERVER_MSGID[SERVER_MSGID["SpringFestivalReward"] = 3716] = "SpringFestivalReward";
+        SERVER_MSGID[SERVER_MSGID["SpringFestivalAllianceRank"] = 3718] = "SpringFestivalAllianceRank";
+        SERVER_MSGID[SERVER_MSGID["SpringFestivalAllianceRankReward"] = 3720] = "SpringFestivalAllianceRankReward";
+        SERVER_MSGID[SERVER_MSGID["SpringFestivalShop"] = 3722] = "SpringFestivalShop";
+        SERVER_MSGID[SERVER_MSGID["SpringFestivalPrestige"] = 3723] = "SpringFestivalPrestige";
+        SERVER_MSGID[SERVER_MSGID["SideBarReward"] = 3725] = "SideBarReward";
+        SERVER_MSGID[SERVER_MSGID["SpringFestivalFire"] = 3726] = "SpringFestivalFire";
+        SERVER_MSGID[SERVER_MSGID["WarcraftSkinInit"] = 3727] = "WarcraftSkinInit";
+        SERVER_MSGID[SERVER_MSGID["WarcraftSkin"] = 3729] = "WarcraftSkin";
+        SERVER_MSGID[SERVER_MSGID["WarcraftSkinListUpdate"] = 3730] = "WarcraftSkinListUpdate";
+        SERVER_MSGID[SERVER_MSGID["WarcraftAttrListUpdate"] = 3731] = "WarcraftAttrListUpdate";
+        SERVER_MSGID[SERVER_MSGID["MountShopGoodsInit"] = 3733] = "MountShopGoodsInit";
+        SERVER_MSGID[SERVER_MSGID["MountShop"] = 3735] = "MountShop";
+        SERVER_MSGID[SERVER_MSGID["MountShopGoods"] = 3736] = "MountShopGoods";
+        SERVER_MSGID[SERVER_MSGID["popWinDiscount"] = 3738] = "popWinDiscount";
+        SERVER_MSGID[SERVER_MSGID["SkillTreeInit"] = 3739] = "SkillTreeInit";
+        SERVER_MSGID[SERVER_MSGID["SkillTreeGraphUpdate"] = 3741] = "SkillTreeGraphUpdate";
+        SERVER_MSGID[SERVER_MSGID["MulTimes"] = 3745] = "MulTimes";
+        SERVER_MSGID[SERVER_MSGID["DailyPackTimes"] = 3747] = "DailyPackTimes";
+        SERVER_MSGID[SERVER_MSGID["FirstPaySplit"] = 3748] = "FirstPaySplit";
+        SERVER_MSGID[SERVER_MSGID["VipPrivilegeInit"] = 3749] = "VipPrivilegeInit";
+        SERVER_MSGID[SERVER_MSGID["VipPrivilegeUpdate"] = 3751] = "VipPrivilegeUpdate";
+        SERVER_MSGID[SERVER_MSGID["NicknameModify"] = 3753] = "NicknameModify";
+        SERVER_MSGID[SERVER_MSGID["NicknameModifySuccess"] = 3754] = "NicknameModifySuccess";
+        SERVER_MSGID[SERVER_MSGID["EasyPayList"] = 3755] = "EasyPayList";
+        SERVER_MSGID[SERVER_MSGID["RecurringBossInit"] = 3756] = "RecurringBossInit";
+        SERVER_MSGID[SERVER_MSGID["RecurringBossUpdate"] = 3758] = "RecurringBossUpdate";
+        SERVER_MSGID[SERVER_MSGID["OptionalGift"] = 3759] = "OptionalGift";
+        SERVER_MSGID[SERVER_MSGID["GeXuQiPaoInit"] = 3761] = "GeXuQiPaoInit";
+        SERVER_MSGID[SERVER_MSGID["GeXuQiPaoTask"] = 3762] = "GeXuQiPaoTask";
+        SERVER_MSGID[SERVER_MSGID["GeXuQiPaoPack"] = 3765] = "GeXuQiPaoPack";
+        SERVER_MSGID[SERVER_MSGID["GeXuQiPaoShop"] = 3767] = "GeXuQiPaoShop";
+        SERVER_MSGID[SERVER_MSGID["GeXuQiPaoZhuiJi"] = 3770] = "GeXuQiPaoZhuiJi";
+        SERVER_MSGID[SERVER_MSGID["CommonLotteryNumInit"] = 3771] = "CommonLotteryNumInit";
+        SERVER_MSGID[SERVER_MSGID["CommonLotteryNumUpdate"] = 3772] = "CommonLotteryNumUpdate";
+    })(SERVER_MSGID || (SERVER_MSGID = {}));
 
     var SERVERTYPE;
     (function (SERVERTYPE) {
@@ -68819,7 +69674,7 @@
                 st = "同名账号登录";
             }
             else {
-                st = "您已被踢下线";
+                st = "网络链接断开";
             }
             E.ViewMgr.ShowMsgBox(EMsgBoxType.OnlyOk, st, null, null, new Laya.Handler(this, () => {
                 this.pageToLogin();
@@ -74588,7 +75443,7 @@
         onBtnCZClick() {
             if (this._czData) {
                 let arr = this.needItems.map(o => ({ moneyCfgId: o.cfgId, moneyVal: o.count }));
-                MainModel.Ins.queryMsgs("进行重铸", arr, EQuickMsg.BaoShiCZ, new Laya.Handler(this, this.onBtnCZHandler));
+                MainModel.Ins.queryMsgs("进行重铸？", arr, EQuickMsg.BaoShiCZ, new Laya.Handler(this, this.onBtnCZHandler));
             }
         }
         onBtnCZHandler() {
@@ -74607,7 +75462,7 @@
             if (this._bzData) {
                 let cfg = BaoShiTransformProxy.Ins.getCfgByLv(this._bzData.level);
                 let arr = this.needItems.map(o => ({ moneyCfgId: o.cfgId, moneyVal: o.count }));
-                MainModel.Ins.queryMsgs("进行变质", arr, EQuickMsg.BaoShiBZ, new Laya.Handler(this, this.onBtnBZHandler));
+                MainModel.Ins.queryMsgs("进行变质？", arr, EQuickMsg.BaoShiBZ, new Laya.Handler(this, this.onBtnBZHandler));
             }
         }
         onBtnBZHandler() {
@@ -74938,11 +75793,13 @@
                 this._ui.img_money4.visible = this._ui.lab_money.visible = true;
                 this._ui.img_money05.visible = this._ui.lab_money05.visible = true;
                 this._ui.btn_cz.disabled = false;
+                this._ui.btn_cz.y = 900;
             }
             else {
                 this._ui.img_money4.visible = this._ui.lab_money.visible = false;
                 this._ui.img_money05.visible = this._ui.lab_money05.visible = false;
                 this._ui.btn_cz.disabled = true;
+                this._ui.btn_cz.y = 877;
             }
         }
         setBZBtn() {
@@ -74950,11 +75807,13 @@
                 this._ui.img_money4.visible = this._ui.lab_money.visible = true;
                 this._ui.img_money05.visible = this._ui.lab_money05.visible = true;
                 this._ui.btn_bz.disabled = false;
+                this._ui.btn_bz.y = 900;
             }
             else {
                 this._ui.img_money4.visible = this._ui.lab_money.visible = false;
                 this._ui.img_money05.visible = this._ui.lab_money05.visible = false;
                 this._ui.btn_bz.disabled = true;
+                this._ui.btn_bz.y = 877;
             }
         }
         onTabSelectHandler(v) {
@@ -74989,6 +75848,7 @@
                 this.setAuto(false);
                 E.ViewMgr.ShowMidError("自动合成已关闭");
             }
+            this._ui.title_lab.text = E.getLang('baoshiTab2').split('-')[v];
         }
         itemTabHandler(tabSkin, index, sel, data) {
             let skin = tabSkin;
@@ -75368,8 +76228,9 @@
         }
         onClickHandler() {
             if (this._data) {
-                let arr = this._data.f_FormationPrice.split("-");
-                MainModel.Ins.buy(parseInt(arr[0]), parseInt(arr[1]), this._data.f_itemid, 1, new Laya.Handler(this, this.okBuyHandler));
+                let arr = this._data.f_FormationPrice.split("-").map(Number);
+                let money = [{ moneyCfgId: arr[0], moneyVal: arr[1] }];
+                MainModel.Ins.queryMsgs("购买法阵？", money, EQuickMsg.BaoShiFZ, new Laya.Handler(this, this.okBuyHandler));
             }
         }
         okBuyHandler() {
@@ -76360,13 +77221,13 @@
         onRenderHandler(item) {
             let id = parseInt(item.dataSource.split(":")[0]);
             let val = parseInt(item.dataSource.split(":")[1]);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
         }
         onRenderHandler1(item) {
             let id = parseInt(item.dataSource.split(":")[0]);
             let val = parseInt(item.dataSource.split(":")[1]);
-            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.valTf.text = attrConvert(id, val);
         }
         onBtnTipClick() {
@@ -76542,7 +77403,7 @@
                 }
             }
             let vo = {};
-            vo.lab = "已获得|(" + arr1.length + "/" + arr.length + ")";
+            vo.lab = "已获得| " + arr1.length + "/" + arr.length + "";
             vo.list = [];
             array.push(vo);
             vo = {};
@@ -76550,7 +77411,7 @@
             vo.list = arr1;
             array.push(vo);
             vo = {};
-            vo.lab = "未获得|(" + arr2.length + "/" + arr.length + ")";
+            vo.lab = "未获得| " + arr2.length + "/" + arr.length + "";
             vo.list = [];
             array.push(vo);
             vo = {};
@@ -81632,10 +82493,10 @@
             for (let ele of arr) {
                 let vo = list.find(item => item.id == parseInt(ele.f_AttributeID));
                 if (vo) {
-                    str += vo.id + ":" + vo.value + "|";
+                    str += vo.id + "：" + vo.value + "|";
                 }
                 else {
-                    str += ele.f_AttributeID + ":" + 0 + "|";
+                    str += ele.f_AttributeID + "：" + 0 + "|";
                 }
             }
             if (str.length > 0) {
@@ -81806,7 +82667,7 @@
                         this.skin.tf1.text = "x" + vo.count;
                     }
                     if (isLv) {
-                        this.skin.tf1.text = "lv." + vo.stItem.level;
+                        this.skin.tf1.text = vo.stItem.level + '级';
                     }
                     this.setEff(vo.itemCfg.f_qua);
                 }
@@ -82110,7 +82971,7 @@
             if (data.f_Attribute && data.f_ItemType == 1) {
                 let id = data.f_Attribute.split("-")[0];
                 let value = data.f_Attribute.split("-")[1];
-                this.txt_attrName.text = MainModel.Ins.getAttrNameIdByID(parseInt(id)) + " : " + attrConvert(parseInt(id), parseInt(value));
+                this.txt_attrName.text = MainModel.Ins.getAttrNameIdByID(parseInt(id)) + " ： " + attrConvert(parseInt(id), parseInt(value));
                 this._item.setDataBySoulItemID(data.f_itemID, parseInt(id));
             }
             else {
@@ -82298,6 +83159,7 @@
             HuYouModel.Ins.on(HuYouModel.UPDATA_VIEW, this, this.updataView);
             HuYouModel.Ins.on(HuYouModel.UPDATA_VIEW_Level, this, this.updataViewLv1);
             HuYouModel.Ins.on(HuYouModel.UPDATA_VIEW_Item, this, this.updataViewItem);
+            MainModel.Ins.on(MainEvent.CommonLotteryUpdate, this, this.updateLottery);
             ActivityModel.Ins.on(ActivityEvent.PopWinUpdate, this, this.onPop);
             this.tabsCtl.selectIndex = 0;
             this._checkBoxCtl.selected = false;
@@ -82314,6 +83176,12 @@
             let _avatar = AvatarFactory.getStandUiMainAvatar();
             this._avatar = _avatar;
             this._ui.heroContainer.addChild(_avatar);
+            this.updateLottery();
+        }
+        updateLottery() {
+            var _a;
+            const num = ((_a = MainModel.Ins.commonLotteryDatas.find(o => o.type === 4)) === null || _a === void 0 ? void 0 : _a.num) || 0;
+            this._ui.limit_lab.text = E.getLang('lottery_txt4', num);
         }
         onPop() {
         }
@@ -82322,6 +83190,7 @@
             HuYouModel.Ins.off(HuYouModel.UPDATA_VIEW, this, this.updataView);
             HuYouModel.Ins.off(HuYouModel.UPDATA_VIEW_Level, this, this.updataViewLv1);
             HuYouModel.Ins.off(HuYouModel.UPDATA_VIEW_Item, this, this.updataViewItem);
+            MainModel.Ins.off(MainEvent.CommonLotteryUpdate, this, this.updateLottery);
             Laya.timer.clear(this, this.onUpdataViewItem);
             ActivityModel.Ins.off(ActivityEvent.PopWinUpdate, this, ActivityModel.Ins.onPop);
             this.timeCtl.stop();
@@ -82804,7 +83673,7 @@
                         this["_item" + i].setBagData(voo, true, true);
                         this._ui["img_line" + i].visible = true;
                         this._ui["txt_lv" + i].visible = true;
-                        this._ui["txt_lv" + i].text = voo.getName() + " " + "lv." + voo.stItem.level;
+                        this._ui["txt_lv" + i].text = voo.getName() + voo.stItem.level + "级";
                     }
                     else {
                         this["_item" + i].setVisible(false);
@@ -85456,7 +86325,7 @@
         onUpdataView() {
             this.setSend();
             this.updataFree();
-            this._ui.lab_lv.text = GuaJiModel.Ins.mianData.level + '级别';
+            this._ui.lab_lv.text = GuaJiModel.Ins.mianData.level + '级';
             this._cfg = GuaJiRewardsProxy.Ins.getCfgByLv(GuaJiModel.Ins.mianData.level);
             let arrTime = this._cfg.f_AFKReward.split("|");
             for (let i = 0; i < 2; i++) {
@@ -85866,11 +86735,12 @@
         updateView() {
             this._item1.setBagData(this.Data);
             let cfg = HuYouQualityProxy.Ins.getCfgByQua(this.Data.itemCfg.f_qua);
-            this._ui.txt_name.text = this.Data.getName() + ` (${cfg.f_SoulQualityName})`;
-            this._ui.txt_name.color = this.Data.getQua();
+            this._ui.txt_name.text = this.Data.getName();
+            this._ui.qua_lab.text = cfg.f_SoulQualityName;
+            this._ui.txt_name.color = this._ui.qua_lab.color = this.Data.getQua();
             this._ui.txt_level.text = this.Data.stItem.level + "级";
             let attr = HuYouModel.Ins.getAttr(this.Data.uid);
-            this._ui.txt1.text = MainModel.Ins.getAttrNameIdByID(attr.id) + ":";
+            this._ui.txt1.text = MainModel.Ins.getAttrNameIdByID(attr.id) + "：";
             this._ui.txt2.text = attrConvert(attr.id, attr.value) + "";
             this._lvCfg = HuYouSoulExpProxy.Ins.getCfgByLv(this.Data.stItem.level + 1);
             this._quaCfg = HuYouQualityProxy.Ins.getCfgByItemID(this.Data.itemID);
@@ -86796,14 +87666,14 @@
         onRenderHandler(item) {
             let id = parseInt(item.dataSource.split(":")[0]);
             let val = parseInt(item.dataSource.split(":")[1]);
-            item.lab.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.lab.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.lab1.text = attrConvert(id, val);
         }
         onRenderHandler1(item) {
             item.lab.color = item.lab1.color = "#53915A";
             let id = parseInt(item.dataSource.split(":")[0]);
             let val = parseInt(item.dataSource.split(":")[1]);
-            item.lab.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.lab.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.lab1.text = attrConvert(id, val);
         }
         onRenderHandler2(item) {
@@ -86871,14 +87741,14 @@
         onRenderHandler(item) {
             let id = parseInt(item.dataSource.split(":")[0]);
             let val = parseInt(item.dataSource.split(":")[1]);
-            item.lab.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.lab.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.lab1.text = attrConvert(id, val);
         }
         onRenderHandler1(item) {
             item.lab.color = item.lab1.color = "#53915A";
             let id = parseInt(item.dataSource.split(":")[0]);
             let val = parseInt(item.dataSource.split(":")[1]);
-            item.lab.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+            item.lab.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.lab1.text = attrConvert(id, val);
         }
         onInit() {
@@ -90583,6 +91453,11 @@
             this._checkBoxCtl2.selectHander = new Laya.Handler(this, this.onSelectHander2);
             this._ui.zhekouImg.mouseEnabled = false;
         }
+        updateLottery() {
+            var _a;
+            const num = ((_a = MainModel.Ins.commonLotteryDatas.find(o => o.type === 2)) === null || _a === void 0 ? void 0 : _a.num) || 0;
+            this._ui.limit_lab.text = E.getLang('lottery_txt', num);
+        }
         onSelectHander() {
             this.updataMoney();
         }
@@ -90673,16 +91548,19 @@
                 }
             }
             else {
-                this._ui.bg_1.visible = this._ui.lab_1.visible = true;
+                this._ui.bg_1.visible = this._ui.lab_1.visible = false;
                 this._ui.bg_2.visible = this._ui.lab_2.visible = false;
                 this._ui.bg_1.x = 371;
                 this._ui.lab_1.x = 408;
             }
             LingChongModel.Ins.on(LingChongModel.Updata_ChouKa, this, this.updataView);
+            MainModel.Ins.on(MainEvent.CommonLotteryUpdate, this, this.updateLottery);
             this.updataView();
+            this.updateLottery();
         }
         onRemove() {
             LingChongModel.Ins.off(LingChongModel.Updata_ChouKa, this, this.updataView);
+            MainModel.Ins.off(MainEvent.CommonLotteryUpdate, this, this.updateLottery);
             this._timeCtl.stop();
         }
         updataView() {
@@ -91249,6 +92127,7 @@
                 this._starCtl = new FuJiangStarCtl(this._ui.star);
                 ButtonCtl.Create(this._ui.btn_tj, new Laya.Handler(this, this.onBtnTJClick));
             }
+            this._ui.tab.visible = false;
         }
         onBtnTJClick() {
             E.ViewMgr.Open(EViewType.LingChongXMTJView);
@@ -96446,7 +97325,7 @@
                 else {
                     if ((this._num + this._wnNum) >= this._needNum) {
                         let num = this._needNum - this._num;
-                        MainModel.Ins.queryMsg("进行升级", ECellType.ShenBinCP, num, EQuickMsg.ShenBinLv, new Laya.Handler(this, this.sendCmd));
+                        MainModel.Ins.queryMsg("进行升级？", ECellType.ShenBinCP, num, EQuickMsg.ShenBinLv, new Laya.Handler(this, this.sendCmd));
                     }
                     else {
                         E.ViewMgr.ShowMidError("神兵碎片不足");
@@ -96803,13 +97682,14 @@
             }
             else {
                 this._ui.ckbg3.visible = this._ui.lab_3.visible = true;
-                this._ui.ckbg.visible = this._ui.tf1.visible = true;
+                this._ui.ckbg.visible = this._ui.tf1.visible = false;
             }
             ShenBinModel.Ins.on(ShenBinModel.OPEN_ITEM, this, this.onOpenItem);
             ShenBinModel.Ins.on(ShenBinModel.OPEN_ITEMLIST, this, this.onOpenItemList);
             ShenBinModel.Ins.on(ShenBinModel.UPDATA_PACK, this, this.setLBDot);
             ShenBinModel.Ins.on(ShenBinModel.UPDATA_SHENBIN, this, this.onupdataAttr);
             ShenBinModel.Ins.on(ShenBinModel.UPDATA_TZ, this, this.onTZRedTip);
+            MainModel.Ins.on(MainEvent.CommonLotteryUpdate, this, this.updateLottery);
             this._ui.txt_money1.text = MainModel.Ins.mRoleData.getVal(ECellType.ShenTie) + "";
             this._ui.txt_money2.text = MainModel.Ins.mRoleData.getVal(ECellType.ShenBinCP) + "";
             this._ui.txt_money22.text = MainModel.Ins.mRoleData.getVal(ECellType.GOLD) + "";
@@ -96820,6 +97700,12 @@
             this.setLBDot();
             this.updataMoney();
             this.onTZRedTip();
+            this.updateLottery();
+        }
+        updateLottery() {
+            var _a;
+            const num = ((_a = MainModel.Ins.commonLotteryDatas.find(o => o.type === 3)) === null || _a === void 0 ? void 0 : _a.num) || 0;
+            this._ui.lmit_lab.text = E.getLang('lottery_txt3', num);
         }
         onTZRedTip() {
             if (ShenBinModel.Ins.isTZRedTip()) {
@@ -96898,6 +97784,7 @@
             ShenBinModel.Ins.off(ShenBinModel.UPDATA_PACK, this, this.setLBDot);
             ShenBinModel.Ins.off(ShenBinModel.UPDATA_SHENBIN, this, this.onupdataAttr);
             ShenBinModel.Ins.off(ShenBinModel.UPDATA_TZ, this, this.onTZRedTip);
+            MainModel.Ins.off(MainEvent.CommonLotteryUpdate, this, this.updateLottery);
             this.setAuto(false);
             this._isPlay = false;
             if (this._eff) {
@@ -97521,7 +98408,7 @@
                 item.lab_name.text = "";
                 item.lab_sname.text = data.serverName + lastName;
                 if (data.roleLevel) {
-                    item.lab_lv.text = "lv:" + data.roleLevel;
+                    item.lab_lv.text = data.roleLevel + "级";
                 }
                 else {
                     item.lab_lv.text = "";
@@ -97531,7 +98418,7 @@
                 item.lab_sname.text = data.serverName;
                 if (data.roleLevel) {
                     item.lab_name.text = data.roleName;
-                    item.lab_lv.text = "lv:" + data.roleLevel;
+                    item.lab_lv.text = data.roleLevel + "级";
                 }
                 else {
                     item.lab_name.text = "";
@@ -97713,6 +98600,12 @@
                 this._ui.btn_dh.visible = false;
                 this._ui.btn_xx.visible = false;
                 this._ui.xxtx.visible = false;
+                this._ui.lab_s1.visible = false;
+                this._ui.lab_s.visible = false;
+                this._ui.lab_c1.visible = false;
+                this._ui.lab_c.visible = false;
+                this._ui.btn_jm.visible = false;
+                this._ui.lab_id0.visible = this._ui.lab_id.visible = false;
             }
         }
         initConfig() {
@@ -97830,7 +98723,7 @@
             E.ViewMgr.Open(EViewType.QuFuView);
         }
         onLabCopyClick() {
-            E.sdk.setCopy(this._ui.lab_id.text);
+            E.sdk.setCopy(this._ui.lab_name.text);
         }
         onSelectHandler1() {
             if (this._checkCtl1.selected) {
@@ -104606,6 +105499,7 @@
                             }
                         }
                     }
+                    RedUpdateModel.Ins.save(RedEnum.TASK_GUIDE, this.index);
                 }
             }
         }
@@ -112648,6 +113542,7 @@
                 this._ui.bg3.skin = "";
                 this._ui.img_t.visible = this._ui.lab_id.visible = this._ui.img_t1.visible = false;
                 this._ui.lab_id.autoSize = true;
+                this._ui.versionTf.visible = false;
                 if (Laya.Utils.getQueryString("pet")) {
                     let that = this;
                     window["del"] = function () {
@@ -112688,6 +113583,7 @@
             }
         }
         onAgeHandler() {
+            E.ViewMgr.Open(EViewType.ShiLingTiShiView);
         }
         onLabSelClick() {
             E.ViewMgr.Open(EViewType.LoginQuFu);
@@ -112889,6 +113785,25 @@
             }
             this._ui.juhua.rotation += 10;
             Laya.timer.once(this.mTime, this, this.updateAnim);
+        }
+    }
+    class ShiLingTiShiView extends ViewBase {
+        constructor() {
+            super(...arguments);
+            this.checkGuide = false;
+            this.mMask = true;
+            this.autoFree = true;
+        }
+        onAddLoadRes() {
+        }
+        onFirstInit() {
+            if (!this.UI) {
+                this.UI = this._ui = new ui.views.login.ui_shilingtishiViewUI;
+            }
+        }
+        onInit() {
+        }
+        onExit() {
         }
     }
 
@@ -115519,7 +116434,7 @@
             this.progressCtl.offsetSize = 2;
             this.progressCtl.setVal(res.cur, res.max);
             if (res.cfg) {
-                this._ui.timetf.text = E.LangMgr.getLang("Time") + ":" + TimeUtil.subTime(res.cdTime);
+                this._ui.timetf.text = E.LangMgr.getLang("Time") + "：" + TimeUtil.subTime(res.cdTime);
             }
             else {
                 this._ui.timetf.text = "";
@@ -115643,7 +116558,7 @@
         }
         updateTimeLabel(ticket) {
             let time = TimeUtil.timeFormatStr(ticket, true);
-            this._ui.subtime.text = E.LangMgr.getLang("SubTime") + ":" + time;
+            this._ui.subtime.text = E.LangMgr.getLang("SubTime") + "：" + time;
         }
         endTimeHandler() {
             this._ui.subtime.text = "";
@@ -117607,7 +118522,13 @@
             this._timeCtl.off(Laya.Event.COMPLETE, this, this.onTimeComplete);
             MainModel.Ins.off(MainEvent.ValChange, this, this.updateMoney);
             this.model.off(ZuoQiEvent.TimeChange, this, this.updateMoney);
+            MainModel.Ins.off(MainEvent.CommonLotteryUpdate, this, this.updateLottery);
             ActivityModel.Ins.off(ActivityEvent.OpenCloseStatusUpdate, this, this.onACtivityEvt);
+        }
+        updateLottery() {
+            var _a;
+            const num = ((_a = MainModel.Ins.commonLotteryDatas.find(o => o.type === 1)) === null || _a === void 0 ? void 0 : _a.num) || 0;
+            this._ui.limit_lab.text = E.getLang('lottery_txt', num);
         }
         onFirstInit() {
             if (!this.UI) {
@@ -117626,6 +118547,7 @@
                 this._checkBoxCtl1.selected = false;
                 this._checkBoxCtl2 = new CheckBoxCtl({ bg: this._ui.bg_2, gou: this._ui.gou_2 });
                 this._checkBoxCtl2.selectHander = new Laya.Handler(this, this.onselectHander);
+                this.updateLottery();
             }
         }
         onselectHander() {
@@ -117707,13 +118629,14 @@
                 }
             }
             else {
-                this._ui.bg_1.visible = this._ui.lab_1.visible = true;
+                this._ui.bg_1.visible = this._ui.lab_1.visible = false;
                 this._ui.bg_2.visible = this._ui.lab_2.visible = false;
                 this._ui.bg_1.x = 373;
                 this._ui.lab_1.x = 412;
             }
             MainModel.Ins.on(MainEvent.ValChange, this, this.updateMoney);
             this.model.on(ZuoQiEvent.TimeChange, this, this.updateMoney);
+            MainModel.Ins.on(MainEvent.CommonLotteryUpdate, this, this.updateLottery);
             ActivityModel.Ins.on(ActivityEvent.OpenCloseStatusUpdate, this, this.onACtivityEvt);
             this.updateMoney();
         }
@@ -118436,6 +119359,7 @@
             this.Reg(new LoginViewNew(EViewType.LoginNew, ELayerType.subFrameLayer));
             this.Reg(new LoginQuFuView(EViewType.LoginQuFu, ELayerType.subFrameLayer));
             this.Reg(new PleaseWaitView(EViewType.Wait, ELayerType.alertLayer));
+            this.Reg(new ShiLingTiShiView(EViewType.ShiLingTiShiView, ELayerType.subFrameLayer));
             this.Reg(new MainView(EViewType.Main, ELayerType.flyLayer));
             this.Reg(new YinDaoView(EViewType.YinDaoView, ELayerType.frameLayer));
             this.Reg(new LocalYinDaoView(EViewType.LocalYinDaoView, ELayerType.frameLayer));

@@ -57,7 +57,7 @@ export class ShenBinLvView extends ViewBase{
             }else{
                 if((this._num + this._wnNum) >= this._needNum){
                     let num = this._needNum - this._num;
-                    MainModel.Ins.queryMsg("进行升级", ECellType.ShenBinCP, num, 
+                    MainModel.Ins.queryMsg("进行升级？", ECellType.ShenBinCP, num, 
                         EQuickMsg.ShenBinLv, new Laya.Handler(this, this.sendCmd));
                 }else{
                     E.ViewMgr.ShowMidError("神兵碎片不足");//显示错误提示

@@ -7,6 +7,8 @@ import { SimpleEffect } from "../avatar/SimpleEffect";
 import { EOpenChest } from "../main/model/ChestAutoPolicy";
 import { MainEvent } from "../main/model/MainEvent";
 import { MainModel } from "../main/model/MainModel";
+import { RedEnum } from "../main/model/RedEnum";
+import { RedUpdateModel } from "../main/model/RedUpdateModel";
 import { TaskModel } from "../main/model/TaskModel";
 import { TaskProxy, TaskTypeProxy } from "../main/proxy/TaskProxy";
 import { YinDaoTaskProxy } from "./YinDaoProxy";
@@ -155,6 +157,7 @@ export class YinDaoManager {
                 gCfg = taskArr[this.index];
             }
             if(gCfg){
+                // RedUpdateModel.Ins.getByID();
                 if(gCfg.f_isview){
                     E.ViewMgr.Open(EViewType.YinDaoView);
                 }else{
@@ -178,6 +181,7 @@ export class YinDaoManager {
                         }
                     }
                 }
+                RedUpdateModel.Ins.save(RedEnum.TASK_GUIDE, this.index);
             }
         }
     }

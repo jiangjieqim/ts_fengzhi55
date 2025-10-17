@@ -4,7 +4,7 @@ import {TimeUtil} from "../../../../frame/util/TimeUtil";
 import { EMsgBoxType, EViewType } from "../../../common/defines/EnumDefine";
 import { E } from "../../../G";
 import { MSGID } from "../../../network/MSGID";
-import { GetRide_revc, MountRefinementLock_revc, MountRefinement_revc, MountReturnPreView_revc, MountReturn_revc, MountShopGoodsInit_revc, MountShopGoods_revc, MountShop_revc, RideInfo_revc, RideLv_req, RideLv_revc, RideMissionData_revc, RideMissionDel_req, RideMissionList_req, RideMissionList_revc, RideMissionTimeEnd_req, RideMission_req, RideMission_revc, RideOwnerCnt_revc, RideOwnerInfo_revc, RideQua_req, RideQua_revc, RideStorgeUp_revc, RideUpdate_req, stCellValue, stEquipItem, stMountShop, stRewardRideVo, stRideMissionVo, stRideReq, stRideVo } from "../../../network/protocols/BaseProto";
+import { CommonLotteryNumInit_revc, CommonLotteryNumUpdate_revc, GetRide_revc, MountRefinementLock_revc, MountRefinement_revc, MountReturnPreView_revc, MountReturn_revc, MountShopGoodsInit_revc, MountShopGoods_revc, MountShop_revc, RideInfo_revc, RideLv_req, RideLv_revc, RideMissionData_revc, RideMissionDel_req, RideMissionList_req, RideMissionList_revc, RideMissionTimeEnd_req, RideMission_req, RideMission_revc, RideOwnerCnt_revc, RideOwnerInfo_revc, RideQua_req, RideQua_revc, RideStorgeUp_revc, RideUpdate_req, stCellValue, stEquipItem, stMountShop, stRewardRideVo, stRideMissionVo, stRideReq, stRideVo } from "../../../network/protocols/BaseProto";
 import {SocketMgr} from "../../../network/SocketMgr";
 import {DotManager} from "../common/DotManager";
 import { System_RefreshTimeProxy } from "../huodong/model/ActivityProxy";
@@ -473,6 +473,7 @@ export class ZuoQiModel extends BaseModel{
         this.updateRed();
         this.event(ZuoQiEvent.TimeChange);
     }
+
     /**坐骑升级 */
     private onRideLvUpRevc(revc:RideLv_revc){
         let vo = this.getRideVo(revc.id);

@@ -64,6 +64,8 @@ class BaseButton{
     }
 
     protected onClickHandler(){
+        //test
+        return;
         if(this.func){
             this.func.call(this.that);
         }

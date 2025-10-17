@@ -60,7 +60,7 @@ import { ShowPlayerView } from "./handle/jjc/views/ShowPlayerView";
 import { SkinLiBaoView } from "./handle/libao/view/SkinLiBaoView";
 import { LoginQuFuView } from "./handle/login/LoginQuFuView";
 import { LoginViewNew } from "./handle/login/LoginViewNew";
-import { PleaseWaitView } from "./handle/login/PleaseWaitView";
+import { PleaseWaitView, ShiLingTiShiView } from "./handle/login/PleaseWaitView";
 import { IHelpViewData } from "./handle/main/interface/Interface";
 import { IWingData } from "./handle/main/interface/IWing";
 import { MainView } from "./handle/main/MainView";
@@ -177,7 +177,8 @@ export class ViewManager {
         this.Reg(new LoginQuFuView(EViewType.LoginQuFu, ELayerType.subFrameLayer));
         
         this.Reg(new PleaseWaitView(EViewType.Wait,ELayerType.alertLayer));
-
+        //适龄提示
+        this.Reg(new ShiLingTiShiView(EViewType.ShiLingTiShiView, ELayerType.subFrameLayer));
         this.Reg(new MainView(EViewType.Main, ELayerType.flyLayer));
         this.Reg(new YinDaoView(EViewType.YinDaoView, ELayerType.frameLayer));
         this.Reg(new LocalYinDaoView(EViewType.LocalYinDaoView, ELayerType.frameLayer));
@@ -272,7 +273,6 @@ export class ViewManager {
         //限时福利
         this.Reg(new XianShiFuLiView(EViewType.DiamondEject,ELayerType.frameLayer));//钻石弹出礼包
         this.Reg(new ChestQuickUseView(EViewType.ChestQuickUse,ELayerType.frameLayer));
-
         //layer-5-flyLayer
 
         //layer-4-navLayer

@@ -44,7 +44,7 @@ export class HuYouDuiHuanItem extends ui.views.fuyou.ui_duihuanItemUI{
         if(data.f_Attribute && data.f_ItemType == 1){
             let id = data.f_Attribute.split("-")[0];
             let value = data.f_Attribute.split("-")[1];
-            this.txt_attrName.text = MainModel.Ins.getAttrNameIdByID(parseInt(id)) + " : " + attrConvert(parseInt(id),parseInt(value));
+            this.txt_attrName.text = MainModel.Ins.getAttrNameIdByID(parseInt(id)) + " ： " + attrConvert(parseInt(id),parseInt(value));
             this._item.setDataBySoulItemID(data.f_itemID,parseInt(id));
         }else{
             this.txt_attrName.text = "";

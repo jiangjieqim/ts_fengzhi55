@@ -291,7 +291,8 @@ export class HuanZhuangModel extends BaseModel{
         let res:HuanZhuangVo[] = [];
         res.push(vo);
         res = res.concat(rl);
-        return res;
+        // return res;
+        return rl;
     }
 
     // /**当前使用的样式 */

@@ -216,7 +216,7 @@ export class LayerMgr {
         if(SocketMgr.Ins.KickNtfType == 0){
             st = "同名账号登录";
         }else{
-            st = "您已被踢下线";
+            st = "网络链接断开";
         }
         E.ViewMgr.ShowMsgBox(EMsgBoxType.OnlyOk,st,null, null, new Laya.Handler(this, () => {
             this.pageToLogin();

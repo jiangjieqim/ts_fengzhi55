@@ -242,7 +242,7 @@ export class BaoShiHCView extends ViewBase{
             // MainModel.Ins.queryMsg("进行重铸", this.needItem.cfgId,this.needItem.count , 
             //     EQuickMsg.BaoShiCZ, new Laya.Handler(this, this.onBtnCZHandler));
             let arr = this.needItems.map(o => ({ moneyCfgId: o.cfgId, moneyVal: o.count }));
-            MainModel.Ins.queryMsgs("进行重铸", arr , 
+            MainModel.Ins.queryMsgs("进行重铸？", arr , 
                 EQuickMsg.BaoShiCZ, new Laya.Handler(this, this.onBtnCZHandler));
         }
     }
@@ -268,7 +268,7 @@ export class BaoShiHCView extends ViewBase{
             // MainModel.Ins.queryMsg("进行变质", /*ECellType.GOLD, parseInt(cfg.f_Price.split("-")[1])*/this.needItem.cfgId,this.needItem.count, 
             //     EQuickMsg.BaoShiBZ, new Laya.Handler(this, this.onBtnBZHandler));
             let arr = this.needItems.map(o => ({ moneyCfgId: o.cfgId, moneyVal: o.count }));
-            MainModel.Ins.queryMsgs("进行变质", arr, 
+            MainModel.Ins.queryMsgs("进行变质？", arr, 
                 EQuickMsg.BaoShiBZ, new Laya.Handler(this, this.onBtnBZHandler));
         }
     }
@@ -626,10 +626,12 @@ export class BaoShiHCView extends ViewBase{
             this._ui.img_money4.visible = this._ui.lab_money.visible = true;
             this._ui.img_money05.visible = this._ui.lab_money05.visible = true;
             this._ui.btn_cz.disabled = false;
+            this._ui.btn_cz.y = 900;
         }else{
             this._ui.img_money4.visible = this._ui.lab_money.visible = false;
             this._ui.img_money05.visible = this._ui.lab_money05.visible = false;
             this._ui.btn_cz.disabled = true;
+            this._ui.btn_cz.y = 877;
         }
     }
 
@@ -638,10 +640,12 @@ export class BaoShiHCView extends ViewBase{
             this._ui.img_money4.visible = this._ui.lab_money.visible = true;
             this._ui.img_money05.visible = this._ui.lab_money05.visible = true;
             this._ui.btn_bz.disabled = false;
+            this._ui.btn_bz.y = 900;
         }else{
             this._ui.img_money4.visible = this._ui.lab_money.visible = false;
             this._ui.img_money05.visible = this._ui.lab_money05.visible = false;
             this._ui.btn_bz.disabled = true;
+            this._ui.btn_bz.y = 877;
         }
     }
 
@@ -678,6 +682,7 @@ export class BaoShiHCView extends ViewBase{
             this.setAuto(false);
             E.ViewMgr.ShowMidError("自动合成已关闭");//显示错误提示
         }
+        this._ui.title_lab.text = E.getLang('baoshiTab2').split('-')[v];
     }
 
     private itemTabHandler(tabSkin, index: number, sel: boolean, data){

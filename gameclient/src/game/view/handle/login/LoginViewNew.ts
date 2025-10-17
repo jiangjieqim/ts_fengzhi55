@@ -117,7 +117,7 @@ export class LoginViewNew extends ViewBase {
             this._ui.img_t.visible = this._ui.lab_id.visible = this._ui.img_t1.visible = false;
 
             this._ui.lab_id.autoSize = true;
-
+            this._ui.versionTf.visible = false;
             // if(Laya.Utils.getQueryString("stat")){
             // Laya.Stat.show(0,300);
             // }
@@ -132,6 +132,7 @@ export class LoginViewNew extends ViewBase {
                 }
             }
         }
+        
     }
 
     private initByVeritf(_verify:boolean){
@@ -188,7 +189,7 @@ export class LoginViewNew extends ViewBase {
     // }
 	/**适龄提示*/
     private onAgeHandler(){
-
+        E.ViewMgr.Open(EViewType.ShiLingTiShiView);
     }
 
     private onLabSelClick(){

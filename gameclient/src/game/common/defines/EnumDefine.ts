@@ -501,7 +501,8 @@ export enum EViewType {
     ZiXuanLiBaoView = 650,
     ZiXuanLiBaoView1 = 651,
 
-    GeXuQiPaoView = 660
+    GeXuQiPaoView = 660,
+    ShiLingTiShiView = 661, //适龄提示
 }
 
 //页面类型

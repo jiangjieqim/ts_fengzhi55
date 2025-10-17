@@ -100,14 +100,14 @@ export class ChengHaoView extends ViewBase{
     private onRenderHandler(item:ui.views.chenghao.ui_chenghaoAttrItemUI){
         let id = parseInt(item.dataSource.split(":")[0]);
         let val = parseInt(item.dataSource.split(":")[1]);
-        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
         item.valTf.text = attrConvert(id,val);
     }
 
     private onRenderHandler1(item:ui.views.chenghao.ui_chenghaoAttrItemUI){
         let id = parseInt(item.dataSource.split(":")[0]);
         let val = parseInt(item.dataSource.split(":")[1]);
-        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+        item.tf1.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
         item.valTf.text = attrConvert(id,val);
     }
 
@@ -290,7 +290,7 @@ export class ChengHaoView extends ViewBase{
             }
         }
         let vo:any = {};
-        vo.lab = "已获得|(" + arr1.length + "/" + arr.length + ")";
+        vo.lab = "已获得| " + arr1.length + "/" + arr.length + "";
         vo.list = [];
         array.push(vo);
         vo = {};
@@ -298,7 +298,7 @@ export class ChengHaoView extends ViewBase{
         vo.list = arr1;
         array.push(vo);
         vo = {};
-        vo.lab = "未获得|(" + arr2.length + "/" + arr.length + ")";
+        vo.lab = "未获得| " + arr2.length + "/" + arr.length + "";
         vo.list = [];
         array.push(vo);
         vo = {};

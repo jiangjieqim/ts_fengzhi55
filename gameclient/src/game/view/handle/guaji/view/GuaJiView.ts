@@ -269,7 +269,7 @@ export class GuaJiView extends ViewBase{
         this.setSend();
         this.updataFree();
 
-        this._ui.lab_lv.text = GuaJiModel.Ins.mianData.level + '级别';
+        this._ui.lab_lv.text = GuaJiModel.Ins.mianData.level + '级';
         this._cfg = GuaJiRewardsProxy.Ins.getCfgByLv(GuaJiModel.Ins.mianData.level);
         let arrTime = this._cfg.f_AFKReward.split("|");
         for(let i:number=0;i<2;i++){

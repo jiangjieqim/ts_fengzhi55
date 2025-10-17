@@ -131,6 +131,12 @@ export class SheZhiView extends ViewBase{
             this._ui.btn_dh.visible = false;
             this._ui.btn_xx.visible = false;
             this._ui.xxtx.visible = false;
+            this._ui.lab_s1.visible = false;
+            this._ui.lab_s.visible = false;
+            this._ui.lab_c1.visible = false;
+            this._ui.lab_c.visible = false;
+            this._ui.btn_jm.visible = false;
+            this._ui.lab_id0.visible = this._ui.lab_id.visible = false;
         }
     }
 
@@ -278,7 +284,8 @@ export class SheZhiView extends ViewBase{
         //     SheZhiModel.Ins.setCopy(this._ui.lab_id.text);
         // }
         // E.ViewMgr.ShowMidOk("复制成功");
-        E.sdk.setCopy(this._ui.lab_id.text);
+        // E.sdk.setCopy(this._ui.lab_id.text);
+        E.sdk.setCopy(this._ui.lab_name.text);
     }
 
     private onSelectHandler1(){

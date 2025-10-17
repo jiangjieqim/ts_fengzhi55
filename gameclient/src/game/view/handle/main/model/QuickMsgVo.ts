@@ -29,7 +29,9 @@ export enum EQuickMsg{
     /**核心神魂已满 */
     ShenHun4 = 14,
     /**青铜币已满 */
-    ShenHun5 = 15
+    ShenHun5 = 15,
+    /**宝石法阵 */
+    BaoShiFZ = 16,
 }
 
 export class  QuickMsgVo {

@@ -133,7 +133,7 @@ export class BoxAutoVo{
     // }
 
 
-    private isStopNow(l:stEquipAttr[],id:RedEnum):EAutoErrCode{
+    private isStopNow(list:stEquipAttr[],id:RedEnum):EAutoErrCode{
         
         let arr1:RedEnum[] = [RedEnum.BOX_ATTR_0,RedEnum.BOX_ATTR_1,RedEnum.BOX_ATTR_2,RedEnum.BOX_ATTR_3];
         let index = arr1.indexOf(id);
@@ -160,21 +160,23 @@ export class BoxAutoVo{
             //任意
             for(let i = 0;i < arr.length;i++){
                 let id = parseInt(arr[i]);
-                if(this.hasAttr(l,id)){
+                if(this.hasAttr(list,id)){
                     return EAutoErrCode.Stop;
                 }
             }
         }else if(isNaN(val)){
+            //无
             return EAutoErrCode.None;
         }
         else{
-            if(this.hasAttr(l,val)){
+            if(this.hasAttr(list,val)){
                 return EAutoErrCode.Stop;
             }
         }
         return EAutoErrCode.GoOn;
     }
 
+    // 返回true时停止
     private check(l:stEquipAttr[],arr:RedEnum[]){
         let s0:EAutoErrCode = this.isStopNow(l,arr[0]);
         let s1:EAutoErrCode = this.isStopNow(l,arr[1]);

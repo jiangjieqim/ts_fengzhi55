@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":2,
-    "selecteID":38,
+    "selectedBox":38,
+    "selecteID":16,
     "searchKey":"View",
     "props":{"width":575,"sceneColor":"#000000","height":500},
     "nodeParent":-1,
@@ -147,13 +147,14 @@
             "props":{"y":333,"x":61,"var":"freeCon"},
             "nodeParent":2,
             "label":"freeCon",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":37,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,btn_mf",
                     "props":{"y":25,"width":199,"var":"btn_mf","skin":"remote/guaji/anniu_blue.png","sizeGrid":"34,25,47,20","height":95},
@@ -166,6 +167,7 @@
                     "compId":17,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":28,"x":87,"text":"免费","strokeColor":"#90501f","fontSize":30,"font":"BOLD","color":"#ffeec2"},
@@ -182,6 +184,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"y":25,"x":33,"skin":"remote/guaji/AD.png"},
@@ -198,9 +201,10 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,lab_cishu",
-                    "props":{"x":44,"var":"lab_cishu","text":"剩余次数: ","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
+                    "props":{"x":44,"var":"lab_cishu","text":"剩余次数：","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
                     "nodeParent":37,
                     "label":"lab_cishu",
                     "isDirectory":false,
@@ -213,6 +217,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,lab_time",
                     "props":{"y":5,"x":14,"width":164,"var":"lab_time","text":"00:00:00后刷新","height":20,"fontSize":20,"font":"BOLD","color":"#9C5F3A","align":"center"},
@@ -228,6 +233,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,lab1",
                     "props":{"y":0,"x":135,"var":"lab1","text":"2","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
@@ -250,16 +256,17 @@
             "props":{"y":333,"x":317,"var":"goldCon"},
             "nodeParent":2,
             "label":"goldCon",
-            "isOpen":null,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":38,
             "child":[
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
-                    "props":{"x":40,"text":"剩余次数: ","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
+                    "props":{"x":40,"text":"剩余次数：","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
                     "nodeParent":38,
                     "label":"Label",
                     "isDirectory":false,
@@ -272,9 +279,10 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,lab2",
-                    "props":{"x":130,"var":"lab2","text":"2","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
+                    "props":{"y":0,"x":131,"var":"lab2","text":"2","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
                     "nodeParent":38,
                     "label":"lab2",
                     "isDirectory":false,
@@ -287,6 +295,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,btn_yb",
                     "props":{"y":25,"width":197,"var":"btn_yb","skin":"remote/guaji/anniu_green.png","sizeGrid":"32,25,44,17","height":95},
@@ -299,6 +308,7 @@
                     "compId":18,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,lab_yb",
                             "props":{"y":27,"x":96,"var":"lab_yb","text":"15","strokeColor":"#90501f","fontSize":30,"font":"BOLD","color":"#ffeec2"},
@@ -315,6 +325,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,img_yb",
                             "props":{"y":15,"x":37,"var":"img_yb","skin":"o/icon/1.png","scaleY":0.6,"scaleX":0.6},
@@ -329,6 +340,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,labFree",
                             "props":{"y":27,"x":59.5,"var":"labFree","text":"免费","strokeColor":"#90501f","fontSize":30,"font":"BOLD","color":"#ffeec2"},

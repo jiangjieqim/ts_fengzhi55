@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":377,
-    "selecteID":378,
+    "selectedBox":8,
+    "selecteID":332,
     "searchKey":"View",
     "props":{"y":0,"x":0,"width":750,"sceneColor":"#ffffff","height":1334},
     "nodeParent":-1,
@@ -231,19 +231,35 @@
                 },
                 {
                     "x":30,
+                    "type":"Label",
+                    "searchKey":"Label,Lvtf",
+                    "props":{"y":93,"x":11.44921875,"width":80,"var":"Lvtf","text":"1级","strokeColor":"#742d08","stroke":2,"height":24,"fontSize":24,"font":"BOLD","color":"#ffe7ae","align":"center"},
+                    "nodeParent":8,
+                    "label":"Lvtf",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":332,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,sp",
                     "props":{"y":8.5,"x":338,"var":"sp"},
                     "nodeParent":8,
                     "label":"sp",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":377,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,img_vip",
                             "props":{"x":12,"var":"img_vip","skin":"remote/common/base/vip_l.png"},
@@ -257,7 +273,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,lab_vip",
                             "props":{"y":10,"width":100,"var":"lab_vip","text":"VIP0","strokeColor":"#6F4D28","stroke":2,"fontSize":24,"font":"BOLD","color":"#FFF1D4","align":"center"},
@@ -274,7 +289,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,lab_vip1",
                             "props":{"y":9,"x":86,"width":36,"var":"lab_vip1","text":"2","strokeColor":"#6F4D28","stroke":2,"height":24,"fontSize":24,"font":"BOLD","color":"#FFF1D4","align":"center"},
@@ -289,7 +303,8 @@
                                 ],
                             "$LOCKED":false,
                             "$HIDDEN":false
-                        }]
+                        }],
+                    "$HIDDEN":true
                 }],
             "$LOCKED":false,
             "$HIDDEN":false
@@ -1227,23 +1242,6 @@
                             "child":[
                                 {
                                     "x":60,
-                                    "type":"Label",
-                                    "searchKey":"Label,Lvtf",
-                                    "props":{"y":46,"x":253,"var":"Lvtf","text":"Lv. 980","strokeColor":"#E06105","stroke":2,"height":24,"fontSize":24,"font":"BOLD","color":"#FDFF8D","align":"left"},
-                                    "nodeParent":331,
-                                    "label":"Lvtf",
-                                    "isOpen":true,
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":332,
-                                    "child":[
-                                        ],
-                                    "$LOCKED":false,
-                                    "$HIDDEN":false
-                                },
-                                {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,expbg",
                                     "props":{"y":4,"x":31,"width":575,"var":"expbg","skin":"remote/main/main/jinyantiaodi.png","sizeGrid":"8,8,7,8","height":20},
@@ -1292,7 +1290,7 @@
                                     "x":60,
                                     "type":"Label",
                                     "searchKey":"Label,lab_js",
-                                    "props":{"y":46,"x":279,"width":196,"var":"lab_js","text":"伍长五张","strokeColor":"#E06105","stroke":2,"height":24,"fontSize":24,"font":"BOLD","color":"#FDFF8D","align":"center"},
+                                    "props":{"y":46,"x":260,"width":158,"var":"lab_js","text":"伍长五张","strokeColor":"#E06105","stroke":2,"height":24,"fontSize":24,"font":"BOLD","color":"#FDFF8D","align":"left"},
                                     "nodeParent":331,
                                     "label":"lab_js",
                                     "isOpen":true,
@@ -1309,7 +1307,7 @@
                                     "x":60,
                                     "type":"Label",
                                     "searchKey":"Label,lab_js1",
-                                    "props":{"y":46,"x":427,"var":"lab_js1","text":"一品","strokeColor":"#E06105","stroke":2,"fontSize":24,"font":"BOLD","color":"#FDFF8D","align":"right"},
+                                    "props":{"y":46,"x":421,"var":"lab_js1","text":"一品","strokeColor":"#E06105","stroke":2,"fontSize":24,"font":"BOLD","color":"#FDFF8D","align":"right"},
                                     "nodeParent":331,
                                     "label":"lab_js1",
                                     "isOpen":true,

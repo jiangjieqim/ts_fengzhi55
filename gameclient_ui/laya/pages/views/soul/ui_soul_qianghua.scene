@@ -2,11 +2,11 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
-    "selecteID":48,
+    "selecteID":49,
     "searchKey":"View",
     "props":{"width":660,"sceneColor":"#000000","height":902},
     "nodeParent":-1,
-    "maxID":49,
+    "maxID":50,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -197,7 +197,7 @@
             "x":15,
             "type":"Label",
             "searchKey":"Label,tf5",
-            "props":{"y":387,"var":"tf5","text":"强化至6级可增加1条随机属性","height":20,"fontSize":20,"font":"BOLD","color":"#B2713C","centerX":0,"align":"center"},
+            "props":{"y":387,"width":260,"var":"tf5","text":"强化至6级可增加1条随机属性","height":20,"fontSize":20,"font":"BOLD","color":"#B2713C","centerX":0,"align":"center"},
             "nodeParent":2,
             "label":"tf5",
             "isDirectory":false,
@@ -365,14 +365,13 @@
             "props":{"y":268,"x":348,"width":244,"var":"right1"},
             "nodeParent":2,
             "label":"right1",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":24,
             "child":[
                 {
-                    "x":30,
                     "type":"UIView",
                     "source":"views/soul/ui_soul_qianghua_attr.scene",
                     "searchKey":"UIView,r0",
@@ -389,7 +388,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"UIView",
                     "source":"views/soul/ui_soul_qianghua_attr.scene",
                     "searchKey":"UIView,r1",
@@ -407,7 +405,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"UIView",
                     "source":"views/soul/ui_soul_qianghua_attr.scene",
                     "searchKey":"UIView,r2",
@@ -424,7 +421,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"UIView",
                     "source":"views/soul/ui_soul_qianghua_attr.scene",
                     "searchKey":"UIView,r3",
@@ -697,6 +693,22 @@
             "compId":48,
             "child":[
                 ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label,empty_lab",
+            "props":{"y":589,"x":0,"width":260,"var":"empty_lab","text":"暂无未装备的战魂","height":20,"fontSize":20,"font":"BOLD","color":"#B2713C","centerX":0,"align":"center"},
+            "nodeParent":2,
+            "label":"empty_lab",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":49,
+            "child":[
+                ],
+            "$LOCKED":false,
+            "$HIDDEN":false
         }],
     "animations":[
         {

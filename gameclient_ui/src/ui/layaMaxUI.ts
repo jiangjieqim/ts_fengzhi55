@@ -1001,6 +1001,7 @@ export module ui.views.baoshi {
     REG("ui.views.baoshi.ui_baoshiGongMingViewUI",ui_baoshiGongMingViewUI);
     export class ui_baoshiHCViewUI extends View {
 		public btn_close:Laya.Image;
+		public title_lab:Laya.Label;
 		public list:Laya.List;
 		public box_hc:Laya.Sprite;
 		public btn_xq:Laya.Image;
@@ -3846,6 +3847,7 @@ export module ui.views.fuyou {
 		public txt_time:Laya.Label;
 		public txt_num2:Laya.Label;
 		public txt_freeNum:Laya.Label;
+		public limit_lab:Laya.Label;
 		public fuyou:Laya.Box;
 		public img_line4:Laya.Image;
 		public img_line3:Laya.Image;
@@ -3977,6 +3979,7 @@ export module ui.views.fuyou {
 		public txt_sj:Laya.Label;
 		public btn_zh:Laya.Image;
 		public img_tt:Laya.Image;
+		public qua_lab:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -8763,6 +8766,7 @@ export module ui.views.lingchong {
 		public bg_2:Laya.Image;
 		public gou_2:Laya.Image;
 		public lab_2:Laya.Label;
+		public limit_lab:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -9052,6 +9056,15 @@ export module ui.views.login {
         }
     }
     REG("ui.views.login.ui_login_newUI",ui_login_newUI);
+    export class ui_shilingtishiViewUI extends View {
+		public bg11:Laya.Image;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("views/login/ui_shilingtishiView");
+        }
+    }
+    REG("ui.views.login.ui_shilingtishiViewUI",ui_shilingtishiViewUI);
 }
 export module ui.views.mail {
     export class mailshowUI extends View {
@@ -9512,6 +9525,7 @@ export module ui.views.main {
 		public plus1:Laya.Image;
 		public yuanbaoTf:Laya.Label;
 		public nameTF:Laya.Label;
+		public Lvtf:Laya.Label;
 		public sp:Laya.Sprite;
 		public img_vip:Laya.Image;
 		public lab_vip:Laya.Label;
@@ -9570,7 +9584,6 @@ export module ui.views.main {
 		public plugs:Laya.Image;
 		public plugcon:Laya.Sprite;
 		public expCon:Laya.Sprite;
-		public Lvtf:Laya.Label;
 		public expbg:Laya.Image;
 		public expv:Laya.Image;
 		public expTf:Laya.Label;
@@ -11955,6 +11968,7 @@ export module ui.views.shenbin {
 		public icon8:Laya.Image;
 		public icon9:Laya.Image;
 		public icon10:Laya.Image;
+		public lmit_lab:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -12161,10 +12175,13 @@ export module ui.views.shezhi {
 		public icon:Laya.Image;
 		public Lvtf:Laya.Label;
 		public lab_name:Laya.Label;
+		public lab_id0:Laya.Label;
 		public lab_id:Laya.Label;
 		public lab_copy:Laya.Label;
 		public lab_sid:Laya.Label;
+		public lab_s1:Laya.Label;
 		public lab_s:Laya.Label;
+		public lab_c1:Laya.Label;
 		public lab_c:Laya.Label;
 		public img_ch:Laya.Image;
 		public check1:ui.views.main.ui_checkbox_02UI;
@@ -12333,6 +12350,7 @@ export module ui.views.soul {
 		public img4:Laya.Image;
 		public plusCon2:Laya.Sprite;
 		public img5:Laya.Image;
+		public empty_lab:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -14434,6 +14452,7 @@ export module ui.views.zuoqi {
 		public bg_2:Laya.Image;
 		public gou_2:Laya.Image;
 		public lab_2:Laya.Label;
+		public limit_lab:Laya.Label;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();

@@ -36,6 +36,8 @@ export enum ErrorCode{
 
     /**传承失败 */
     HeroMoveFail=139,
+    /**弹出礼包CD时间不足 */
+    EjectPackCDNotEnough = 192,
 
     /**448封号 */
     DisableUser = 448,

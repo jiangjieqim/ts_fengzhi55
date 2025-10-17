@@ -19,6 +19,8 @@ import { RedEnum } from "../../main/model/RedEnum";
 import { RedUpdateModel } from "../../main/model/RedUpdateModel";
 import { VipModel, VipType } from "../../huodong/model/VipModel";
 import { EClientType } from "../../sdk/ClientType";
+import { MainModel } from "../../main/model/MainModel";
+import { MainEvent } from "../../main/model/MainEvent";
 
 export class LingChongViewCtl3{
     protected _ui:ui.views.lingchong.ui_lingchongZHViewUI;
@@ -60,6 +62,12 @@ export class LingChongViewCtl3{
         this._ui.zhekouImg.mouseEnabled = false;
     }
 
+    private updateLottery() {
+        const num = MainModel.Ins.commonLotteryDatas.find(o=> o.type === 2)?.num || 0;
+        this._ui.limit_lab.text = E.getLang('lottery_txt', num);
+    }
+
+        
     private onSelectHander(){
         this.updataMoney();
     }
@@ -152,18 +160,22 @@ export class LingChongViewCtl3{
                 }
             }
         }else{
-            this._ui.bg_1.visible = this._ui.lab_1.visible = true;
+            //this._ui.bg_1.visible = this._ui.lab_1.visible = true;
+            this._ui.bg_1.visible = this._ui.lab_1.visible = false;
             this._ui.bg_2.visible = this._ui.lab_2.visible = false;
             this._ui.bg_1.x = 371;
             this._ui.lab_1.x = 408;
         }
 
         LingChongModel.Ins.on(LingChongModel.Updata_ChouKa,this,this.updataView);
+        MainModel.Ins.on(MainEvent.CommonLotteryUpdate,this,this.updateLottery);
         this.updataView();
+        this.updateLottery();
     }
 
     public onRemove(){
         LingChongModel.Ins.off(LingChongModel.Updata_ChouKa,this,this.updataView);
+        MainModel.Ins.off(MainEvent.CommonLotteryUpdate,this,this.updateLottery);
         this._timeCtl.stop();
     }
 

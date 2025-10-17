@@ -67,7 +67,7 @@ export abstract class  BaseCfg{
        return this.getkv('f_id',id);
     }
 
-    public GetAllFids(){
+    public GetAllFids(): number[]{
         return this.getAllValue('f_id');
     }
     public get isLoaded() {

@@ -90,4 +90,5 @@ export class RedEnum{
     public static SHEN_BIN_SHILIAN:number = 1015;
     public static ZUOQI_SHILIAN:number = 1013;
     public static LINGCHONG_SHILIAN:number = 1014;
+    public static TASK_GUIDE:number = 1015; // 任务触发的新功能引导
 }

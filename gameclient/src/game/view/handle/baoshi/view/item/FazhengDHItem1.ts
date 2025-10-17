@@ -4,6 +4,7 @@ import { GemFormationBuy_req } from "../../../../../network/protocols/BaseProto"
 import {SocketMgr} from "../../../../../network/SocketMgr";
 import { ItemViewFactory } from "../../../main/model/ItemViewFactory";
 import { MainModel } from "../../../main/model/MainModel";
+import { EQuickMsg } from "../../../main/model/QuickMsgVo";
 import { ItemVo } from "../../../main/vos/ItemVo";
 import { IconUtils } from "../../../zuoqi/vos/IconUtils";
 import { BaoShiModel } from "../../model/BaoShiModel";
@@ -62,8 +63,12 @@ export class FazhengDHItem1 extends ui.views.baoshi.ui_baoshiDHItemUI{
 
     private onClickHandler(){
         if(this._data){
-            let arr = this._data.f_FormationPrice.split("-");
-            MainModel.Ins.buy(parseInt(arr[0]),parseInt(arr[1]),this._data.f_itemid,1,new Laya.Handler(this,this.okBuyHandler));
+            let arr = this._data.f_FormationPrice.split("-").map(Number);
+            let money = [{ moneyCfgId: arr[0], moneyVal: arr[1] }];
+            //MainModel.Ins.buy(parseInt(arr[0]),parseInt(arr[1]),this._data.f_itemid,1,new Laya.Handler(this,this.okBuyHandler));
+            //let arr = this.needItems.map(o => ({ moneyCfgId: o.cfgId, moneyVal: o.count }));
+            MainModel.Ins.queryMsgs("购买法阵？", money , 
+                EQuickMsg.BaoShiFZ, new Laya.Handler(this, this.okBuyHandler));
         }
     }
 

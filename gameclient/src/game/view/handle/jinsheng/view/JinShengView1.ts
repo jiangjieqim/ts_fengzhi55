@@ -33,7 +33,7 @@ export class JinShengView1 extends ViewBase{
     private onRenderHandler(item:ui.views.jinsheng.ui_jinshengItemUI){
         let id = parseInt(item.dataSource.split(":")[0]);
         let val = parseInt(item.dataSource.split(":")[1]);
-        item.lab.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+        item.lab.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
         item.lab1.text = attrConvert(id,val);
     }
 
@@ -41,7 +41,7 @@ export class JinShengView1 extends ViewBase{
         item.lab.color = item.lab1.color = "#53915A";
         let id = parseInt(item.dataSource.split(":")[0]);
         let val = parseInt(item.dataSource.split(":")[1]);
-        item.lab.text = MainModel.Ins.getAttrNameIdByID(id) + ":";
+        item.lab.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
         item.lab1.text = attrConvert(id,val);
     }
 

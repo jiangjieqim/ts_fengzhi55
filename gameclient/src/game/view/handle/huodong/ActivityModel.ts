@@ -80,7 +80,8 @@ export class ActivityModel extends BaseModel{
         return this._dataList;
     }
     private onPopWinRevc(revc:popWin_revc){
-
+        // test去掉礼包弹窗
+        return;
         let l = revc.datalist;
 
         for(let i = 0; i < l.length;i++){

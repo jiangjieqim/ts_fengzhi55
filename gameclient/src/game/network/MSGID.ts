@@ -464,5 +464,7 @@ export enum MSGID {
     GeXuQiPaoTask = 3762,
     GeXuQiPaoPack = 3765,
     GeXuQiPaoShop = 3767,
-    GeXuQiPaoZhuiJi = 3770
+    GeXuQiPaoZhuiJi = 3770,
+    CommonLotteryNumInit = 3771,
+    CommonLotteryNumUpdate = 3772,
 }

@@ -111,11 +111,12 @@ export class FuYouItemTip extends ViewBase{
     private updateView(){
         this._item1.setBagData(this.Data);
         let cfg = HuYouQualityProxy.Ins.getCfgByQua((this.Data as GridItemVo).itemCfg.f_qua);
-        this._ui.txt_name.text = (this.Data as GridItemVo).getName() + ` (${cfg.f_SoulQualityName})`;
-        this._ui.txt_name.color = (this.Data as GridItemVo).getQua();
+        this._ui.txt_name.text = (this.Data as GridItemVo).getName();
+        this._ui.qua_lab.text = cfg.f_SoulQualityName;
+        this._ui.txt_name.color = this._ui.qua_lab.color = (this.Data as GridItemVo).getQua();
         this._ui.txt_level.text = (this.Data as GridItemVo).stItem.level + "级";
         let attr = HuYouModel.Ins.getAttr((this.Data as GridItemVo).uid);
-        this._ui.txt1.text = MainModel.Ins.getAttrNameIdByID(attr.id) + ":";
+        this._ui.txt1.text = MainModel.Ins.getAttrNameIdByID(attr.id) + "：";
         this._ui.txt2.text =  attrConvert(attr.id,attr.value) + "";
 
         this._lvCfg = HuYouSoulExpProxy.Ins.getCfgByLv((this.Data as GridItemVo).stItem.level + 1);

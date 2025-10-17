@@ -22,6 +22,7 @@ import { ShenBinModel } from "../model/ShenBinModel";
 import { ShenBinCfgProxy, ShenBinListProxy } from "../proxy/ShenBinProxy";
 import { ShenBinAttrItem } from "./ShenBinAttrItem";
 import { ShenBinCtl } from "./ShenBinCtl";
+import { MainEvent } from "../../main/model/MainEvent";
 
 export class ShenBinView extends ViewBase{
     private _ui:ui.views.shenbin.ui_shenbinViewUI;
@@ -123,7 +124,9 @@ export class ShenBinView extends ViewBase{
             }
         }else{
             this._ui.ckbg3.visible = this._ui.lab_3.visible = true;
-            this._ui.ckbg.visible = this._ui.tf1.visible = true;
+            //test 关掉连续锻造
+            // this._ui.ckbg.visible = this._ui.tf1.visible = true;
+            this._ui.ckbg.visible = this._ui.tf1.visible = false;
         }
 
         ShenBinModel.Ins.on(ShenBinModel.OPEN_ITEM,this,this.onOpenItem);
@@ -131,6 +134,7 @@ export class ShenBinView extends ViewBase{
         ShenBinModel.Ins.on(ShenBinModel.UPDATA_PACK,this,this.setLBDot);
         ShenBinModel.Ins.on(ShenBinModel.UPDATA_SHENBIN,this,this.onupdataAttr);
         ShenBinModel.Ins.on(ShenBinModel.UPDATA_TZ,this,this.onTZRedTip);
+        MainModel.Ins.on(MainEvent.CommonLotteryUpdate,this,this.updateLottery);
         this._ui.txt_money1.text = MainModel.Ins.mRoleData.getVal(ECellType.ShenTie) + "";
         this._ui.txt_money2.text = MainModel.Ins.mRoleData.getVal(ECellType.ShenBinCP) + "";
         this._ui.txt_money22.text = MainModel.Ins.mRoleData.getVal(ECellType.GOLD) + "";
@@ -141,8 +145,13 @@ export class ShenBinView extends ViewBase{
         this.setLBDot();
         this.updataMoney();
         this.onTZRedTip();
+        this.updateLottery();
     }
-
+    private updateLottery() {
+        const num = MainModel.Ins.commonLotteryDatas.find(o=> o.type === 3)?.num || 0;
+        this._ui.lmit_lab.text = E.getLang('lottery_txt3', num);
+    }
+        
     private onTZRedTip(){
         if(ShenBinModel.Ins.isTZRedTip()){
             DotManager.addDot(this._ui.btn_tz,10,-10);
@@ -217,6 +226,7 @@ export class ShenBinView extends ViewBase{
         ShenBinModel.Ins.off(ShenBinModel.UPDATA_PACK,this,this.setLBDot);
         ShenBinModel.Ins.off(ShenBinModel.UPDATA_SHENBIN,this,this.onupdataAttr);
         ShenBinModel.Ins.off(ShenBinModel.UPDATA_TZ,this,this.onTZRedTip);
+        MainModel.Ins.off(MainEvent.CommonLotteryUpdate,this,this.updateLottery);
         this.setAuto(false);
         this._isPlay = false;
         if(this._eff){

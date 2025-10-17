@@ -90,6 +90,9 @@ export class ZuoQiMainView extends ViewBase{
             this._attrZuoqi.skin = this._ui;
             this.btnList.push(this.yunshubtnCtl,this.zuoqichouBtnCtl);
         }
+        //test!!!
+        //this._ui.backBtn.visible = this._ui.tf1.visible = false;
+
     }
 
     private onBtnXslbClick(){

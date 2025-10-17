@@ -80,9 +80,9 @@ export class HuYouModel extends Laya.EventDispatcher{
         for(let ele of arr){
             let vo = list.find(item => item.id == parseInt(ele.f_AttributeID));
             if(vo){
-                str += vo.id + ":" + vo.value + "|";
+                str += vo.id + "：" + vo.value + "|";
             }else{
-                str += ele.f_AttributeID + ":" + 0 + "|";
+                str += ele.f_AttributeID + "：" + 0 + "|";
             }
         }
         if(str.length > 0){

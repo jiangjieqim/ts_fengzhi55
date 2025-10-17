@@ -4117,3 +4117,14 @@ t_BoxGacha.xlsx 概率表
 <proto id="3770" name="GeXuQiPaoZhuiJi" desc="割须弃袍追击" type="revc">
     <protobuf type="array" itemtype="uint32" name="datalist" desc="抽中的随机fid t_RecurringActivity_DrawEvent_RewardRate表f_id" ></protobuf>
 </proto>
+
+<proto name="stCommonLottery">
+    <protobuf type="uint8" name="type" desc="1坐骑 2灵宠 3神兵 4福源" ></protobuf>
+    <protobuf type="uint8" name="num" desc="剩余次数" ></protobuf>
+</proto>
+<proto id="3771" name="CommonLotteryNumInit" desc="抽奖次数（全部量）" type="revc">
+    <protobuf type="array" itemtype="stCommonLottery" name="datalist" desc="剩余抽奖次数列表" ></protobuf>
+</proto>
+<proto id="3772" name="CommonLotteryNumUpdate" desc="抽奖次数（变化量）" type="revc">
+    <protobuf type="array" itemtype="stCommonLottery" name="datalist" desc="更新后的剩余抽奖次数列表" ></protobuf>
+</proto>

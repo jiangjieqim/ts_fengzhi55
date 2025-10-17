@@ -115,7 +115,12 @@ export class ZuoQiChouQuView extends ViewBase{
         this._timeCtl.off(Laya.Event.COMPLETE,this,this.onTimeComplete);
         MainModel.Ins.off(MainEvent.ValChange,this,this.updateMoney);
         this.model.off(ZuoQiEvent.TimeChange,this,this.updateMoney);
+        MainModel.Ins.off(MainEvent.CommonLotteryUpdate,this,this.updateLottery);
         ActivityModel.Ins.off(ActivityEvent.OpenCloseStatusUpdate,this,this.onACtivityEvt)
+    }
+    private updateLottery() {
+        const num = MainModel.Ins.commonLotteryDatas.find(o=> o.type === 1)?.num || 0;
+        this._ui.limit_lab.text = E.getLang('lottery_txt', num);
     }
     /**这里在加载完资源后调用-建议只处理资源相关的逻辑*/
     protected onFirstInit(): void{
@@ -145,6 +150,7 @@ export class ZuoQiChouQuView extends ViewBase{
 
             this._checkBoxCtl2 = new CheckBoxCtl({bg:this._ui.bg_2,gou:this._ui.gou_2} as ICheckBoxSkin);
             this._checkBoxCtl2.selectHander = new Laya.Handler(this,this.onselectHander);
+            this.updateLottery();
         }
     }
 
@@ -233,7 +239,8 @@ export class ZuoQiChouQuView extends ViewBase{
                 }
             }
         }else{
-            this._ui.bg_1.visible = this._ui.lab_1.visible = true;
+            // this._ui.bg_1.visible = this._ui.lab_1.visible = true;
+            this._ui.bg_1.visible = this._ui.lab_1.visible = false;
             this._ui.bg_2.visible = this._ui.lab_2.visible = false;
             this._ui.bg_1.x = 373;
             this._ui.lab_1.x = 412;
@@ -241,6 +248,7 @@ export class ZuoQiChouQuView extends ViewBase{
 
         MainModel.Ins.on(MainEvent.ValChange,this,this.updateMoney);
         this.model.on(ZuoQiEvent.TimeChange,this,this.updateMoney);
+        MainModel.Ins.on(MainEvent.CommonLotteryUpdate,this,this.updateLottery);
         ActivityModel.Ins.on(ActivityEvent.OpenCloseStatusUpdate,this,this.onACtivityEvt)
         this.updateMoney();
     }

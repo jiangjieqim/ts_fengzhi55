@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":10,
-    "selecteID":50,
+    "selectedBox":33,
+    "selecteID":29,
     "searchKey":"View",
     "props":{"width":692,"sceneColor":"#000000","height":955},
     "nodeParent":-1,
@@ -52,13 +52,14 @@
             "props":{"y":47,"x":221.5,"width":237,"skin":"remote/common/base/sxk.png","sizeGrid":"0,25,0,24","height":50},
             "nodeParent":2,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":6,
             "child":[
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
                     "props":{"y":12,"x":90,"text":"晋升","strokeColor":"#90501f","fontSize":28,"font":"BOLD","color":"#9C5F3A"},
@@ -207,7 +208,7 @@
                     "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":243},
+                    "props":{"y":243,"x":-21},
                     "nodeParent":33,
                     "label":"Sprite",
                     "isOpen":false,
@@ -278,7 +279,7 @@
                     "x":30,
                     "type":"List",
                     "searchKey":"List,list",
-                    "props":{"y":243,"x":39,"width":180,"var":"list","spaceY":8,"repeatY":4,"repeatX":1,"height":141},
+                    "props":{"y":243,"x":18,"width":221,"var":"list","spaceY":8,"repeatY":4,"repeatX":1,"height":141},
                     "nodeParent":33,
                     "label":"list",
                     "isOpen":true,
@@ -437,16 +438,17 @@
                     "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":248},
+                    "props":{"y":248,"x":0},
                     "nodeParent":34,
                     "label":"Sprite",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":27,
                     "child":[
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"texture":"remote/jinsheng/jt.png"},
@@ -461,6 +463,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":35,"texture":"remote/jinsheng/jt.png"},
@@ -475,6 +478,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":71,"texture":"remote/jinsheng/jt.png"},
@@ -489,6 +493,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":106,"texture":"remote/jinsheng/jt.png"},
@@ -508,7 +513,7 @@
                     "x":30,
                     "type":"List",
                     "searchKey":"List,list1",
-                    "props":{"y":243,"x":94,"width":180,"var":"list1","spaceY":8,"repeatY":4,"repeatX":1,"height":141},
+                    "props":{"y":243,"x":60,"width":223,"var":"list1","spaceY":8,"repeatY":4,"repeatX":1,"height":141},
                     "nodeParent":34,
                     "label":"list1",
                     "isOpen":true,

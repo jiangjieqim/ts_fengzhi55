@@ -82,7 +82,7 @@ export class GridItemCtl{
                     this.skin.tf1.text = "x" + vo.count;
                 }
                 if(isLv){
-                    this.skin.tf1.text = "lv." + vo.stItem.level;
+                    this.skin.tf1.text = vo.stItem.level + '级';
                 }
                 this.setEff(vo.itemCfg.f_qua);
            }else{

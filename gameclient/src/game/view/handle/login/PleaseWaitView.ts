@@ -67,3 +67,26 @@ export class PleaseWaitView extends ViewBase{
         
     }
 }
+
+export class ShiLingTiShiView extends ViewBase{
+    private _ui:ui.views.login.ui_shilingtishiViewUI;
+    protected checkGuide:boolean = false;
+    protected mMask = true; 
+    protected autoFree = true;
+    
+    protected onAddLoadRes() {
+        //this.addAtlas('shezhi.atlas');
+    }
+
+    protected onFirstInit(){
+        if(!this.UI){
+            this.UI = this._ui = new ui.views.login.ui_shilingtishiViewUI;
+        }
+    }
+
+    protected onInit() {
+    }
+
+    protected onExit() {
+    }
+}

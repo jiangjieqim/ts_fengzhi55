@@ -236,6 +236,7 @@ this.newRole=b.readUint8()
 }
 	constructor(){}
 }export class stServerConfig{
+public protoid:number = undefined
 	/*心跳间隔毫秒*/
 	public HeartMillisecond:number;
 
@@ -261,6 +262,7 @@ this.openTime.read(b);
 }
 	constructor(){}
 }export class stPlayerData{
+public protoid:number = undefined
 	/*账号*/
 	public Account:string;
 
@@ -306,6 +308,7 @@ this.naming=b.readUTFString()
 }
 	constructor(){}
 }export class stPlayerBaseInfo{
+public protoid:number = undefined
 	/*基础信息*/
 	public moneyInfo:stCellValue[];
 
@@ -364,6 +367,7 @@ this.isVip=b.readUint8()
 }
 	constructor(){}
 }export class stPropItem{
+public protoid:number = undefined
 	/*道具id*/
 	public id:number;
 
@@ -384,6 +388,7 @@ this.count=b.readUint32()
 }
 	constructor(){}
 }export class stCellValue{
+public protoid:number = undefined
 	/*货币类型1:元宝 2:铜钱 3:宝箱卷 4:战斗力 5:经验值 (配置表 t_ExpValue.xlsx) 
     10002   速度
     10003	生命
@@ -409,6 +414,7 @@ this.count=b.readUint32()
 }
 	constructor(){}
 }export class stEquipAttr{
+public protoid:number = undefined
 	/*属性类型id 读取t_EffectValue.xlsx和t_EquipmentValue.xlsx*/
 	public id:number;
 
@@ -429,6 +435,7 @@ this.value=b.readUint32()
 }
 	constructor(){}
 }export class stEquipItem{
+public protoid:number = undefined
 	/*装备类型读取t_EquipmentID.xlsx的f_id*/
 	public type:number;
 
@@ -531,6 +538,7 @@ this.mountAttrList.push(item);
 }
 	constructor(){}
 }export class stWingUpgradeInfo{
+public protoid:number = undefined
 	/*翅膀属性id*/
 	public id:number;
 
@@ -556,6 +564,7 @@ this.next=b.readUint32()
 }
 	constructor(){}
 }export class stWingItem{
+public protoid:number = undefined
 	/*翅膀的等级数据*/
 	public wingInfoData:stWingInfo=new stWingInfo();
 
@@ -619,6 +628,7 @@ this.stageAttrList.push(item);
 }
 	constructor(){}
 }export class stWingInfo{
+public protoid:number = undefined
 	/*翅膀的等级*/
 	public wingLevel:number;
 
@@ -783,6 +793,7 @@ this.type=b.readUint8()
 }
 	constructor(){}
 }export class stFightActionLog{
+public protoid:number = undefined
 	/*技能id*/
 	public skillId:number;
 
@@ -834,6 +845,7 @@ this.addType=b.readUint8()
 	constructor(){}
 }/*战斗宠物结构体*/
 export class stFightPet{
+public protoid:number = undefined
 	/*pos站位*/
 	public pos:number;
 
@@ -854,6 +866,7 @@ this.petId=b.readUint16()
 }
 	constructor(){}
 }export class stFightData{
+public protoid:number = undefined
 	/*播放战斗动作的角色站位*/
 	public target:number;
 
@@ -874,6 +887,7 @@ this.val=b.readUint32()
 }
 	constructor(){}
 }export class stFightAction{
+public protoid:number = undefined
 	/*动作类型
         1 普通攻击 --->攻击对方的动作
         2 吸血     ---> val 10 触发了加血10
@@ -951,6 +965,7 @@ this.targetList.push(item);
 	constructor(){}
 }/*形象*/
 export class stSkin{
+public protoid:number = undefined
 	/*头部ID*/
 	public f_HeadID:number;
 
@@ -997,6 +1012,7 @@ this.f_BulletPic=b.readUint16()
 	constructor(){}
 }/*战斗角色信息结构体*/
 export class stFightRole{
+public protoid:number = undefined
 	/*总血量*/
 	public blood:number;
 
@@ -1048,6 +1064,7 @@ this.name=b.readUTFString()
 	constructor(){}
 }/*战斗结构体*/
 export class stFightVo{
+public protoid:number = undefined
 	/*赢家的索引号,站位索引号 0:己方 1敌方*/
 	public owner:number;
 
@@ -1346,6 +1363,7 @@ b.writeUint8(this.type);
 	constructor(){}
 }/*换装形象*/
 export class stSkinStyle{
+public protoid:number = undefined
 	/*undefined*/
 	public qua:number;
 
@@ -1474,6 +1492,7 @@ b.writeUint8(this.type);
 }
 	constructor(){}
 }export class stRewardRideVo{
+public protoid:number = undefined
 	/*类型:0 坐骑类型 1 item类型*/
 	public type:number;
 
@@ -1504,6 +1523,7 @@ this.count=b.readUint16()
 }
 	constructor(){}
 }export class stRideVo{
+public protoid:number = undefined
 	/*坐骑id*/
 	public id:number;
 
@@ -1530,6 +1550,7 @@ this.star=b.readUint16()
 	constructor(){}
 }/*坐骑的关联关系*/
 export class stMountRelation{
+public protoid:number = undefined
 	/*坐骑id*/
 	public mountId:number;
 
@@ -1683,6 +1704,7 @@ this.star=b.readUint16()
 }
 	constructor(){}
 }export class stRideMissionVo{
+public protoid:number = undefined
 	/*坐骑mission id*/
 	public id:number;
 
@@ -1708,6 +1730,7 @@ this.time=b.readUint32()
 }
 	constructor(){}
 }export class stRideReq{
+public protoid:number = undefined
 	/*坐骑id*/
 	public rideId:number;
 
@@ -1999,6 +2022,7 @@ this.treasurePower=b.readUint32()
 	constructor(){}
 }/*竞技场玩家列表数据*/
 export class stJjcPlayer{
+public protoid:number = undefined
 	/*玩家或机器人流水号id*/
 	public id:number;
 
@@ -2167,6 +2191,7 @@ this.enemyInfo.read(b);
 	constructor(){}
 }/*竞技场战斗日志数据结构*/
 export class stJjcLog{
+public protoid:number = undefined
 	/*时间戳*/
 	public time:number;
 
@@ -2258,6 +2283,7 @@ b.writeUint32(this.playerId);
 	constructor(){}
 }/*当前坐骑信息*/
 export class stRideInfo{
+public protoid:number = undefined
 	/*坐骑基础信息*/
 	public baseInfo:stRideVo=new stRideVo();
 
@@ -2293,6 +2319,7 @@ this.attr.push(item);
 	constructor(){}
 }/*当前翅膀信息*/
 export class stWing{
+public protoid:number = undefined
 	/*翅膀id*/
 	public wingId:number;
 
@@ -2329,6 +2356,7 @@ this.power=b.readUint32()
 	constructor(){}
 }/*竞技场当前法阵信息*/
 export class stGemArena{
+public protoid:number = undefined
 	/*当前法阵id*/
 	public formationId:number;
 
@@ -2364,6 +2392,7 @@ this.Gem.push(item);
 	constructor(){}
 }/*竞技场当前战魂信息*/
 export class stSpiritInfo{
+public protoid:number = undefined
 	/*战魂的id*/
 	public spiritId:number;
 
@@ -2390,6 +2419,7 @@ this.level=b.readUint8()
 	constructor(){}
 }/*竞技场当前战魂信息*/
 export class stSpiritArena{
+public protoid:number = undefined
 	/*战魂的信息*/
 	public spiritInfo:stSpiritInfo[];
 
@@ -2439,6 +2469,7 @@ this.attrList.push(item);
 	constructor(){}
 }/*竞技场当前武馆信息*/
 export class stGymArena{
+public protoid:number = undefined
 	/*武馆场馆属性列表*/
 	public gymAttrList:stEquipAttr[];
 
@@ -2488,6 +2519,7 @@ this.roomAttrList.push(item);
 	constructor(){}
 }/*竞技场当前福佑信息*/
 export class stBlessingArena{
+public protoid:number = undefined
 	/*装备的哪些福佑信息*/
 	public attrList:stEquipAttr[];
 
@@ -2762,6 +2794,7 @@ this.rank=b.readUint16()
 	constructor(){}
 }/*状态结构*/
 export class stTipsVo{
+public protoid:number = undefined
 	/*类型 1 竞技场购买提醒 (重置为0的时间读配置表 重置的时候主动推送更新)*/
 	public type:number;
 
@@ -2814,6 +2847,7 @@ this.data.write(b);
 }
 	constructor(){}
 }export class stShopItem{
+public protoid:number = undefined
 	/*商品fid*/
 	public fid:number;
 
@@ -2866,6 +2900,7 @@ this.data.read(b);
 }
 	constructor(){}
 }export class stActivityStatus{
+public protoid:number = undefined
 	/*流水号*/
 	public uid:number;
 
@@ -2886,6 +2921,7 @@ this.status=b.readUint8()
 }
 	constructor(){}
 }export class stActivityCell{
+public protoid:number = undefined
 	/*主功能对于的配置表id*/
 	public id:number;
 
@@ -2937,6 +2973,7 @@ this.param1=b.readUint8()
 }
 	constructor(){}
 }export class stActivity{
+public protoid:number = undefined
 	/*流水号*/
 	public uid:number;
 
@@ -3070,6 +3107,7 @@ b.writeUTFString(this.extra||"");
 }
 	constructor(){}
 }export class stActivityRed{
+public protoid:number = undefined
 	/*流水号*/
 	public uid:number;
 
@@ -3201,6 +3239,7 @@ b.writeUint8(this.id);
 }
 	constructor(){}
 }export class stReloadEquip{
+public protoid:number = undefined
 	/*EEquipType装备类型*/
 	public type:number;
 
@@ -3291,6 +3330,7 @@ b.writeUint16(this.uid);
 }
 	constructor(){}
 }export class stPopWin{
+public protoid:number = undefined
 	/*流水号 对应配置表t_Pack_Controller的f_id*/
 	public uid:number;
 
@@ -3342,6 +3382,7 @@ this.datalist.push(item);
 }
 	constructor(){}
 }export class stStyle{
+public protoid:number = undefined
 	/*部位id 装备类型*/
 	public id:number;
 
@@ -3525,6 +3566,7 @@ b.writeUint8(this.type);
 	constructor(){}
 }/*武馆-邀请数据*/
 export class stGymInvite{
+public protoid:number = undefined
 	/*状态 0 演武完走人 1 演武完展示传承界面 2 演武完展示领取奖励界面*/
 	public result:number;
 
@@ -3565,6 +3607,7 @@ this.speedUpTime=b.readUint32()
 }
 	constructor(){}
 }export class stGymEquip{
+public protoid:number = undefined
 	/*0-江湖人士 1-将领型 2-巾帼型 3-君主型 4-谋士型*/
 	public heroType:number;
 
@@ -3790,6 +3833,7 @@ this.rewardStatus=b.readUint8()
 }
 	constructor(){}
 }export class stGymUpgradeInfo{
+public protoid:number = undefined
 	/*设备id*/
 	public id:number;
 
@@ -3907,6 +3951,7 @@ this.time=b.readUint32()
 }
 	constructor(){}
 }export class stGymFacilityRefinementInfo{
+public protoid:number = undefined
 	/*洗练词条的穿戴状态 1穿戴着 2未穿戴*/
 	public wearable:number;
 
@@ -3941,6 +3986,7 @@ this.attrList.push(item);
 }
 	constructor(){}
 }export class stGymFacilityRefinement{
+public protoid:number = undefined
 	/*设备id*/
 	public id:number;
 
@@ -4035,6 +4081,7 @@ this.datalist.push(item);
 }
 	constructor(){}
 }export class stGymMission{
+public protoid:number = undefined
 	/*t_Gym_Mission_List表f_id*/
 	public fid:number;
 
@@ -4165,6 +4212,7 @@ let len;
 	constructor(){}
 }/*物品数据*/
 export class stItem{
+public protoid:number = undefined
 	/*背包类型 0无序的福佑背包 1有序福佑装备背包*/
 	public type:number;
 
@@ -4216,6 +4264,7 @@ this.cheifId=b.readUint16()
 	constructor(){}
 }/*物品数据装备属性*/
 export class stItemEquipAttr{
+public protoid:number = undefined
 	/*道具的流水号*/
 	public uid:uint64=new uint64();
 
@@ -4251,6 +4300,7 @@ this.attrList.push(item);
 	constructor(){}
 }/*删除背包物品*/
 export class stItemRem{
+public protoid:number = undefined
 	/*道具的流水号*/
 	public uid:uint64=new uint64();
 
@@ -4518,6 +4568,7 @@ let len;
 	constructor(){}
 }/*解锁武将信息*/
 export class stGymNpc{
+public protoid:number = undefined
 	/*已解锁的武将id(t_Gym_NPC_List表的f_HeroID)*/
 	public id:number;
 
@@ -4671,6 +4722,7 @@ this.attrList.push(item);
 	constructor(){}
 }/*地图任务解锁数据*/
 export class stGymMapTasks{
+public protoid:number = undefined
 	/*任务类型id*/
 	public taskTypeId:number;
 
@@ -4712,6 +4764,7 @@ this.list.push(item);
 	constructor(){}
 }/*挂机主界面信息结构体*/
 export class stAfk{
+public protoid:number = undefined
 	/*挂机等级*/
 	public level:number;
 
@@ -4757,6 +4810,7 @@ this.rewardList.push(item);
 	constructor(){}
 }/*挂机主界面信息结构体*/
 export class stAfkFast{
+public protoid:number = undefined
 	/*快速侦察，看视频次数*/
 	public fastAfkVideoNum:number;
 
@@ -4778,6 +4832,7 @@ this.fastAfkBuyNum=b.readUint8()
 	constructor(){}
 }/*挂机被邀请者结构体*/
 export class stAfkInvitee{
+public protoid:number = undefined
 	/*被邀请者头像*/
 	public portrait:string;
 
@@ -4959,6 +5014,7 @@ let len;
 	constructor(){}
 }/*单个商队详情*/
 export class stItemStation{
+public protoid:number = undefined
 	/*商队马车的位置*/
 	public pos:number;
 
@@ -5122,6 +5178,7 @@ let len;
 	constructor(){}
 }/*任务详情*/
 export class stMission{
+public protoid:number = undefined
 	/*委派任务id,对应t_Station_Mission_List.xlsx中f_MissionID*/
 	public missionId:number;
 
@@ -5206,6 +5263,7 @@ this.missionIds[i].write(b);
 	constructor(){}
 }/*新版冒险挑战关卡数据*/
 export class stNewAdventure{
+public protoid:number = undefined
 	/*待挑战关卡id（t_Adventure_Level的f_Levelid）*/
 	public adventureId:number;
 
@@ -5362,6 +5420,7 @@ let len;
 	constructor(){}
 }/*附近驿站详情*/
 export class stStationNearBy{
+public protoid:number = undefined
 	/*玩家角色ID,可以是机器人的ID*/
 	public playerId:number;
 
@@ -5582,6 +5641,7 @@ this.datalist.push(item);
 	constructor(){}
 }/*跑商操作日志*/
 export class stStationHandleLog{
+public protoid:number = undefined
 	/*跑商日志的ID*/
 	public logId:number;
 
@@ -5676,6 +5736,7 @@ b.writeUint8(this.id);
 	constructor(){}
 }/*战魂主界面信息结构体*/
 export class stSpirit{
+public protoid:number = undefined
 	/*战魂流水号id*/
 	public uid:number;
 
@@ -5943,6 +6004,7 @@ this.f_id=b.readUint32()
 	constructor(){}
 }/*大乱斗战斗结果结构体*/
 export class stSmashFightLang{
+public protoid:number = undefined
 	/*话术类型 t_Smash_Script表的f_SeverType*/
 	public type:number;
 
@@ -5964,6 +6026,7 @@ this.lang=b.readUTFString()
 	constructor(){}
 }/*大乱斗战斗结果结构体*/
 export class stSmashFight{
+public protoid:number = undefined
 	/*话术类型 t_Smash_Script表的f_id*/
 	public type:number;
 
@@ -5999,6 +6062,7 @@ this.langList.push(item);
 	constructor(){}
 }/*大乱斗前三强结构体*/
 export class stSmashTopWinner{
+public protoid:number = undefined
 	/*名次*/
 	public position:number;
 
@@ -6040,6 +6104,7 @@ this.titleId=b.readUint8()
 	constructor(){}
 }/*大乱斗当前玩家的战斗结果*/
 export class stSmashFightResult{
+public protoid:number = undefined
 	/*连胜场数*/
 	public streakTimes:number;
 
@@ -6239,6 +6304,7 @@ this.time=b.readUint32()
 	constructor(){}
 }/*区服详情*/
 export class stServerItem{
+public protoid:number = undefined
 	/*区服名称*/
 	public serverName:string;
 
@@ -6475,6 +6541,7 @@ b.writeUTFString(this.portrait||"");
 	constructor(){}
 }/*订阅消息结构体*/
 export class stDingYue{
+public protoid:number = undefined
 	/*t_Setting_Subscribe f_id*/
 	public id:number;
 
@@ -6636,6 +6703,7 @@ this.val=b.readUTFString()
 	constructor(){}
 }/*邮件结构体*/
 export class stMail{
+public protoid:number = undefined
 	/*邮件id*/
 	public uid:number;
 
@@ -6775,6 +6843,7 @@ this.mission.read(b);
 	constructor(){}
 }/*红点结构体*/
 export class stRedDot{
+public protoid:number = undefined
 	/*红点类型,或者红点的值*/
 	public type:number;
 
@@ -6864,6 +6933,7 @@ this.result=b.readUTFString()
 	constructor(){}
 }/*cd时间详情*/
 export class stAdCd{
+public protoid:number = undefined
 	/*广告位置 1宝箱升级,2快速挂机,3武馆,4免费元宝 ,...待扩展*/
 	public pos:number;
 
@@ -7022,6 +7092,7 @@ let len;
 	constructor(){}
 }/*宝石的详情*/
 export class stGem{
+public protoid:number = undefined
 	/*存放的地方 0即宝石背包,大于0即存放的法阵id,对应t_Gem_Formation_List.xlsx的f_Formationid*/
 	public type:number;
 
@@ -7058,6 +7129,7 @@ this.pos=b.readUint16()
 	constructor(){}
 }/*宝石的命脉*/
 export class stGemLifeBlood{
+public protoid:number = undefined
 	/*命脉的id*/
 	public id:number;
 
@@ -7159,6 +7231,7 @@ let len;
 	constructor(){}
 }/*宝石消耗传的道具信息*/
 export class stGemItem{
+public protoid:number = undefined
 	/*道具ID*/
 	public itemId:number;
 
@@ -7328,6 +7401,7 @@ this.defaultFormationId=b.readUint8()
 	constructor(){}
 }/*公告结构体*/
 export class stNotice{
+public protoid:number = undefined
 	/*公告流水号*/
 	public uid:number;
 
@@ -7425,6 +7499,7 @@ this.handlerAfter.read(b);
 	constructor(){}
 }/*神兵结构体*/
 export class stArtifact{
+public protoid:number = undefined
 	/*神兵id（t_Artifact_List表的f_Artifactid）*/
 	public artifactId:number;
 
@@ -7543,6 +7618,7 @@ this.datalist.push(item);
 	constructor(){}
 }/*神兵开箱日志结构体*/
 export class stArtifactLog{
+public protoid:number = undefined
 	/*物品数据*/
 	public item:stCellValue=new stCellValue();
 
@@ -7664,6 +7740,7 @@ b.writeUint8(this.type);
 	constructor(){}
 }/*劳动节shop的结构体*/
 export class stLabourShop{
+public protoid:number = undefined
 	/*t_Labour_Shop.xlsx的f_id*/
 	public id:number;
 
@@ -7685,6 +7762,7 @@ this.num=b.readUint8()
 	constructor(){}
 }/*劳动节抽奖获得的红色的信息*/
 export class stLabourItemRed{
+public protoid:number = undefined
 	/*t_Labour_Config_item.xlsx的f_id*/
 	public id:number;
 
@@ -7786,6 +7864,7 @@ this.type=b.readUint8()
 	constructor(){}
 }/*神兵结构体*/
 export class stArtifactPack{
+public protoid:number = undefined
 	/*t_Artifact_pack.xlsx的f_id*/
 	public id:number;
 
@@ -7859,6 +7938,7 @@ b.writeUint8(this.id);
 	constructor(){}
 }/*五一劳动节日扭蛋结构体*/
 export class stLabourCapsuleToys{
+public protoid:number = undefined
 	/*类型 0 物品 1坐骑*/
 	public type:number;
 
@@ -8428,6 +8508,7 @@ this.rewardStatus=b.readUint8()
 	constructor(){}
 }/*称号信息*/
 export class stTitleInfo{
+public protoid:number = undefined
 	/*t_Title_Lists.xlsx表f_titleid*/
 	public titleId:number;
 
@@ -8647,6 +8728,7 @@ this.moneyVal=b.readUint32()
 	constructor(){}
 }/*形象更新结构体*/
 export class stPeakJjcAvatar{
+public protoid:number = undefined
 	/*名字*/
 	public name:string;
 
@@ -8755,6 +8837,7 @@ this.rewardList.push(item);
 	constructor(){}
 }/*坐骑洗髓属性*/
 export class stMountRefinement{
+public protoid:number = undefined
 	/*属性类型id 读取t_EffectValue.xlsx和t_EquipmentValue.xlsx*/
 	public id:number;
 
@@ -8912,6 +8995,7 @@ this.rewardList.push(item);
 	constructor(){}
 }/*副将的结构体*/
 export class stChief{
+public protoid:number = undefined
 	/*副将id 对应t_Chief_List.xlsx的f_cheifid*/
 	public cheifId:number;
 
@@ -9040,6 +9124,7 @@ this.assistId=b.readUint8()
 	constructor(){}
 }/*副将装备信息结构体*/
 export class stChiefEquip{
+public protoid:number = undefined
 	/*副将装备部位*/
 	public partId:number;
 
@@ -9066,6 +9151,7 @@ this.equipLevel=b.readUint16()
 	constructor(){}
 }/*副将技能信息结构体*/
 export class stChiefSkill{
+public protoid:number = undefined
 	/*(弃用)副将技能id, 1技能1 2技能2(前后端技能不匹配,使用槽位来匹配技能)*/
 	public skillId:number;
 
@@ -9183,6 +9269,7 @@ this.freeCount=b.readUint8()
 }
 	constructor(){}
 }export class stRecruitChief{
+public protoid:number = undefined
 	/*类型:0 副将类型 1 item类型*/
 	public type:number;
 
@@ -9417,6 +9504,7 @@ this.moraleRewardNum=b.readUint16()
 }
 	constructor(){}
 }export class stInvitationTopPlayer{
+public protoid:number = undefined
 	/*玩家等级*/
 	public level:number;
 
@@ -9442,6 +9530,7 @@ this.portrait=b.readUTFString()
 }
 	constructor(){}
 }export class stInvitationInfo{
+public protoid:number = undefined
 	/*t_Invitation表f_id*/
 	public fid:number;
 
@@ -9462,6 +9551,7 @@ this.state=b.readUint8()
 }
 	constructor(){}
 }export class stActivationInfo{
+public protoid:number = undefined
 	/*t_Invitation_Value表f_id*/
 	public fid:number;
 
@@ -9666,6 +9756,7 @@ b.writeUint16(this.mountId);
 }
 	constructor(){}
 }export class stFundReward{
+public protoid:number = undefined
 	/*是否可领取 0不可领取 1可领取 2已领取*/
 	public state:number;
 
@@ -9686,6 +9777,7 @@ this.f_id=b.readUint8()
 }
 	constructor(){}
 }export class stFund{
+public protoid:number = undefined
 	/*t_Fund.xlsx的id*/
 	public id:number;
 
@@ -9829,6 +9921,7 @@ this.serverTime.read(b);
 }
 	constructor(){}
 }export class stMountRecord{
+public protoid:number = undefined
 	/*玩家id*/
 	public playerId:number;
 
@@ -9864,6 +9957,7 @@ this.time=b.readUint32()
 }
 	constructor(){}
 }export class stMountNum{
+public protoid:number = undefined
 	/*玩家id*/
 	public playerId:number;
 
@@ -10117,6 +10211,7 @@ let len;
 }
 	constructor(){}
 }export class stSilkBag{
+public protoid:number = undefined
 	/*星星争夺战锦囊id,对应t_Star_PocketTips.xlsx的f_id*/
 	public id:number;
 
@@ -10137,6 +10232,7 @@ this.val=b.readUint32()
 }
 	constructor(){}
 }export class stStarBattleEnemy{
+public protoid:number = undefined
 	/*玩家id*/
 	public accountId:number;
 
@@ -10444,6 +10540,7 @@ this.silkBags.push(item);
 	constructor(){}
 }/*星星争夺战战斗日志数据结构*/
 export class stStarBattleLog{
+public protoid:number = undefined
 	/*玩家角色id*/
 	public accountId:number;
 
@@ -10527,6 +10624,7 @@ this.dataList.push(item);
 }
 	constructor(){}
 }export class stStarRank{
+public protoid:number = undefined
 	/*玩家角色id*/
 	public accountId:number;
 
@@ -10675,6 +10773,7 @@ b.writeUint32(this.accountId);
 }
 	constructor(){}
 }export class stStarGoods{
+public protoid:number = undefined
 	/*星星争夺战商店的物品id对应t_Star_Shop.xlsx的f_goodsid*/
 	public goodsId:number;
 
@@ -10735,6 +10834,7 @@ this.goodsFreshUnix=b.readUint32()
 }
 	constructor(){}
 }export class stActivityRecord{
+public protoid:number = undefined
 	/*玩家id*/
 	public playerId:number;
 
@@ -10775,6 +10875,7 @@ this.time=b.readUint32()
 }
 	constructor(){}
 }export class stActivityNum{
+public protoid:number = undefined
 	/*玩家id*/
 	public playerId:number;
 
@@ -11097,6 +11198,7 @@ this.closeUnix=b.readUint32()
 	constructor(){}
 }/*鏖战玩家列表数据*/
 export class stTeamFightPlayer{
+public protoid:number = undefined
 	/*玩家头像*/
 	public headUrl:string;
 
@@ -11320,6 +11422,7 @@ let len;
 	constructor(){}
 }/*武神殿敌人信息*/
 export class stPalaceEnemy{
+public protoid:number = undefined
 	/*敌人id(t_Palace_Enemy.xlsx表f_EnemyID)*/
 	public enemyId:number;
 
@@ -11447,6 +11550,7 @@ b.writeUint8(this.type);
 	constructor(){}
 }/*武神殿敌人信息*/
 export class stPalaceBuff{
+public protoid:number = undefined
 	/*t_Palace_DataType.xlsx的f_id(当栏位上没有神魂时传0)*/
 	public buffId:number;
 
@@ -11591,6 +11695,7 @@ this.coreBuffList.push(b.readUint8())
 	constructor(){}
 }/*武神殿排行榜数据*/
 export class stPalacePlayer{
+public protoid:number = undefined
 	/*服务器名字*/
 	public severName:string;
 
@@ -11756,6 +11861,7 @@ this.clear=b.readUint8()
 	constructor(){}
 }/*武神殿商店已购买项*/
 export class stPalaceShopItem{
+public protoid:number = undefined
 	/*物品id（t_Palace_Shop.xlsx表的f_id）*/
 	public fid:number;
 
@@ -11968,6 +12074,7 @@ let len;
 }
 	constructor(){}
 }export class stCommonRank{
+public protoid:number = undefined
 	/*玩家角色id*/
 	public accountId:number;
 
@@ -12123,6 +12230,7 @@ b.writeUint8(this.id);
 }
 	constructor(){}
 }export class stNewPlayerAttr{
+public protoid:number = undefined
 	/*借东风的id,对应t_Newplayer_Attribute.xlsx的f_id*/
 	public id:number;
 
@@ -12168,6 +12276,7 @@ this.dataList.push(item);
 }
 	constructor(){}
 }export class stTrammelsChief{
+public protoid:number = undefined
 	/*副将羁绊fid（t_Trammels_Chief表的f_id，空位时传0）*/
 	public id:number;
 
@@ -12249,6 +12358,7 @@ let len;
 }
 	constructor(){}
 }export class stPet{
+public protoid:number = undefined
 	/*宠物序列号(唯一)*/
 	public petSerialNum:number;
 
@@ -12313,6 +12423,7 @@ this.onBattle=b.readUint8()
 }
 	constructor(){}
 }export class stPetSkill{
+public protoid:number = undefined
 	/*宠物技能ID,对应t_Pet_List的f_skillid*/
 	public skillId:number;
 
@@ -12333,6 +12444,7 @@ this.skillLevel=b.readUint8()
 }
 	constructor(){}
 }export class stPetTalent{
+public protoid:number = undefined
 	/*血脉觉醒ID,对应t_Pet_Talent_List.xlsx的f_id*/
 	public talentId:number;
 
@@ -12768,6 +12880,7 @@ this.dataList.push(item);
 }
 	constructor(){}
 }export class stNewFeast{
+public protoid:number = undefined
 	/*新人盛宴对应积分领取的奖励的id*/
 	public id:number;
 
@@ -12868,6 +12981,7 @@ this.val=b.readUint32()
 }
 	constructor(){}
 }export class stPetFusionBaoDi{
+public protoid:number = undefined
 	/*宠物稀有度*/
 	public quality:number;
 
@@ -12932,6 +13046,7 @@ this.nextRecoverUnix=b.readUint32()
 }
 	constructor(){}
 }export class stFuncGuide{
+public protoid:number = undefined
 	/*对应t_Func_Guide.xlsx的f_id*/
 	public id:number;
 
@@ -13025,6 +13140,7 @@ this.totalCnt=b.readUint32()
 }
 	constructor(){}
 }export class stSevenTask{
+public protoid:number = undefined
 	/*7日狂欢的fid,对应t_SevenDays_Task.xlsx的f_id*/
 	public id:number;
 
@@ -13134,6 +13250,7 @@ b.writeUint8(this.type);
 }
 	constructor(){}
 }export class stShareReward{
+public protoid:number = undefined
 	/*功能id（t_Func表的f_FunctionID）*/
 	public funcId:number;
 
@@ -13174,6 +13291,7 @@ this.dataList.push(item);
 }
 	constructor(){}
 }export class stBoxExtraItem{
+public protoid:number = undefined
 	/*对应t_Box_ExtraItem.xlsx的f_id*/
 	public id:number;
 
@@ -13250,6 +13368,7 @@ b.writeUint8(this.type);
 }
 	constructor(){}
 }export class stClubReward{
+public protoid:number = undefined
 	/*t_System_Community.xlsx表f_id*/
 	public id:number;
 
@@ -13311,6 +13430,7 @@ this.freeCount=b.readUint8()
 }
 	constructor(){}
 }export class stDailyShopWeekCard{
+public protoid:number = undefined
 	/*对应t_Pack_Daily_Shop_WeekCard.xlsx的f_id*/
 	public id:number;
 
@@ -13351,6 +13471,7 @@ this.dataList.push(item);
 }
 	constructor(){}
 }export class stNewPlayerTask{
+public protoid:number = undefined
 	/*新人盛宴的fid,t_Alternation_Rookie_Task.xlsx的f_id*/
 	public id:number;
 
@@ -13448,6 +13569,7 @@ b.writeUint8(this.type);
 }
 	constructor(){}
 }export class stChatPlayer{
+public protoid:number = undefined
 	/*序列号*/
 	public uid:number;
 
@@ -13568,6 +13690,7 @@ b.writeUint8(this.type);
 }
 	constructor(){}
 }export class stAlliance{
+public protoid:number = undefined
 	/*同盟id*/
 	public uid:number;
 
@@ -13618,6 +13741,7 @@ this.rank=b.readUint8()
 }
 	constructor(){}
 }export class stAlliancePlayer{
+public protoid:number = undefined
 	/*序列号*/
 	public uid:number;
 
@@ -13957,6 +14081,7 @@ let len;
 }
 	constructor(){}
 }export class stCheifStarUp{
+public protoid:number = undefined
 	/*副将id 对应t_Chief_List.xlsx的f_cheifid*/
 	public cheifId:number;
 
@@ -14028,6 +14153,7 @@ this.closeUnix=b.readUint32()
 	constructor(){}
 }/*同盟内排行榜列表数据*/
 export class stAllianceInnerRankPlayer{
+public protoid:number = undefined
 	/*职位，0普通成员 1副会长 2会长*/
 	public position:number;
 
@@ -14089,6 +14215,7 @@ this.serverName=b.readUTFString()
 	constructor(){}
 }/*同盟副本总排行榜列表数据*/
 export class stAllianceBossRank{
+public protoid:number = undefined
 	/*排名*/
 	public rank:number;
 
@@ -14240,6 +14367,7 @@ let len;
 }
 	constructor(){}
 }export class stSkyRank{
+public protoid:number = undefined
 	/*玩家角色id*/
 	public accountId:number;
 
@@ -14539,6 +14667,7 @@ b.writeUint8(this.fid);
 }
 	constructor(){}
 }export class stPromotion{
+public protoid:number = undefined
 	/*任务ID,对应对应t_Upsatage_Task.xlsx的f_id*/
 	public taskId:number;
 
@@ -14653,6 +14782,7 @@ let len;
 	constructor(){}
 }/*同盟内排行榜列表数据*/
 export class stAllianceShop{
+public protoid:number = undefined
 	/*t_Alliance_Shop.xlsx的f_id*/
 	public fid:number;
 
@@ -14777,6 +14907,7 @@ this.seconds=b.readUint32()
 }
 	constructor(){}
 }export class stAllianceWarTime{
+public protoid:number = undefined
 	/*1赤壁大战报名时间 2赤壁大战活动时间 3奖励关卡活动时间 4当前周报名时间 5当前周活动时间 6当前周奖励关卡时间*/
 	public type:number;
 
@@ -14909,6 +15040,7 @@ b.writeUint8(this.type);
 }
 	constructor(){}
 }export class stAllianceWarLife{
+public protoid:number = undefined
 	/*bossID*/
 	public id:number;
 
@@ -15009,6 +15141,7 @@ this.val=b.readUint8()
 }
 	constructor(){}
 }export class stAllianceWarCityPreview{
+public protoid:number = undefined
 	/*城池编号*/
 	public cityType:number;
 
@@ -15039,6 +15172,7 @@ this.baseNums.push(b.readUint8())
 }
 	constructor(){}
 }export class stAllianceWarCityContent{
+public protoid:number = undefined
 	/*城池编号*/
 	public cityType:number;
 
@@ -15146,6 +15280,7 @@ b.writeUint8(this.cityType);
 }
 	constructor(){}
 }export class stAllianceWarCityTakeOver{
+public protoid:number = undefined
 	/*城池编号*/
 	public cityType:number;
 
@@ -15263,6 +15398,7 @@ b.writeUint32(this.id);
 }
 	constructor(){}
 }export class stBossDamage{
+public protoid:number = undefined
 	/*伤害排名*/
 	public rank:number;
 
@@ -15341,6 +15477,7 @@ let len;
 }
 	constructor(){}
 }export class stAllianceWarCityLog{
+public protoid:number = undefined
 	/*主动发起方的玩家ID*/
 	public playerId:number;
 
@@ -15426,6 +15563,7 @@ this.dataList.push(item);
 }
 	constructor(){}
 }export class stAllianceWarAllianceRank{
+public protoid:number = undefined
 	/*联盟id*/
 	public uid:number;
 
@@ -15493,6 +15631,7 @@ this.my.read(b);
 }
 	constructor(){}
 }export class stAllianceWarInnerRank{
+public protoid:number = undefined
 	/*伤害排名(若rank=0则标识没上榜)*/
 	public rank:number;
 
@@ -15575,6 +15714,7 @@ this.my.read(b);
 }
 	constructor(){}
 }export class stAllianceWarRewardRank{
+public protoid:number = undefined
 	/*伤害排名(若rank=0)*/
 	public rank:number;
 
@@ -15701,6 +15841,7 @@ this.weekPoint=b.readUint32()
 }
 	constructor(){}
 }export class stBattlePassCard{
+public protoid:number = undefined
 	/*f_id*/
 	public fid:number;
 
@@ -15797,6 +15938,7 @@ b.writeUint8(this.type);
 }
 	constructor(){}
 }export class stBattlePassTask{
+public protoid:number = undefined
 	/*战令任务f_id*/
 	public fid:number;
 
@@ -15858,6 +16000,7 @@ this.data.read(b);
 }
 	constructor(){}
 }export class stBattlePassPack{
+public protoid:number = undefined
 	/*战令礼包f_id*/
 	public fid:number;
 
@@ -16046,6 +16189,7 @@ this.serverIdEnd=b.readUint32()
 }
 	constructor(){}
 }export class stDailyEventTask{
+public protoid:number = undefined
 	/*摸金校尉任务f_id*/
 	public fid:number;
 
@@ -16143,6 +16287,7 @@ b.writeUint8(this.position);
 }
 	constructor(){}
 }export class stDailyEvent{
+public protoid:number = undefined
 	/*1基础时间 2稀有事件 3无事发生*/
 	public type:number;
 
@@ -16201,6 +16346,7 @@ this.position=b.readUint8()
 }
 	constructor(){}
 }export class stMonopolyMapInfo{
+public protoid:number = undefined
 	/*地图f_id（t_Monopoly_Map）*/
 	public fid:number;
 
@@ -16231,6 +16377,7 @@ this.type=b.readUint8()
 }
 	constructor(){}
 }export class stMonopolyTask{
+public protoid:number = undefined
 	/*大富翁任务f_id*/
 	public fid:number;
 
@@ -16256,6 +16403,7 @@ this.state=b.readUint8()
 }
 	constructor(){}
 }export class stMonopolyPack{
+public protoid:number = undefined
 	/*大富翁礼包f_id*/
 	public fid:number;
 
@@ -16432,6 +16580,7 @@ b.writeUint8(this.type);
 }
 	constructor(){}
 }export class stDrawEventRewardInfo{
+public protoid:number = undefined
 	/*大奖f_id（t_DrawEvent_Rewards）*/
 	public fid:number;
 
@@ -16452,6 +16601,7 @@ this.state=b.readUint8()
 }
 	constructor(){}
 }export class stDrawEventCumulateRewardInfo{
+public protoid:number = undefined
 	/*大奖f_id（t_DrawEvent_Rewards）*/
 	public fid:number;
 
@@ -16472,6 +16622,7 @@ this.state=b.readUint8()
 }
 	constructor(){}
 }export class stDrawEventTask{
+public protoid:number = undefined
 	/*元旦活动任务f_id*/
 	public fid:number;
 
@@ -16497,6 +16648,7 @@ this.state=b.readUint8()
 }
 	constructor(){}
 }export class stDrawEventPack{
+public protoid:number = undefined
 	/*元旦活动礼包f_id*/
 	public fid:number;
 
@@ -16769,6 +16921,7 @@ let len;
 }
 	constructor(){}
 }export class stArtifactSuit{
+public protoid:number = undefined
 	/*神兵套装的f_id*/
 	public fid:number;
 
@@ -16975,6 +17128,7 @@ this.rewardList.push(item);
 }
 	constructor(){}
 }export class stNamingReward{
+public protoid:number = undefined
 	/*冠名奖励的id*/
 	public id:number;
 
@@ -17139,6 +17293,7 @@ b.writeUint8(this.flag);
 }
 	constructor(){}
 }export class stNamingRank{
+public protoid:number = undefined
 	/*名次*/
 	public ranking:number;
 
@@ -17280,6 +17435,7 @@ let len;
 }
 	constructor(){}
 }export class stSpringFestivalRewardInfo{
+public protoid:number = undefined
 	/*联盟总威望奖励f_id*/
 	public fid:number;
 
@@ -17300,6 +17456,7 @@ this.state=b.readUint8()
 }
 	constructor(){}
 }export class stSpringFestivalTask{
+public protoid:number = undefined
 	/*春节活动任务f_id*/
 	public fid:number;
 
@@ -17325,6 +17482,7 @@ this.state=b.readUint8()
 }
 	constructor(){}
 }export class stSpringFestivalPack{
+public protoid:number = undefined
 	/*春节活动礼包f_id*/
 	public fid:number;
 
@@ -17345,6 +17503,7 @@ this.count=b.readUint8()
 }
 	constructor(){}
 }export class stSpringFestivalShop{
+public protoid:number = undefined
 	/*春节活动商店物品f_id*/
 	public fid:number;
 
@@ -17365,6 +17524,7 @@ this.count=b.readUint8()
 }
 	constructor(){}
 }export class stSpringFestivalAllianceRank{
+public protoid:number = undefined
 	/*联盟id*/
 	public uid:number;
 
@@ -17759,6 +17919,7 @@ this.itemId=b.readUint32()
 }
 	constructor(){}
 }export class stWarcraftSkin{
+public protoid:number = undefined
 	/*类型 1角色外观 2翅膀外观 3坐骑外观*/
 	public type:number;
 
@@ -17794,6 +17955,7 @@ this.skinIds.push(b.readUint32())
 }
 	constructor(){}
 }export class stWarcraftAttr{
+public protoid:number = undefined
 	/*玩家皮肤属性id(t_Image_Attribute的f_id)*/
 	public fid:number;
 
@@ -17930,6 +18092,7 @@ b.writeUint32(this.fid);
 }
 	constructor(){}
 }export class stMountShop{
+public protoid:number = undefined
 	/*对应t_Mount_shop.xlsx的f_id*/
 	public id:number;
 
@@ -18026,6 +18189,7 @@ b.writeUint16(this.uid);
 }
 	constructor(){}
 }export class stPopWinDiscount{
+public protoid:number = undefined
 	/*流水号 对应配置表t_Pack_Controller的f_id*/
 	public uid:number;
 
@@ -18087,6 +18251,7 @@ this.dataList.push(item);
 	constructor(){}
 }/*八阵图格子结构体*/
 export class stSkillTreeLattice{
+public protoid:number = undefined
 	/*格子id(t_SkillTree_LatticeAttribute表fid)*/
 	public latticeId:number;
 
@@ -18108,6 +18273,7 @@ this.itemId=b.readUint32()
 	constructor(){}
 }/*八阵图结构体*/
 export class stSkillTreeGraph{
+public protoid:number = undefined
 	/*八阵图id（t_SkillTree_Graph表f_id）*/
 	public uid:number;
 
@@ -18148,6 +18314,7 @@ this.latticeList.push(item);
 	constructor(){}
 }/*八阵图符箓结构体*/
 export class stSkillTreeSpell{
+public protoid:number = undefined
 	/*符箓id(t_SkillTree_Spell表fid)*/
 	public spellId:number;
 
@@ -18309,6 +18476,7 @@ b.writeUint8(this.level);
 }
 	constructor(){}
 }export class stTimeCommon{
+public protoid:number = undefined
 	/*1每日周礼包 2每日月礼包*/
 	public flag:number;
 
@@ -18366,6 +18534,7 @@ this.flag=b.readUint8()
 }
 	constructor(){}
 }export class stVipPrivilege{
+public protoid:number = undefined
 	/*玩家当前的vip等级fid(t_VIP表f_id)*/
 	public fid:number;
 
@@ -18490,6 +18659,7 @@ this.name=b.readUTFString()
 }
 	constructor(){}
 }export class stEasyPay{
+public protoid:number = undefined
 	/*t_Purchase_EasyPay.xlsx的f_id*/
 	public id:number;
 
@@ -18604,6 +18774,7 @@ this.adNum=b.readUint8()
 }
 	constructor(){}
 }export class stOptionalGift{
+public protoid:number = undefined
 	/*自选礼包的fid*/
 	public id:number;
 
@@ -18638,6 +18809,7 @@ this.items.push(item);
 }
 	constructor(){}
 }export class stOptionalItem{
+public protoid:number = undefined
 	/*自选道具所在的奖励上索引位置*/
 	public itemIdx:number;
 
@@ -18700,6 +18872,7 @@ this.dataList[i].write(b);
 }
 	constructor(){}
 }export class stGeXuQiPaoTask{
+public protoid:number = undefined
 	/*割须弃袍任务f_id*/
 	public fid:number;
 
@@ -18725,6 +18898,7 @@ this.state=b.readUint8()
 }
 	constructor(){}
 }export class stGeXuQiPaoPack{
+public protoid:number = undefined
 	/*割须弃袍礼包f_id*/
 	public fid:number;
 
@@ -18745,6 +18919,7 @@ this.count=b.readUint8()
 }
 	constructor(){}
 }export class stGeXuQiPaoShop{
+public protoid:number = undefined
 	/*割须弃袍商店物品f_id*/
 	public fid:number;
 
@@ -18944,6 +19119,67 @@ this.datalist=this.datalist||[];
 len = b.readInt32();
 for(let i = 0;i < len;i++){
 this.datalist.push(b.readUint32())
+}
+
+}
+	constructor(){}
+}export class stCommonLottery{
+public protoid:number = undefined
+	/*1坐骑 2灵宠 3神兵*/
+	public type:number;
+
+	/*剩余次数*/
+	public num:number;
+
+public write(b){
+let len;
+b.writeUint8(this.type);
+b.writeUint8(this.num);
+
+}
+public read(b){
+let len;
+this.type=b.readUint8()
+this.num=b.readUint8()
+
+}
+	constructor(){}
+}/*抽奖次数（全部量） 协议id:3771*/
+export class CommonLotteryNumInit_revc{
+public protoid:number = 3771
+	/*剩余抽奖次数列表*/
+	public datalist:stCommonLottery[];
+
+public read(b){
+let len;
+this.datalist=this.datalist||[];
+
+len = b.readInt32();
+for(let i = 0;i < len;i++){
+let item = new stCommonLottery()
+item.read(b);
+this.datalist.push(item);
+
+}
+
+}
+	constructor(){}
+}/*抽奖次数（变化量） 协议id:3772*/
+export class CommonLotteryNumUpdate_revc{
+public protoid:number = 3772
+	/*更新后的剩余抽奖次数列表*/
+	public datalist:stCommonLottery[];
+
+public read(b){
+let len;
+this.datalist=this.datalist||[];
+
+len = b.readInt32();
+for(let i = 0;i < len;i++){
+let item = new stCommonLottery()
+item.read(b);
+this.datalist.push(item);
+
 }
 
 }

@@ -12,7 +12,7 @@ import { E, G } from "../../../../G";
 import { ELayerType, LayerMgr } from "../../../../layer/LayerMgr";
 import { LoginClient } from "../../../../network/clients/LoginClient";
 import { MSGID } from "../../../../network/MSGID";
-import { EasyPayList_revc,ActionEquip_req, AdFreeCard_revc, Adventure_Boss_req, Adventure_Boss_revc, Adventure_req, Adventure_revc, AllLifeCard_revc, BoxAuto_req, BoxAuto_revc, BoxCommitState_revc, BoxExtraItemChange_revc, BoxExtraItemInit_revc, BoxUsedCount_revc, ChestInfoUpdate_revc, ChestUpLevel_req, ChestUpLevel_revc, ClubReward_revc, ConfigHash_revc, Conquest_revc, DailyShopWeekCard_revc, DebugFightVal_revc, EquipChange_revc, Err_revc, ExchangeEquipProxy_req, ExchangeEquip_req, ExchangeEquip_revc, FightEnd_req, FightResult_revc, FirstPaySplit_revc, FundRefresh_req, GameStyle_req, GameStyle_revc, GetServerTimeMS_revc, Gm_req, GrowPackUnlock_revc, GymPack_revc, Init_revc, ItemDel_revc, JjcFight_revc, JjcRankDrop_revc, JjcRewardPreview_revc, JustWatchPlayer_req, MailList_revc, MailRed_revc, MonthCard_revc, NewAdventureFight_req, NewServer_revc, NoticeList_revc, PalaceRefresh_req, PeakJjcOpenUnix_revc, PeakWatchPlayerInfo_req, PetFusionBaoDi_revc, PlayerCurExp_revc, PlayerLevel_revc, RedDotUpdate_revc, Reward_revc, SellEquipFinish_revc, Sell_revc, ServerVersion_revc, ShareReward_revc, SideBarReward_revc, SignStatus_revc, stCellValue, stEquipItem, stFightActionLog, stFightVo, stMail, stNotice, stPlayerBaseInfo, stRedDot, Success_revc, ValChanel_revc, WatchPlayerInfo_req, WatchPlayerInfo_revc, WxAuthInfo_revc, stEasyPay } from "../../../../network/protocols/BaseProto";
+import { EasyPayList_revc,ActionEquip_req, AdFreeCard_revc, Adventure_Boss_req, Adventure_Boss_revc, Adventure_req, Adventure_revc, AllLifeCard_revc, BoxAuto_req, BoxAuto_revc, BoxCommitState_revc, BoxExtraItemChange_revc, BoxExtraItemInit_revc, BoxUsedCount_revc, ChestInfoUpdate_revc, ChestUpLevel_req, ChestUpLevel_revc, ClubReward_revc, ConfigHash_revc, Conquest_revc, DailyShopWeekCard_revc, DebugFightVal_revc, EquipChange_revc, Err_revc, ExchangeEquipProxy_req, ExchangeEquip_req, ExchangeEquip_revc, FightEnd_req, FightResult_revc, FirstPaySplit_revc, FundRefresh_req, GameStyle_req, GameStyle_revc, GetServerTimeMS_revc, Gm_req, GrowPackUnlock_revc, GymPack_revc, Init_revc, ItemDel_revc, JjcFight_revc, JjcRankDrop_revc, JjcRewardPreview_revc, JustWatchPlayer_req, MailList_revc, MailRed_revc, MonthCard_revc, NewAdventureFight_req, NewServer_revc, NoticeList_revc, PalaceRefresh_req, PeakJjcOpenUnix_revc, PeakWatchPlayerInfo_req, PetFusionBaoDi_revc, PlayerCurExp_revc, PlayerLevel_revc, RedDotUpdate_revc, Reward_revc, SellEquipFinish_revc, Sell_revc, ServerVersion_revc, ShareReward_revc, SideBarReward_revc, SignStatus_revc, stCellValue, stEquipItem, stFightActionLog, stFightVo, stMail, stNotice, stPlayerBaseInfo, stRedDot, Success_revc, ValChanel_revc, WatchPlayerInfo_req, WatchPlayerInfo_revc, WxAuthInfo_revc, stEasyPay, CommonLotteryNumUpdate_revc, stCommonLottery, CommonLotteryNumInit_revc } from "../../../../network/protocols/BaseProto";
 import { uint64 } from "../../../../network/protocols/uint64";
 import { SocketMgr } from "../../../../network/SocketMgr";
 import { StaticDataMgr } from "../../../../static/StaticDataMgr";
@@ -327,6 +327,7 @@ export class MainModel extends BaseModel implements IMainModel{
     /**是否使用后台计算的一键购买 */
     readonly bServerEasyPay:boolean = true;
     plusplay:FightNumModel = new FightNumModel();
+    public commonLotteryDatas: stCommonLottery[] = [];
     /**主页皮肤样式 */
     public get skinStyle(){
 
@@ -963,6 +964,8 @@ export class MainModel extends BaseModel implements IMainModel{
         E.MsgMgr.AddMsg(MSGID.EquipChangeRevc,this.onEquipChangeRevc,this);
         E.MsgMgr.AddMsg(MSGID.ValChanelRevc,this.onValChanelRevc,this);
         E.MsgMgr.AddMsg(MSGID.InitRevc,this.onInitRevc,this);
+        E.MsgMgr.AddMsg(MSGID.CommonLotteryNumInit,this.onCommonLotteryInitRevc,this);
+        E.MsgMgr.AddMsg(MSGID.CommonLotteryNumUpdate,this.onCommonLotteryUpdateRevc,this);
         E.MsgMgr.AddMsg(MSGID.ChestInfoUpdateRevc,this.onChestInfoUpdate,this);
         E.MsgMgr.AddMsg(MSGID.ChestUpLevelRevc,this.onChestUpLevelRevc,this);
         E.MsgMgr.AddMsg(MSGID.ItemDelRevc,this.onItemDelRevc,this);
@@ -1509,6 +1512,13 @@ export class MainModel extends BaseModel implements IMainModel{
     /**红点,状态提示 */
     private onRedDotUpdateOtpRevc(revc:RedDotUpdate_revc){
         RedUpdateModel.Ins.redList = revc.datalist;
+        const yinDaoRed = RedUpdateModel.Ins.getByID(RedEnum.TASK_GUIDE);
+        if (yinDaoRed) {
+            E.yinDaoMgr.index = yinDaoRed.type + 1;
+        } else {
+            E.yinDaoMgr.index = 0;
+        }
+        
         this.boxAutoVo.initData();
         if(E.Debug){
             let str = "";
@@ -1712,6 +1722,7 @@ export class MainModel extends BaseModel implements IMainModel{
         switch(data.reason){
             case ErrorCode.EquipUid:
             case ErrorCode.Sell:
+            case ErrorCode.EjectPackCDNotEnough:
                 return;
             case ErrorCode.Selled:
                 // E.ViewMgr.Close(EViewType.Equip_switch);
@@ -1961,6 +1972,8 @@ export class MainModel extends BaseModel implements IMainModel{
      * - 当宝箱不在升级状态且当前金币数大于当前宝箱升级的所需金币数的50%，则主界面宝箱升级按钮触发红点
      */
     public mChestMoneyLevelRed(){
+        // 宝箱升级去掉红点
+        return false;
         this.hasLvUpBtnRed = false;
         //是否已经满级
         let isFullMax:boolean = false;
@@ -2455,6 +2468,18 @@ export class MainModel extends BaseModel implements IMainModel{
         SocketMgr.Ins.SendMessageBin(skinReq);
 
         this.checkDisCount();
+    }
+
+    private onCommonLotteryInitRevc(data: CommonLotteryNumInit_revc) {
+        this.commonLotteryDatas = data.datalist;
+    }
+
+    private onCommonLotteryUpdateRevc(data: CommonLotteryNumInit_revc) {
+        for (const d of data.datalist) {
+            const item = this.commonLotteryDatas.find(o => o.type === d.type);
+            item.num = d.num;
+        }
+        this.event(MainEvent.CommonLotteryUpdate);
     }
 
     private checkDisCount() {
@@ -3061,10 +3086,12 @@ export class MainModel extends BaseModel implements IMainModel{
                 this.mainView.avatarFight.clearData();
             }
             if (this.isNeePop(cell)) {
+                // 满足助威委托条件
                 this.openUiByEquipVo(cell, true);
                 //有更加好的装备 需要弹出处理的宝箱界面
                 this.once(MainEvent.SellSucceed, this, this.onSellSucceed);
             } else {
+                // 不满足助威委托条件
                 this._lsEquipPopLock = _lsEquipPopLock;
                 this.curChest.animEndSell(cell,source);
             }
@@ -4116,8 +4143,15 @@ export class MainModel extends BaseModel implements IMainModel{
             headImg.skin = t;
         }
     }
-    private getNeedStop(b:boolean,list1:boolean[]){
+    /**
+     * 是否满足助威委托条件
+     * @param b true同时 false或
+     * @param list1 [属性？, 战力？, 品质]
+     * @returns true满足条件 false不满足条件
+     */
+    private getNeedStop(b:boolean,list1:boolean[]): boolean{
         if(b){
+            // 同时
             for(let i = 0; i < list1.length;i++){
                 if(!list1[i]){
                     return false;
@@ -4125,6 +4159,7 @@ export class MainModel extends BaseModel implements IMainModel{
             }
             return true;
         }else{
+            // 或
             for(let i = 0; i < list1.length;i++){
                 if(list1[i]){
                     return true;

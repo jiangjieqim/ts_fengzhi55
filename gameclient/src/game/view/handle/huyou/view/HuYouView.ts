@@ -286,6 +286,7 @@ export class HuYouView extends ViewBase{
         HuYouModel.Ins.on(HuYouModel.UPDATA_VIEW,this,this.updataView);
         HuYouModel.Ins.on(HuYouModel.UPDATA_VIEW_Level,this,this.updataViewLv1);
         HuYouModel.Ins.on(HuYouModel.UPDATA_VIEW_Item,this,this.updataViewItem);
+        MainModel.Ins.on(MainEvent.CommonLotteryUpdate,this,this.updateLottery);
         // 限时礼包按钮是否显示
         ActivityModel.Ins.on(ActivityEvent.PopWinUpdate,this,this.onPop);
 
@@ -309,9 +310,13 @@ export class HuYouView extends ViewBase{
         let _avatar: AvatarMainView = AvatarFactory.getStandUiMainAvatar();
         this._avatar = _avatar;
         this._ui.heroContainer.addChild(_avatar);
-
+        this.updateLottery();
     }
-
+    private updateLottery() {
+        const num = MainModel.Ins.commonLotteryDatas.find(o=> o.type === 4)?.num || 0;
+        this._ui.limit_lab.text = E.getLang('lottery_txt4', num);
+    }
+        
     private onPop() {
         //ActivityModel.Ins.onPop(this.packUid, this._ui.btn_xslb);
     }
@@ -321,6 +326,7 @@ export class HuYouView extends ViewBase{
         HuYouModel.Ins.off(HuYouModel.UPDATA_VIEW,this,this.updataView);
         HuYouModel.Ins.off(HuYouModel.UPDATA_VIEW_Level,this,this.updataViewLv1);
         HuYouModel.Ins.off(HuYouModel.UPDATA_VIEW_Item,this,this.updataViewItem);
+        MainModel.Ins.off(MainEvent.CommonLotteryUpdate,this,this.updateLottery);
         Laya.timer.clear(this,this.onUpdataViewItem);
         ActivityModel.Ins.off(ActivityEvent.PopWinUpdate,this,ActivityModel.Ins.onPop);
         this.timeCtl.stop();
@@ -846,7 +852,7 @@ export class HuYouView extends ViewBase{
                     (this["_item" + i] as GridItemCtl).setBagData(voo,true,true);
                     this._ui["img_line" + i].visible = true;
                     this._ui["txt_lv" + i].visible = true;
-                    this._ui["txt_lv" + i].text = voo.getName() + " " + "lv." + voo.stItem.level;
+                    this._ui["txt_lv" + i].text = voo.getName() + voo.stItem.level + "级";
                 }else{
                     (this["_item" + i] as GridItemCtl).setVisible(false);
                     this._ui["img_line" + i].visible = false;

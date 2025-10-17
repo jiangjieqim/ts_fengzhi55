@@ -24,6 +24,41 @@ public f_RaidsPrice:string;
 export class t_Adventure_Level_dat{
 /**id*/
 public f_id:number;
+/**页签*/
+public f_Page:number;
+/**关卡id*/
+public f_Levelid:number;
+/**章节名字*/
+public f_Chapter:string;
+/**章节id*/
+public f_ChapterID:number;
+/**小关卡id*/
+public f_unitid:number;
+/**小关卡名称*/
+public f_Unit:string;
+/**敌人形象id*/
+public f_EnamyImage:number;
+/**敌人属性id*/
+public f_Enemyid:number;
+/**关卡奖励物品ID1*/
+public f_LevelReward1:string;
+/**章节奖励*/
+public f_ChapterReward:string;
+/**扫荡掉落战魂数量*/
+public f_RaidsGetSpirits:number;
+/**关卡对应装备id*/
+public f_Equipmentid:number;
+/**人物头像*/
+public f_headIcon:number;
+/**稀有度*/
+public f_quashow:string;
+/**解锁武将池*/
+public f_unlockhero:number;
+}
+
+export class t_Adventure_Level0_dat{
+/**id*/
+public f_id:number;
 /**关卡id*/
 public f_Levelid:number;
 /**页签*/
@@ -5209,6 +5244,29 @@ public f_FourPiece:string;
 }
 
 export class t_Spirit_Attribute_Fixed_dat{
+/**id*/
+public f_id:number;
+/**套装id*/
+public f_SetID:number;
+/**战魂id*/
+public f_SpiritID:number;
+/**对应levleid*/
+public f_levelid:string;
+/**战魂名称*/
+public f_SpiritName:string;
+/**战魂稀有度*/
+public f_SpiritQuality:number;
+/**掉落概率*/
+public f_GetRate:number;
+/**战魂属性*/
+public f_QualityName:string;
+/**词条数量*/
+public f_PerksNumber:string;
+/**战魂iconid*/
+public f_SpiritIconID:number;
+}
+
+export class t_Spirit_Attribute_Fixed0_dat{
 /**id*/
 public f_id:number;
 /**套装id*/

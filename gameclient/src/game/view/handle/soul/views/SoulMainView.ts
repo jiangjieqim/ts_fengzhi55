@@ -155,6 +155,11 @@ export class SoulMainView extends ViewBase {
 
         let randomList = SoulModel.Ins.getAllRandomAttr();
         this._ui.list2.array = randomList;
+        if (randomList.length) {
+            this._ui.bg6.visible = true;
+        } else {
+            this._ui.bg6.visible = false;
+        }
         this._ui.list2.scrollTo(0);
         this.rightCtl.onChangeEvt();
 

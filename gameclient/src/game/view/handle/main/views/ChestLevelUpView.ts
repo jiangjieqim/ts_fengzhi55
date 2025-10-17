@@ -260,7 +260,7 @@ export class ChestLevelUpView extends ViewBase{
         this.progressCtl.setVal(res.cur,res.max);
 
         if(res.cfg){
-            this._ui.timetf.text = E.LangMgr.getLang("Time") + ":" + TimeUtil.subTime(res.cdTime);//cfg.f_BoxCD
+            this._ui.timetf.text = E.LangMgr.getLang("Time") + "：" + TimeUtil.subTime(res.cdTime);//cfg.f_BoxCD
         }else{
             this._ui.timetf.text = "";
         }
@@ -413,7 +413,7 @@ export class ChestLevelUpView extends ViewBase{
     private updateTimeLabel(ticket:number){
         let time =  TimeUtil.timeFormatStr(ticket,true);
         // TimeUtil.timeFormatStr(ticket,true).toString()
-        this._ui.subtime.text = E.LangMgr.getLang("SubTime") + ":" + time;
+        this._ui.subtime.text = E.LangMgr.getLang("SubTime") + "：" + time;
     }
 
     private endTimeHandler(){

@@ -126,4 +126,5 @@ export class MainEvent {
     public static OneClickPurchase:string = "OneClickPurchase";
     /**更新按钮列表 */
     public static UpdateListView:string = "UpdateListView";
+    public static CommonLotteryUpdate:string = "CommonLotteryUpdate";
 }

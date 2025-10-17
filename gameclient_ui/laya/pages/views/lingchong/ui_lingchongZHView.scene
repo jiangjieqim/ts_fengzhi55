@@ -2,11 +2,11 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
-    "selecteID":24,
+    "selecteID":17,
     "searchKey":"View",
     "props":{"width":620,"sceneColor":"#000000","height":1023},
     "nodeParent":-1,
-    "maxID":56,
+    "maxID":57,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -126,7 +126,7 @@
             "x":15,
             "type":"Label",
             "searchKey":"Label,lab_num",
-            "props":{"y":708,"x":137.5,"var":"lab_num","text":"再抽取60次后必出传奇灵宠","fontSize":28,"font":"BOLD","color":"#9F540C"},
+            "props":{"y":708,"x":148.5,"var":"lab_num","text":"再抽取60次后必出传奇灵宠","fontSize":24,"font":"BOLD","color":"#9F540C"},
             "nodeParent":2,
             "label":"lab_num",
             "isDirectory":false,
@@ -624,6 +624,22 @@
             "child":[
                 ],
             "$LOCKED":false
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label,limit_lab",
+            "props":{"y":740,"x":215,"var":"limit_lab","text":"今日还可抽50次","fontSize":24,"font":"BOLD","color":"#9F540C"},
+            "nodeParent":2,
+            "label":"limit_lab",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":56,
+            "child":[
+                ],
+            "$LOCKED":false,
+            "$HIDDEN":false
         }],
     "animations":[
         {

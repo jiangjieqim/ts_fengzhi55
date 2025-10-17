@@ -119,7 +119,7 @@ export class ShopModel extends BaseModel {
         if(revc.data.fid == this.goldfid){
             E.ViewMgr.ShowMidOk('领取成功');
         }else{
-            E.ViewMgr.ShowMidOk('购买成功');
+            //E.ViewMgr.ShowMidOk('购买成功');
         }
     }
 

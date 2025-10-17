@@ -25,7 +25,7 @@ export class QuFuUtils{
             item.lab_sname.text = data.serverName + lastName;
             if(data.roleLevel){
                 // item.lab_name.text = data.roleName;
-                item.lab_lv.text = "lv:" + data.roleLevel;
+                item.lab_lv.text = data.roleLevel + "级";
             }else{
                 // item.lab_name.text = "";
                 item.lab_lv.text = "";
@@ -35,7 +35,7 @@ export class QuFuUtils{
             item.lab_sname.text = data.serverName;
             if(data.roleLevel){
                 item.lab_name.text = data.roleName;
-                item.lab_lv.text = "lv:" + data.roleLevel;
+                item.lab_lv.text = data.roleLevel + "级";
             }else{
                 item.lab_name.text = "";
                 item.lab_lv.text = "";

@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":2,
-    "selecteID":54,
+    "selectedBox":24,
+    "selecteID":16,
     "searchKey":"View",
     "props":{"width":659,"sceneColor":"#000000","height":1126},
     "nodeParent":-1,
@@ -112,7 +112,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,quality",
-                    "props":{"y":22,"x":27,"width":100,"var":"quality","skin":"remote/common/base/jiangli.png","sizeGrid":"15,15,15,15","height":100},
+                    "props":{"y":32,"x":27,"width":100,"var":"quality","skin":"remote/common/base/jiangli.png","sizeGrid":"15,15,15,15","height":100},
                     "nodeParent":24,
                     "label":"quality",
                     "isOpen":true,
@@ -145,7 +145,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label,Lvtf",
-                    "props":{"y":96,"x":75,"var":"Lvtf","text":"Lv. 98","strokeColor":"#000000","stroke":1,"fontSize":18,"font":"BOLD","color":"#ffffff"},
+                    "props":{"y":135,"x":37.7783203125,"width":80,"var":"Lvtf","text":"Lv. 98","fontSize":18,"font":"BOLD","color":"#9C5F3A","align":"center"},
                     "nodeParent":24,
                     "label":"Lvtf",
                     "isOpen":true,
@@ -161,7 +161,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label,lab_name",
-                    "props":{"y":19,"x":142,"var":"lab_name","text":"呼呼","fontSize":32,"font":"BOLD","color":"#9C5F3A"},
+                    "props":{"y":29,"x":142,"var":"lab_name","text":"呼呼","fontSize":32,"font":"BOLD","color":"#9C5F3A"},
                     "nodeParent":24,
                     "label":"lab_name",
                     "isDirectory":false,
@@ -176,10 +176,10 @@
                 {
                     "x":30,
                     "type":"Label",
-                    "searchKey":"Label",
-                    "props":{"y":96,"x":142,"text":"ID:","fontSize":30,"font":"BOLD","color":"#9C5F3A"},
+                    "searchKey":"Label,lab_id0",
+                    "props":{"y":106,"x":142,"var":"lab_id0","text":"ID:","fontSize":30,"font":"BOLD","color":"#9C5F3A"},
                     "nodeParent":24,
-                    "label":"Label",
+                    "label":"lab_id0",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -187,13 +187,13 @@
                     "child":[
                         ],
                     "$LOCKED":false,
-                    "$HIDDEN":false
+                    "$HIDDEN":true
                 },
                 {
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label,lab_id",
-                    "props":{"y":101,"x":183,"var":"lab_id","text":"1a","fontSize":25,"font":"BOLD","color":"#9C5F3A"},
+                    "props":{"y":111,"x":183,"var":"lab_id","text":"1a","fontSize":25,"font":"BOLD","color":"#9C5F3A"},
                     "nodeParent":24,
                     "label":"lab_id",
                     "isDirectory":false,
@@ -203,13 +203,13 @@
                     "child":[
                         ],
                     "$LOCKED":false,
-                    "$HIDDEN":false
+                    "$HIDDEN":true
                 },
                 {
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label,lab_copy",
-                    "props":{"y":102,"x":305,"var":"lab_copy","underline":true,"text":"复制","fontSize":23,"font":"BOLD","color":"#22A01C"},
+                    "props":{"y":33,"x":305,"var":"lab_copy","underline":true,"text":"复制","fontSize":23,"font":"BOLD","color":"#22A01C"},
                     "nodeParent":24,
                     "label":"lab_copy",
                     "isDirectory":false,
@@ -225,7 +225,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label",
-                    "props":{"y":148,"x":25,"text":"当前服务器:","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
+                    "props":{"y":163,"x":25,"text":"当前服务器:","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
                     "nodeParent":24,
                     "label":"Label",
                     "isDirectory":false,
@@ -241,7 +241,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label,lab_sid",
-                    "props":{"y":148,"x":143,"var":"lab_sid","text":"1服","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
+                    "props":{"y":163,"x":143,"var":"lab_sid","text":"1服","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
                     "nodeParent":24,
                     "label":"lab_sid",
                     "isDirectory":false,
@@ -256,10 +256,10 @@
                 {
                     "x":30,
                     "type":"Label",
-                    "searchKey":"Label",
-                    "props":{"y":180,"x":27,"text":"服务器版本号:","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
+                    "searchKey":"Label,lab_s1",
+                    "props":{"y":185,"x":27,"var":"lab_s1","text":"服务器版本号:","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
                     "nodeParent":24,
-                    "label":"Label",
+                    "label":"lab_s1",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -267,13 +267,13 @@
                     "child":[
                         ],
                     "$LOCKED":false,
-                    "$HIDDEN":false
+                    "$HIDDEN":true
                 },
                 {
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label,lab_s",
-                    "props":{"y":179,"x":166,"var":"lab_s","text":"1.1.2","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
+                    "props":{"y":184,"x":166,"var":"lab_s","text":"1.1.2","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
                     "nodeParent":24,
                     "label":"lab_s",
                     "isDirectory":false,
@@ -283,15 +283,15 @@
                     "child":[
                         ],
                     "$LOCKED":false,
-                    "$HIDDEN":false
+                    "$HIDDEN":true
                 },
                 {
                     "x":30,
                     "type":"Label",
-                    "searchKey":"Label",
-                    "props":{"y":180,"x":339,"text":"客户端版本号:","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
+                    "searchKey":"Label,lab_c1",
+                    "props":{"y":180,"x":339,"var":"lab_c1","text":"客户端版本号:","fontSize":20,"font":"BOLD","color":"#9C5F3A"},
                     "nodeParent":24,
-                    "label":"Label",
+                    "label":"lab_c1",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -299,7 +299,7 @@
                     "child":[
                         ],
                     "$LOCKED":false,
-                    "$HIDDEN":false
+                    "$HIDDEN":true
                 },
                 {
                     "x":30,
@@ -315,13 +315,13 @@
                     "child":[
                         ],
                     "$LOCKED":false,
-                    "$HIDDEN":false
+                    "$HIDDEN":true
                 },
                 {
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,img_ch",
-                    "props":{"y":45,"x":111,"var":"img_ch","skin":"remote/main/main/ch_1.png","scaleY":0.7,"scaleX":0.7},
+                    "props":{"y":79,"x":111,"var":"img_ch","skin":"remote/main/main/ch_1.png","scaleY":0.7,"scaleX":0.7},
                     "nodeParent":24,
                     "label":"img_ch",
                     "isDirectory":false,

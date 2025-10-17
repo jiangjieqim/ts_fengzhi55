@@ -385,6 +385,11 @@ export class SoulUpgradeView extends ViewBase {
         newList=newList.concat(_vo.attrList);
         newList=newList.concat(textList);
         this.rightCtl.attr = newList;
+        if (newList.length) {
+            this._ui.tf4.visible = true;
+        } else {
+            this._ui.tf4.visible = false;
+        }
         /////////////////////////////////////////////////////////////////////////////////////
         this.leftCtl.attr = attrList;//基础属性
         let plusVal = t_Power_level.Ins.calculatePlus(attrList);
@@ -424,6 +429,11 @@ export class SoulUpgradeView extends ViewBase {
         }
         this.dataList = result;
         this._ui.list2.array = result;
+        if (result.length) {
+            this._ui.empty_lab.visible = false;
+        } else {
+            this._ui.empty_lab.visible = true;
+        }
         this._ui.list2.scrollTo(0);
         this.updateViewList();
     }

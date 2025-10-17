@@ -222,6 +222,10 @@ class CurNewAdventureItemViewSkin extends ui.views.maoxian2.ui_maoxian2_item1UI{
             this.on(Laya.Event.DISPLAY,this,this.onDisplay);
             this.on(Laya.Event.UNDISPLAY,this,this.onUnDisplay);
             NewAdventureModel.Ins.on(NewAdventureEvent.DisposeAvatar,this,this.disposeAvatar);
+
+            // //test!!!
+            // this.bg2.visible = this.bg1.visible = this.bg3.visible = this.bg4.visible =false;
+
         }
     }
     private onDisplay(){
