@@ -48,9 +48,12 @@ export class FightJieSuanView extends ViewBase{
             this._jjcCtl = new FightJjcJieSuanCtl(this);
             this._jjcCtl.succeed = this.succeed;
 
-            this._ui.lab0.on(Laya.Event.CLICK,this,this.onLab0Click);
-            this._ui.lab1.on(Laya.Event.CLICK,this,this.onLab1Click);
-            this._ui.lab2.on(Laya.Event.CLICK,this,this.onLab2Click);
+            // test不显示前往
+            // this._ui.lab0.on(Laya.Event.CLICK,this,this.onLab0Click);
+            // this._ui.lab1.on(Laya.Event.CLICK,this,this.onLab1Click);
+            // this._ui.lab2.on(Laya.Event.CLICK,this,this.onLab2Click);
+            this._ui.lab0.visible = this._ui.lab1.visible = this._ui.lab2.visible = false;
+
             // this.goonCtl = ButtonCtl.CreateBtn(this._ui.goonBtn,this,this.onGoOnClick);
             this._ui.goonBtn.on(Laya.Event.CLICK,this,this.onGoOnClick);
             this._ui.backBtn.on(Laya.Event.CLICK,this,this.onBackClick);
@@ -332,6 +335,9 @@ export class FightJieSuanView extends ViewBase{
             this.succeed.stop();
         }
         // this.win++;
+
+        // test不显示前往
+        this._ui.lab0.visible = this._ui.lab1.visible = this._ui.lab2.visible = false;
     }
 
     protected onExit() {

@@ -869,6 +869,7 @@ export module ui.views.baoshi {
 		public btn:Laya.Image;
 		public img:Laya.Image;
 		public lab:Laya.Label;
+		public free_lab:Laya.Label;
 		public lab_yy:Laya.Label;
 		public zhekouImg:Laya.Image;
 		public oldGoldTf:Laya.Label;
@@ -6472,6 +6473,7 @@ export module ui.views.jinsheng {
 		public list2:Laya.List;
 		public pro:Laya.Image;
 		public btn:Laya.Image;
+		public js_lab:Laya.Label;
 		public lab2:Laya.Label;
 		public lab_max:Laya.Label;
         constructor(){ super()}
@@ -13026,6 +13028,7 @@ export module ui.views.wing {
 		public lock:Laya.Image;
 		public selectedView:Laya.Box;
 		public wearedIcon:Laya.Image;
+		public price_img:Laya.Image;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();

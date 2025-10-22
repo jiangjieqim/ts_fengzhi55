@@ -30,6 +30,7 @@ export class WingExchangeView extends ViewBase{
             this._ui.wingList.renderHandler = new Laya.Handler(this,this.onAttrItemHandler);
             this._ui.wingList.selectHandler = new Laya.Handler(this,this.onSelectHandler);
         }
+        this._ui.curWingView.price_img.visible = false;
     }
 
     private set01Value() {

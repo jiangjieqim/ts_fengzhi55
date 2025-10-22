@@ -23,6 +23,8 @@ export class YeWaiItemViewNew extends ui.views.maoxian.ui_maoxian2_item11UI {
         this._saoDan = ButtonCtl.Create(this.saodanbtn, new Laya.Handler(this, this.onSaoDanHandler));
         this._tiaozhan = ButtonCtl.Create(this.challenge, new Laya.Handler(this, this.onTiaozhan));
         // this.yitongguantf.autoSize = true;
+        this.yitongguan.disabled = true;
+        this.yitongguan.gray = true;
     }
 
     private onSaoDanHandler() {
@@ -67,7 +69,7 @@ export class YeWaiItemViewNew extends ui.views.maoxian.ui_maoxian2_item11UI {
         if(lv < _cfg.f_OpenLimit){
 
             // this._notOpen.visible = true;
-            this.unlockTf.text = `解锁等级:${_cfg.f_OpenLimit}`;
+            this.unlockTf.text = `${_cfg.f_OpenLimit}级解锁`;
 
             // this.tf4.text = `解锁等级:${_cfg.f_OpenLimit}`;
             // this.tf3.text = ``;

@@ -358,6 +358,10 @@ export class ChestLevelUpView extends ViewBase{
             this._ui.subBtn.visible = true; 
             this.setCDBtn();
         }
+        if(!cfg.nextInfo){
+            this._ui.levelView.visible = false;
+            this._ui.levelFullTf.visible = true;
+        }
     }
 
     private setCDBtn(){

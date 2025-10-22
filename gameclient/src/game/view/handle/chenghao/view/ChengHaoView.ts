@@ -186,7 +186,7 @@ export class ChengHaoView extends ViewBase{
         }else{
             this._ui.list.array = [];
         }
-        this._ui.lab_tj.text = cfg.f_titleDec;
+        this._ui.lab_tj.text = `获得条件：${cfg.f_titleDec}`;
         let index = ChengHaoModel.Ins.titleList.findIndex(ele => ele.titleId == ChengHaoModel.Ins.selectCh);
         if(index == -1){
             this._ui.btn_pd.visible = false;

@@ -70,7 +70,7 @@ export class JinShengView extends ViewBase{
         item.lab1.text = attrConvert(id,val);
     }
 
-    private onRenderHandler2(item:JinShengItem){
+    private onRenderHandler2(item:JinShengItem, index:number){
         item.setData(item.dataSource);
     }
 
@@ -112,5 +112,12 @@ export class JinShengView extends ViewBase{
         }else{
             DotManager.removeDot(this._ui.btn);
         }
+        setTimeout(() => {
+            if (this._ui.list2.cells.every(o => o['lab']['text'] === '已完成')) {
+                this._ui.js_lab.text = '一键领取';
+            } else {
+                this._ui.js_lab.text = '晋升';
+            }
+        }, 300);
     }
 }

@@ -5384,7 +5384,7 @@ public f_InitiRandomAttr:number;
 public f_RandomAttrMax:number;
 /**Iconid*/
 public f_IconAdress:string;
-/**战魂颜色*/
+/**战徽颜色*/
 public f_SpiritColor:string;
 /**desc*/
 public f_desc:string;

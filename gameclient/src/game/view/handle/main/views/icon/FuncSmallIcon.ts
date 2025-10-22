@@ -141,7 +141,12 @@ export class FuncSmallIcon {
         if(!btnCon){
             btnCon = this.skin;
         }
-        this.btnCtl = ButtonCtl.CreateBtn(btnCon, this, this.onClickHandler, btnEffect);
+        //if (!this.btnCtl) {
+            if (this.btnCtl) {
+                this.btnCtl.dispose();
+            }
+            this.btnCtl = ButtonCtl.CreateBtn(btnCon, this, this.onClickHandler, btnEffect);
+        //}
         if(btnStyle == EButtonStyle.Mid){
             this.btnCtl.setpos(x,y);
         }

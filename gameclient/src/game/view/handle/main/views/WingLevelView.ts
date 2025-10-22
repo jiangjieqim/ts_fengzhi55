@@ -50,6 +50,7 @@ export class WingLevelView extends ViewBase{
                 this._ui.levelUpBtnLabel.text = '升级';
             }
         }
+        this._ui.curWingView.price_img.visible = false;
     }
     
     private onBtnXslbClick(){
@@ -129,6 +130,11 @@ export class WingLevelView extends ViewBase{
         const stageValues = [...new Set(WingModel.Ins.wingStageAttrs.map(o => o.now))];
         const attr = WingModel.Ins.wingStageAttrs.sort((a, b) => b.now - a.now)[0];
         this._ui.addAttrList.array = stageValues.length > 1 ? [{ ...attr, next: attr.now }] : [];
+        if (this._ui.addAttrList.length) {
+            this._ui.listTitle2.visible = true;
+        } else {
+            this._ui.listTitle2.visible = false;
+        }
     }
 
     onLevelUpHandler() {

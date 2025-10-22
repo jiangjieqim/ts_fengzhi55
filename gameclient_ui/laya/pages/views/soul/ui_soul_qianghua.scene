@@ -698,7 +698,7 @@
             "x":15,
             "type":"Label",
             "searchKey":"Label,empty_lab",
-            "props":{"y":589,"x":0,"width":260,"var":"empty_lab","text":"暂无未装备的战魂","height":20,"fontSize":20,"font":"BOLD","color":"#B2713C","centerX":0,"align":"center"},
+            "props":{"y":589,"x":0,"width":260,"var":"empty_lab","text":"暂无未装备的战徽","height":20,"fontSize":20,"font":"BOLD","color":"#B2713C","centerX":0,"align":"center"},
             "nodeParent":2,
             "label":"empty_lab",
             "isDirectory":false,

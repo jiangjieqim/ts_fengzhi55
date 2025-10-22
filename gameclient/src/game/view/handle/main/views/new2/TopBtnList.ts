@@ -136,6 +136,7 @@ export class TopBtnList extends MainIconListBase{
             DotManager.removeDot(this.arrowBtn);
         }
         DebugUtil.drawTF(this.arrowBtn,fid,"#00ff00");
+        this.arrowBtn.visible = false;
     }
 
     /**功能是否开启了 */

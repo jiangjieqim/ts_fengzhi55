@@ -41,6 +41,7 @@ export class WingStageView extends ViewBase{
             this._ui.addAttrList.renderHandler = new Laya.Handler(this,this.onAttrItemHandler);
             this._ui.btn_xslb.visible = false;
         }
+        this._ui.curWingView.price_img.visible = false;
     }
 
     private onCloseHandler1(){
@@ -140,6 +141,11 @@ export class WingStageView extends ViewBase{
         this._ui.attrList.array = WingModel.Ins.wingStageAttrs;
         const stageValues = [...new Set(WingModel.Ins.wingStageAttrs.map(o => o.now))];
         this._ui.addAttrList.array = stageValues.length > 1 ? [WingModel.Ins.wingStageAttrs.sort((a, b) => b.now - a.now)[0]] : [];
+        if (this._ui.addAttrList.array.length) {
+            this._ui.listTitle2.visible = true;
+        } else {
+            this._ui.listTitle2.visible = false;
+        }
     }
 
     onStageUpBtnHandler() {

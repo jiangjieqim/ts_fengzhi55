@@ -383,7 +383,7 @@ export class LeftLieBiao{
     }
 
     private createBottomBtns(){
-        this.createBotLittleBtn(`remote/main/main/ch_rk.png`,E.getLang("ch01"),EFuncDef.chenghao);//称号
+        //this.createBotLittleBtn(`remote/main/main/ch_rk.png`,E.getLang("ch01"),EFuncDef.chenghao);//称号
         this.btn_daily_share = this.createBotLittleBtn(`remote/main/main/fx.png`,E.getLang("fx"),EFuncDef.FenXiang );//分享
         // this.btn_tjzm = this.createBotLittleBtn(`remote/main/main/tjzm.png`,E.getLang("tjzm"),EFuncDef.TianJiaZhuoMian);//添加桌面
         this.btn_group_share = this.createBotLittleBtn(`remote/main/main/fxdq.png`,E.getLang("fxdq"),EFuncDef.GroupShare);//分享到群

@@ -29,6 +29,7 @@ class FazhengDHItem extends RowMoveBaseNode {
         _skin.setData(this.list[index]);
         _skin.x = index * _skin.width;
         _skin.y = this.y;
+        _skin.free_lab.visible = false;
         return _skin;
     }
 }

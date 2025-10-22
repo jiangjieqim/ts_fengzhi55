@@ -109,9 +109,11 @@ export class WingInfoView extends ViewBase{
             });
             this._ui.wingAttrAddTitle.visible = true;
             this._ui.addAttrList.array = [addAttr];
+            this._ui.wingAttrAddTitle.visible = true;
         } else {
             this._ui.wingAttrAddTitle.visible = false;
             this._ui.addAttrList.array = [];
+            this._ui.wingAttrAddTitle.visible = false;
         }
         this._ui.attrList2.array = arr2;
     }

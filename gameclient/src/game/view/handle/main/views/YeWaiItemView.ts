@@ -61,7 +61,7 @@ export class YeWaiItemView extends ui.views.maoxian.ui_bossYeWaiItemUI{
         let lv = this.model.mRoleData.lv;
         if(lv < _cfg.f_OpenLimit){
             this._notOpen.visible = true;
-            this.tf4.text = `解锁等级:${_cfg.f_OpenLimit}`;
+            this.tf4.text = `${_cfg.f_OpenLimit}级解锁`;
             this.tf3.text = ``;
         } else {
 

@@ -47,9 +47,16 @@ export class BaoShiDHItem extends ui.views.baoshi.ui_baoshiDHItemUI{
         let arr = value.f_price.split("-");
         let val = parseInt(arr[1]);
 
-        this.img.skin = IconUtils.getIconByCfgId(parseInt(arr[0]));
-        this.lab.text = val + "";
         this.lab_name.text = itemVo.getName();
+        if (val > 0) {
+            this.img.skin = IconUtils.getIconByCfgId(parseInt(arr[0]));
+            this.lab.text = val + "";
+            this.free_lab.visible = false;
+        } else {
+            this.free_lab.visible = true;
+            this.img.visible = this.lab.visible = false;
+        }
+
         this.setDot();
         // if(GemFeastModel.Ins.isOpen){
         //if(MainModel.Ins.isGemOpen){

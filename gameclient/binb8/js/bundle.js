@@ -46128,9 +46128,7 @@
                 this.succeed = new SucceedPlay(this._ui.succeedContainer);
                 this._jjcCtl = new FightJjcJieSuanCtl(this);
                 this._jjcCtl.succeed = this.succeed;
-                this._ui.lab0.on(Laya.Event.CLICK, this, this.onLab0Click);
-                this._ui.lab1.on(Laya.Event.CLICK, this, this.onLab1Click);
-                this._ui.lab2.on(Laya.Event.CLICK, this, this.onLab2Click);
+                this._ui.lab0.visible = this._ui.lab1.visible = this._ui.lab2.visible = false;
                 this._ui.goonBtn.on(Laya.Event.CLICK, this, this.onGoOnClick);
                 this._ui.backBtn.on(Laya.Event.CLICK, this, this.onBackClick);
             }
@@ -46345,6 +46343,7 @@
                 this.succeed.visible = false;
                 this.succeed.stop();
             }
+            this._ui.lab0.visible = this._ui.lab1.visible = this._ui.lab2.visible = false;
         }
         onExit() {
             if (this.discountTicket) {
@@ -60167,6 +60166,9 @@
             let btnCon = this.skin["btnCon"];
             if (!btnCon) {
                 btnCon = this.skin;
+            }
+            if (this.btnCtl) {
+                this.btnCtl.dispose();
             }
             this.btnCtl = ButtonCtl.CreateBtn(btnCon, this, this.onClickHandler, btnEffect);
             if (btnStyle == EButtonStyle.Mid) {
@@ -74662,9 +74664,16 @@
             ItemViewFactory.refreshSlot(this.item, itemVo, false);
             let arr = value.f_price.split("-");
             let val = parseInt(arr[1]);
-            this.img.skin = IconUtils.getIconByCfgId(parseInt(arr[0]));
-            this.lab.text = val + "";
             this.lab_name.text = itemVo.getName();
+            if (val > 0) {
+                this.img.skin = IconUtils.getIconByCfgId(parseInt(arr[0]));
+                this.lab.text = val + "";
+                this.free_lab.visible = false;
+            }
+            else {
+                this.free_lab.visible = true;
+                this.img.visible = this.lab.visible = false;
+            }
             this.setDot();
             if (value.f_freetimes) {
                 this.zhekouImg.visible = false;
@@ -76291,6 +76300,7 @@
             _skin.setData(this.list[index]);
             _skin.x = index * _skin.width;
             _skin.y = this.y;
+            _skin.free_lab.visible = false;
             return _skin;
         }
     }
@@ -77301,7 +77311,7 @@
             else {
                 this._ui.list.array = [];
             }
-            this._ui.lab_tj.text = cfg.f_titleDec;
+            this._ui.lab_tj.text = `获得条件：${cfg.f_titleDec}`;
             let index = ChengHaoModel.Ins.titleList.findIndex(ele => ele.titleId == ChengHaoModel.Ins.selectCh);
             if (index == -1) {
                 this._ui.btn_pd.visible = false;
@@ -87676,7 +87686,7 @@
             item.lab.text = MainModel.Ins.getAttrNameIdByID(id) + "：";
             item.lab1.text = attrConvert(id, val);
         }
-        onRenderHandler2(item) {
+        onRenderHandler2(item, index) {
             item.setData(item.dataSource);
         }
         updataView() {
@@ -87715,6 +87725,14 @@
             else {
                 DotManager.removeDot(this._ui.btn);
             }
+            setTimeout(() => {
+                if (this._ui.list2.cells.every(o => o['lab']['text'] === '已完成')) {
+                    this._ui.js_lab.text = '一键领取';
+                }
+                else {
+                    this._ui.js_lab.text = '晋升';
+                }
+            }, 300);
         }
     }
 
@@ -92127,7 +92145,6 @@
                 this._starCtl = new FuJiangStarCtl(this._ui.star);
                 ButtonCtl.Create(this._ui.btn_tj, new Laya.Handler(this, this.onBtnTJClick));
             }
-            this._ui.tab.visible = false;
         }
         onBtnTJClick() {
             E.ViewMgr.Open(EViewType.LingChongXMTJView);
@@ -114744,7 +114761,6 @@
             this.model.openFunc(funcid);
         }
         createBottomBtns() {
-            this.createBotLittleBtn(`remote/main/main/ch_rk.png`, E.getLang("ch01"), EFuncDef.chenghao);
             this.btn_daily_share = this.createBotLittleBtn(`remote/main/main/fx.png`, E.getLang("fx"), EFuncDef.FenXiang);
             this.btn_group_share = this.createBotLittleBtn(`remote/main/main/fxdq.png`, E.getLang("fxdq"), EFuncDef.GroupShare);
         }
@@ -115223,6 +115239,7 @@
                 DotManager.removeDot(this.arrowBtn);
             }
             DebugUtil.drawTF(this.arrowBtn, fid, "#00ff00");
+            this.arrowBtn.visible = false;
         }
         isOpen(cfg) {
             return cfg && MainModel.Ins.isOpenAllByFuncid(cfg.f_funid) && MainModel.Ins.isSubOpen(cfg);
@@ -116511,6 +116528,10 @@
                 this._ui.subBtn.visible = true;
                 this.setCDBtn();
             }
+            if (!cfg.nextInfo) {
+                this._ui.levelView.visible = false;
+                this._ui.levelFullTf.visible = true;
+            }
         }
         setCDBtn() {
             let time = GuaJiModel.Ins.getstAdCdByType(GuaJiModel.CDEnmu.BaoXiangLv).endUnix - TimeUtil.serverTime;
@@ -117291,6 +117312,7 @@
                 this._ui.wingList.renderHandler = new Laya.Handler(this, this.onAttrItemHandler);
                 this._ui.wingList.selectHandler = new Laya.Handler(this, this.onSelectHandler);
             }
+            this._ui.curWingView.price_img.visible = false;
         }
         set01Value() {
             const list = WingIdProxy.Ins.List;
@@ -117515,10 +117537,12 @@
                 });
                 this._ui.wingAttrAddTitle.visible = true;
                 this._ui.addAttrList.array = [addAttr];
+                this._ui.wingAttrAddTitle.visible = true;
             }
             else {
                 this._ui.wingAttrAddTitle.visible = false;
                 this._ui.addAttrList.array = [];
+                this._ui.wingAttrAddTitle.visible = false;
             }
             this._ui.attrList2.array = arr2;
         }
@@ -117595,6 +117619,7 @@
                     this._ui.levelUpBtnLabel.text = '升级';
                 }
             }
+            this._ui.curWingView.price_img.visible = false;
         }
         onBtnXslbClick() {
             ActivityModel.Ins.diamondEject(this.packUid);
@@ -117659,6 +117684,12 @@
             const stageValues = [...new Set(WingModel.Ins.wingStageAttrs.map(o => o.now))];
             const attr = WingModel.Ins.wingStageAttrs.sort((a, b) => b.now - a.now)[0];
             this._ui.addAttrList.array = stageValues.length > 1 ? [Object.assign(Object.assign({}, attr), { next: attr.now })] : [];
+            if (this._ui.addAttrList.length) {
+                this._ui.listTitle2.visible = true;
+            }
+            else {
+                this._ui.listTitle2.visible = false;
+            }
         }
         onLevelUpHandler() {
             var _a;
@@ -117769,6 +117800,7 @@
                 this._ui.addAttrList.renderHandler = new Laya.Handler(this, this.onAttrItemHandler);
                 this._ui.btn_xslb.visible = false;
             }
+            this._ui.curWingView.price_img.visible = false;
         }
         onCloseHandler1() {
             E.ViewMgr.Close(this.ViewType);
@@ -117847,6 +117879,12 @@
             this._ui.attrList.array = WingModel.Ins.wingStageAttrs;
             const stageValues = [...new Set(WingModel.Ins.wingStageAttrs.map(o => o.now))];
             this._ui.addAttrList.array = stageValues.length > 1 ? [WingModel.Ins.wingStageAttrs.sort((a, b) => b.now - a.now)[0]] : [];
+            if (this._ui.addAttrList.array.length) {
+                this._ui.listTitle2.visible = true;
+            }
+            else {
+                this._ui.listTitle2.visible = false;
+            }
         }
         onStageUpBtnHandler() {
             if (this._ui.stageUpBtn.gray) {
@@ -118016,6 +118054,8 @@
             this.model = MainModel.Ins;
             this._saoDan = ButtonCtl.Create(this.saodanbtn, new Laya.Handler(this, this.onSaoDanHandler));
             this._tiaozhan = ButtonCtl.Create(this.challenge, new Laya.Handler(this, this.onTiaozhan));
+            this.yitongguan.disabled = true;
+            this.yitongguan.gray = true;
         }
         onSaoDanHandler() {
             if (this.model.isCanSweep) {
@@ -118047,7 +118087,7 @@
             let showSaoDan = false;
             let lv = this.model.mRoleData.lv;
             if (lv < _cfg.f_OpenLimit) {
-                this.unlockTf.text = `解锁等级:${_cfg.f_OpenLimit}`;
+                this.unlockTf.text = `${_cfg.f_OpenLimit}级解锁`;
             }
             else {
                 if (nextCfg && nextCfg.f_id == _cfg.f_id) {
